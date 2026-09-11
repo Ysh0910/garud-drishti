@@ -66,7 +66,7 @@ SENSE ──► ANALYSE ──► PREDICT ──► VISUALISE ──► WARN ─
        ▼                                   ▼                                   ▼
 ┌──────────────┐                 ┌──────────────────┐               ┌────────────────────┐
 │ Authority    │                 │ Citizen Mobile   │               │ Alert Engine       │
-│ Web Dashboard│                 │ App (React Native│               │ (SMS / FCM Push)   │
+│ Web Dashboard│                 │ App(React Native)│               │ (SMS / FCM Push)   │
 └──────────────┘                 └──────────────────┘               └────────────────────┘
 ```
 
