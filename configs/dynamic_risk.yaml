@@ -1,0 +1,47 @@
+# Dynamic Risk Model Configuration (Model 2)
+model:
+  name: dynamic_risk_xgboost_v1
+  algorithm: xgboost
+  type: multi_horizon_risk
+  horizons:
+    - current
+    - 6h
+    - 24h
+    - 48h
+    - 72h
+  params:
+    n_estimators: 600
+    max_depth: 7
+    learning_rate: 0.03
+    subsample: 0.8
+    colsample_bytree: 0.8
+    objective: binary:logistic
+    eval_metric: auc
+
+features:
+  static_input: base_susceptibility
+  rainfall_windows:
+    - rainfall_1h_mm
+    - rainfall_3h_mm
+    - rainfall_6h_mm
+    - rainfall_12h_mm
+    - rainfall_24h_mm
+    - rainfall_72h_mm
+    - rainfall_7d_mm
+  soil_moisture: soil_moisture
+  forecasts:
+    - forecast_rain_6h_mm
+    - forecast_rain_24h_mm
+    - forecast_rain_48h_mm
+  satellite_change: satellite_change_score
+
+risk_bands:
+  very_low: [0, 20]
+  low: [21, 40]
+  moderate: [41, 60]
+  high: [61, 80]
+  critical: [81, 100]
+
+alert_thresholds:
+  high_risk_threshold: 61
+  critical_risk_threshold: 81

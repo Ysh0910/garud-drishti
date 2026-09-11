@@ -1,0 +1,38 @@
+# Susceptibility Model Configuration (Model 1)
+model:
+  name: susceptibility_xgboost_v1
+  algorithm: xgboost
+  type: binary_classification
+  params:
+    n_estimators: 500
+    max_depth: 6
+    learning_rate: 0.05
+    subsample: 0.8
+    colsample_bytree: 0.8
+    objective: binary:logistic
+    eval_metric: logloss
+    scale_pos_weight: 1.0
+
+features:
+  - elevation_m
+  - slope_deg
+  - aspect_deg
+  - curvature
+  - landcover
+  - geology
+  - geomorphology
+  - hydrological_condition
+  - distance_to_drainage_m
+  - historical_ls_density
+  - distance_to_historical_ls_m
+
+validation:
+  strategy: spatial_block_split
+  block_size_km: 10
+  metrics:
+    - roc_auc
+    - pr_auc
+    - precision
+    - recall
+    - f1
+    - brier_score

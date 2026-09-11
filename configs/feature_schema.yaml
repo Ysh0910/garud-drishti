@@ -1,0 +1,31 @@
+# Feature Schema Definitions & Quality Policies
+features:
+  elevation_m:
+    unit: meters
+    source: SRTM / USGS DEM
+    type: float
+    missing_policy: raise_error
+
+  slope_deg:
+    unit: degrees
+    source: SRTM DEM derived
+    type: float
+    missing_policy: raise_error
+
+  rainfall_24h_mm:
+    unit: mm
+    source: IMD / GPM IMERG
+    type: float
+    missing_policy: mark_stale_and_degrade
+
+  soil_moisture:
+    unit: volumetric_water_content
+    source: NASA SMAP
+    type: float
+    missing_policy: fallback_to_regional_mean
+
+  base_susceptibility:
+    unit: index_0_100
+    source: Model 1 Output
+    type: float
+    missing_policy: recompute
