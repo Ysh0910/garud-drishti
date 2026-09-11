@@ -24,15 +24,3 @@ coverage/
 .idea/
 .DS_Store
 Thumbs.db
-
-# Large raw data archives and binaries (>100MB / raw datasets)
-data/raw/*.zip
-data/raw/*.pdf
-data/raw/*.nc
-data/raw/*.nc4
-data/raw/*.gpkg
-data/raw/*.tif
-data/raw/*.tiff
-data/raw/*.h5
-data/raw/subset_*
-!data/**/.gitkeep
