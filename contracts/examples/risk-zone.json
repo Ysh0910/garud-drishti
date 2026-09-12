@@ -1,0 +1,44 @@
+{
+  "_example": "SYNTHETIC DEMO DATA — not a real observation. Represents a single RiskZoneFeature inside a GeoJSON FeatureCollection returned by GET /api/v1/risk/grid.",
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
+  },
+  "meta": {
+    "horizon": "current",
+    "generated_at": "2026-07-15T06:30:00Z",
+    "total_cells": 1,
+    "model_version": "dynamic_xgb_v1"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [91.875, 25.615],
+            [91.885, 25.615],
+            [91.885, 25.625],
+            [91.875, 25.625],
+            [91.875, 25.615]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "cell_demo_0042",
+        "base_susceptibility": 72,
+        "risk_score": 78,
+        "risk_level": "HIGH",
+        "risk_state": "HIGH",
+        "response_priority": "HIGH",
+        "trend": "INCREASING",
+        "confidence": null,
+        "data_quality": "GOOD",
+        "updated_at": "2026-07-15T06:30:00Z",
+        "model_version": "dynamic_xgb_v1"
+      }
+    }
+  ]
+}

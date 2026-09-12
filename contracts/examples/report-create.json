@@ -1,0 +1,11 @@
+{
+  "_example": "SYNTHETIC DEMO DATA — not a real report. Represents the multipart/form-data JSON fields for POST /api/v1/reports. The 'photo' field is a file upload and is not represented in this JSON.",
+  "client_report_id": "demo-client-uuid-0001",
+  "category": "CRACK",
+  "description": "Visible crack approximately 2 metres wide running along the hillside above the road. Demo data only.",
+  "latitude": 25.6185,
+  "longitude": 91.8792,
+  "location_accuracy_m": 8.5,
+  "captured_at": "2026-07-15T06:12:00Z",
+  "severity": "HIGH"
+}

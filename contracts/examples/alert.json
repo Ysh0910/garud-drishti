@@ -1,0 +1,23 @@
+{
+  "_example": "SYNTHETIC DEMO DATA — not a real alert. Represents an AlertResponse from GET /api/v1/alerts or POST /api/v1/alerts/{id}/acknowledge.",
+  "alert_id": "srv-demo-alert-0001",
+  "cell_id": "cell_demo_0042",
+  "zone_name": "Demo Zone — Northern Sector",
+  "severity": "CRITICAL",
+  "state": "PENDING_APPROVAL",
+  "trigger_reason": "Risk score crossed CRITICAL threshold (81+) with elevated exposure in surrounding area.",
+  "trigger_rule": "RULE_1_CRITICAL",
+  "risk_score_at_creation": 85,
+  "risk_score_current": 87,
+  "created_at": "2026-07-15T06:31:00Z",
+  "updated_at": "2026-07-15T06:31:00Z",
+  "approved_by": null,
+  "approved_at": null,
+  "resolved_at": null,
+  "notification": {
+    "channel": "SIMULATED",
+    "sent_at": null,
+    "recipient_count": null,
+    "delivery_status": "PENDING"
+  }
+}

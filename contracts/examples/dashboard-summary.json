@@ -1,0 +1,18 @@
+{
+  "_example": "SYNTHETIC DEMO DATA — not real system state. Represents the DashboardSummaryResponse from GET /api/v1/dashboard/summary.",
+  "kpi": {
+    "critical_zones": 3,
+    "high_risk_zones": 11,
+    "active_alerts": 2,
+    "new_reports": 7,
+    "roads_at_risk": 4,
+    "villages_at_risk": 2,
+    "unresolved_incidents": 9
+  },
+  "data_freshness": {
+    "risk_grid_updated_at": "2026-07-15T06:30:00Z",
+    "rainfall_updated_at": "2026-07-15T06:00:00Z",
+    "overall_quality": "GOOD"
+  },
+  "generated_at": "2026-07-15T06:35:00Z"
+}

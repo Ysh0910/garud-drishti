@@ -1,0 +1,20 @@
+{
+  "_example": "SYNTHETIC DEMO DATA — not a real report. Represents the ReportResponse returned by POST /api/v1/reports and GET /api/v1/reports/{report_id}.",
+  "report_id": "srv-demo-report-0001",
+  "client_report_id": "demo-client-uuid-0001",
+  "status": "PENDING",
+  "category": "CRACK",
+  "description": "Visible crack approximately 2 metres wide running along the hillside above the road. Demo data only.",
+  "latitude": 25.6185,
+  "longitude": 91.8792,
+  "location_accuracy_m": 8.5,
+  "captured_at": "2026-07-15T06:12:00Z",
+  "submitted_at": "2026-07-15T06:13:45Z",
+  "severity": "HIGH",
+  "media_url": null,
+  "evidence_score": null,
+  "nearest_cell_id": "cell_demo_0042",
+  "verified_by": null,
+  "verified_at": null,
+  "rejection_reason": null
+}

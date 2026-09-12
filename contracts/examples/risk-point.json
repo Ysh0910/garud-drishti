@@ -1,0 +1,41 @@
+{
+  "_example": "SYNTHETIC DEMO DATA — not a real observation. For development and UI mocking only.",
+  "latitude": 25.6200,
+  "longitude": 91.8800,
+  "cell_id": "cell_demo_0042",
+  "base_susceptibility": 72,
+  "current_risk": 78,
+  "risk_level": "HIGH",
+  "risk_state": "HIGH",
+  "trend": "INCREASING",
+  "confidence": null,
+  "data_quality": "GOOD",
+  "forecasts": [
+    {
+      "horizon": "6h",
+      "risk_score": 82,
+      "risk_level": "CRITICAL",
+      "validated": false
+    },
+    {
+      "horizon": "24h",
+      "risk_score": 88,
+      "risk_level": "CRITICAL",
+      "validated": true
+    },
+    {
+      "horizon": "48h",
+      "risk_score": 74,
+      "risk_level": "HIGH",
+      "validated": false
+    },
+    {
+      "horizon": "72h",
+      "risk_score": 61,
+      "risk_level": "HIGH",
+      "validated": false
+    }
+  ],
+  "updated_at": "2026-07-15T06:30:00Z",
+  "model_version": "dynamic_xgb_v1"
+}
