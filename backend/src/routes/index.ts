@@ -1,26 +1,25 @@
 import { Router } from 'express';
-import healthRouter from './health.js';
+import healthRouter from './health';
+import riskRouter from './risk';
 
 // ---------------------------------------------------------------------------
-// Root API router
+// Root API router (/api/v1)
 // Mounts all versioned sub-routers.
-// Phases 5–11 will add risk, reports, alerts, exposure, dashboard routers here.
 // ---------------------------------------------------------------------------
 
 const router = Router();
 
-// Health check — mounted at the app level in app.ts, not under /api/v1,
-// so it is accessible without the version prefix. Exported here for testing.
 export { healthRouter };
 
-// Future sub-routers (stubs — uncomment as phases are implemented):
-// import riskRouter from './risk.js';
-// import reportsRouter from './reports.js';
-// import alertsRouter from './alerts.js';
-// import exposureRouter from './exposure.js';
-// import dashboardRouter from './dashboard.js';
+// Mount Risk API (/api/v1/risk)
+router.use('/risk', riskRouter);
 
-// router.use('/risk', riskRouter);
+// Future sub-routers (uncomment as phases are implemented):
+// import reportsRouter from './reports';
+// import alertsRouter from './alerts';
+// import exposureRouter from './exposure';
+// import dashboardRouter from './dashboard';
+
 // router.use('/reports', reportsRouter);
 // router.use('/alerts', alertsRouter);
 // router.use('/roads', exposureRouter);
