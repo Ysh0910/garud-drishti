@@ -3,13 +3,13 @@ import { ZodError } from 'zod';
 import { AppError } from '../utils/errors.js';
 import { isProduction } from '../config/index.js';
 
-// ---------------------------------------------------------------------------
-// Structured error response shape
-// Matches TECH_STACK.md §41 error contract:
-//   { "error": { "code": "...", "message": "...", "request_id": "..." } }
-// ---------------------------------------------------------------------------
+// ============================================================================
+// Structured Error Response Shape
+// Matches TECH_STACK.md §41 & contracts error conventions:
+//   { "error": { "code": "...", "message": "...", "request_id": "...", "details": ... } }
+// ============================================================================
 
-interface ErrorResponse {
+export interface ErrorResponseBody {
   error: {
     code: string;
     message: string;
@@ -18,15 +18,15 @@ interface ErrorResponse {
   };
 }
 
-function buildErrorResponse(
+export function buildErrorResponse(
   code: string,
   message: string,
   requestId?: string,
   details?: unknown,
-): ErrorResponse {
-  const body: ErrorResponse = { error: { code, message } };
+): ErrorResponseBody {
+  const body: ErrorResponseBody = { error: { code, message } };
   if (requestId) body.error.request_id = requestId;
-  if (details !== undefined && !isProduction) body.error.details = details;
+  if (details !== undefined) body.error.details = details;
   return body;
 }
 
@@ -37,16 +37,20 @@ export function errorHandler(
   res: Response,
   _next: NextFunction,
 ): void {
-  const requestId = req.headers['x-request-id'] as string | undefined;
+  const requestId = (req.headers['x-request-id'] as string) || undefined;
 
-  // --- Zod validation errors (schema parse failures) ---
+  // --- Zod validation errors ---
   if (err instanceof ZodError) {
+    const formatted = err.flatten();
     res.status(422).json(
       buildErrorResponse(
         'VALIDATION_ERROR',
         'Request validation failed.',
         requestId,
-        err.flatten(),
+        {
+          field_errors: formatted.fieldErrors,
+          form_errors: formatted.formErrors,
+        },
       ),
     );
     return;
@@ -54,23 +58,23 @@ export function errorHandler(
 
   // --- Operational application errors ---
   if (err instanceof AppError) {
-    if (!isProduction) {
-      console.error(`[${err.code}] ${err.message}`);
+    if (!isProduction && err.statusCode >= 500) {
+      console.error(`[${err.code}] ${err.message}`, err.details ?? '');
     }
     res.status(err.statusCode).json(
-      buildErrorResponse(err.code, err.message, requestId),
+      buildErrorResponse(err.code, err.message, requestId, err.details),
     );
     return;
   }
 
-  // --- Unknown / unexpected errors ---
-  // Log in full server-side; expose minimal info to the client.
-  console.error('[unhandled error]', err);
+  // --- Unexpected / system errors ---
+  console.error('[unhandled_error]', err);
   res.status(500).json(
     buildErrorResponse(
       'INTERNAL_ERROR',
-      'An unexpected error occurred.',
+      'An unexpected internal server error occurred.',
       requestId,
+      !isProduction && err instanceof Error ? { stack: err.stack } : undefined,
     ),
   );
 }

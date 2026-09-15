@@ -1,0 +1,22 @@
+# Environment & Secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies & Build artifacts
+node_modules/
+dist/
+build/
+coverage/
+.venv/
+__pycache__/
+*.pyc
+
+# IDE / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Internal status tracking
+GARUD_DRISHTI_DEVELOPMENT_STATUS.md
