@@ -1,0 +1,12 @@
+feature,mean_abs_shap
+historical_ls_density,4.4330034
+distance_to_historical_ls_m,1.3879907
+slope_deg,0.48132592
+elevation_m,0.40978402
+distance_to_drainage_m,0.3735498
+curvature,0.36249954
+aspect_deg,0.2595328
+geology,0.1955409
+geomorphology,0.06456029
+landcover,0.0
+hydrological_condition,0.0

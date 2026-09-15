@@ -1,0 +1,17 @@
+{
+  "feature_list": [
+    "base_susceptibility",
+    "rainfall_1h_mm",
+    "rainfall_3h_mm",
+    "rainfall_6h_mm",
+    "rainfall_12h_mm",
+    "rainfall_24h_mm",
+    "rainfall_72h_mm",
+    "rainfall_7d_mm",
+    "soil_moisture",
+    "forecast_rain_6h_mm",
+    "forecast_rain_24h_mm",
+    "forecast_rain_48h_mm"
+  ],
+  "categorical_features": []
+}
