@@ -1,0 +1,144 @@
+{
+  "generated_at": "2026-09-15T12:53:40.956445Z",
+  "script": "finalize_reports.py",
+  "datasets": {
+    "historical_landslides": {
+      "gsi": {
+        "status": "PRESENT",
+        "csv": "C:\\Users\\tejasvi javagal\\Desktop\\New folder\\garud-drishti\\garud-drishti\\data\\raw\\gsi\\gsi_landslide_inventory.csv",
+        "geojson": "C:\\Users\\tejasvi javagal\\Desktop\\New folder\\garud-drishti\\garud-drishti\\data\\raw\\gsi\\gsi_landslide_inventory.geojson",
+        "records": 36372,
+        "with_coordinates": 13246,
+        "size_bytes": 12466951
+      },
+      "isro_atlas": {
+        "status": "PRESENT",
+        "csv": "C:\\Users\\tejasvi javagal\\Desktop\\New folder\\garud-drishti\\garud-drishti\\data\\raw\\landslide_atlas\\landslide_atlas_inventory.csv",
+        "records": 168,
+        "size_bytes": 18505
+      },
+      "combined": {
+        "status": "PRESENT",
+        "records": 0,
+        "georeferenced": 2041,
+        "size_bytes": 1814267
+      }
+    },
+    "terrain": {
+      "srtm_dem": {
+        "status": "PRESENT",
+        "hgt_tiles": 288,
+        "tif_files": 2,
+        "total_size_bytes": 978284644,
+        "resolution": "~90m (3 arc-second)",
+        "source": "Viewfinder Panoramas DEM3",
+        "coverage_pct": 66.7
+      },
+      "terrain_features": {
+        "status": "PRESENT",
+        "slope": true,
+        "aspect": true,
+        "curvature": true,
+        "elevation": true,
+        "size_bytes": 758556758,
+        "notes": "DEM-derived from SRTM HGT tiles. Used as geomorphology proxy."
+      }
+    },
+    "rainfall": {
+      "imd_rf25": {
+        "status": "PRESENT",
+        "path": "C:\\Users\\tejasvi javagal\\Desktop\\New folder\\garud-drishti\\garud-drishti\\data\\raw\\RF25_ind2025_rfp25.nc",
+        "size_bytes": 25431832,
+        "resolution": "25km daily",
+        "timesteps": null,
+        "year": "2025"
+      },
+      "gpm_daily": {
+        "status": "PRESENT",
+        "nc4_files": 40,
+        "size_bytes": 1319955993
+      },
+      "gpm_half_hourly": {
+        "status": "PRESENT",
+        "hdf_files": 30,
+        "size_bytes": 237547057
+      }
+    },
+    "soil_moisture": {
+      "smap": {
+        "status": "PRESENT",
+        "data_files": 1,
+        "size_bytes": 690084584
+      }
+    },
+    "satellite": {
+      "sentinel1": {
+        "status": "PRESENT",
+        "products": 1
+      },
+      "sentinel2": {
+        "status": "PRESENT",
+        "products": 1
+      }
+    },
+    "boundaries": {
+      "status": "PRESENT",
+      "gpkg": true,
+      "gadm_geojson": true,
+      "approximate_geojson": true,
+      "osm_derived": true,
+      "states_covered": 8,
+      "size_bytes": 4221846
+    },
+    "infrastructure": {
+      "osm_ner": {
+        "status": "PRESENT",
+        "path": "C:\\Users\\tejasvi javagal\\Desktop\\New folder\\garud-drishti\\garud-drishti\\data\\raw\\north-eastern-zone.gpkg",
+        "size_bytes": 630083584,
+        "source": "Geofabrik 2026-09-10",
+        "note": "GeoPackage at data/raw/north-eastern-zone.gpkg"
+      }
+    },
+    "geology": {
+      "status": "PROXY_ONLY",
+      "v2_download_status": "RASTER_PROXY",
+      "files": {
+        "soilgrids_proxy": {
+          "path": "C:\\Users\\tejasvi javagal\\Desktop\\New folder\\garud-drishti\\garud-drishti\\data\\raw\\geology\\soilgrids_wrb_ner.tif",
+          "size": 4080197
+        }
+      },
+      "size_bytes": 8618333,
+      "notes": "SoilGrids WRB soil class = geology proxy. GLIM = authoritative global lithology. GSI Bhukosh = authoritative Indian geology (requires registration)."
+    },
+    "geomorphology": {
+      "status": "DEM_DERIVED_PROXY",
+      "slope_tif": true,
+      "aspect_tif": true,
+      "curvature_tif": true,
+      "elevation_tif": true,
+      "size_bytes": 758787800,
+      "notes": "Terrain features derived from SRTM DEM. Bhuvan/GSI dedicated geomorphology layer requires registration."
+    },
+    "lulc": {
+      "status": "PRESENT",
+      "esa_worldcover_tiles": 12,
+      "esa_resolution": "10m",
+      "esa_year": "2021",
+      "bhuvan_files": 21,
+      "size_bytes": 998385239,
+      "notes": "ESA WorldCover 10m 2021 tiles present covering NER. Bhuvan LULC requires portal request."
+    }
+  },
+  "blocking_items": [
+    "Geology: GSI Bhukosh registration required for authoritative Indian geology data"
+  ],
+  "overall_readiness": "PARTIAL - Core static datasets present. GPM/SMAP/Sentinel actual data require NASA Earthdata + Copernicus credentials.",
+  "next_steps": [
+    "1. Register at urs.earthdata.nasa.gov \u2192 set EARTHDATA_USER + EARTHDATA_PASSWORD \u2192 run GPM/SMAP downloaders",
+    "2. Register at dataspace.copernicus.eu \u2192 download Sentinel-1 GRD + Sentinel-2 L2A scenes",
+    "3. Register at bhukosh.gsi.gov.in \u2192 download authoritative Indian geology vector data",
+    "4. Proceed to ml/preprocessing/ \u2192 derive feature matrices from existing datasets",
+    "5. Train Model 1 (XGBoost susceptibility) using GSI inventory + SRTM terrain + ESA WorldCover"
+  ]
+}

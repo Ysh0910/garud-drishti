@@ -1,0 +1,35 @@
+{
+  "pipeline_name": "Sentinel-2 Derived LULC for NER",
+  "status": "PIPELINE_DOCUMENTED",
+  "note": "This pipeline derives LULC from Sentinel-2 L2A imagery. It is the practical fallback when Bhuvan LULC is unavailable. Sentinel-2 LULC is labelled 'model-derived' in all outputs.",
+  "inputs": [
+    "Sentinel-2 L2A products (see data/raw/sentinel2/)",
+    "NER boundary (data/raw/boundaries/)",
+    "Cloud mask (Sentinel-2 SCL band)"
+  ],
+  "steps": [
+    "1. Load Sentinel-2 L2A product",
+    "2. Apply Scene Classification Layer (SCL) cloud mask",
+    "3. Create monthly/seasonal cloud-free composite",
+    "4. Extract spectral bands: B02(Blue), B03(Green), B04(Red), B08(NIR), B11(SWIR), B12(SWIR2)",
+    "5. Compute indices: NDVI, NDWI, NDBI, EVI, BSI",
+    "6. Apply supervised classification (Random Forest) using training samples",
+    "7. Map to land cover classes: Forest, Shrub, Grassland, Cropland, Built-up, Water, Bare, Snow",
+    "8. Reproject to EPSG:4326",
+    "9. Save as GeoTIFF under data/raw/lulc/sentinel2_derived/"
+  ],
+  "output_path": "data/raw/lulc/sentinel2_derived/lulc_ner_s2derived.tif",
+  "classes": {
+    "1": "Forest",
+    "2": "Shrub/Scrub",
+    "3": "Grassland",
+    "4": "Cropland",
+    "5": "Built-up/Urban",
+    "6": "Water",
+    "7": "Bare/Rock",
+    "8": "Snow/Ice",
+    "0": "No data/Cloud"
+  },
+  "disclaimer": "Model-derived classification \u2014 not authoritative reference LULC",
+  "requires": "Sentinel-2 data download (see scripts/step9_sentinel_catalog.py)"
+}

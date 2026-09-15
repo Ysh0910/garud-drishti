@@ -1,0 +1,45 @@
+{
+  "generated_at": "2026-09-15T11:30:58.701351+00:00",
+  "attempts": [
+    {
+      "source": "GLIM Zenodo",
+      "url": "https://zenodo.org/record/3653428/files/GLIM_v1.zip",
+      "status": "HTTP_404"
+    },
+    {
+      "source": "GLIM Zenodo",
+      "url": "https://zenodo.org/record/3653428/files/lithology_glim.zip",
+      "status": "HTTP_404"
+    },
+    {
+      "source": "GLIM Zenodo",
+      "url": "https://www.geo.uni-hamburg.de/geologie/forschung/geochemie/downloads/glim.zip",
+      "status": "HTTP_404"
+    },
+    {
+      "source": "SoilGrids WCS",
+      "status": "DOWNLOADED",
+      "size_bytes": 4080197
+    },
+    {
+      "source": "SoilGrids REST",
+      "status": "DOWNLOADED",
+      "size_bytes": 231514
+    },
+    {
+      "source": "SoilGrids REST",
+      "status": "HTTP_200"
+    },
+    {
+      "source": "OneGeology CGMW WMS",
+      "status": "ERROR: HTTPConnectionPool(host='mapsone.brgm.fr', port=80): Max retries exceeded with u"
+    }
+  ],
+  "status": "PARTIAL",
+  "notes": [
+    "GLIM (Global Lithological Map) - Hartmann & Moosdorf 2012 - ideal for geology features.",
+    "SoilGrids WRB soil classification is a reasonable proxy for lithology/geology.",
+    "GSI Bhukosh (https://bhukosh.gsi.gov.in/) is the authoritative Indian geology source - requires registration.",
+    "For ML training, WRB soil class / parent material can serve as geology feature until GSI data is obtained."
+  ]
+}

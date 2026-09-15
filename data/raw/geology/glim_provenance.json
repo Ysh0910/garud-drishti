@@ -1,0 +1,14 @@
+{
+  "dataset": "GLIM Global Lithological Map",
+  "authors": "Hartmann & Moosdorf 2012",
+  "doi": "10.1029/2012GC004370",
+  "manual_download": "https://www.geo.uni-hamburg.de/geologie/forschung/geochemie/litholmod.html",
+  "zenodo": "https://zenodo.org/record/3897899",
+  "status": "REQUIRES_MANUAL_DOWNLOAD",
+  "interim": "Use SoilGrids WRB soil classification at data/raw/geology/soilgrids_wrb_ner.tif as geology proxy",
+  "columns_of_interest": [
+    "xx",
+    "gg"
+  ],
+  "note": "GLIM provides 16 lithological classes useful as ML features for landslide susceptibility"
+}

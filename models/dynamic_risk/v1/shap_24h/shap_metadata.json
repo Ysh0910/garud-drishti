@@ -1,0 +1,11 @@
+{
+  "num_samples_explained": 600,
+  "top_features": [
+    "rainfall_72h_mm",
+    "rainfall_24h_mm",
+    "base_susceptibility",
+    "rainfall_7d_mm",
+    "soil_moisture"
+  ],
+  "summary_plot": "C:\\Users\\tejasvi javagal\\Desktop\\New folder\\garud-drishti\\garud-drishti\\models\\dynamic_risk\\v1\\shap_24h\\shap_summary.png"
+}

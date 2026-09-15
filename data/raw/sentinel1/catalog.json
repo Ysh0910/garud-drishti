@@ -1,0 +1,16 @@
+{
+  "collection": "SENTINEL-1",
+  "product_type": "GRD",
+  "region": "North Eastern Region (NER), India",
+  "updated_at": "2026-09-15T12:38:32.800532+00:00",
+  "status": "PRESENT",
+  "product_count": 1,
+  "products": [
+    {
+      "filename": "S1A_IW_GRDH_1SDV_20240704T120507_20240704T120532_054611_06A5C6_C2CE_COG.SAFE.zip",
+      "path": "data\\raw\\sentinel1\\S1A_IW_GRDH_1SDV_20240704T120507_20240704T120532_054611_06A5C6_C2CE_COG.SAFE.zip",
+      "size_bytes": 1247115288,
+      "size_mb": 1189.34
+    }
+  ]
+}

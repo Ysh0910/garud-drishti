@@ -38,52 +38,43 @@ The system is a decision-support and early-warning platform — not a determinis
 
 ## System Architecture
 
-```
-Terrain + Historical Landslides
-Rainfall / Environmental Observations
-                │
-                ▼
-       [ Data Ingestion ]       ◄── IMD / GPM / SMAP / GSI / SRTM
-                │
-                ▼
-       [ Feature Pipeline ]
-                │
-                ▼
-   ┌────────────┴────────────┐
-   │                         │
-[ Model 1            [ Model 2
-  Susceptibility ]     Dynamic Risk ]
-   │                         │
-   └────────────┬────────────┘
-                │
-                ▼
-       [ Spatial Risk Grid ]
-         (PostGIS cells)
-                │
-                ▼
-         [ Backend API ]
-          (FastAPI)
-         /            \
-        /              \
-[ Authority Web    [ Citizen Mobile
-  Dashboard ]        App ]
-  (Debarshi)         (Taarun)
-        ▲                │
-        │                │ Citizen Reports
-        │                ▼
-        └──── [ Evidence Review ] ◄── Authority
-                         │
-                         ▼
-              [ Exposure Analysis ]
-                         │
-                         ▼
-              [ Response Priority ]
-                         │
-                         ▼
-              [ Alert Workflow ]
-                         │
-                         ▼
-              [ Simulated Notification ]
+```text
+               ┌────────────────────────────────────────────────────────┐
+               │                 EXTERNAL DATA SOURCES                  │
+               │ GSI Inventory | IMD Rainfall | NASA GPM | SMAP | DEM   │
+               └───────────────────────────┬────────────────────────────┘
+                                           │
+                                           ▼
+                                ┌─────────────────────┐
+                                │ Ingestion Pipeline  │
+                                └──────────┬──────────┘
+                                           │
+                                           ▼
+                                ┌─────────────────────┐
+                                │ Feature Store &     │
+                                │ PostGIS Spatial DB  │
+                                └──────────┬──────────┘
+                                           │
+                       ┌───────────────────┴───────────────────┐
+                       ▼                                       ▼
+            ┌─────────────────────┐                 ┌─────────────────────┐
+            │ XGBoost Suscepti-   │                 │ Dynamic Risk Engine │
+            │ bility Model (M1)   │                 │ XGBoost Model (M2)  │
+            └──────────┬──────────┘                 └──────────┬──────────┘
+                       │                                       │
+                       └───────────────────┬───────────────────┘
+                                           │
+                                           ▼
+                                ┌─────────────────────┐
+                                │ FastAPI REST Server │
+                                └──────────┬──────────┘
+                                           │
+       ┌───────────────────────────────────┼───────────────────────────────────┐
+       ▼                                   ▼                                   ▼
+┌──────────────┐                 ┌──────────────────┐               ┌────────────────────┐
+│ Authority    │                 │ Citizen Mobile   │               │ Alert Engine       │
+│ Web Dashboard│                 │ App (React Native│               │ (SMS / FCM Push)   │
+└──────────────┘                 └──────────────────┘               └────────────────────┘
 ```
 
 ---

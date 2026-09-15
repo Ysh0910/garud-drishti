@@ -1,0 +1,38 @@
+{
+  "inspection_time": "2026-09-15T10:55:56.643995Z",
+  "manifests": {
+    "daily": {
+      "path": "data\\raw\\subset_GPM_3IMERGDF_07_20260911_085145_.txt",
+      "exists": true,
+      "total_lines": 10137,
+      "total_urls": 10137,
+      "doc_urls": 2,
+      "data_urls": 10135,
+      "status": "MANIFEST_ONLY",
+      "first_data_url": "https://data.gesdisc.earthdata.nasa.gov/data/GPM_L3/GPM_3IMERGDF.07/1998/01/3B-DAY.MS.MRG.3IMERG.19980101-S000000-E235959.V07B.nc4",
+      "last_data_url": "https://data.gesdisc.earthdata.nasa.gov/data/GPM_L3/GPM_3IMERGDF.07/2025/09/3B-DAY.MS.MRG.3IMERG.20250930-S000000-E235959.V07B.nc4",
+      "date_range_from_urls": {
+        "earliest": "19980101",
+        "latest": "20250930"
+      },
+      "downloaded_files": 0
+    },
+    "half_hourly": {
+      "path": "data\\raw\\subset_GPM_3IMERGHH_07_20260911_094301_.txt",
+      "exists": true,
+      "total_lines": 486482,
+      "total_urls": 486482,
+      "doc_urls": 2,
+      "data_urls": 486480,
+      "status": "MANIFEST_ONLY",
+      "first_data_url": "https://data.gesdisc.earthdata.nasa.gov/data/GPM_L3/GPM_3IMERGHH.07/1998/001/3B-HHR.MS.MRG.3IMERG.19980101-S000000-E002959.0000.V07B.HDF5",
+      "last_data_url": "https://data.gesdisc.earthdata.nasa.gov/data/GPM_L3/GPM_3IMERGHH.07/2025/273/3B-HHR.MS.MRG.3IMERG.20250930-S233000-E235959.1410.V07B.HDF5",
+      "date_range_from_urls": {
+        "earliest": "19980101",
+        "latest": "20250930"
+      },
+      "downloaded_files": 0
+    }
+  },
+  "notes": []
+}

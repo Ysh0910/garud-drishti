@@ -1,0 +1,101 @@
+{
+  "source_file": "data\\raw\\RF25_ind2025_rfp25.nc",
+  "inspection_time": "2026-09-15T10:55:56.020114Z",
+  "status": "READABLE",
+  "dimensions": {
+    "LONGITUDE": 135,
+    "LATITUDE": 129,
+    "TIME": 365
+  },
+  "variables": [
+    {
+      "name": "LONGITUDE",
+      "dimensions": [
+        "LONGITUDE"
+      ],
+      "shape": [
+        135
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "units": "degrees_east",
+        "point_spacing": "even",
+        "axis": "X",
+        "modulo": 360.0,
+        "standard_name": "longitude"
+      }
+    },
+    {
+      "name": "LATITUDE",
+      "dimensions": [
+        "LATITUDE"
+      ],
+      "shape": [
+        129
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "units": "degrees_north",
+        "point_spacing": "even",
+        "axis": "Y",
+        "standard_name": "latitude"
+      }
+    },
+    {
+      "name": "TIME",
+      "dimensions": [
+        "TIME"
+      ],
+      "shape": [
+        365
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "units": "days since 1900-12-31 00:00:00",
+        "axis": "T",
+        "time_origin": "31-DEC-1900",
+        "standard_name": "time"
+      }
+    },
+    {
+      "name": "RAINFALL",
+      "dimensions": [
+        "TIME",
+        "LATITUDE",
+        "LONGITUDE"
+      ],
+      "shape": [
+        365,
+        129,
+        135
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "missing_value": -999.0,
+        "_FillValue": -999.0,
+        "long_name": "Rainfall",
+        "units": "mm",
+        "history": "From ind2025_rfp25.grd"
+      }
+    }
+  ],
+  "time_range": {},
+  "lat_range": {
+    "min": 6.5,
+    "max": 38.5,
+    "n": 129
+  },
+  "lon_range": {
+    "min": 66.5,
+    "max": 100.0,
+    "n": 135
+  },
+  "units": {},
+  "crs": "Not explicitly stated \u2014 likely WGS84 lat/lon",
+  "missing_value": null,
+  "notes": [],
+  "global_attributes": {
+    "history": "FERRET V6.82    9-Apr-26",
+    "Conventions": "CF-1.0"
+  }
+}

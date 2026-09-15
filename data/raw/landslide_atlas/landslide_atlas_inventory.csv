@@ -1,0 +1,186 @@
+landslide_id,state,district,location,latitude,longitude,date,event_id,landslide_type,source_page,source_document,confidence,notes
+ATLAS_0001,Jammu and Kashmir,,,,,434 / 2011,1 / 2015,,30,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 30
+ATLAS_0002,Ladakh,,,,,-,-,,30,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 30
+ATLAS_0003,Himachal Pradesh,,,,,413 / 1998,"1/ 2017
+51/2013
+2/2021",,30,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 30
+ATLAS_0004,Uttarakhand,,,,,1419 / 1998,"32/2003
+307/2010
+473 / 2012
+6610 / 2013
+1 / 2017
+329/2021
+1/2022",,30,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 30
+ATLAS_0005,Sikkim,,,,,-,"1408 / 2011
+8 / 2012
+1/ 2016",,30,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 30
+ATLAS_0006,West Bengal,,,,,-,66 / 2011,,30,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 30
+ATLAS_0007,Arunachal Pradesh,,,,,-,"75 / 2016
+1/2021",,30,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 30
+ATLAS_0008,Nagaland,,,,,-,7/2017,,30,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 30
+ATLAS_0009,Manipur,,,,,-,"556/2017
+1/2022",,30,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 30
+ATLAS_0010,Mizoram,,,,,-,8926/2017,,30,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 30
+ATLAS_0011,Tripura,,,,,-,-,,30,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 30
+ATLAS_0012,Assam,,,,,-,"533/2017
+5091/2022",,30,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 30
+ATLAS_0013,Meghalaya,,,,,-,-,,30,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 30
+ATLAS_0014,Maharashtra,,,,,-,5012/2021,,30,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 30
+ATLAS_0015,Goa,,,,,-,-,,30,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 30
+ATLAS_0016,Karnataka,,,,,-,993/2018,,30,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 30
+ATLAS_0017,Kerala,,,,,-,"5191/2018
+756/2019
+09/2020
+29/2021",,30,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 30
+ATLAS_0018,Tamil Nadu,,,,,-,603/2018,,30,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 30
+ATLAS_0019,Haryana,,,,,-,-,,30,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 30
+ATLAS_0020,,,,,,"2,266","37,074",,30,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 30
+ATLAS_0021,Uttaranchal,1,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0022,Uttaranchal,2,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0023,Kerala,3,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0024,J&K,4,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0025,Kerala,5,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0026,J&K,6,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0027,Kerala,7,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0028,Sikkim,8,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0029,Sikkim,9,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0030,Kerala,10,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0031,Manipur,11,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0032,Karnataka,12,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0033,Kerala,13,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0034,J&K,14,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0035,Kerala,15,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0036,Himachal Pradesh,16,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0037,J&K,17,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0038,Kerala,18,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0039,Uttaranchal,19,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0040,Sikkim,20,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0041,Uttaranchal,21,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0042,Assam,22,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0043,Uttaranchal,23,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0044,Kerala,24,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0045,Himachal Pradesh,25,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0046,Kerala,26,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0047,J&K,27,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0048,Kerala,28,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0049,Uttaranchal,29,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0050,Himachal Pradesh,30,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0051,Meghalaya,31,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0052,Himachal Pradesh,32,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0053,Kerala,33,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0054,Meghalaya,34,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0055,West Bengal,35,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0056,Tamil Nadu,36,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0057,Himachal Pradesh,37,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0058,Mizoram,38,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0059,Mizoram,39,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0060,Assam,40,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0061,Tamil Nadu,41,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0062,J&K,42,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0063,Tamil Nadu,43,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0064,Kerala,44,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0065,Mizoram,45,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0066,Himachal Pradesh,46,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0067,Assam,47,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0068,Kerala,48,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0069,Assam,49,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0070,Uttaranchal,50,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0071,Sikkim,51,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0072,J&K,52,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0073,Karnataka,53,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0074,Karnataka,54,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0075,Assam,55,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0076,Arunachal Pradesh,56,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0077,Himachal Pradesh,57,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0078,J&K,58,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0079,Tamil Nadu,59,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0080,Mizoram,60,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0081,Himachal Pradesh,61,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0082,Himachal Pradesh,62,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0083,Manipur,63,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0084,Meghalaya,64,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0085,Uttaranchal,65,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0086,Meghalaya,66,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0087,Meghalaya,67,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0088,Uttaranchal,68,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0089,Meghalaya,69,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0090,Himachal Pradesh,70,,,,,,,71,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 71
+ATLAS_0091,Mizoram,71,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0092,Tamil Nadu,72,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0093,Arunachal Pradesh,73,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0094,Arunachal Pradesh,74,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0095,Tripura,75,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0096,Tripura,76,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0097,Karnataka,77,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0098,Arunachal Pradesh,78,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0099,J&K,79,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0100,Maharashtra,80,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0101,Uttaranchal,81,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0102,Mizoram,82,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0103,Assam,83,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0104,Arunachal Pradesh,84,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0105,Tamil Nadu,85,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0106,Uttaranchal,86,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0107,Arunachal Pradesh,87,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0108,Himachal Pradesh,88,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0109,Nagaland,89,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0110,Meghalaya,90,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0111,Arunachal Pradesh,91,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0112,Karnataka,92,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0113,Nagaland,93,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0114,Nagaland,94,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0115,Assam,95,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0116,Arunachal Pradesh,96,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0117,Manipur,97,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0118,J&k,98,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0119,Assam,99,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0120,Manipur,100,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0121,Arunachal Pradesh,101,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0122,Mizoram,102,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0123,Karnataka,103,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0124,Arunachal Pradesh,104,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0125,Nagaland,105,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0126,Nagaland,106,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0127,Maharashtra,107,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0128,Arunachal Pradesh,108,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0129,Maharashtra,109,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0130,Tripura,110,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0131,Goa,111,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0132,Manipur,112,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0133,Arunachal Pradesh,113,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0134,Maharashtra,114,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0135,Arunachal Pradesh,115,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0136,Karnatka,116,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0137,Assam,117,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0138,Mizoram,118,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0139,J&K,119,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0140,Arunachal Pradesh,120,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0141,Goa,121,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0142,Manipur,122,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0143,J&K,123,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0144,Karnataka,124,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0145,Arunachal Pradesh,125,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0146,Himachal Pradesh,126,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0147,Assam,127,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0148,Maharashtra,128,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0149,Maharashtra,129,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0150,Tripura,130,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0151,Maharashtra,131,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0152,J&k,132,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0153,Maharashtra,133,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0154,Maharashtra,134,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0155,Arunachal Pradesh,135,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0156,J&K,136,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0157,Assam,137,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0158,Kerala,138,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0159,Maharashtra,139,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0160,Maharashtra,140,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0161,Manipur,141,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0162,Manipur,142,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0163,Manipur,143,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0164,Nagaland,144,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0165,Nagaland,145,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0166,Uttaranchal,146,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0167,Uttaranchal,147,,,,,,,72,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 72
+ATLAS_0168,,,"Model input: Variable material thickness
+of Release area",,,,,,77,LandslideAtlas_2023.pdf,TABLE_EXTRACTED_NO_COORDS,Table row from page 77

@@ -1,0 +1,9 @@
+{
+  "generated_at": "2026-09-15T11:15:49.528870Z",
+  "status": "CATALOG_ONLY",
+  "catalog_items": 20,
+  "actual_files_downloaded": 0,
+  "notes": [
+    "Catalog metadata retrieved. Actual product download requires Copernicus Data Space credentials (COPERNICUS_USER, COPERNICUS_PASSWORD env vars). Set credentials and re-run with download_sentinel.py to fetch actual data."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "alternatives": [
+    {
+      "name": "ESRI 2020 Land Cover (10m)",
+      "provider": "Esri",
+      "url": "https://www.arcgis.com/home/item.html?id=d3da5dd386d140cf93fc9ecbf8da5e31",
+      "resolution": "10m",
+      "year": "2020",
+      "classes": 9,
+      "license": "Creative Commons Attribution 4.0",
+      "access": "Free via ArcGIS Online or Planetary Computer",
+      "suitability": "HIGH - Good resolution, annual updates, global coverage"
+    },
+    {
+      "name": "Dynamic World (Google / WRI)",
+      "provider": "Google / World Resources Institute",
+      "url": "https://dynamicworld.app/",
+      "resolution": "10m",
+      "temporal": "Near-real-time",
+      "classes": 9,
+      "license": "CC-BY-4.0",
+      "access": "Google Earth Engine API",
+      "suitability": "HIGH - Near-real-time, good NER coverage"
+    },
+    {
+      "name": "Copernicus Global Land Cover",
+      "provider": "Copernicus",
+      "url": "https://land.copernicus.eu/global/products/lc",
+      "resolution": "100m",
+      "year": "2019",
+      "classes": 23,
+      "license": "Free for non-commercial use",
+      "access": "Direct download via Copernicus Land Service",
+      "suitability": "MEDIUM - Coarser resolution but reliable"
+    },
+    {
+      "name": "GlobCover (ESA)",
+      "provider": "ESA",
+      "resolution": "300m",
+      "year": "2009",
+      "suitability": "LOW - Outdated, coarse resolution"
+    },
+    {
+      "name": "Sentinel-2 derived (project pipeline)",
+      "provider": "Self-derived",
+      "resolution": "10m",
+      "temporal": "Monthly composites available",
+      "suitability": "HIGH - Matches project satellite data, customizable classes",
+      "note": "Derived through Sentinel-2 processing pipeline (see Step 9)"
+    }
+  ]
+}

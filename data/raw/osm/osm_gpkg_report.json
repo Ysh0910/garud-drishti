@@ -1,0 +1,274 @@
+{
+  "source_file": "data\\raw\\north-eastern-zone.gpkg",
+  "inspection_time": "2026-09-15T10:55:59.120756Z",
+  "status": "READABLE",
+  "layers": [
+    {
+      "name": "gis_osm_places_free",
+      "geometry_type": "Point",
+      "crs": "GEOGCS[\"WGS 84 (CRS84)\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Longitude\",EAST],AXIS[\"Latitude\",NORTH],AUTHORITY[\"OGC\",\"CRS84\"]]",
+      "feature_count": 8611,
+      "properties": [
+        "osm_id",
+        "code",
+        "fclass",
+        "population",
+        "name"
+      ]
+    },
+    {
+      "name": "gis_osm_pois_free",
+      "geometry_type": "Point",
+      "crs": "GEOGCS[\"WGS 84 (CRS84)\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Longitude\",EAST],AXIS[\"Latitude\",NORTH],AUTHORITY[\"OGC\",\"CRS84\"]]",
+      "feature_count": 10411,
+      "properties": [
+        "osm_id",
+        "code",
+        "fclass",
+        "name"
+      ]
+    },
+    {
+      "name": "gis_osm_transport_free",
+      "geometry_type": "Point",
+      "crs": "GEOGCS[\"WGS 84 (CRS84)\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Longitude\",EAST],AXIS[\"Latitude\",NORTH],AUTHORITY[\"OGC\",\"CRS84\"]]",
+      "feature_count": 879,
+      "properties": [
+        "osm_id",
+        "code",
+        "fclass",
+        "name"
+      ]
+    },
+    {
+      "name": "gis_osm_traffic_free",
+      "geometry_type": "Point",
+      "crs": "GEOGCS[\"WGS 84 (CRS84)\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Longitude\",EAST],AXIS[\"Latitude\",NORTH],AUTHORITY[\"OGC\",\"CRS84\"]]",
+      "feature_count": 6081,
+      "properties": [
+        "osm_id",
+        "code",
+        "fclass",
+        "name",
+        "calming"
+      ]
+    },
+    {
+      "name": "gis_osm_natural_free",
+      "geometry_type": "Point",
+      "crs": "GEOGCS[\"WGS 84 (CRS84)\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Longitude\",EAST],AXIS[\"Latitude\",NORTH],AUTHORITY[\"OGC\",\"CRS84\"]]",
+      "feature_count": 1908,
+      "properties": [
+        "osm_id",
+        "code",
+        "fclass",
+        "name"
+      ]
+    },
+    {
+      "name": "gis_osm_pofw_free",
+      "geometry_type": "Point",
+      "crs": "GEOGCS[\"WGS 84 (CRS84)\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Longitude\",EAST],AXIS[\"Latitude\",NORTH],AUTHORITY[\"OGC\",\"CRS84\"]]",
+      "feature_count": 649,
+      "properties": [
+        "osm_id",
+        "code",
+        "fclass",
+        "name"
+      ]
+    },
+    {
+      "name": "gis_osm_roads_free",
+      "geometry_type": "LineString",
+      "crs": "GEOGCS[\"WGS 84 (CRS84)\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Longitude\",EAST],AXIS[\"Latitude\",NORTH],AUTHORITY[\"OGC\",\"CRS84\"]]",
+      "feature_count": 304224,
+      "properties": [
+        "osm_id",
+        "code",
+        "fclass",
+        "name",
+        "ref",
+        "oneway",
+        "maxspeed",
+        "layer",
+        "bridge",
+        "tunnel"
+      ]
+    },
+    {
+      "name": "gis_osm_waterways_free",
+      "geometry_type": "LineString",
+      "crs": "GEOGCS[\"WGS 84 (CRS84)\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Longitude\",EAST],AXIS[\"Latitude\",NORTH],AUTHORITY[\"OGC\",\"CRS84\"]]",
+      "feature_count": 13859,
+      "properties": [
+        "osm_id",
+        "code",
+        "fclass",
+        "width",
+        "name"
+      ]
+    },
+    {
+      "name": "gis_osm_railways_free",
+      "geometry_type": "LineString",
+      "crs": "GEOGCS[\"WGS 84 (CRS84)\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Longitude\",EAST],AXIS[\"Latitude\",NORTH],AUTHORITY[\"OGC\",\"CRS84\"]]",
+      "feature_count": 5038,
+      "properties": [
+        "osm_id",
+        "code",
+        "fclass",
+        "name",
+        "layer",
+        "bridge",
+        "tunnel"
+      ]
+    },
+    {
+      "name": "gis_osm_water_a_free",
+      "geometry_type": "MultiPolygon",
+      "crs": "GEOGCS[\"WGS 84 (CRS84)\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Longitude\",EAST],AXIS[\"Latitude\",NORTH],AUTHORITY[\"OGC\",\"CRS84\"]]",
+      "feature_count": 22690,
+      "properties": [
+        "osm_id",
+        "code",
+        "fclass",
+        "name"
+      ]
+    },
+    {
+      "name": "gis_osm_landuse_a_free",
+      "geometry_type": "MultiPolygon",
+      "crs": "GEOGCS[\"WGS 84 (CRS84)\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Longitude\",EAST],AXIS[\"Latitude\",NORTH],AUTHORITY[\"OGC\",\"CRS84\"]]",
+      "feature_count": 29796,
+      "properties": [
+        "osm_id",
+        "code",
+        "fclass",
+        "name"
+      ]
+    },
+    {
+      "name": "gis_osm_natural_a_free",
+      "geometry_type": "MultiPolygon",
+      "crs": "GEOGCS[\"WGS 84 (CRS84)\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Longitude\",EAST],AXIS[\"Latitude\",NORTH],AUTHORITY[\"OGC\",\"CRS84\"]]",
+      "feature_count": 693,
+      "properties": [
+        "osm_id",
+        "code",
+        "fclass",
+        "name"
+      ]
+    },
+    {
+      "name": "gis_osm_places_a_free",
+      "geometry_type": "MultiPolygon",
+      "crs": "GEOGCS[\"WGS 84 (CRS84)\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Longitude\",EAST],AXIS[\"Latitude\",NORTH],AUTHORITY[\"OGC\",\"CRS84\"]]",
+      "feature_count": 923,
+      "properties": [
+        "osm_id",
+        "code",
+        "fclass",
+        "population",
+        "name"
+      ]
+    },
+    {
+      "name": "gis_osm_pois_a_free",
+      "geometry_type": "MultiPolygon",
+      "crs": "GEOGCS[\"WGS 84 (CRS84)\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Longitude\",EAST],AXIS[\"Latitude\",NORTH],AUTHORITY[\"OGC\",\"CRS84\"]]",
+      "feature_count": 2809,
+      "properties": [
+        "osm_id",
+        "code",
+        "fclass",
+        "name"
+      ]
+    },
+    {
+      "name": "gis_osm_transport_a_free",
+      "geometry_type": "MultiPolygon",
+      "crs": "GEOGCS[\"WGS 84 (CRS84)\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Longitude\",EAST],AXIS[\"Latitude\",NORTH],AUTHORITY[\"OGC\",\"CRS84\"]]",
+      "feature_count": 487,
+      "properties": [
+        "osm_id",
+        "code",
+        "fclass",
+        "name"
+      ]
+    },
+    {
+      "name": "gis_osm_buildings_a_free",
+      "geometry_type": "MultiPolygon",
+      "crs": "GEOGCS[\"WGS 84 (CRS84)\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Longitude\",EAST],AXIS[\"Latitude\",NORTH],AUTHORITY[\"OGC\",\"CRS84\"]]",
+      "feature_count": 1896463,
+      "properties": [
+        "osm_id",
+        "code",
+        "fclass",
+        "name",
+        "type"
+      ]
+    },
+    {
+      "name": "gis_osm_protected_areas_a_free",
+      "geometry_type": "MultiPolygon",
+      "crs": "GEOGCS[\"WGS 84 (CRS84)\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Longitude\",EAST],AXIS[\"Latitude\",NORTH],AUTHORITY[\"OGC\",\"CRS84\"]]",
+      "feature_count": 139,
+      "properties": [
+        "osm_id",
+        "code",
+        "fclass"
+      ]
+    },
+    {
+      "name": "gis_osm_traffic_a_free",
+      "geometry_type": "MultiPolygon",
+      "crs": "GEOGCS[\"WGS 84 (CRS84)\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Longitude\",EAST],AXIS[\"Latitude\",NORTH],AUTHORITY[\"OGC\",\"CRS84\"]]",
+      "feature_count": 274,
+      "properties": [
+        "osm_id",
+        "code",
+        "fclass",
+        "name",
+        "calming"
+      ]
+    },
+    {
+      "name": "gis_osm_pofw_a_free",
+      "geometry_type": "MultiPolygon",
+      "crs": "GEOGCS[\"WGS 84 (CRS84)\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Longitude\",EAST],AXIS[\"Latitude\",NORTH],AUTHORITY[\"OGC\",\"CRS84\"]]",
+      "feature_count": 560,
+      "properties": [
+        "osm_id",
+        "code",
+        "fclass",
+        "name"
+      ]
+    },
+    {
+      "name": "gis_osm_adminareas_a_free",
+      "geometry_type": "MultiPolygon",
+      "crs": "GEOGCS[\"WGS 84 (CRS84)\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Longitude\",EAST],AXIS[\"Latitude\",NORTH],AUTHORITY[\"OGC\",\"CRS84\"]]",
+      "feature_count": 844,
+      "properties": [
+        "osm_id",
+        "code",
+        "fclass",
+        "name"
+      ]
+    }
+  ],
+  "notes": [],
+  "layer_count": 20,
+  "key_layers_found": [
+    "gis_osm_places_free",
+    "gis_osm_pois_free",
+    "gis_osm_roads_free",
+    "gis_osm_waterways_free",
+    "gis_osm_water_a_free",
+    "gis_osm_landuse_a_free",
+    "gis_osm_places_a_free",
+    "gis_osm_pois_a_free",
+    "gis_osm_buildings_a_free"
+  ]
+}
