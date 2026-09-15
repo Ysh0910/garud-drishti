@@ -1,0 +1,560 @@
+{
+  "generated_at": "2026-09-15T11:10:05.521916+00:00",
+  "status": "NER_TILES_PRESENT",
+  "source": "Viewfinder Panoramas DEM3 (3 arc-second, SRTM-based)",
+  "source_url": "http://viewfinderpanoramas.org/dem3/",
+  "original_manifest": "data/raw/srtm_v3_6aa3cfb7243c85a5.zip (USGS EarthExplorer manifest CSV - not actual DEM)",
+  "crs": "WGS84 EPSG:4326 (assumed - SRTM standard)",
+  "resolution": "3 arc-second (~90m)",
+  "format": "HGT binary",
+  "ner_tiles_count": 88,
+  "ner_lat_range": {
+    "min": 24,
+    "max": 27
+  },
+  "ner_lon_range": {
+    "min": 88,
+    "max": 98
+  },
+  "ner_tiles": [
+    {
+      "file": "N24E088.hgt",
+      "lat": 24,
+      "lon": 88,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N24E089.hgt",
+      "lat": 24,
+      "lon": 89,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N25E088.hgt",
+      "lat": 25,
+      "lon": 88,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N25E089.hgt",
+      "lat": 25,
+      "lon": 89,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N26E088.hgt",
+      "lat": 26,
+      "lon": 88,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N26E089.hgt",
+      "lat": 26,
+      "lon": 89,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N27E088.hgt",
+      "lat": 27,
+      "lon": 88,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N27E089.hgt",
+      "lat": 27,
+      "lon": 89,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N24E090.hgt",
+      "lat": 24,
+      "lon": 90,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N24E091.hgt",
+      "lat": 24,
+      "lon": 91,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N24E092.hgt",
+      "lat": 24,
+      "lon": 92,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N24E093.hgt",
+      "lat": 24,
+      "lon": 93,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N24E094.hgt",
+      "lat": 24,
+      "lon": 94,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N24E095.hgt",
+      "lat": 24,
+      "lon": 95,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N25E090.hgt",
+      "lat": 25,
+      "lon": 90,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N25E091.hgt",
+      "lat": 25,
+      "lon": 91,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N25E092.hgt",
+      "lat": 25,
+      "lon": 92,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N25E093.hgt",
+      "lat": 25,
+      "lon": 93,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N25E094.hgt",
+      "lat": 25,
+      "lon": 94,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N25E095.hgt",
+      "lat": 25,
+      "lon": 95,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N26E090.hgt",
+      "lat": 26,
+      "lon": 90,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N26E091.hgt",
+      "lat": 26,
+      "lon": 91,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N26E092.hgt",
+      "lat": 26,
+      "lon": 92,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N26E093.hgt",
+      "lat": 26,
+      "lon": 93,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N26E094.hgt",
+      "lat": 26,
+      "lon": 94,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N26E095.hgt",
+      "lat": 26,
+      "lon": 95,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N27E090.hgt",
+      "lat": 27,
+      "lon": 90,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N27E091.hgt",
+      "lat": 27,
+      "lon": 91,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N27E092.hgt",
+      "lat": 27,
+      "lon": 92,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N27E093.hgt",
+      "lat": 27,
+      "lon": 93,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N27E094.hgt",
+      "lat": 27,
+      "lon": 94,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N27E095.hgt",
+      "lat": 27,
+      "lon": 95,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N24E096.hgt",
+      "lat": 24,
+      "lon": 96,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N24E097.hgt",
+      "lat": 24,
+      "lon": 97,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N24E098.hgt",
+      "lat": 24,
+      "lon": 98,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N25E096.hgt",
+      "lat": 25,
+      "lon": 96,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N25E097.hgt",
+      "lat": 25,
+      "lon": 97,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N25E098.hgt",
+      "lat": 25,
+      "lon": 98,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N26E096.hgt",
+      "lat": 26,
+      "lon": 96,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N26E097.hgt",
+      "lat": 26,
+      "lon": 97,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N26E098.hgt",
+      "lat": 26,
+      "lon": 98,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N27E096.hgt",
+      "lat": 27,
+      "lon": 96,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N27E097.hgt",
+      "lat": 27,
+      "lon": 97,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N27E098.hgt",
+      "lat": 27,
+      "lon": 98,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N24E088.hgt",
+      "lat": 24,
+      "lon": 88,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N24E089.hgt",
+      "lat": 24,
+      "lon": 89,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N25E088.hgt",
+      "lat": 25,
+      "lon": 88,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N25E089.hgt",
+      "lat": 25,
+      "lon": 89,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N26E088.hgt",
+      "lat": 26,
+      "lon": 88,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N26E089.hgt",
+      "lat": 26,
+      "lon": 89,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N27E088.hgt",
+      "lat": 27,
+      "lon": 88,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N27E089.hgt",
+      "lat": 27,
+      "lon": 89,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N24E090.hgt",
+      "lat": 24,
+      "lon": 90,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N24E091.hgt",
+      "lat": 24,
+      "lon": 91,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N24E092.hgt",
+      "lat": 24,
+      "lon": 92,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N24E093.hgt",
+      "lat": 24,
+      "lon": 93,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N24E094.hgt",
+      "lat": 24,
+      "lon": 94,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N24E095.hgt",
+      "lat": 24,
+      "lon": 95,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N25E090.hgt",
+      "lat": 25,
+      "lon": 90,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N25E091.hgt",
+      "lat": 25,
+      "lon": 91,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N25E092.hgt",
+      "lat": 25,
+      "lon": 92,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N25E093.hgt",
+      "lat": 25,
+      "lon": 93,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N25E094.hgt",
+      "lat": 25,
+      "lon": 94,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N25E095.hgt",
+      "lat": 25,
+      "lon": 95,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N26E090.hgt",
+      "lat": 26,
+      "lon": 90,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N26E091.hgt",
+      "lat": 26,
+      "lon": 91,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N26E092.hgt",
+      "lat": 26,
+      "lon": 92,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N26E093.hgt",
+      "lat": 26,
+      "lon": 93,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N26E094.hgt",
+      "lat": 26,
+      "lon": 94,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N26E095.hgt",
+      "lat": 26,
+      "lon": 95,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N27E090.hgt",
+      "lat": 27,
+      "lon": 90,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N27E091.hgt",
+      "lat": 27,
+      "lon": 91,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N27E092.hgt",
+      "lat": 27,
+      "lon": 92,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N27E093.hgt",
+      "lat": 27,
+      "lon": 93,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N27E094.hgt",
+      "lat": 27,
+      "lon": 94,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N27E095.hgt",
+      "lat": 27,
+      "lon": 95,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N24E096.hgt",
+      "lat": 24,
+      "lon": 96,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N24E097.hgt",
+      "lat": 24,
+      "lon": 97,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N24E098.hgt",
+      "lat": 24,
+      "lon": 98,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N25E096.hgt",
+      "lat": 25,
+      "lon": 96,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N25E097.hgt",
+      "lat": 25,
+      "lon": 97,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N25E098.hgt",
+      "lat": 25,
+      "lon": 98,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N26E096.hgt",
+      "lat": 26,
+      "lon": 96,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N26E097.hgt",
+      "lat": 26,
+      "lon": 97,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N26E098.hgt",
+      "lat": 26,
+      "lon": 98,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N27E096.hgt",
+      "lat": 27,
+      "lon": 96,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N27E097.hgt",
+      "lat": 27,
+      "lon": 97,
+      "size_bytes": 2884802
+    },
+    {
+      "file": "N27E098.hgt",
+      "lat": 27,
+      "lon": 98,
+      "size_bytes": 2884802
+    }
+  ],
+  "packages_downloaded": [
+    "G45 (lon84-90,lat20-30)",
+    "G46 (lon90-96,lat20-30)",
+    "G47 (lon96-102,lat20-30)"
+  ],
+  "notes": [
+    "USGS SRTM v3 manifest CSV was present but contains tile metadata only, not actual DEM data.",
+    "Actual DEM HGT files downloaded from Viewfinder Panoramas (SRTM-derived 90m DEM).",
+    "44 NER 1-degree tiles available covering lat20-30N, lon88-98E.",
+    "Feature derivation (slope, aspect, curvature) to be performed in ml/preprocessing/ using rasterio/GDAL."
+  ]
+}

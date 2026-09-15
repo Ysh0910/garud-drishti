@@ -1,0 +1,221 @@
+{
+  "generated_at": "2026-09-15T11:01:22.346033Z",
+  "gsi_records": 3102,
+  "atlas_records": 168,
+  "total_merged": 3270,
+  "records_with_coordinates": 2041,
+  "records_without_coordinates": 1229,
+  "georeferenced_in_geojson": 2040,
+  "probable_duplicate_pairs": 545,
+  "probable_duplicate_records": 641,
+  "deduplication_rule": "Probable duplicates: same source pair within 1.0km and same year-month, OR within 0.1km regardless of date. Records are FLAGGED, not removed.",
+  "state_normalisation": "Applied canonical state name mapping. Original values preserved in notes if changed.",
+  "duplicates": [
+    {
+      "index_a": 43,
+      "id_a": "NER_00044",
+      "index_b": 770,
+      "id_b": "NER_00771",
+      "distance_km": 0.0,
+      "date_a": "",
+      "date_b": "",
+      "reason": "dist=0.000km, dates=/"
+    },
+    {
+      "index_a": 48,
+      "id_a": "NER_00049",
+      "index_b": 49,
+      "id_b": "NER_00050",
+      "distance_km": 0.0,
+      "date_a": "",
+      "date_b": "",
+      "reason": "dist=0.000km, dates=/"
+    },
+    {
+      "index_a": 51,
+      "id_a": "NER_00052",
+      "index_b": 52,
+      "id_b": "NER_00053",
+      "distance_km": 0.0,
+      "date_a": "",
+      "date_b": "",
+      "reason": "dist=0.000km, dates=/"
+    },
+    {
+      "index_a": 55,
+      "id_a": "NER_00056",
+      "index_b": 56,
+      "id_b": "NER_00057",
+      "distance_km": 0.0,
+      "date_a": "",
+      "date_b": "",
+      "reason": "dist=0.000km, dates=/"
+    },
+    {
+      "index_a": 55,
+      "id_a": "NER_00056",
+      "index_b": 57,
+      "id_b": "NER_00058",
+      "distance_km": 0.0,
+      "date_a": "",
+      "date_b": "",
+      "reason": "dist=0.000km, dates=/"
+    },
+    {
+      "index_a": 56,
+      "id_a": "NER_00057",
+      "index_b": 57,
+      "id_b": "NER_00058",
+      "distance_km": 0.0,
+      "date_a": "",
+      "date_b": "",
+      "reason": "dist=0.000km, dates=/"
+    },
+    {
+      "index_a": 59,
+      "id_a": "NER_00060",
+      "index_b": 60,
+      "id_b": "NER_00061",
+      "distance_km": 0.0506,
+      "date_a": "",
+      "date_b": "",
+      "reason": "dist=0.051km, dates=/"
+    },
+    {
+      "index_a": 72,
+      "id_a": "NER_00073",
+      "index_b": 73,
+      "id_b": "NER_00074",
+      "distance_km": 0.0,
+      "date_a": "",
+      "date_b": "",
+      "reason": "dist=0.000km, dates=/"
+    },
+    {
+      "index_a": 72,
+      "id_a": "NER_00073",
+      "index_b": 74,
+      "id_b": "NER_00075",
+      "distance_km": 0.0,
+      "date_a": "",
+      "date_b": "",
+      "reason": "dist=0.000km, dates=/"
+    },
+    {
+      "index_a": 73,
+      "id_a": "NER_00074",
+      "index_b": 74,
+      "id_b": "NER_00075",
+      "distance_km": 0.0,
+      "date_a": "",
+      "date_b": "",
+      "reason": "dist=0.000km, dates=/"
+    },
+    {
+      "index_a": 77,
+      "id_a": "NER_00078",
+      "index_b": 78,
+      "id_b": "NER_00079",
+      "distance_km": 0.0684,
+      "date_a": "",
+      "date_b": "",
+      "reason": "dist=0.068km, dates=/"
+    },
+    {
+      "index_a": 79,
+      "id_a": "NER_00080",
+      "index_b": 80,
+      "id_b": "NER_00081",
+      "distance_km": 0.0,
+      "date_a": "",
+      "date_b": "",
+      "reason": "dist=0.000km, dates=/"
+    },
+    {
+      "index_a": 82,
+      "id_a": "NER_00083",
+      "index_b": 83,
+      "id_b": "NER_00084",
+      "distance_km": 0.0972,
+      "date_a": "",
+      "date_b": "",
+      "reason": "dist=0.097km, dates=/"
+    },
+    {
+      "index_a": 90,
+      "id_a": "NER_00091",
+      "index_b": 91,
+      "id_b": "NER_00092",
+      "distance_km": 0.0581,
+      "date_a": "",
+      "date_b": "",
+      "reason": "dist=0.058km, dates=/"
+    },
+    {
+      "index_a": 94,
+      "id_a": "NER_00095",
+      "index_b": 95,
+      "id_b": "NER_00096",
+      "distance_km": 0.0533,
+      "date_a": "",
+      "date_b": "",
+      "reason": "dist=0.053km, dates=/"
+    },
+    {
+      "index_a": 100,
+      "id_a": "NER_00101",
+      "index_b": 102,
+      "id_b": "NER_00103",
+      "distance_km": 0.0533,
+      "date_a": "",
+      "date_b": "",
+      "reason": "dist=0.053km, dates=/"
+    },
+    {
+      "index_a": 111,
+      "id_a": "NER_00112",
+      "index_b": 112,
+      "id_b": "NER_00113",
+      "distance_km": 0.0,
+      "date_a": "",
+      "date_b": "",
+      "reason": "dist=0.000km, dates=/"
+    },
+    {
+      "index_a": 111,
+      "id_a": "NER_00112",
+      "index_b": 113,
+      "id_b": "NER_00114",
+      "distance_km": 0.0,
+      "date_a": "",
+      "date_b": "",
+      "reason": "dist=0.000km, dates=/"
+    },
+    {
+      "index_a": 112,
+      "id_a": "NER_00113",
+      "index_b": 113,
+      "id_b": "NER_00114",
+      "distance_km": 0.0,
+      "date_a": "",
+      "date_b": "",
+      "reason": "dist=0.000km, dates=/"
+    },
+    {
+      "index_a": 114,
+      "id_a": "NER_00115",
+      "index_b": 115,
+      "id_b": "NER_00116",
+      "distance_km": 0.0199,
+      "date_a": "",
+      "date_b": "",
+      "reason": "dist=0.020km, dates=/"
+    }
+  ],
+  "warnings": [
+    "GSI PDF may be primarily image-based \u2014 programmatic extraction may be limited",
+    "ISRO Atlas primarily contains aggregate/statistical data rather than point coordinates",
+    "Absence from inventory does not prove absence of a landslide",
+    "Additional validation against official GSI/ISRO portals recommended"
+  ]
+}

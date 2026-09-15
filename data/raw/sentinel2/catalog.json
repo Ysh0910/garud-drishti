@@ -1,0 +1,16 @@
+{
+  "collection": "SENTINEL-2",
+  "product_type": "MSIL2A (Bottom-of-Atmosphere Reflectance)",
+  "region": "North Eastern Region (NER), India",
+  "updated_at": "2026-09-15T12:38:32.801793+00:00",
+  "status": "PRESENT",
+  "product_count": 1,
+  "products": [
+    {
+      "filename": "S2B_MSIL2A_20240101T043159_N0510_R133_T46REQ_20240101T063322.SAFE.zip",
+      "path": "data\\raw\\sentinel2\\S2B_MSIL2A_20240101T043159_N0510_R133_T46REQ_20240101T063322.SAFE.zip",
+      "size_bytes": 77617495,
+      "size_mb": 74.02
+    }
+  ]
+}

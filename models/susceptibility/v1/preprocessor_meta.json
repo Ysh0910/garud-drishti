@@ -1,0 +1,21 @@
+{
+  "feature_list": [
+    "elevation_m",
+    "slope_deg",
+    "aspect_deg",
+    "curvature",
+    "landcover",
+    "geology",
+    "geomorphology",
+    "hydrological_condition",
+    "distance_to_drainage_m",
+    "historical_ls_density",
+    "distance_to_historical_ls_m"
+  ],
+  "categorical_features": [
+    "landcover",
+    "geology",
+    "geomorphology",
+    "hydrological_condition"
+  ]
+}

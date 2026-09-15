@@ -1,0 +1,18 @@
+{
+  "dataset": "geomorphology",
+  "generated_at": "2026-09-15T11:11:46.070200Z",
+  "status": "BLOCKED_REQUIRES_MANUAL_DOWNLOAD",
+  "download_note": "No geomorphology layers found on accessible Bhuvan WMS endpoints",
+  "official_sources": [
+    "GSI Bhukosh: https://bhukosh.gsi.gov.in/",
+    "Bhuvan WMS: https://bhuvan-vec2.nrsc.gov.in/bhuvan/wms",
+    "Bhuvan thematic data: https://bhuvan.nrsc.gov.in/",
+    "NESAC NER data: http://www.nesac.gov.in/"
+  ],
+  "layers_found": [],
+  "accessible_endpoints": [
+    "https://bhuvan-vec1.nrsc.gov.in/bhuvan/wms"
+  ],
+  "required_action": "Manual download from GSI Bhukosh or Bhuvan portal required. Registration/approval may be needed. For geomorphology: use Bhuvan thematic services or GSI Bhukosh API once access is obtained.",
+  "interim_fallback": "For development/training purposes, a DEM-derived terrain analysis can provide a proxy for geomorphology (slope, curvature, TWI). Geology categorical features require authoritative GSI data."
+}

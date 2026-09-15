@@ -1,0 +1,11 @@
+{
+  "num_samples_explained": 317,
+  "top_features": [
+    "historical_ls_density",
+    "distance_to_historical_ls_m",
+    "slope_deg",
+    "elevation_m",
+    "distance_to_drainage_m"
+  ],
+  "summary_plot": "C:\\Users\\tejasvi javagal\\Desktop\\New folder\\garud-drishti\\garud-drishti\\models\\susceptibility\\v1\\shap\\shap_summary.png"
+}

@@ -1,0 +1,77 @@
+{
+  "script": "download_glim_v2.py",
+  "generated_at": "2026-09-15T11:56:23.563231Z",
+  "ner_bbox": [
+    87.0,
+    20.0,
+    98.0,
+    30.5
+  ],
+  "attempts": [
+    {
+      "source": "Zenodo 3653428 \u2013 glim_wgs84_v1.2.1.zip",
+      "url": "https://zenodo.org/record/3653428/files/glim_wgs84_v1.2.1.zip",
+      "status": "FAILED: HTTP Error 404: NOT FOUND"
+    },
+    {
+      "source": "Zenodo 3653428 \u2013 GLIM_v1.zip",
+      "url": "https://zenodo.org/record/3653428/files/GLIM_v1.zip",
+      "status": "FAILED: HTTP Error 404: NOT FOUND"
+    },
+    {
+      "source": "Zenodo 3653428 \u2013 lithology_glim.zip",
+      "url": "https://zenodo.org/record/3653428/files/lithology_glim.zip",
+      "status": "FAILED: HTTP Error 404: NOT FOUND"
+    },
+    {
+      "source": "Zenodo DOI redirect \u2013 glim_wgs84_v1.2.1.zip",
+      "url": "https://zenodo.org/records/3653428/files/glim_wgs84_v1.2.1.zip",
+      "status": "FAILED: HTTP Error 404: NOT FOUND"
+    },
+    {
+      "source": "HydroSHEDS \u2013 glim_v1.2_lithology",
+      "url": "https://hydrosheds.org/images/inpages/geol_l07b_1m_s0_2007oct.zip",
+      "status": "FAILED: HTTP Error 404: Not Found"
+    },
+    {
+      "source": "GFZ Potsdam GLIM",
+      "url": "https://dataservices.gfz-potsdam.de/panmetaworks/review/6e1b73b6c8cc3cb0a9bcec2c30b0b3e7daee5b1028f3d08a63d7f5bd4e23ef2a/",
+      "status": "FAILED: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1077)>"
+    },
+    {
+      "source": "Figshare GLIM v1",
+      "url": "https://figshare.com/ndownloader/files/3551370",
+      "status": "FAILED: Response too small (0 bytes), likely error page"
+    },
+    {
+      "source": "BGS OneGeology WMS GetMap \u2013 NER bbox raster",
+      "url": "http://ogc.bgs.ac.uk/cgi-bin/BGS_1GE_Bedrock_and_Structural_Geology/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&BBOX=20,87,30.5,98&CRS=EPSG:4326&WIDTH=1100&HEIGHT=1050&LAYERS=GBG&STYLES=&FORMAT=image/geotiff",
+      "status": "FAILED: HTTP Error 404: Not Found"
+    },
+    {
+      "source": "Macrostrat tiles API \u2013 NER geology JSON",
+      "url": "https://macrostrat.org/api/geologic_units/map?lat=25&lng=92&z=6",
+      "status": "FAILED: 'str' object has no attribute 'get'"
+    },
+    {
+      "source": "OpenLandMap Lithology (USGS) 250m NER bbox",
+      "url": "https://openlandmap.org/api/v1/map/landform?bbox=87,20,98,30.5&width=440&height=420&format=tif",
+      "status": "FAILED: HTTP Error 404: Not Found"
+    },
+    {
+      "source": "SoilGrids parent material WCS",
+      "url": "https://maps.isric.org/mapserv?map=/map/wrb.map&SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=MostProbable&FORMAT=image/tiff&SUBSET=X(87,98)&SUBSET=Y(20,30.5)&SUBSETTINGCRS=http://www.opengis.net/def/crs/EPSG/0/4326&OUTPUTCRS=http://www.opengis.net/def/crs/EPSG/0/4326",
+      "status": "DOWNLOADED",
+      "file": "C:\\Users\\tejasvi javagal\\Desktop\\New folder\\garud-drishti\\garud-drishti\\data\\raw\\geology\\soilgrids_parent_material_ner.tif"
+    }
+  ],
+  "status": "RASTER_PROXY",
+  "files_created": [
+    "C:\\Users\\tejasvi javagal\\Desktop\\New folder\\garud-drishti\\garud-drishti\\data\\raw\\geology\\soilgrids_parent_material_ner.tif",
+    "C:\\Users\\tejasvi javagal\\Desktop\\New folder\\garud-drishti\\garud-drishti\\data\\raw\\geology\\soilgrids_wrb_ner.tif"
+  ],
+  "notes": [
+    "Using SoilGrids parent material WCS as geology proxy. Not a formal lithology vector layer.",
+    "SoilGrids WRB soil classification already present: C:\\Users\\tejasvi javagal\\Desktop\\New folder\\garud-drishti\\garud-drishti\\data\\raw\\geology\\soilgrids_wrb_ner.tif (4,080,197 bytes). This is a geology proxy adequate for ML feature engineering."
+  ]
+}

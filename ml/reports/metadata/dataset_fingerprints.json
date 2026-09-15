@@ -1,0 +1,40 @@
+{
+  "susceptibility": {
+    "dataset_name": "susceptibility_dataset",
+    "dataset_version": "v1",
+    "file_path": "C:\\Users\\tejasvi javagal\\Desktop\\New folder\\garud-drishti\\garud-drishti\\data\\final\\susceptibility_dataset.csv",
+    "sha256": "0b1d89377354bf597f8cade7c83daac45fdf9a7534be38753c6c0a82d339753f",
+    "rows": 1640,
+    "columns": 17,
+    "positive_samples": 820,
+    "control_samples": 820,
+    "status": "VALIDATED"
+  },
+  "dynamic_risk": {
+    "dataset_name": "dynamic_risk_dataset",
+    "dataset_version": "v1",
+    "file_path": "C:\\Users\\tejasvi javagal\\Desktop\\New folder\\garud-drishti\\garud-drishti\\data\\final\\dynamic_risk_dataset.csv",
+    "sha256": "cce91c9a93696404ee7c4f1c82e36c7d95a01f6ef75020d2ca8dc12858abe2dc",
+    "rows": 3000,
+    "columns": 20,
+    "target_distributions": {
+      "landslide_within_6h": {
+        "positives": 1266,
+        "rate": 0.422
+      },
+      "landslide_within_24h": {
+        "positives": 1537,
+        "rate": 0.5123
+      },
+      "landslide_within_48h": {
+        "positives": 1667,
+        "rate": 0.5557
+      },
+      "landslide_within_72h": {
+        "positives": 1810,
+        "rate": 0.6033
+      }
+    },
+    "status": "VALIDATED"
+  }
+}

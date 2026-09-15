@@ -1,0 +1,287 @@
+{
+  "generated_at": "2026-09-15T11:20:56.998056+00:00",
+  "source": "Planetary Computer - ESRI 10m Annual LULC V2",
+  "collection": "io-lulc-annual-v02",
+  "year": "2020",
+  "bbox": [
+    88.0,
+    20.0,
+    98.0,
+    30.5
+  ],
+  "tiles": [
+    {
+      "id": "47R-2021",
+      "bbox": [
+        95.76959,
+        23.9707,
+        102.23041,
+        32.03531
+      ],
+      "assets": {
+        "data": {
+          "status": "HTTP_409",
+          "url": "https://ai4edataeuwest.blob.core.windows.net/io-lulc/io-annual-lulc-v02/47R_2021"
+        }
+      }
+    },
+    {
+      "id": "47Q-2021",
+      "bbox": [
+        95.84427,
+        15.97911,
+        102.15573,
+        24.02922
+      ],
+      "assets": {
+        "data": {
+          "status": "HTTP_409",
+          "url": "https://ai4edataeuwest.blob.core.windows.net/io-lulc/io-annual-lulc-v02/47Q_2021"
+        }
+      }
+    },
+    {
+      "id": "46R-2021",
+      "bbox": [
+        89.76959,
+        23.9707,
+        96.23041,
+        32.03531
+      ],
+      "assets": {
+        "data": {
+          "status": "HTTP_409",
+          "url": "https://ai4edataeuwest.blob.core.windows.net/io-lulc/io-annual-lulc-v02/46R_2021"
+        }
+      }
+    },
+    {
+      "id": "46Q-2021",
+      "bbox": [
+        89.84427,
+        15.97911,
+        96.15573,
+        24.02922
+      ],
+      "assets": {
+        "data": {
+          "status": "HTTP_409",
+          "url": "https://ai4edataeuwest.blob.core.windows.net/io-lulc/io-annual-lulc-v02/46Q_2021"
+        }
+      }
+    },
+    {
+      "id": "45R-2021",
+      "bbox": [
+        83.76959,
+        23.9707,
+        90.23041,
+        32.03531
+      ],
+      "assets": {
+        "data": {
+          "status": "HTTP_409",
+          "url": "https://ai4edataeuwest.blob.core.windows.net/io-lulc/io-annual-lulc-v02/45R_2021"
+        }
+      }
+    },
+    {
+      "id": "45Q-2021",
+      "bbox": [
+        83.84427,
+        15.97911,
+        90.15573,
+        24.02922
+      ],
+      "assets": {
+        "data": {
+          "status": "HTTP_409",
+          "url": "https://ai4edataeuwest.blob.core.windows.net/io-lulc/io-annual-lulc-v02/45Q_2021"
+        }
+      }
+    },
+    {
+      "id": "47R-2020",
+      "bbox": [
+        95.76959,
+        23.9707,
+        102.23041,
+        32.03531
+      ],
+      "assets": {
+        "data": {
+          "status": "HTTP_409",
+          "url": "https://ai4edataeuwest.blob.core.windows.net/io-lulc/io-annual-lulc-v02/47R_2020"
+        }
+      }
+    },
+    {
+      "id": "47Q-2020",
+      "bbox": [
+        95.84427,
+        15.97911,
+        102.15573,
+        24.02922
+      ],
+      "assets": {
+        "data": {
+          "status": "HTTP_409",
+          "url": "https://ai4edataeuwest.blob.core.windows.net/io-lulc/io-annual-lulc-v02/47Q_2020"
+        }
+      }
+    },
+    {
+      "id": "46R-2020",
+      "bbox": [
+        89.76959,
+        23.9707,
+        96.23041,
+        32.03531
+      ],
+      "assets": {
+        "data": {
+          "status": "HTTP_409",
+          "url": "https://ai4edataeuwest.blob.core.windows.net/io-lulc/io-annual-lulc-v02/46R_2020"
+        }
+      }
+    },
+    {
+      "id": "46Q-2020",
+      "bbox": [
+        89.84427,
+        15.97911,
+        96.15573,
+        24.02922
+      ],
+      "assets": {
+        "data": {
+          "status": "HTTP_409",
+          "url": "https://ai4edataeuwest.blob.core.windows.net/io-lulc/io-annual-lulc-v02/46Q_2020"
+        }
+      }
+    },
+    {
+      "id": "45R-2020",
+      "bbox": [
+        83.76959,
+        23.9707,
+        90.23041,
+        32.03531
+      ],
+      "assets": {
+        "data": {
+          "status": "HTTP_409",
+          "url": "https://ai4edataeuwest.blob.core.windows.net/io-lulc/io-annual-lulc-v02/45R_2020"
+        }
+      }
+    },
+    {
+      "id": "45Q-2020",
+      "bbox": [
+        83.84427,
+        15.97911,
+        90.15573,
+        24.02922
+      ],
+      "assets": {
+        "data": {
+          "status": "HTTP_409",
+          "url": "https://ai4edataeuwest.blob.core.windows.net/io-lulc/io-annual-lulc-v02/45Q_2020"
+        }
+      }
+    },
+    {
+      "id": "47R-2019",
+      "bbox": [
+        95.76959,
+        23.9707,
+        102.23041,
+        32.03531
+      ],
+      "assets": {
+        "data": {
+          "status": "HTTP_409",
+          "url": "https://ai4edataeuwest.blob.core.windows.net/io-lulc/io-annual-lulc-v02/47R_2019"
+        }
+      }
+    },
+    {
+      "id": "47Q-2019",
+      "bbox": [
+        95.84427,
+        15.97911,
+        102.15573,
+        24.02922
+      ],
+      "assets": {
+        "data": {
+          "status": "HTTP_409",
+          "url": "https://ai4edataeuwest.blob.core.windows.net/io-lulc/io-annual-lulc-v02/47Q_2019"
+        }
+      }
+    },
+    {
+      "id": "46R-2019",
+      "bbox": [
+        89.76959,
+        23.9707,
+        96.23041,
+        32.03531
+      ],
+      "assets": {
+        "data": {
+          "status": "HTTP_409",
+          "url": "https://ai4edataeuwest.blob.core.windows.net/io-lulc/io-annual-lulc-v02/46R_2019"
+        }
+      }
+    },
+    {
+      "id": "46Q-2019",
+      "bbox": [
+        89.84427,
+        15.97911,
+        96.15573,
+        24.02922
+      ],
+      "assets": {
+        "data": {
+          "status": "HTTP_409",
+          "url": "https://ai4edataeuwest.blob.core.windows.net/io-lulc/io-annual-lulc-v02/46Q_2019"
+        }
+      }
+    },
+    {
+      "id": "45R-2019",
+      "bbox": [
+        83.76959,
+        23.9707,
+        90.23041,
+        32.03531
+      ],
+      "assets": {
+        "data": {
+          "status": "HTTP_409",
+          "url": "https://ai4edataeuwest.blob.core.windows.net/io-lulc/io-annual-lulc-v02/45R_2019"
+        }
+      }
+    },
+    {
+      "id": "45Q-2019",
+      "bbox": [
+        83.84427,
+        15.97911,
+        90.15573,
+        24.02922
+      ],
+      "assets": {
+        "data": {
+          "status": "HTTP_409",
+          "url": "https://ai4edataeuwest.blob.core.windows.net/io-lulc/io-annual-lulc-v02/45Q_2019"
+        }
+      }
+    }
+  ],
+  "status": "NO_TILES_DOWNLOADED",
+  "tiles_found": 18,
+  "tiles_downloaded": 0
+}

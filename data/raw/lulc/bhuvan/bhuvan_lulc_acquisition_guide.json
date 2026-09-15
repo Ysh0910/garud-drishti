@@ -1,0 +1,29 @@
+{
+  "dataset": "Bhuvan LULC 1:50K",
+  "provider": "NRSC / ISRO",
+  "portal": "https://bhuvan.nrsc.gov.in/",
+  "lulc_update": "https://bhuvan.nrsc.gov.in/updates/bhuvan_apr2026.html",
+  "available_years": [
+    "2015-16",
+    "2011-12",
+    "2005-06"
+  ],
+  "format": "Shapefile (requires approval/request)",
+  "acquisition_method": "Request via Bhuvan portal with AOI/bounding box",
+  "status": "REQUIRES_MANUAL_REQUEST",
+  "notes": [
+    "Bhuvan LULC 1:50K requires a formal request through the Bhuvan portal",
+    "Available for selected districts, AOI, or bounding box",
+    "Registration and approval required",
+    "Contact: bhuvan@nrsc.gov.in or use portal request form",
+    "Most recent: 2015-16 (56 class LULC classification)",
+    "For NER, request states: Arunachal Pradesh, Assam, Manipur, Meghalaya, Mizoram, Nagaland, Sikkim, Tripura"
+  ],
+  "how_to_request": [
+    "1. Register at https://bhuvan.nrsc.gov.in/",
+    "2. Navigate to LULC data request section",
+    "3. Select AOI (NER bounding box: 88\u00b0E-98\u00b0E, 20\u00b0N-30.5\u00b0N)",
+    "4. Select 2015-16 dataset for most recent official LULC",
+    "5. Submit request and await approval"
+  ]
+}

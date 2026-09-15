@@ -1,0 +1,30 @@
+{
+  "generated_at": "2026-09-15T11:32:07.717723+00:00",
+  "attempts": [
+    {
+      "source": "Zenodo 3897899",
+      "url": "https://zenodo.org/record/3897899/files/GLIM_v1.zip",
+      "status": "HTTP_404"
+    },
+    {
+      "source": "Zenodo 3897899 shp",
+      "url": "https://zenodo.org/record/3897899/files/GLIM_v1.shp",
+      "status": "HTTP_404"
+    },
+    {
+      "source": "GitHub mirror",
+      "url": "https://github.com/hartmann-j/GLIM/archive/refs/heads/main.zip",
+      "status": "HTTP_404"
+    },
+    {
+      "source": "Hamburg direct",
+      "url": "https://www.geo.uni-hamburg.de/geologie/forschung/geochemie/litholmod/glim_v1.zip",
+      "status": "HTTP_404"
+    },
+    {
+      "source": "GLIM provenance",
+      "status": "DOCUMENTED"
+    }
+  ],
+  "status": "BLOCKED_WITH_PROXY"
+}

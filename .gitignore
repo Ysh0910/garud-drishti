@@ -1,22 +1,50 @@
 # Environment & Secrets
 .env
 .env.*
+.env.local
+.env.*.local
 !.env.example
+*.log
 
-# Dependencies & Build artifacts
+# Dependencies & Package Managers
 node_modules/
-dist/
-build/
-coverage/
+.pnpm-store/
+venv/
 .venv/
 __pycache__/
 *.pyc
 
-# IDE / OS
-.DS_Store
-Thumbs.db
+# Build & Output
+dist/
+build/
+.next/
+out/
+coverage/
+
+# IDE & OS
 .vscode/
 .idea/
+.DS_Store
+Thumbs.db
 
 # Internal status tracking
 GARUD_DRISHTI_DEVELOPMENT_STATUS.md
+
+# Large Raw Spatial & Satellite Data (Kept locally / S3)
+data/raw/**/*.tif
+data/raw/**/*.TIF
+data/raw/**/*.hgt
+data/raw/**/*.HGT
+data/raw/**/*.nc4
+data/raw/**/*.HDF5
+data/raw/**/*.hdf5
+data/raw/**/*.h5
+data/raw/**/*.H5
+data/raw/**/*.gpkg
+data/raw/**/*.zip
+data/raw/**/*.tar.gz
+data/raw/**/*.SAFE/
+data/raw/**/__pycache__/
+data/raw/**/*.part
+data/processed/**/*.tif
+data/processed/**/*.hgt

@@ -1,0 +1,21 @@
+{
+  "source_file": "data\\raw\\srtm_v3_6aa3cfb7243c85a5.zip",
+  "inspection_time": "2026-09-15T10:55:56.628374Z",
+  "status": "READABLE",
+  "contents": [
+    {
+      "filename": "srtm_v3_6aa3cfb7243c85a5.csv",
+      "compressed_size": 366644,
+      "uncompressed_size": 3245895,
+      "date_time": "(2026, 9, 11, 9, 54, 20)"
+    }
+  ],
+  "notes": [
+    "NER requires approx tiles N21-N30, E088-E098. Check tile names against this range."
+  ],
+  "file_count": 1,
+  "extensions_found": [
+    ".csv"
+  ],
+  "format": "Unknown \u2014 inspect tile names"
+}

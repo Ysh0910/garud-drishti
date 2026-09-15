@@ -1,0 +1,27 @@
+[
+  {
+    "tile": "J44",
+    "status": "DOWNLOADED",
+    "hgt_files": 24
+  },
+  {
+    "tile": "J45",
+    "status": "DOWNLOADED",
+    "hgt_files": 24
+  },
+  {
+    "tile": "J46",
+    "status": "DOWNLOADED",
+    "hgt_files": 24
+  },
+  {
+    "tile": "K44",
+    "status": "DOWNLOADED",
+    "hgt_files": 24
+  },
+  {
+    "tile": "K45",
+    "status": "DOWNLOADED",
+    "hgt_files": 24
+  }
+]

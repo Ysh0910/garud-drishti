@@ -1,0 +1,12 @@
+{
+  "generated_at": "2026-09-15T11:10:34.060817Z",
+  "geology": {
+    "status": "DOWNLOADED",
+    "note": "Downloaded cleanganga:LITHOLOG \u2192 data\\raw\\geology\\geology_ner_wms.png"
+  },
+  "geomorphology": {
+    "status": "BLOCKED",
+    "note": "No geomorphology layers found on accessible Bhuvan WMS endpoints",
+    "provenance_file": "data\\raw\\geomorphology\\geomorphology_provenance.json"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "generated_at": "2026-09-15T11:10:11.479477Z",
+  "status": "COMPLETED",
+  "methods_attempted": [
+    {
+      "method": "OSM_GPKG",
+      "result": "SUCCESS"
+    },
+    {
+      "method": "GADM_v4.1",
+      "result": "SUCCESS (7 states)"
+    },
+    {
+      "method": "APPROXIMATE_BBOXES",
+      "result": "ALWAYS_CREATED"
+    }
+  ],
+  "final_source": "OSM_GPKG",
+  "states_covered": [
+    "Assam",
+    "Manipur",
+    "Meghalaya",
+    "Mizoram",
+    "Nagaland",
+    "Sikkim",
+    "Tripura"
+  ],
+  "notes": [],
+  "boundary_files": [
+    "data\\raw\\boundaries\\ner_boundary.gpkg",
+    "data\\raw\\boundaries\\ner_boundary_approximate.geojson",
+    "data\\raw\\boundaries\\ner_boundary_from_osm.geojson",
+    "data\\raw\\boundaries\\ner_boundary_gadm.geojson"
+  ]
+}
