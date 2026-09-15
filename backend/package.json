@@ -8,6 +8,8 @@
     "build": "tsc",
     "start": "node dist/server.js",
     "dev": "tsx watch src/server.ts",
+    "db:migrate": "tsx src/db/migrate.ts",
+    "db:seed": "tsx src/db/seed.ts",
     "lint": "eslint src --ext .ts",
     "test": "jest --runInBand"
   },
@@ -17,6 +19,7 @@
     "express": "^5.0.1",
     "helmet": "^7.1.0",
     "morgan": "^1.10.0",
+    "pg": "^8.23.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
@@ -25,6 +28,7 @@
     "@types/jest": "^30.0.0",
     "@types/morgan": "^1.9.9",
     "@types/node": "^20.14.0",
+    "@types/pg": "^8.23.1",
     "@types/supertest": "^6.0.2",
     "@typescript-eslint/eslint-plugin": "^7.13.0",
     "@typescript-eslint/parser": "^7.13.0",
