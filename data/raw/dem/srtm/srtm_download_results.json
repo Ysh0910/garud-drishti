@@ -1,0 +1,40 @@
+[
+  {
+    "tile": "srtm_54_13",
+    "status": "HTTP_404"
+  },
+  {
+    "tile": "srtm_54_14",
+    "status": "HTTP_404"
+  },
+  {
+    "tile": "srtm_54_15",
+    "status": "HTTP_404"
+  },
+  {
+    "tile": "srtm_55_13",
+    "status": "HTTP_404"
+  },
+  {
+    "tile": "srtm_55_14",
+    "status": "HTTP_404"
+  },
+  {
+    "tile": "srtm_55_15",
+    "status": "HTTP_404"
+  },
+  {
+    "tile": "srtm_56_13",
+    "status": "DOWNLOADED",
+    "size": 72096675
+  },
+  {
+    "tile": "srtm_56_14",
+    "status": "HTTP_404"
+  },
+  {
+    "tile": "srtm_56_15",
+    "status": "DOWNLOADED",
+    "size": 72096675
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-09-15T11:16:36.816730+00:00",
+  "daily": {
+    "manifest_file": "data\\raw\\subset_GPM_3IMERGDF_07_20260911_085145_.txt",
+    "data_urls": 10135,
+    "date_range": {
+      "start": "20000101",
+      "end": "20250930"
+    },
+    "sample_url": "https://data.gesdisc.earthdata.nasa.gov/data/GPM_L3/GPM_3IMERGDF.07/1998/01/3B-DAY.MS.MRG.3IMERG.19980101-S000000-E235959.V07B.nc4",
+    "status": "BLOCKED_AUTH_REQUIRED"
+  },
+  "half_hourly": {
+    "manifest_file": "data\\raw\\subset_GPM_3IMERGHH_07_20260911_094301_.txt",
+    "data_urls": 486480,
+    "date_range": {
+      "start": "20000101",
+      "end": "20250930"
+    },
+    "sample_url": "https://data.gesdisc.earthdata.nasa.gov/data/GPM_L3/GPM_3IMERGHH.07/1998/001/3B-HHR.MS.MRG.3IMERG.19980101-S000000-E002959.0000.V07B.HDF5",
+    "status": "BLOCKED_AUTH_REQUIRED"
+  },
+  "auth_note": "NASA Earthdata login required. Set EARTHDATA_USER and EARTHDATA_PASSWORD."
+}

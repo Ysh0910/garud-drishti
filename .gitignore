@@ -24,3 +24,22 @@ coverage/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Large Raw Spatial & Satellite Data (Kept locally / S3)
+data/raw/**/*.tif
+data/raw/**/*.TIF
+data/raw/**/*.hgt
+data/raw/**/*.HGT
+data/raw/**/*.nc4
+data/raw/**/*.HDF5
+data/raw/**/*.hdf5
+data/raw/**/*.h5
+data/raw/**/*.H5
+data/raw/**/*.gpkg
+data/raw/**/*.zip
+data/raw/**/*.tar.gz
+data/raw/**/*.SAFE/
+data/raw/**/__pycache__/
+data/raw/**/*.part
+data/processed/**/*.tif
+data/processed/**/*.hgt

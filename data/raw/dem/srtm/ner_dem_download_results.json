@@ -1,0 +1,20 @@
+[
+  {
+    "tile": "G45",
+    "status": "DOWNLOADED",
+    "total": 24,
+    "ner_tiles": 8
+  },
+  {
+    "tile": "G46",
+    "status": "DOWNLOADED",
+    "total": 24,
+    "ner_tiles": 24
+  },
+  {
+    "tile": "G47",
+    "status": "DOWNLOADED",
+    "total": 24,
+    "ner_tiles": 12
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "script": "download_glim_pangaea.py",
+  "generated_at": "2026-09-15T11:58:23.464272+00:00",
+  "attempts": [
+    {
+      "source": "PANGAEA text export",
+      "result": "no_records_parsed"
+    },
+    {
+      "source": "Macrostrat bbox GeoJSON",
+      "result": "HTTP Error 500: Internal Server Error"
+    },
+    {
+      "source": "OpenTopo geology WMS",
+      "result": "<urlopen error [Errno 11001] getaddrinfo failed>"
+    }
+  ],
+  "files_created": [
+    "C:\\Users\\tejasvi javagal\\Desktop\\New folder\\garud-drishti\\garud-drishti\\data\\raw\\geology\\soilgrids_wrb_ner.tif"
+  ],
+  "status": "PROXY_PLUS_API",
+  "notes": [
+    "GLIM (Hartmann & Moosdorf 2012) \u2013 official source: PANGAEA doi:10.1594/PANGAEA.788537",
+    "GDB mirror: https://www.dropbox.com/s/9vuowtebp9f1iud/LiMW_GIS%202015.gdb.zip",
+    "SoilGrids WRB already present as geology proxy."
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "probe_time": "2026-09-15T11:10:34.061099Z",
+  "endpoints_tried": [
+    {
+      "url": "https://bhuvan-vec2.nrsc.gov.in/bhuvan/wms",
+      "status": "UNREACHABLE"
+    },
+    {
+      "url": "https://bhuvan-vec1.nrsc.gov.in/bhuvan/wms",
+      "status": "ACCESSIBLE",
+      "total_layers": 7238
+    },
+    {
+      "url": "https://bhuvan-app1.nrsc.gov.in/bhuvan/wms",
+      "status": "UNREACHABLE"
+    },
+    {
+      "url": "https://bhuvan-gp1.nrsc.gov.in/bhuvan/wms",
+      "status": "UNREACHABLE"
+    }
+  ],
+  "geology_layers": [
+    {
+      "name": "cleanganga:LITHOLOG",
+      "title": "LITHOLOG",
+      "abstract": "",
+      "endpoint": "https://bhuvan-vec1.nrsc.gov.in/bhuvan/wms"
+    }
+  ],
+  "geomorphology_layers": [],
+  "accessible_endpoints": [
+    "https://bhuvan-vec1.nrsc.gov.in/bhuvan/wms"
+  ]
+}

@@ -1,0 +1,359 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              97.4,
+              26.6
+            ],
+            [
+              97.4,
+              29.5
+            ],
+            [
+              91.5,
+              29.5
+            ],
+            [
+              91.5,
+              26.6
+            ],
+            [
+              97.4,
+              26.6
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "state": "Arunachal Pradesh",
+        "geometry_type": "APPROXIMATE_BOUNDING_BOX",
+        "confidence": "LOW",
+        "note": "Approximate bounding box only. Not a precise administrative boundary.",
+        "source": "Manually compiled from known state extents"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              96.0,
+              24.1
+            ],
+            [
+              96.0,
+              27.9
+            ],
+            [
+              89.7,
+              27.9
+            ],
+            [
+              89.7,
+              24.1
+            ],
+            [
+              96.0,
+              24.1
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "state": "Assam",
+        "geometry_type": "APPROXIMATE_BOUNDING_BOX",
+        "confidence": "LOW",
+        "note": "Approximate bounding box only. Not a precise administrative boundary.",
+        "source": "Manually compiled from known state extents"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              94.8,
+              23.8
+            ],
+            [
+              94.8,
+              25.7
+            ],
+            [
+              92.9,
+              25.7
+            ],
+            [
+              92.9,
+              23.8
+            ],
+            [
+              94.8,
+              23.8
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "state": "Manipur",
+        "geometry_type": "APPROXIMATE_BOUNDING_BOX",
+        "confidence": "LOW",
+        "note": "Approximate bounding box only. Not a precise administrative boundary.",
+        "source": "Manually compiled from known state extents"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              92.8,
+              25.0
+            ],
+            [
+              92.8,
+              26.1
+            ],
+            [
+              89.8,
+              26.1
+            ],
+            [
+              89.8,
+              25.0
+            ],
+            [
+              92.8,
+              25.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "state": "Meghalaya",
+        "geometry_type": "APPROXIMATE_BOUNDING_BOX",
+        "confidence": "LOW",
+        "note": "Approximate bounding box only. Not a precise administrative boundary.",
+        "source": "Manually compiled from known state extents"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              93.4,
+              21.9
+            ],
+            [
+              93.4,
+              24.5
+            ],
+            [
+              92.2,
+              24.5
+            ],
+            [
+              92.2,
+              21.9
+            ],
+            [
+              93.4,
+              21.9
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "state": "Mizoram",
+        "geometry_type": "APPROXIMATE_BOUNDING_BOX",
+        "confidence": "LOW",
+        "note": "Approximate bounding box only. Not a precise administrative boundary.",
+        "source": "Manually compiled from known state extents"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.2,
+              25.2
+            ],
+            [
+              95.2,
+              27.0
+            ],
+            [
+              93.3,
+              27.0
+            ],
+            [
+              93.3,
+              25.2
+            ],
+            [
+              95.2,
+              25.2
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "state": "Nagaland",
+        "geometry_type": "APPROXIMATE_BOUNDING_BOX",
+        "confidence": "LOW",
+        "note": "Approximate bounding box only. Not a precise administrative boundary.",
+        "source": "Manually compiled from known state extents"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              88.9,
+              27.1
+            ],
+            [
+              88.9,
+              28.1
+            ],
+            [
+              88.0,
+              28.1
+            ],
+            [
+              88.0,
+              27.1
+            ],
+            [
+              88.9,
+              27.1
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "state": "Sikkim",
+        "geometry_type": "APPROXIMATE_BOUNDING_BOX",
+        "confidence": "LOW",
+        "note": "Approximate bounding box only. Not a precise administrative boundary.",
+        "source": "Manually compiled from known state extents"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              92.3,
+              22.9
+            ],
+            [
+              92.3,
+              24.5
+            ],
+            [
+              91.1,
+              24.5
+            ],
+            [
+              91.1,
+              22.9
+            ],
+            [
+              92.3,
+              22.9
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "state": "Tripura",
+        "geometry_type": "APPROXIMATE_BOUNDING_BOX",
+        "confidence": "LOW",
+        "note": "Approximate bounding box only. Not a precise administrative boundary.",
+        "source": "Manually compiled from known state extents"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              97.4,
+              21.9
+            ],
+            [
+              97.4,
+              29.5
+            ],
+            [
+              88.0,
+              29.5
+            ],
+            [
+              88.0,
+              21.9
+            ],
+            [
+              97.4,
+              21.9
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "state": "NER_COMBINED",
+        "geometry_type": "APPROXIMATE_BOUNDING_BOX",
+        "confidence": "LOW",
+        "note": "Approximate NER overall bounding box.",
+        "source": "Manually compiled"
+      }
+    }
+  ],
+  "properties": {
+    "WARNING": "APPROXIMATE BOUNDING BOXES ONLY \u2014 NOT precise administrative boundaries",
+    "states": [
+      "Arunachal Pradesh",
+      "Assam",
+      "Manipur",
+      "Meghalaya",
+      "Mizoram",
+      "Nagaland",
+      "Sikkim",
+      "Tripura"
+    ],
+    "generated_at": "2026-09-15T11:10:27.546529Z",
+    "intended_use": "Spatial filter only. Replace with authoritative boundary for production."
+  }
+}

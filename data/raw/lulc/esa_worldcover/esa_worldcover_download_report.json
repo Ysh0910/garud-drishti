@@ -1,0 +1,109 @@
+{
+  "generated_at": "2026-09-15T11:28:03.320797+00:00",
+  "source": "ESA WorldCover 2021 v2.0",
+  "source_url": "https://worldcover2021.esa.int/",
+  "resolution": "10m",
+  "classes": 11,
+  "license": "CC-BY 4.0",
+  "tiles": [
+    {
+      "tile": "ESA_WorldCover_10m_2021_v200_N21E087_Map",
+      "status": "DOWNLOADED",
+      "file": "data\\raw\\lulc\\esa_worldcover\\ESA_WorldCover_10m_2021_v200_N21E087_Map.tif",
+      "size_bytes": 81771213,
+      "lat_range": "21-24N",
+      "lon_range": "87-90E"
+    },
+    {
+      "tile": "ESA_WorldCover_10m_2021_v200_N21E090_Map",
+      "status": "DOWNLOADED",
+      "file": "data\\raw\\lulc\\esa_worldcover\\ESA_WorldCover_10m_2021_v200_N21E090_Map.tif",
+      "size_bytes": 58949208,
+      "lat_range": "21-24N",
+      "lon_range": "90-93E"
+    },
+    {
+      "tile": "ESA_WorldCover_10m_2021_v200_N21E093_Map",
+      "status": "DOWNLOADED",
+      "file": "data\\raw\\lulc\\esa_worldcover\\ESA_WorldCover_10m_2021_v200_N21E093_Map.tif",
+      "size_bytes": 94447576,
+      "lat_range": "21-24N",
+      "lon_range": "93-96E"
+    },
+    {
+      "tile": "ESA_WorldCover_10m_2021_v200_N21E096_Map",
+      "status": "DOWNLOADED",
+      "file": "data\\raw\\lulc\\esa_worldcover\\ESA_WorldCover_10m_2021_v200_N21E096_Map.tif",
+      "size_bytes": 93309494,
+      "lat_range": "21-24N",
+      "lon_range": "96-99E"
+    },
+    {
+      "tile": "ESA_WorldCover_10m_2021_v200_N24E087_Map",
+      "status": "DOWNLOADED",
+      "file": "data\\raw\\lulc\\esa_worldcover\\ESA_WorldCover_10m_2021_v200_N24E087_Map.tif",
+      "size_bytes": 117460909,
+      "lat_range": "24-27N",
+      "lon_range": "87-90E"
+    },
+    {
+      "tile": "ESA_WorldCover_10m_2021_v200_N24E090_Map",
+      "status": "DOWNLOADED",
+      "file": "data\\raw\\lulc\\esa_worldcover\\ESA_WorldCover_10m_2021_v200_N24E090_Map.tif",
+      "size_bytes": 98826043,
+      "lat_range": "24-27N",
+      "lon_range": "90-93E"
+    },
+    {
+      "tile": "ESA_WorldCover_10m_2021_v200_N24E093_Map",
+      "status": "DOWNLOADED",
+      "file": "data\\raw\\lulc\\esa_worldcover\\ESA_WorldCover_10m_2021_v200_N24E093_Map.tif",
+      "size_bytes": 55435233,
+      "lat_range": "24-27N",
+      "lon_range": "93-96E"
+    },
+    {
+      "tile": "ESA_WorldCover_10m_2021_v200_N24E096_Map",
+      "status": "DOWNLOADED",
+      "file": "data\\raw\\lulc\\esa_worldcover\\ESA_WorldCover_10m_2021_v200_N24E096_Map.tif",
+      "size_bytes": 48641297,
+      "lat_range": "24-27N",
+      "lon_range": "96-99E"
+    },
+    {
+      "tile": "ESA_WorldCover_10m_2021_v200_N27E087_Map",
+      "status": "DOWNLOADED",
+      "file": "data\\raw\\lulc\\esa_worldcover\\ESA_WorldCover_10m_2021_v200_N27E087_Map.tif",
+      "size_bytes": 88835880,
+      "lat_range": "27-30N",
+      "lon_range": "87-90E"
+    },
+    {
+      "tile": "ESA_WorldCover_10m_2021_v200_N27E090_Map",
+      "status": "DOWNLOADED",
+      "file": "data\\raw\\lulc\\esa_worldcover\\ESA_WorldCover_10m_2021_v200_N27E090_Map.tif",
+      "size_bytes": 84842890,
+      "lat_range": "27-30N",
+      "lon_range": "90-93E"
+    },
+    {
+      "tile": "ESA_WorldCover_10m_2021_v200_N27E093_Map",
+      "status": "DOWNLOADED",
+      "file": "data\\raw\\lulc\\esa_worldcover\\ESA_WorldCover_10m_2021_v200_N27E093_Map.tif",
+      "size_bytes": 79061337,
+      "lat_range": "27-30N",
+      "lon_range": "93-96E"
+    },
+    {
+      "tile": "ESA_WorldCover_10m_2021_v200_N27E096_Map",
+      "status": "DOWNLOADED",
+      "file": "data\\raw\\lulc\\esa_worldcover\\ESA_WorldCover_10m_2021_v200_N27E096_Map.tif",
+      "size_bytes": 96124189,
+      "lat_range": "27-30N",
+      "lon_range": "96-99E"
+    }
+  ],
+  "tiles_downloaded": 12,
+  "tiles_total": 12,
+  "status": "COMPLETED"
+}

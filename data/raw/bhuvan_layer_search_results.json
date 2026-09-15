@@ -1,0 +1,6857 @@
+{
+  "searched_at": "2026-09-15T11:13:18.419904+00:00",
+  "endpoint": "https://bhuvan-vec1.nrsc.gov.in/bhuvan/wms",
+  "total_layers": 6671,
+  "results": {
+    "geomorphology": [],
+    "terrain": [
+      {
+        "name": "sdv:ap_slope",
+        "title": "Andhra Pradesh Slope Data"
+      },
+      {
+        "name": "ap_slope",
+        "title": "ap_slope"
+      },
+      {
+        "name": "sdv:as_slope",
+        "title": "Assam Slope Data"
+      },
+      {
+        "name": "sdv:br_slope",
+        "title": "br_slope"
+      },
+      {
+        "name": "sdv:ka_slope",
+        "title": "Karnataka Slope Data"
+      },
+      {
+        "name": "sdv:kl_slope",
+        "title": "Kerala Slope Data"
+      },
+      {
+        "name": "sdv:mh_slope",
+        "title": "mh_slope"
+      },
+      {
+        "name": "sdv:ml_slope",
+        "title": "Meghalaya Slope Data"
+      },
+      {
+        "name": "sdv:mn_slope",
+        "title": "Manipur Slope Data"
+      },
+      {
+        "name": "sdv:mp_slope",
+        "title": "Madhya Pradesh Slope Data"
+      },
+      {
+        "name": "sdv:mz_slope",
+        "title": "Mizoram Slope Data"
+      },
+      {
+        "name": "sdv:nl_slope",
+        "title": "Nagaland Slope Data"
+      },
+      {
+        "name": "sdv:or_slope",
+        "title": "Odisha Slope Data"
+      },
+      {
+        "name": "sdv:pb_slope",
+        "title": "Punjab Slope Data"
+      },
+      {
+        "name": "pb_slope",
+        "title": "pb_slope"
+      },
+      {
+        "name": "sdv:rj_slope",
+        "title": "Rajasthan Slope Data"
+      },
+      {
+        "name": "sdv:sk_slope",
+        "title": "Sikkim Slope Data"
+      },
+      {
+        "name": "sdv:tr_slope",
+        "title": "Tripura Slope Data"
+      },
+      {
+        "name": "sdv:up_slope",
+        "title": "Uttar Pradesh Slope Data"
+      },
+      {
+        "name": "basemap:waterbody_DEM",
+        "title": "basemap:waterbody_DEM"
+      },
+      {
+        "name": "sdv:Amritsar_slope",
+        "title": "Amritsar_slope"
+      },
+      {
+        "name": "sdv:Bathinda_slope",
+        "title": "Bathinda_slope"
+      },
+      {
+        "name": "sdv:Contour_ap_dem_1",
+        "title": "Contour_ap_dem_1"
+      },
+      {
+        "name": "cleanganga:Elevation",
+        "title": "Elevation"
+      },
+      {
+        "name": "sdv:Faridkot_slope",
+        "title": "Faridkot_slope"
+      },
+      {
+        "name": "sdv:Firozpur_slope",
+        "title": "Firozpur_slope"
+      },
+      {
+        "name": "sdv:Gurdaspur_slope",
+        "title": "Gurdaspur_slope"
+      },
+      {
+        "name": "sdv:Hoshiarpur_slope",
+        "title": "Hoshiarpur_slope"
+      },
+      {
+        "name": "sdv:Jalandhar_slope",
+        "title": "Jalandhar_slope"
+      },
+      {
+        "name": "sdv:Kapurthala_slope",
+        "title": "Kapurthala_slope"
+      },
+      {
+        "name": "sdv:Ludhiana_slope",
+        "title": "Ludhiana_slope"
+      },
+      {
+        "name": "sdv:Mansa_slope",
+        "title": "Mansa_slope"
+      },
+      {
+        "name": "sdv:Moga_slope",
+        "title": "Moga_slope"
+      },
+      {
+        "name": "sdv:Muktsar_slope",
+        "title": "Muktsar_slope"
+      },
+      {
+        "name": "sdv:Nawanshahr_slope",
+        "title": "Nawanshahr_slope"
+      },
+      {
+        "name": "sdv:Patiala_slope",
+        "title": "Patiala_slope"
+      },
+      {
+        "name": "sdv:Rupnagar_slope",
+        "title": "Rupnagar_slope"
+      },
+      {
+        "name": "sdv:Sangrur_slope",
+        "title": "Sangrur_slope"
+      },
+      {
+        "name": "cite:Slope",
+        "title": "Slope"
+      },
+      {
+        "name": "sdv:Telangana_slope",
+        "title": "Telangana_slope"
+      },
+      {
+        "name": "sdv:anantapur_slope",
+        "title": "anantapur"
+      },
+      {
+        "name": "sdv:ar_slope",
+        "title": "Arunachal_Pradesh"
+      },
+      {
+        "name": "sdv:as_Barpeta_slope",
+        "title": "as_Barpeta_slope"
+      },
+      {
+        "name": "sdv:as_Bongaigaon_slope",
+        "title": "as_Bongaigaon_slope"
+      },
+      {
+        "name": "sdv:as_Cachar_slope",
+        "title": "as_Cachar_slope"
+      },
+      {
+        "name": "sdv:as_Darrang_slope",
+        "title": "as_Darrang_slope"
+      },
+      {
+        "name": "sdv:as_Dhemaji_slope",
+        "title": "as_Dhemaji_slope"
+      },
+      {
+        "name": "sdv:as_Dhuburi_slope",
+        "title": "as_Dhuburi_slope"
+      },
+      {
+        "name": "sdv:as_Dibrugarh_slope",
+        "title": "as_Dibrugarh_slope"
+      },
+      {
+        "name": "sdv:as_Goalpara_slope",
+        "title": "as_Goalpara_slope"
+      },
+      {
+        "name": "sdv:as_Golaghat_slope",
+        "title": "as_Golaghat_slope"
+      },
+      {
+        "name": "sdv:as_Hailakandi_slope",
+        "title": "as_Hailakandi_slope"
+      },
+      {
+        "name": "sdv:as_Jorhat_slope",
+        "title": "as_Jorhat_slope"
+      },
+      {
+        "name": "sdv:as_Kamrup_slope",
+        "title": "as_Kamrup_slope"
+      },
+      {
+        "name": "sdv:as_Karbi_Anglong_slope",
+        "title": "as_Karbi_Anglong_slope"
+      },
+      {
+        "name": "sdv:as_Karimganj_slope",
+        "title": "as_Karimganj_slope"
+      },
+      {
+        "name": "sdv:as_Kokrajhar_slope",
+        "title": "as_Kokrajhar_slope"
+      },
+      {
+        "name": "sdv:as_Lakhimpur_slope",
+        "title": "as_Lakhimpur_slope"
+      },
+      {
+        "name": "sdv:as_Morigaon_slope",
+        "title": "as_Morigaon_slope"
+      },
+      {
+        "name": "sdv:as_NC_Hills_slope",
+        "title": "as_NC_Hills_slope"
+      },
+      {
+        "name": "sdv:as_Nagaon_slope",
+        "title": "as_Nagaon_slope"
+      },
+      {
+        "name": "sdv:as_Nalbari_slope",
+        "title": "as_Nalbari_slope"
+      },
+      {
+        "name": "sdv:as_Sibsagar_slope",
+        "title": "as_Sibsagar_slope"
+      },
+      {
+        "name": "sdv:as_Sonitpur_slope",
+        "title": "as_Sonitpur_slope"
+      },
+      {
+        "name": "sdv:as_Tinsukia_slope",
+        "title": "as_Tinsukia_slope"
+      },
+      {
+        "name": "sdv:br_Araria_slope",
+        "title": "br_Araria_slope"
+      },
+      {
+        "name": "sdv:br_Aurangabad_slope",
+        "title": "br_Aurangabad_slope"
+      },
+      {
+        "name": "sdv:br_Banka_slope",
+        "title": "br_Banka_slope"
+      },
+      {
+        "name": "sdv:br_Begusarai_slope",
+        "title": "br_Begusarai_slope"
+      },
+      {
+        "name": "sdv:br_Bhagalpur_slope",
+        "title": "br_Bhagalpur_slope"
+      },
+      {
+        "name": "sdv:br_Bhojpur_slope",
+        "title": "br_Bhojpur_slope"
+      },
+      {
+        "name": "sdv:br_Buxar_slope",
+        "title": "br_Buxar_slope"
+      },
+      {
+        "name": "sdv:br_Darbhanga_slope",
+        "title": "br_Darbhanga_slope"
+      },
+      {
+        "name": "sdv:br_Gaya_slope",
+        "title": "br_Gaya_slope"
+      },
+      {
+        "name": "sdv:br_Gopalganj_slope",
+        "title": "br_Gopalganj_slope"
+      },
+      {
+        "name": "sdv:br_Jamui_slope",
+        "title": "br_Jamui_slope"
+      },
+      {
+        "name": "sdv:br_Jehanabad_slope",
+        "title": "br_Jehanabad_slope"
+      },
+      {
+        "name": "sdv:br_KaimurBhabua_slope",
+        "title": "br_KaimurBhabua_slope"
+      },
+      {
+        "name": "sdv:br_Katihar_slope",
+        "title": "br_Katihar_slope"
+      },
+      {
+        "name": "sdv:br_Khagaria_slope",
+        "title": "br_Khagaria_slope"
+      },
+      {
+        "name": "sdv:br_Kishanganj_slope",
+        "title": "br_Kishanganj_slope"
+      },
+      {
+        "name": "sdv:br_Lakhisarai_slope",
+        "title": "br_Lakhisarai_slope"
+      },
+      {
+        "name": "sdv:br_Madhepura_slope",
+        "title": "br_Madhepura_slope"
+      },
+      {
+        "name": "sdv:br_Madhubani_slope",
+        "title": "br_Madhubani_slope"
+      },
+      {
+        "name": "sdv:br_Munger_slope",
+        "title": "br_Munger_slope"
+      },
+      {
+        "name": "sdv:br_Muzaffarpur_slope",
+        "title": "br_Muzaffarpur_slope"
+      },
+      {
+        "name": "sdv:br_Nalanda_slope",
+        "title": "br_Nalanda_slope"
+      },
+      {
+        "name": "sdv:br_Nawada_slope",
+        "title": "br_Nawada_slope"
+      },
+      {
+        "name": "sdv:br_PashchimChamparan_slope",
+        "title": "br_PashchimChamparan_slope"
+      },
+      {
+        "name": "sdv:br_Patna_slope",
+        "title": "br_Patna_slope"
+      },
+      {
+        "name": "sdv:br_PurbaChamparan_slope",
+        "title": "br_PurbaChamparan_slope"
+      },
+      {
+        "name": "sdv:br_Purnia_slope",
+        "title": "br_Purnia_slope"
+      },
+      {
+        "name": "sdv:br_Rohtas_slope",
+        "title": "br_Rohtas_slope"
+      },
+      {
+        "name": "sdv:br_Saharsa_slope",
+        "title": "br_Saharsa_slope"
+      },
+      {
+        "name": "sdv:br_Samastipur_slope",
+        "title": "br_Samastipur_slope"
+      },
+      {
+        "name": "sdv:br_SaranChhapra_slope",
+        "title": "br_SaranChhapra_slope"
+      },
+      {
+        "name": "sdv:br_Sheikhpura_slope",
+        "title": "br_Sheikhpura_slope"
+      },
+      {
+        "name": "sdv:br_Sheohar_slope",
+        "title": "br_Sheohar_slope"
+      },
+      {
+        "name": "sdv:br_Sitamarhi_slope",
+        "title": "br_Sitamarhi_slope"
+      },
+      {
+        "name": "sdv:br_Siwan_slope",
+        "title": "br_Siwan_slope"
+      },
+      {
+        "name": "sdv:br_Supaul_slope",
+        "title": "br_Supaul_slope"
+      },
+      {
+        "name": "sdv:br_Vaishali_slope",
+        "title": "br_Vaishali_slope"
+      },
+      {
+        "name": "sdv:br_slope",
+        "title": "Bihar"
+      },
+      {
+        "name": "sdv:ch_slope",
+        "title": "Chattisgarh_slope"
+      },
+      {
+        "name": "sdv:chittoor_slope",
+        "title": "chittoor"
+      },
+      {
+        "name": "sdv:cuddapah_slope",
+        "title": "cuddapah"
+      },
+      {
+        "name": "sdv:east_slope",
+        "title": "east"
+      },
+      {
+        "name": "sdv:gj_slope",
+        "title": "GUJARAT"
+      },
+      {
+        "name": "sdv:godavari_slope",
+        "title": "godavari"
+      },
+      {
+        "name": "sdv:guntur_slope",
+        "title": "guntur"
+      },
+      {
+        "name": "sdv:hp_slope",
+        "title": "himachal_pradesh"
+      },
+      {
+        "name": "sdv:hr_slope",
+        "title": "haryana_slope"
+      },
+      {
+        "name": "sdv:jh_slope",
+        "title": "jharkhand_slope"
+      },
+      {
+        "name": "sdv:ka_Bagalkot_slope",
+        "title": "ka_Bagalkot_slope"
+      },
+      {
+        "name": "sdv:ka_Bangalore_slope",
+        "title": "ka_Bangalore_slope"
+      },
+      {
+        "name": "sdv:ka_Belgaum_slope",
+        "title": "ka_Belgaum_slope"
+      },
+      {
+        "name": "sdv:ka_Bellary_slope",
+        "title": "ka_Bellary_slope"
+      },
+      {
+        "name": "sdv:ka_Bidar_slope",
+        "title": "ka_Bidar_slope"
+      },
+      {
+        "name": "sdv:ka_Bijapur_slope",
+        "title": "ka_Bijapur_slope"
+      },
+      {
+        "name": "sdv:ka_Chamarajanagar_slope",
+        "title": "ka_Chamarajanagar_slope"
+      },
+      {
+        "name": "sdv:ka_Chikmagalur_slope",
+        "title": "ka_Chikmagalur_slope"
+      },
+      {
+        "name": "sdv:ka_Chitradurga_slope",
+        "title": "ka_Chitradurga_slope"
+      },
+      {
+        "name": "sdv:ka_DakshinaKannada_slope",
+        "title": "ka_DakshinaKannada_slope"
+      },
+      {
+        "name": "sdv:ka_Davanagere_slope",
+        "title": "ka_Davanagere_slope"
+      },
+      {
+        "name": "sdv:ka_Dharwad_slope",
+        "title": "ka_Dharwad_slope"
+      },
+      {
+        "name": "sdv:ka_Gadag_slope",
+        "title": "ka_Gadag_slope"
+      },
+      {
+        "name": "sdv:ka_Gulbarga_slope",
+        "title": "ka_Gulbarga_slope"
+      },
+      {
+        "name": "sdv:ka_Hassan_slope",
+        "title": "ka_Hassan_slope"
+      },
+      {
+        "name": "sdv:ka_Haveri_slope",
+        "title": "ka_Haveri_slope"
+      },
+      {
+        "name": "sdv:ka_Kodagu_slope",
+        "title": "ka_Kodagu_slope"
+      },
+      {
+        "name": "sdv:ka_Kolar_slope",
+        "title": "ka_Kolar_slope"
+      },
+      {
+        "name": "sdv:ka_Koppal_slope",
+        "title": "ka_Koppal_slope"
+      },
+      {
+        "name": "sdv:ka_Mandya_slope",
+        "title": "ka_Mandya_slope"
+      },
+      {
+        "name": "sdv:ka_Mysore_slope",
+        "title": "ka_Mysore_slope"
+      },
+      {
+        "name": "sdv:ka_Raichur_slope",
+        "title": "ka_Raichur_slope"
+      },
+      {
+        "name": "sdv:ka_Shimoga_slope",
+        "title": "ka_Shimoga_slope"
+      },
+      {
+        "name": "sdv:ka_Tumkur_slope",
+        "title": "ka_Tumkur_slope"
+      },
+      {
+        "name": "sdv:ka_Udupi_slope",
+        "title": "ka_Udupi_slope"
+      },
+      {
+        "name": "sdv:ka_UttaraKannada_slope",
+        "title": "ka_UttaraKannada_slope"
+      },
+      {
+        "name": "sdv:kl_Alappuzha_slope",
+        "title": "kl_Alappuzha_slope"
+      },
+      {
+        "name": "sdv:kl_Ernakulam_slope",
+        "title": "kl_Ernakulam_slope"
+      },
+      {
+        "name": "sdv:kl_Idukki_slope",
+        "title": "kl_Idukki_slope"
+      },
+      {
+        "name": "sdv:kl_Kannur_slope",
+        "title": "kl_Kannur_slope"
+      },
+      {
+        "name": "sdv:kl_Kasaragod_slope",
+        "title": "kl_Kasaragod_slope"
+      },
+      {
+        "name": "sdv:kl_Kollam_slope",
+        "title": "kl_Kollam_slope"
+      },
+      {
+        "name": "sdv:kl_Kottayam_slope",
+        "title": "kl_Kottayam_slope"
+      },
+      {
+        "name": "sdv:kl_Kozhikode_slope",
+        "title": "kl_Kozhikode_slope"
+      },
+      {
+        "name": "sdv:kl_Malappuram_slope",
+        "title": "kl_Malappuram_slope"
+      },
+      {
+        "name": "sdv:kl_Palakkad_slope",
+        "title": "kl_Palakkad_slope"
+      },
+      {
+        "name": "sdv:kl_Pathanamthitta_slope",
+        "title": "kl_Pathanamthitta_slope"
+      },
+      {
+        "name": "sdv:kl_Thiruvananthapuram_slope",
+        "title": "kl_Thiruvananthapuram_slope"
+      },
+      {
+        "name": "sdv:kl_Thrissur_slope",
+        "title": "kl_Thrissur_slope"
+      },
+      {
+        "name": "sdv:kl_Wayanad_slope",
+        "title": "kl_Wayanad_slope"
+      },
+      {
+        "name": "sdv:krishna_slope",
+        "title": "krishna"
+      },
+      {
+        "name": "sdv:kurnool_slope",
+        "title": "kurnool"
+      },
+      {
+        "name": "sdv:mh_Ahmednagar_slope",
+        "title": "mh_Ahmednagar_slope"
+      },
+      {
+        "name": "sdv:mh_Akola_slope",
+        "title": "mh_Akola_slope"
+      },
+      {
+        "name": "sdv:mh_Amravati_slope",
+        "title": "mh_Amravati_slope"
+      },
+      {
+        "name": "sdv:mh_Aurangabad_slope",
+        "title": "mh_Aurangabad_slope"
+      },
+      {
+        "name": "sdv:mh_Beed_slope",
+        "title": "mh_Beed_slope"
+      },
+      {
+        "name": "sdv:mh_Bhandara_slope",
+        "title": "mh_Bhandara_slope"
+      },
+      {
+        "name": "sdv:mh_Buldhana_slope",
+        "title": "mh_Buldhana_slope"
+      },
+      {
+        "name": "sdv:mh_Chandrapur_slope",
+        "title": "mh_Chandrapur_slope"
+      },
+      {
+        "name": "sdv:mh_Dhule_slope",
+        "title": "mh_Dhule_slope"
+      },
+      {
+        "name": "sdv:mh_Gadchiroli_slope",
+        "title": "mh_Gadchiroli_slope"
+      },
+      {
+        "name": "sdv:mh_Gondia_slope",
+        "title": "mh_Gondia_slope"
+      },
+      {
+        "name": "sdv:mh_Hingoli_slope",
+        "title": "mh_Hingoli_slope"
+      },
+      {
+        "name": "sdv:mh_Jalgaon_slope",
+        "title": "mh_Jalgaon_slope"
+      },
+      {
+        "name": "sdv:mh_Jalna_slope",
+        "title": "mh_Jalna_slope"
+      },
+      {
+        "name": "sdv:mh_Kolhapur_slope",
+        "title": "mh_Kolhapur_slope"
+      },
+      {
+        "name": "sdv:mh_Latur_slope",
+        "title": "mh_Latur_slope"
+      },
+      {
+        "name": "sdv:mh_Mumbai_Sub_slope",
+        "title": "mh_Mumbai_Sub_slope"
+      },
+      {
+        "name": "sdv:mh_Mumbai_slope",
+        "title": "mh_Mumbai_slope"
+      },
+      {
+        "name": "sdv:mh_Nagpur_slope",
+        "title": "mh_Nagpur_slope"
+      },
+      {
+        "name": "sdv:mh_Nanded_slope",
+        "title": "mh_Nanded_slope"
+      },
+      {
+        "name": "sdv:mh_Nandurbar_slope",
+        "title": "mh_Nandurbar_slope"
+      },
+      {
+        "name": "sdv:mh_Nashik_slope",
+        "title": "mh_Nashik_slope"
+      },
+      {
+        "name": "sdv:mh_Osmanabad_slope",
+        "title": "mh_Osmanabad_slope"
+      },
+      {
+        "name": "sdv:mh_Parbhani_slope",
+        "title": "mh_Parbhani_slope"
+      },
+      {
+        "name": "sdv:mh_Pune_slope",
+        "title": "mh_Pune_slope"
+      },
+      {
+        "name": "sdv:mh_Raigarh_slope",
+        "title": "mh_Raigarh_slope"
+      },
+      {
+        "name": "sdv:mh_Ratnagiri_slope",
+        "title": "mh_Ratnagiri_slope"
+      },
+      {
+        "name": "sdv:mh_Sangli_slope",
+        "title": "mh_Sangli_slope"
+      },
+      {
+        "name": "sdv:mh_Satara_slope",
+        "title": "mh_Satara_slope"
+      },
+      {
+        "name": "sdv:mh_Sindhudurg_slope",
+        "title": "mh_Sindhudurg_slope"
+      },
+      {
+        "name": "sdv:mh_Solapur_slope",
+        "title": "mh_Solapur_slope"
+      },
+      {
+        "name": "sdv:mh_Thane_slope",
+        "title": "mh_Thane_slope"
+      },
+      {
+        "name": "sdv:mh_Wardha_slope",
+        "title": "mh_Wardha_slope"
+      },
+      {
+        "name": "sdv:mh_Washim_slope",
+        "title": "mh_Washim_slope"
+      },
+      {
+        "name": "sdv:mh_Yavatmal_slope",
+        "title": "mh_Yavatmal_slope"
+      },
+      {
+        "name": "sdv:ml_EastGaroHills_slope",
+        "title": "ml_EastGaroHills_slope"
+      },
+      {
+        "name": "sdv:ml_EastKhasiHills_slope",
+        "title": "ml_EastKhasiHills_slope"
+      },
+      {
+        "name": "sdv:ml_JaintiaHills_slope",
+        "title": "ml_JaintiaHills_slope"
+      },
+      {
+        "name": "sdv:ml_RiBhoi_slope",
+        "title": "ml_RiBhoi_slope"
+      },
+      {
+        "name": "sdv:ml_SouthGaroHills_slope",
+        "title": "ml_SouthGaroHills_slope"
+      },
+      {
+        "name": "sdv:ml_WestGaroHills_slope",
+        "title": "ml_WestGaroHills_slope"
+      },
+      {
+        "name": "sdv:ml_WestKhasiHills_slope",
+        "title": "ml_WestKhasiHills_slope"
+      },
+      {
+        "name": "sdv:mn_Bishnupur_slope",
+        "title": "mn_Bishnupur_slope"
+      },
+      {
+        "name": "sdv:mn_Chandel_slope",
+        "title": "mn_Chandel_slope"
+      },
+      {
+        "name": "sdv:mn_Churachandpur_slope",
+        "title": "mn_Churachandpur_slope"
+      },
+      {
+        "name": "sdv:mn_ImphalEast_slope",
+        "title": "mn_ImphalEast_slope"
+      },
+      {
+        "name": "sdv:mn_ImphalWest_slope",
+        "title": "mn_ImphalWest_slope"
+      },
+      {
+        "name": "sdv:mn_Senapati_slope",
+        "title": "mn_Senapati_slope"
+      },
+      {
+        "name": "sdv:mn_Tamenglong_slope",
+        "title": "mn_Tamenglong_slope"
+      },
+      {
+        "name": "sdv:mn_Thoubal_slope",
+        "title": "mn_Thoubal_slope"
+      },
+      {
+        "name": "sdv:mn_Ukhrul_slope",
+        "title": "mn_Ukhrul_slope"
+      },
+      {
+        "name": "sdv:mp_Anuppur_slope",
+        "title": "mp_Anuppur_slope"
+      },
+      {
+        "name": "sdv:mp_Ashoknagar_slope",
+        "title": "mp_Ashoknagar_slope"
+      },
+      {
+        "name": "sdv:mp_Balaghat_slope",
+        "title": "mp_Balaghat_slope"
+      },
+      {
+        "name": "sdv:mp_Barwani_slope",
+        "title": "mp_Barwani_slope"
+      },
+      {
+        "name": "sdv:mp_Betul_slope",
+        "title": "mp_Betul_slope"
+      },
+      {
+        "name": "sdv:mp_Bhopal_slope",
+        "title": "mp_Bhopal_slope"
+      },
+      {
+        "name": "sdv:mp_Burhanpur_slope",
+        "title": "mp_Burhanpur_slope"
+      },
+      {
+        "name": "sdv:mp_Chhatarpur_slope",
+        "title": "mp_Chhatarpur_slope"
+      },
+      {
+        "name": "sdv:mp_Chhindwara_slope",
+        "title": "mp_Chhindwara_slope"
+      },
+      {
+        "name": "sdv:mp_Damoh_slope",
+        "title": "mp_Damoh_slope"
+      },
+      {
+        "name": "sdv:mp_Datia_slope",
+        "title": "mp_Datia_slope"
+      },
+      {
+        "name": "sdv:mp_Dewas_slope",
+        "title": "mp_Dewas_slope"
+      },
+      {
+        "name": "sdv:mp_Dhar_slope",
+        "title": "mp_Dhar_slope"
+      },
+      {
+        "name": "sdv:mp_Dindori_slope",
+        "title": "mp_Dindori_slope"
+      },
+      {
+        "name": "sdv:mp_EastNimar_slope",
+        "title": "mp_EastNimar_slope"
+      },
+      {
+        "name": "sdv:mp_Guna_slope",
+        "title": "mp_Guna_slope"
+      },
+      {
+        "name": "sdv:mp_Gwalior_slope",
+        "title": "mp_Gwalior_slope"
+      },
+      {
+        "name": "sdv:mp_Harda_slope",
+        "title": "mp_Harda_slope"
+      },
+      {
+        "name": "sdv:mp_Hoshangabad_slope",
+        "title": "mp_Hoshangabad_slope"
+      },
+      {
+        "name": "sdv:mp_Indore_slope",
+        "title": "mp_Indore_slope"
+      },
+      {
+        "name": "sdv:mp_Jabalpur_slope",
+        "title": "mp_Jabalpur_slope"
+      },
+      {
+        "name": "sdv:mp_Jhabua_slope",
+        "title": "mp_Jhabua_slope"
+      },
+      {
+        "name": "sdv:mp_Katni_slope",
+        "title": "mp_Katni_slope"
+      },
+      {
+        "name": "sdv:mp_Mandla_slope",
+        "title": "mp_Mandla_slope"
+      },
+      {
+        "name": "sdv:mp_Mandsaur_slope",
+        "title": "mp_Mandsaur_slope"
+      },
+      {
+        "name": "sdv:mp_Morena_slope",
+        "title": "mp_Morena_slope"
+      },
+      {
+        "name": "sdv:mp_Narsimhapur_slope",
+        "title": "mp_Narsimhapur_slope"
+      },
+      {
+        "name": "sdv:mp_Neemuch_slope",
+        "title": "mp_Neemuch_slope"
+      },
+      {
+        "name": "sdv:mp_Panna_slope",
+        "title": "mp_Panna_slope"
+      },
+      {
+        "name": "sdv:mp_Raisen_slope",
+        "title": "mp_Raisen_slope"
+      },
+      {
+        "name": "sdv:mp_Rajgarh_slope",
+        "title": "mp_Rajgarh_slope"
+      },
+      {
+        "name": "sdv:mp_Ratlam_slope",
+        "title": "mp_Ratlam_slope"
+      },
+      {
+        "name": "sdv:mp_Rewa_slope",
+        "title": "mp_Rewa_slope"
+      },
+      {
+        "name": "sdv:mp_Sagar_slope",
+        "title": "mp_Sagar_slope"
+      },
+      {
+        "name": "sdv:mp_Satna_slope",
+        "title": "mp_Satna_slope"
+      },
+      {
+        "name": "sdv:mp_Sehore_slope",
+        "title": "mp_Sehore_slope"
+      },
+      {
+        "name": "sdv:mp_Seoni_slope",
+        "title": "mp_Seoni_slope"
+      },
+      {
+        "name": "sdv:mp_Shahdol_slope",
+        "title": "mp_Shahdol_slope"
+      },
+      {
+        "name": "sdv:mp_Shajapur_slope",
+        "title": "mp_Shajapur_slope"
+      },
+      {
+        "name": "sdv:mp_Sheopur_slope",
+        "title": "mp_Sheopur_slope"
+      },
+      {
+        "name": "sdv:mp_Shivpuri_slope",
+        "title": "mp_Shivpuri_slope"
+      },
+      {
+        "name": "sdv:mp_Sidhi_slope",
+        "title": "mp_Sidhi_slope"
+      },
+      {
+        "name": "sdv:mp_Tikamgarh_slope",
+        "title": "mp_Tikamgarh_slope"
+      },
+      {
+        "name": "sdv:mp_Ujjain_slope",
+        "title": "mp_Ujjain_slope"
+      },
+      {
+        "name": "sdv:mp_Umaria_slope",
+        "title": "mp_Umaria_slope"
+      },
+      {
+        "name": "sdv:mp_Vidisha_slope",
+        "title": "mp_Vidisha_slope"
+      },
+      {
+        "name": "sdv:mp_WestNimar_slope",
+        "title": "mp_WestNimar_slope"
+      },
+      {
+        "name": "sdv:mz_Aizawl_slope",
+        "title": "mz_Aizawl_slope"
+      },
+      {
+        "name": "sdv:mz_Champhai_slope",
+        "title": "mz_Champhai_slope"
+      },
+      {
+        "name": "sdv:mz_Kolasib_slope",
+        "title": "mz_Kolasib_slope"
+      },
+      {
+        "name": "sdv:mz_Lawngtlai_slope",
+        "title": "mz_Lawngtlai_slope"
+      },
+      {
+        "name": "sdv:mz_Lunglei_slope",
+        "title": "mz_Lunglei_slope"
+      },
+      {
+        "name": "sdv:mz_Mamit_slope",
+        "title": "mz_Mamit_slope"
+      },
+      {
+        "name": "sdv:mz_Saiha_slope",
+        "title": "mz_Saiha_slope"
+      },
+      {
+        "name": "sdv:mz_Serchhip_slope",
+        "title": "mz_Serchhip_slope"
+      },
+      {
+        "name": "sdv:nellore_slope",
+        "title": "nellore"
+      },
+      {
+        "name": "sdv:nl_Dimapur_slope",
+        "title": "nl_Dimapur_slope"
+      },
+      {
+        "name": "sdv:nl_Kohima_slope",
+        "title": "nl_Kohima_slope"
+      },
+      {
+        "name": "sdv:nl_Mokokchung_slope",
+        "title": "nl_Mokokchung_slope"
+      },
+      {
+        "name": "sdv:nl_Mon_slope",
+        "title": "nl_Mon_slope"
+      },
+      {
+        "name": "sdv:nl_Phek_slope",
+        "title": "nl_Phek_slope"
+      },
+      {
+        "name": "sdv:nl_Tuensang_slope",
+        "title": "nl_Tuensang_slope"
+      },
+      {
+        "name": "sdv:nl_Wokha_slope",
+        "title": "nl_Wokha_slope"
+      },
+      {
+        "name": "sdv:nl_Zunheboto_slope",
+        "title": "nl_Zunheboto_slope"
+      },
+      {
+        "name": "sdv:or_Anugul_slope",
+        "title": "or_Anugul_slope"
+      },
+      {
+        "name": "sdv:or_Balangir_slope",
+        "title": "or_Balangir_slope"
+      },
+      {
+        "name": "sdv:or_Baleshwar_slope",
+        "title": "or_Baleshwar_slope"
+      },
+      {
+        "name": "sdv:or_Bargarh_slope",
+        "title": "or_Bargarh_slope"
+      },
+      {
+        "name": "sdv:or_Baudh_slope",
+        "title": "or_Baudh_slope"
+      },
+      {
+        "name": "sdv:or_Bhadrak_slope",
+        "title": "or_Bhadrak_slope"
+      },
+      {
+        "name": "sdv:or_Cuttack_slope",
+        "title": "or_Cuttack_slope"
+      },
+      {
+        "name": "sdv:or_Debagarh_slope",
+        "title": "or_Debagarh_slope"
+      },
+      {
+        "name": "sdv:or_Dhenkanal_slope",
+        "title": "or_Dhenkanal_slope"
+      },
+      {
+        "name": "sdv:or_Gajapati_slope",
+        "title": "or_Gajapati_slope"
+      },
+      {
+        "name": "sdv:or_Ganjam_slope",
+        "title": "or_Ganjam_slope"
+      },
+      {
+        "name": "sdv:or_Jagatsinghapur_slope",
+        "title": "or_Jagatsinghapur_slope"
+      },
+      {
+        "name": "sdv:or_Jajapur_slope",
+        "title": "or_Jajapur_slope"
+      },
+      {
+        "name": "sdv:or_Jharsuguda_slope",
+        "title": "or_Jharsuguda_slope"
+      },
+      {
+        "name": "sdv:or_Kalahandi_slope",
+        "title": "or_Kalahandi_slope"
+      },
+      {
+        "name": "sdv:or_Kandhamal_slope",
+        "title": "or_Kandhamal_slope"
+      },
+      {
+        "name": "sdv:or_Kendrapara_slope",
+        "title": "or_Kendrapara_slope"
+      },
+      {
+        "name": "sdv:or_Kendujhar_slope",
+        "title": "or_Kendujhar_slope"
+      },
+      {
+        "name": "sdv:or_Khordha_slope",
+        "title": "or_Khordha_slope"
+      },
+      {
+        "name": "sdv:or_Koraput_slope",
+        "title": "or_Koraput_slope"
+      },
+      {
+        "name": "sdv:or_Malkangiri_slope",
+        "title": "or_Malkangiri_slope"
+      },
+      {
+        "name": "sdv:or_Mayurbhanj_slope",
+        "title": "or_Mayurbhanj_slope"
+      },
+      {
+        "name": "sdv:or_Nabarangapur_slope",
+        "title": "or_Nabarangapur_slope"
+      },
+      {
+        "name": "sdv:or_Nayagarh_slope",
+        "title": "or_Nayagarh_slope"
+      },
+      {
+        "name": "sdv:or_Nuapada_slope",
+        "title": "or_Nuapada_slope"
+      },
+      {
+        "name": "sdv:or_Puri_slope",
+        "title": "or_Puri_slope"
+      },
+      {
+        "name": "sdv:or_Rayagada_slope",
+        "title": "or_Rayagada_slope"
+      },
+      {
+        "name": "sdv:or_Sambalpur_slope",
+        "title": "or_Sambalpur_slope"
+      },
+      {
+        "name": "sdv:or_Sonapur_slope",
+        "title": "or_Sonapur_slope"
+      },
+      {
+        "name": "sdv:or_Sundargarh_slope",
+        "title": "or_Sundargarh_slope"
+      },
+      {
+        "name": "sdv:rj_Ajmer_slope",
+        "title": "rj_Ajmer_slope"
+      },
+      {
+        "name": "sdv:rj_Alwar_slope",
+        "title": "rj_Alwar_slope"
+      },
+      {
+        "name": "sdv:rj_Banswara_slope",
+        "title": "rj_Banswara_slope"
+      },
+      {
+        "name": "sdv:rj_Baran_slope",
+        "title": "rj_Baran_slope"
+      },
+      {
+        "name": "sdv:rj_Barmer_slope",
+        "title": "rj_Barmer_slope"
+      },
+      {
+        "name": "sdv:rj_Bharatpur_slope",
+        "title": "rj_Bharatpur_slope"
+      },
+      {
+        "name": "sdv:rj_Bhilwara_slope",
+        "title": "rj_Bhilwara_slope"
+      },
+      {
+        "name": "sdv:rj_Bikaner_slope",
+        "title": "rj_Bikaner_slope"
+      },
+      {
+        "name": "sdv:rj_Bundi_slope",
+        "title": "rj_Bundi_slope"
+      },
+      {
+        "name": "sdv:rj_Chittaurgarh_slope",
+        "title": "rj_Chittaurgarh_slope"
+      },
+      {
+        "name": "sdv:rj_Churu_slope",
+        "title": "rj_Churu_slope"
+      },
+      {
+        "name": "sdv:rj_Dausa_slope",
+        "title": "rj_Dausa_slope"
+      },
+      {
+        "name": "sdv:rj_Dhaulpur_slope",
+        "title": "rj_Dhaulpur_slope"
+      },
+      {
+        "name": "sdv:rj_Dungarpur_slope",
+        "title": "rj_Dungarpur_slope"
+      },
+      {
+        "name": "sdv:rj_Ganganagar_slope",
+        "title": "rj_Ganganagar_slope"
+      },
+      {
+        "name": "sdv:rj_Hanumangarh_slope",
+        "title": "rj_Hanumangarh_slope"
+      },
+      {
+        "name": "sdv:rj_Jaipur_slope",
+        "title": "rj_Jaipur_slope"
+      },
+      {
+        "name": "sdv:rj_Jaisalmer_slope",
+        "title": "rj_Jaisalmer_slope"
+      },
+      {
+        "name": "sdv:rj_Jalor_slope",
+        "title": "rj_Jalor_slope"
+      },
+      {
+        "name": "sdv:rj_Jhalawar_slope",
+        "title": "rj_Jhalawar_slope"
+      },
+      {
+        "name": "sdv:rj_Jhunjhunun_slope",
+        "title": "rj_Jhunjhunun_slope"
+      },
+      {
+        "name": "sdv:rj_Jodhpur_slope",
+        "title": "rj_Jodhpur_slope"
+      },
+      {
+        "name": "sdv:rj_Karauli_slope",
+        "title": "rj_Karauli_slope"
+      },
+      {
+        "name": "sdv:rj_Kota_slope",
+        "title": "rj_Kota_slope"
+      },
+      {
+        "name": "sdv:rj_Nagaur_slope",
+        "title": "rj_Nagaur_slope"
+      },
+      {
+        "name": "sdv:rj_Pali_slope",
+        "title": "rj_Pali_slope"
+      },
+      {
+        "name": "sdv:rj_Pratapgarh_slope",
+        "title": "rj_Pratapgarh_slope"
+      },
+      {
+        "name": "sdv:rj_Rajsamand_slope",
+        "title": "rj_Rajsamand_slope"
+      },
+      {
+        "name": "sdv:rj_Sawai_madhopur_slope",
+        "title": "rj_Sawai_madhopur_slope"
+      },
+      {
+        "name": "sdv:rj_Sikar_slope",
+        "title": "rj_Sikar_slope"
+      },
+      {
+        "name": "sdv:rj_Sirohi_slope",
+        "title": "rj_Sirohi_slope"
+      },
+      {
+        "name": "sdv:rj_Tonk_slope",
+        "title": "rj_Tonk_slope"
+      },
+      {
+        "name": "sdv:rj_Udaipur_slope",
+        "title": "rj_Udaipur_slope"
+      },
+      {
+        "name": "sdv:sk_East_slope",
+        "title": "sk_East_slope"
+      },
+      {
+        "name": "sdv:sk_North_slope",
+        "title": "sk_North_slope"
+      },
+      {
+        "name": "sdv:sk_South_slope",
+        "title": "sk_South_slope"
+      },
+      {
+        "name": "sdv:sk_West_slope",
+        "title": "sk_West_slope"
+      },
+      {
+        "name": "sdv:srikakulam_slope",
+        "title": "srikakulam"
+      },
+      {
+        "name": "sdv:tn_slope",
+        "title": "tn_slope"
+      },
+      {
+        "name": "sdv:tr_Dhalai_slope",
+        "title": "tr_Dhalai_slope"
+      },
+      {
+        "name": "sdv:tr_NorthTripura_slope",
+        "title": "tr_NorthTripura_slope"
+      },
+      {
+        "name": "sdv:tr_SouthTripura_slope",
+        "title": "tr_SouthTripura_slope"
+      },
+      {
+        "name": "sdv:tr_WestTripura_slope",
+        "title": "tr_WestTripura_slope"
+      },
+      {
+        "name": "sdv:ts_slope",
+        "title": "Telangana_slope"
+      },
+      {
+        "name": "sdv:uk_slope",
+        "title": "Uttarakhand_slope"
+      },
+      {
+        "name": "sdv:up_Agra_slope",
+        "title": "up_Agra_slope"
+      },
+      {
+        "name": "sdv:up_Aligarh_slope",
+        "title": "up_Aligarh_slope"
+      },
+      {
+        "name": "sdv:up_Allahabad_slope",
+        "title": "up_Allahabad_slope"
+      },
+      {
+        "name": "sdv:up_AmbedkarNagar_slope",
+        "title": "up_AmbedkarNagar_slope"
+      },
+      {
+        "name": "sdv:up_Auraiya_slope",
+        "title": "up_Auraiya_slope"
+      },
+      {
+        "name": "sdv:up_Azamgarh_slope",
+        "title": "up_Azamgarh_slope"
+      },
+      {
+        "name": "sdv:up_Baghpat_slope",
+        "title": "up_Baghpat_slope"
+      },
+      {
+        "name": "sdv:up_Bahraich_slope",
+        "title": "up_Bahraich_slope"
+      },
+      {
+        "name": "sdv:up_Ballia_slope",
+        "title": "up_Ballia_slope"
+      },
+      {
+        "name": "sdv:up_Balrampur_slope",
+        "title": "up_Balrampur_slope"
+      },
+      {
+        "name": "sdv:up_Banda_slope",
+        "title": "up_Banda_slope"
+      },
+      {
+        "name": "sdv:up_BaraBanki_slope",
+        "title": "up_BaraBanki_slope"
+      },
+      {
+        "name": "sdv:up_Bareilly_slope",
+        "title": "up_Bareilly_slope"
+      },
+      {
+        "name": "sdv:up_Basti_slope",
+        "title": "up_Basti_slope"
+      },
+      {
+        "name": "sdv:up_Bijnor_slope",
+        "title": "up_Bijnor_slope"
+      },
+      {
+        "name": "sdv:up_Budaun_slope",
+        "title": "up_Budaun_slope"
+      },
+      {
+        "name": "sdv:up_Bulandshahr_slope",
+        "title": "up_Bulandshahr_slope"
+      },
+      {
+        "name": "sdv:up_Chandauli_slope",
+        "title": "up_Chandauli_slope"
+      },
+      {
+        "name": "sdv:up_Chitrakoot_slope",
+        "title": "up_Chitrakoot_slope"
+      },
+      {
+        "name": "sdv:up_Deoria_slope",
+        "title": "up_Deoria_slope"
+      },
+      {
+        "name": "sdv:up_Etah_slope",
+        "title": "up_Etah_slope"
+      },
+      {
+        "name": "sdv:up_Etawah_slope",
+        "title": "up_Etawah_slope"
+      },
+      {
+        "name": "sdv:up_Faizabad_slope",
+        "title": "up_Faizabad_slope"
+      },
+      {
+        "name": "sdv:up_Farrukhabad_slope",
+        "title": "up_Farrukhabad_slope"
+      },
+      {
+        "name": "sdv:up_Fatehpur_slope",
+        "title": "up_Fatehpur_slope"
+      },
+      {
+        "name": "sdv:up_Firozabad_slope",
+        "title": "up_Firozabad_slope"
+      },
+      {
+        "name": "sdv:up_GautamBuddhaNagar_slope",
+        "title": "up_GautamBuddhaNagar_slope"
+      },
+      {
+        "name": "sdv:up_Gazipur_slope",
+        "title": "up_Gazipur_slope"
+      },
+      {
+        "name": "sdv:up_Ghaziabad_slope",
+        "title": "up_Ghaziabad_slope"
+      },
+      {
+        "name": "sdv:up_Gonda_slope",
+        "title": "up_Gonda_slope"
+      },
+      {
+        "name": "sdv:up_Gorakhpur_slope",
+        "title": "up_Gorakhpur_slope"
+      },
+      {
+        "name": "sdv:up_Hamirpur_slope",
+        "title": "up_Hamirpur_slope"
+      },
+      {
+        "name": "sdv:up_Hardoi_slope",
+        "title": "up_Hardoi_slope"
+      },
+      {
+        "name": "sdv:up_Hathras_slope",
+        "title": "up_Hathras_slope"
+      },
+      {
+        "name": "sdv:up_Jalaun_slope",
+        "title": "up_Jalaun_slope"
+      },
+      {
+        "name": "sdv:up_Jaunpur_slope",
+        "title": "up_Jaunpur_slope"
+      },
+      {
+        "name": "sdv:up_Jhansi_slope",
+        "title": "up_Jhansi_slope"
+      },
+      {
+        "name": "sdv:up_JyotibaPhuleNagar_slope",
+        "title": "up_JyotibaPhuleNagar_slope"
+      },
+      {
+        "name": "sdv:up_Kannauj_slope",
+        "title": "up_Kannauj_slope"
+      },
+      {
+        "name": "sdv:up_KanpurDehat_slope",
+        "title": "up_KanpurDehat_slope"
+      },
+      {
+        "name": "sdv:up_KanpurNagar_slope",
+        "title": "up_KanpurNagar_slope"
+      },
+      {
+        "name": "sdv:up_Kaushambi_slope",
+        "title": "up_Kaushambi_slope"
+      },
+      {
+        "name": "sdv:up_Kheri_slope",
+        "title": "up_Kheri_slope"
+      },
+      {
+        "name": "sdv:up_Kushinagar_slope",
+        "title": "up_Kushinagar_slope"
+      },
+      {
+        "name": "sdv:up_Lalitpur_slope",
+        "title": "up_Lalitpur_slope"
+      },
+      {
+        "name": "sdv:up_Lucknow_slope",
+        "title": "up_Lucknow_slope"
+      },
+      {
+        "name": "sdv:up_Mahoba_slope",
+        "title": "up_Mahoba_slope"
+      },
+      {
+        "name": "sdv:up_Mahrajganj_slope",
+        "title": "up_Mahrajganj_slope"
+      },
+      {
+        "name": "sdv:up_Mainpuri_slope",
+        "title": "up_Mainpuri_slope"
+      },
+      {
+        "name": "sdv:up_Mathura_slope",
+        "title": "up_Mathura_slope"
+      },
+      {
+        "name": "sdv:up_Mau_slope",
+        "title": "up_Mau_slope"
+      },
+      {
+        "name": "sdv:up_Meerut_slope",
+        "title": "up_Meerut_slope"
+      },
+      {
+        "name": "sdv:up_Mirzapur_slope",
+        "title": "up_Mirzapur_slope"
+      },
+      {
+        "name": "sdv:up_Moradabad_slope",
+        "title": "up_Moradabad_slope"
+      },
+      {
+        "name": "sdv:up_Muzzafarnagar_slope",
+        "title": "up_Muzzafarnagar_slope"
+      },
+      {
+        "name": "sdv:up_Pilibhit_slope",
+        "title": "up_Pilibhit_slope"
+      },
+      {
+        "name": "sdv:up_Pratapgarh_slope",
+        "title": "up_Pratapgarh_slope"
+      },
+      {
+        "name": "sdv:up_RaeBareli_slope",
+        "title": "up_RaeBareli_slope"
+      },
+      {
+        "name": "sdv:up_Rampur_slope",
+        "title": "up_Rampur_slope"
+      },
+      {
+        "name": "sdv:up_Saharanpur_slope",
+        "title": "up_Saharanpur_slope"
+      },
+      {
+        "name": "sdv:up_SantRaviDasNagarBhadohi_slope",
+        "title": "up_SantRaviDasNagarBhadohi_slope"
+      },
+      {
+        "name": "sdv:up_Shahjahanpur_slope",
+        "title": "up_Shahjahanpur_slope"
+      },
+      {
+        "name": "sdv:up_Shrawasti_slope",
+        "title": "up_Shrawasti_slope"
+      },
+      {
+        "name": "sdv:up_SiddarthNagar_slope",
+        "title": "up_SiddarthNagar_slope"
+      },
+      {
+        "name": "sdv:up_Sitapur_slope",
+        "title": "up_Sitapur_slope"
+      },
+      {
+        "name": "sdv:up_Sonbhadra_slope",
+        "title": "up_Sonbhadra_slope"
+      },
+      {
+        "name": "sdv:up_Sultanpur_slope",
+        "title": "up_Sultanpur_slope"
+      },
+      {
+        "name": "sdv:up_Unnao_slope",
+        "title": "up_Unnao_slope"
+      },
+      {
+        "name": "sdv:up_Varanasi_slope",
+        "title": "up_Varanasi_slope"
+      },
+      {
+        "name": "sdv:visakhapatnam_slope",
+        "title": "visakhapatnam"
+      },
+      {
+        "name": "sdv:vizianagaram_slope",
+        "title": "vizianagaram"
+      },
+      {
+        "name": "sdv:wb_slope",
+        "title": "WB_slope"
+      },
+      {
+        "name": "sdv:west_slope",
+        "title": "west"
+      },
+      {
+        "name": "sdv:westbengal_slope",
+        "title": "westbengal_slope"
+      }
+    ],
+    "NER_states": [
+      {
+        "name": "sdv:as_slope",
+        "title": "Assam Slope Data"
+      },
+      {
+        "name": "sdv:ml_slope",
+        "title": "Meghalaya Slope Data"
+      },
+      {
+        "name": "sdv:mn_slope",
+        "title": "Manipur Slope Data"
+      },
+      {
+        "name": "sdv:mz_slope",
+        "title": "Mizoram Slope Data"
+      },
+      {
+        "name": "sdv:nl_slope",
+        "title": "Nagaland Slope Data"
+      },
+      {
+        "name": "sdv:sk_slope",
+        "title": "Sikkim Slope Data"
+      },
+      {
+        "name": "sdv:tr_slope",
+        "title": "Tripura Slope Data"
+      },
+      {
+        "name": "gw:ARUNACHAL_PRADESH_POST",
+        "title": "ARUNACHAL_PRADESH_POST"
+      },
+      {
+        "name": "gw:ARUNACHAL_PRADESH_PRE",
+        "title": "ARUNACHAL_PRADESH_PRE"
+      },
+      {
+        "name": "gw:ASSAM_POST",
+        "title": "ASSAM_POST"
+      },
+      {
+        "name": "gw:ASSAM_POSTMONSOON_2008_2015",
+        "title": "ASSAM_POSTMONSOON_2008_2015"
+      },
+      {
+        "name": "gw:ASSAM_PRE",
+        "title": "ASSAM_PRE"
+      },
+      {
+        "name": "gw:ASSAM_PREMONSOON_2008_2014",
+        "title": "ASSAM_PREMONSOON_2008_2014"
+      },
+      {
+        "name": "sisdp:Darrang_lc_assam",
+        "title": "Darrang_lc_assam"
+      },
+      {
+        "name": "sisdp:Jorhat_lc_assam",
+        "title": "Jorhat_lc_assam"
+      },
+      {
+        "name": "sisdp:Kamrup_lc_assam",
+        "title": "Kamrup_lc_assam"
+      },
+      {
+        "name": "twris:Kinnerasani_Canal",
+        "title": "Kinnerasani_Canal"
+      },
+      {
+        "name": "twris:Kinnerasani_dbnd",
+        "title": "Kinnerasani_dbnd"
+      },
+      {
+        "name": "hs:LUHS_AS_ASSAM_2006",
+        "title": "LUHS_AS_ASSAM_2006"
+      },
+      {
+        "name": "hs:LUHS_AS_ASSAM_2015",
+        "title": "LUHS_AS_ASSAM_2015"
+      },
+      {
+        "name": "hs:LUHS_TR_TRIPURA_2005",
+        "title": "LUHS_TR_TRIPURA_2005"
+      },
+      {
+        "name": "hs:LUHS_TR_TRIPURA_2015",
+        "title": "LUHS_TR_TRIPURA_2015"
+      },
+      {
+        "name": "gw:MANIPUR_POST",
+        "title": "MANIPUR_POST"
+      },
+      {
+        "name": "gw:MANIPUR_POSTMONSOON_2016",
+        "title": "MANIPUR_POSTMONSOON_2016"
+      },
+      {
+        "name": "gw:MANIPUR_PRE",
+        "title": "MANIPUR_PRE"
+      },
+      {
+        "name": "gw:MANIPUR_PREMONSOON_2016",
+        "title": "MANIPUR_PREMONSOON_2016"
+      },
+      {
+        "name": "gw:MEGHALAYA_POST",
+        "title": "MEGHALAYA_POST"
+      },
+      {
+        "name": "gw:MEGHALAYA_PRE",
+        "title": "MEGHALAYA_PRE"
+      },
+      {
+        "name": "gw:MIZORAM_POST",
+        "title": "MIZORAM_POST"
+      },
+      {
+        "name": "gw:MIZORAM_PRE",
+        "title": "MIZORAM_PRE"
+      },
+      {
+        "name": "sisdp:Mizoram_Aizawl_LULC_",
+        "title": "Mizoram_Aizawl_LULC_"
+      },
+      {
+        "name": "sisdp:Mizoram_Aizawl_Road_F",
+        "title": "Mizoram_Aizawl_Road_F"
+      },
+      {
+        "name": "sisdp:Mizoram_Champhai_LULC",
+        "title": "Mizoram_Champhai_LULC"
+      },
+      {
+        "name": "sisdp:Mizoram_Champhai_Road_copy",
+        "title": "Mizoram_Champhai_Road_copy"
+      },
+      {
+        "name": "sisdp:Mizoram_Kolasib_LULC_",
+        "title": "Mizoram_Kolasib_LULC_"
+      },
+      {
+        "name": "gw:Mizoram_Post_Monsoon_2009_2016",
+        "title": "Mizoram_Post_Monsoon_2009_2016"
+      },
+      {
+        "name": "gw:Mizoram_Pre_Monsoon_2009_2016",
+        "title": "Mizoram_Pre_Monsoon_2009_2016"
+      },
+      {
+        "name": "gw:NAGALAND_POST",
+        "title": "NAGALAND_POST"
+      },
+      {
+        "name": "gw:NAGALAND_PRE",
+        "title": "NAGALAND_PRE"
+      },
+      {
+        "name": "sisdpv2:RJ_Bikaner_lulc_v2",
+        "title": "RJ_Bikaner_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:SK_East_Sikkim_lulc_v2",
+        "title": "SK_East_Sikkim_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:SK_North_Sikkim_lulc_v2",
+        "title": "SK_North_Sikkim_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:SK_South_Sikkim_lulc_v2",
+        "title": "SK_South_Sikkim_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:SK_West_Sikkim_lulc_v2",
+        "title": "SK_West_Sikkim_lulc_v2"
+      },
+      {
+        "name": "gw:TRIPURA_POST",
+        "title": "TRIPURA_POST"
+      },
+      {
+        "name": "gw:TRIPURA_PRE",
+        "title": "TRIPURA_PRE"
+      },
+      {
+        "name": "sdv:ar_slope",
+        "title": "Arunachal_Pradesh"
+      },
+      {
+        "name": "moef:girner_ecz_poly",
+        "title": "girner_ecz_poly"
+      },
+      {
+        "name": "sdv:rj_Bikaner_slope",
+        "title": "rj_Bikaner_slope"
+      },
+      {
+        "name": "sdv:tr_NorthTripura_slope",
+        "title": "tr_NorthTripura_slope"
+      },
+      {
+        "name": "sdv:tr_SouthTripura_slope",
+        "title": "tr_SouthTripura_slope"
+      },
+      {
+        "name": "sdv:tr_WestTripura_slope",
+        "title": "tr_WestTripura_slope"
+      }
+    ],
+    "soil": [
+      {
+        "name": "sdv:nagireddipalli-soil",
+        "title": "nagireddipalli-soil"
+      }
+    ],
+    "geology": [
+      {
+        "name": "cleanganga:LITHOLOG",
+        "title": "LITHOLOG"
+      }
+    ],
+    "landslide": [],
+    "watershed": [
+      {
+        "name": "cite:bhuvan_watershed",
+        "title": "cite:bhuvan_watershed"
+      },
+      {
+        "name": "nuis:AND_PB_drainage_line",
+        "title": "AND_PB_drainage_line"
+      },
+      {
+        "name": "nuis:AND_PB_drainage_poly",
+        "title": "AND_PB_drainage_poly"
+      },
+      {
+        "name": "nuis:AP_DH_drainage_line",
+        "title": "AP_DH_drainage_line"
+      },
+      {
+        "name": "nuis:AP_DH_drainage_poly",
+        "title": "AP_DH_drainage_poly"
+      },
+      {
+        "name": "nuis:AP_MA_drainage_line",
+        "title": "AP_MA_drainage_line"
+      },
+      {
+        "name": "nuis:AP_MA_drainage_poly",
+        "title": "AP_MA_drainage_poly"
+      },
+      {
+        "name": "sdv:AP_RIVER",
+        "title": "AP_RIVER"
+      },
+      {
+        "name": "nuis:AP_SR_drainage_line",
+        "title": "AP_SR_drainage_line"
+      },
+      {
+        "name": "nuis:AP_SR_drainage_poly",
+        "title": "AP_SR_drainage_poly"
+      },
+      {
+        "name": "sdv:AP_SUB_BASIN",
+        "title": "AP_SUB_BASIN"
+      },
+      {
+        "name": "nuis:AP_SU_drainage_line",
+        "title": "AP_SU_drainage_line"
+      },
+      {
+        "name": "nuis:AP_TP_drainage_line",
+        "title": "AP_TP_drainage_line"
+      },
+      {
+        "name": "sdv:AP_WATERSHED1",
+        "title": "AP_WATERSHED1"
+      },
+      {
+        "name": "nuis:AR_AL_drainage_line",
+        "title": "AR_AL_drainage_line"
+      },
+      {
+        "name": "nuis:AR_AL_drainage_poly",
+        "title": "AR_AL_drainage_poly"
+      },
+      {
+        "name": "nuis:AR_DA_drainage_line",
+        "title": "AR_DA_drainage_line"
+      },
+      {
+        "name": "nuis:AR_DA_drainage_poly",
+        "title": "AR_DA_drainage_poly"
+      },
+      {
+        "name": "nuis:AS_DI_drainage_poly",
+        "title": "AS_DI_drainage_poly"
+      },
+      {
+        "name": "nuis:AS_NA_drainage_line",
+        "title": "AS_NA_drainage_line"
+      },
+      {
+        "name": "nuis:AS_NA_drainage_poly",
+        "title": "AS_NA_drainage_poly"
+      },
+      {
+        "name": "nuis:AS_SI_drainage_line",
+        "title": "AS_SI_drainage_line"
+      },
+      {
+        "name": "nuis:AS_SI_drainage_poly",
+        "title": "AS_SI_drainage_poly"
+      },
+      {
+        "name": "nuis:AS_TE_drainage_line",
+        "title": "AS_TE_drainage_line"
+      },
+      {
+        "name": "nuis:AS_TE_drainage_poly",
+        "title": "AS_TE_drainage_poly"
+      },
+      {
+        "name": "nuis:AS_TI_drainage_line",
+        "title": "AS_TI_drainage_line"
+      },
+      {
+        "name": "nuis:AS_TI_drainage_poly",
+        "title": "AS_TI_drainage_poly"
+      },
+      {
+        "name": "hydrology:BASIN",
+        "title": "BASIN"
+      },
+      {
+        "name": "hydrology:BDRN_22_MinorRiversMyanmar",
+        "title": "BDRN_22_MinorRiversMyanmar"
+      },
+      {
+        "name": "nuis:BR_AR_drainage_poly",
+        "title": "BR_AR_drainage_poly"
+      },
+      {
+        "name": "nuis:BR_BH_drainage_line",
+        "title": "BR_BH_drainage_line"
+      },
+      {
+        "name": "nuis:BR_BH_drainage_poly",
+        "title": "BR_BH_drainage_poly"
+      },
+      {
+        "name": "nuis:BR_DA_drainage_poly",
+        "title": "BR_DA_drainage_poly"
+      },
+      {
+        "name": "nuis:BR_MU_drainage_poly",
+        "title": "BR_MU_drainage_poly"
+      },
+      {
+        "name": "nuis:BR_PA_drainage_line",
+        "title": "BR_PA_drainage_line"
+      },
+      {
+        "name": "nuis:BR_PA_drainage_poly",
+        "title": "BR_PA_drainage_poly"
+      },
+      {
+        "name": "nuis:CG_CG_drainage_poly",
+        "title": "CG_CG_drainage_poly"
+      },
+      {
+        "name": "nuis:CH_BI_drainage_line",
+        "title": "CH_BI_drainage_line"
+      },
+      {
+        "name": "nuis:CH_BI_drainage_poly",
+        "title": "CH_BI_drainage_poly"
+      },
+      {
+        "name": "nuis:CH_DU_drainage_line",
+        "title": "CH_DU_drainage_line"
+      },
+      {
+        "name": "nuis:CH_DU_drainage_poly",
+        "title": "CH_DU_drainage_poly"
+      },
+      {
+        "name": "nuis:CH_KO_drainage_line",
+        "title": "CH_KO_drainage_line"
+      },
+      {
+        "name": "nuis:CH_KO_drainage_poly",
+        "title": "CH_KO_drainage_poly"
+      },
+      {
+        "name": "nuis:CH_RA_drainage_line",
+        "title": "CH_RA_drainage_line"
+      },
+      {
+        "name": "nuis:CH_RA_drainage_poly",
+        "title": "CH_RA_drainage_poly"
+      },
+      {
+        "name": "cleanganga:Cleanganga_MajorRiverswithName",
+        "title": "Cleanganga_MajorRiverswithName"
+      },
+      {
+        "name": "nuis:DD_DA_drainage_line",
+        "title": "DD_DA_drainage_line"
+      },
+      {
+        "name": "nuis:DD_DA_drainage_poly",
+        "title": "DD_DA_drainage_poly"
+      },
+      {
+        "name": "nuis:DN_SI_drainage_line",
+        "title": "DN_SI_drainage_line"
+      },
+      {
+        "name": "nuis:DN_SI_drainage_poly",
+        "title": "DN_SI_drainage_poly"
+      },
+      {
+        "name": "nuis:GA_CUR_drainage_line",
+        "title": "GA_CUR_drainage_line"
+      },
+      {
+        "name": "nuis:GA_CUR_drainage_poly",
+        "title": "GA_CUR_drainage_poly"
+      },
+      {
+        "name": "nuis:GA_CU_drainage_line",
+        "title": "GA_CU_drainage_line"
+      },
+      {
+        "name": "nuis:GA_CU_drainage_poly",
+        "title": "GA_CU_drainage_poly"
+      },
+      {
+        "name": "nuis:GA_MAP_drainage_line",
+        "title": "GA_MAP_drainage_line"
+      },
+      {
+        "name": "nuis:GA_MAP_drainage_poly",
+        "title": "GA_MAP_drainage_poly"
+      },
+      {
+        "name": "nuis:GA_MA_drainage_line",
+        "title": "GA_MA_drainage_line"
+      },
+      {
+        "name": "nuis:GA_MA_drainage_poly",
+        "title": "GA_MA_drainage_poly"
+      },
+      {
+        "name": "nuis:GA_MO_drainage_line",
+        "title": "GA_MO_drainage_line"
+      },
+      {
+        "name": "nuis:GA_MO_drainage_poly",
+        "title": "GA_MO_drainage_poly"
+      },
+      {
+        "name": "nuis:GJ_BH_drainage_line",
+        "title": "GJ_BH_drainage_line"
+      },
+      {
+        "name": "nuis:GJ_BH_drainage_poly",
+        "title": "GJ_BH_drainage_poly"
+      },
+      {
+        "name": "nuis:GJ_JA_drainage_line",
+        "title": "GJ_JA_drainage_line"
+      },
+      {
+        "name": "nuis:GJ_JA_drainage_poly",
+        "title": "GJ_JA_drainage_poly"
+      },
+      {
+        "name": "nuis:GJ_NA_drainage_line",
+        "title": "GJ_NA_drainage_line"
+      },
+      {
+        "name": "nuis:GJ_NA_drainage_poly",
+        "title": "GJ_NA_drainage_poly"
+      },
+      {
+        "name": "nuis:GJ_RA_drainage_line",
+        "title": "GJ_RA_drainage_line"
+      },
+      {
+        "name": "nuis:GJ_RA_drainage_poly",
+        "title": "GJ_RA_drainage_poly"
+      },
+      {
+        "name": "nuis:GJ_SU_drainage_line",
+        "title": "GJ_SU_drainage_line"
+      },
+      {
+        "name": "nuis:GJ_SU_drainage_poly",
+        "title": "GJ_SU_drainage_poly"
+      },
+      {
+        "name": "nuis:GJ_VA_drainage_line",
+        "title": "GJ_VA_drainage_line"
+      },
+      {
+        "name": "nuis:GJ_VA_drainage_poly",
+        "title": "GJ_VA_drainage_poly"
+      },
+      {
+        "name": "cleanganga:GangaRiver",
+        "title": "GangaRiver"
+      },
+      {
+        "name": "nuis:HP_DH_drainage_line",
+        "title": "HP_DH_drainage_line"
+      },
+      {
+        "name": "nuis:HP_DH_drainage_poly",
+        "title": "HP_DH_drainage_poly"
+      },
+      {
+        "name": "nuis:HP_MA_drainage_line",
+        "title": "HP_MA_drainage_line"
+      },
+      {
+        "name": "nuis:HP_MA_drainage_poly",
+        "title": "HP_MA_drainage_poly"
+      },
+      {
+        "name": "nuis:HP_NA_drainage_line",
+        "title": "HP_NA_drainage_line"
+      },
+      {
+        "name": "nuis:HP_NA_drainage_poly",
+        "title": "HP_NA_drainage_poly"
+      },
+      {
+        "name": "nuis:HP_SH_drainage_line",
+        "title": "HP_SH_drainage_line"
+      },
+      {
+        "name": "nuis:HP_SO_drainage_line",
+        "title": "HP_SO_drainage_line"
+      },
+      {
+        "name": "nuis:HP_SO_drainage_poly",
+        "title": "HP_SO_drainage_poly"
+      },
+      {
+        "name": "cleanganga:Inter_Basin_Transfer_Link",
+        "title": "Inter_Basin_Transfer_Link"
+      },
+      {
+        "name": "nuis:JH_BO_drainage_line",
+        "title": "JH_BO_drainage_line"
+      },
+      {
+        "name": "nuis:JH_BO_drainage_poly",
+        "title": "JH_BO_drainage_poly"
+      },
+      {
+        "name": "nuis:JH_DH_drainage_line",
+        "title": "JH_DH_drainage_line"
+      },
+      {
+        "name": "nuis:JH_DH_drainage_poly",
+        "title": "JH_DH_drainage_poly"
+      },
+      {
+        "name": "nuis:JH_JA_drainage_line",
+        "title": "JH_JA_drainage_line"
+      },
+      {
+        "name": "nuis:JH_JA_drainage_poly",
+        "title": "JH_JA_drainage_poly"
+      },
+      {
+        "name": "nuis:JH_RA_drainage_line",
+        "title": "JH_RA_drainage_line"
+      },
+      {
+        "name": "nuis:JH_RA_drainage_poly",
+        "title": "JH_RA_drainage_poly"
+      },
+      {
+        "name": "nuis:JK_AC_drainage_line",
+        "title": "JK_AC_drainage_line"
+      },
+      {
+        "name": "nuis:JK_AC_drainage_poly",
+        "title": "JK_AC_drainage_poly"
+      },
+      {
+        "name": "nuis:JK_AK_drainage_line",
+        "title": "JK_AK_drainage_line"
+      },
+      {
+        "name": "nuis:JK_AK_drainage_poly",
+        "title": "JK_AK_drainage_poly"
+      },
+      {
+        "name": "nuis:JK_AN_drainage_line",
+        "title": "JK_AN_drainage_line"
+      },
+      {
+        "name": "nuis:JK_AN_drainage_poly",
+        "title": "JK_AN_drainage_poly"
+      },
+      {
+        "name": "nuis:JK_BAR_drainage_line",
+        "title": "JK_BAR_drainage_line"
+      },
+      {
+        "name": "nuis:JK_BAR_drainage_poly",
+        "title": "JK_BAR_drainage_poly"
+      },
+      {
+        "name": "nuis:JK_BA_drainage_line",
+        "title": "JK_BA_drainage_line"
+      },
+      {
+        "name": "nuis:JK_BA_drainage_poly",
+        "title": "JK_BA_drainage_poly"
+      },
+      {
+        "name": "nuis:JK_BE_drainage_line",
+        "title": "JK_BE_drainage_line"
+      },
+      {
+        "name": "nuis:JK_BE_drainage_poly",
+        "title": "JK_BE_drainage_poly"
+      },
+      {
+        "name": "nuis:JK_BI_drainage_line",
+        "title": "JK_BI_drainage_line"
+      },
+      {
+        "name": "nuis:JK_BI_drainage_poly",
+        "title": "JK_BI_drainage_poly"
+      },
+      {
+        "name": "nuis:JK_BU_drainage_line",
+        "title": "JK_BU_drainage_line"
+      },
+      {
+        "name": "nuis:JK_BU_drainage_poly",
+        "title": "JK_BU_drainage_poly"
+      },
+      {
+        "name": "nuis:JK_DA_drainage_line",
+        "title": "JK_DA_drainage_line"
+      },
+      {
+        "name": "nuis:JK_DA_drainage_poly",
+        "title": "JK_DA_drainage_poly"
+      },
+      {
+        "name": "nuis:JK_GA_drainage_line",
+        "title": "JK_GA_drainage_line"
+      },
+      {
+        "name": "nuis:JK_GA_drainage_poly",
+        "title": "JK_GA_drainage_poly"
+      },
+      {
+        "name": "nuis:JK_KI_drainage_line",
+        "title": "JK_KI_drainage_line"
+      },
+      {
+        "name": "nuis:JK_KO_drainage_line",
+        "title": "JK_KO_drainage_line"
+      },
+      {
+        "name": "nuis:JK_KO_drainage_poly",
+        "title": "JK_KO_drainage_poly"
+      },
+      {
+        "name": "nuis:JK_KU_drainage_line",
+        "title": "JK_KU_drainage_line"
+      },
+      {
+        "name": "nuis:JK_KU_drainage_poly",
+        "title": "JK_KU_drainage_poly"
+      },
+      {
+        "name": "nuis:JK_PO_drainage_line",
+        "title": "JK_PO_drainage_line"
+      },
+      {
+        "name": "nuis:JK_PO_drainage_poly",
+        "title": "JK_PO_drainage_poly"
+      },
+      {
+        "name": "nuis:JK_QA_drainage_line",
+        "title": "JK_QA_drainage_line"
+      },
+      {
+        "name": "nuis:JK_QA_drainage_poly",
+        "title": "JK_QA_drainage_poly"
+      },
+      {
+        "name": "nuis:JK_RAM_drainage_line",
+        "title": "JK_RAM_drainage_line"
+      },
+      {
+        "name": "nuis:JK_RAM_drainage_poly",
+        "title": "JK_RAM_drainage_poly"
+      },
+      {
+        "name": "nuis:JK_RA_drainage_line",
+        "title": "JK_RA_drainage_line"
+      },
+      {
+        "name": "nuis:JK_RA_drainage_poly",
+        "title": "JK_RA_drainage_poly"
+      },
+      {
+        "name": "nuis:JK_SA_drainage_line",
+        "title": "JK_SA_drainage_line"
+      },
+      {
+        "name": "nuis:JK_SA_drainage_poly",
+        "title": "JK_SA_drainage_poly"
+      },
+      {
+        "name": "nuis:JK_SOP_drainage_line",
+        "title": "JK_SOP_drainage_line"
+      },
+      {
+        "name": "nuis:JK_SOP_drainage_poly",
+        "title": "JK_SOP_drainage_poly"
+      },
+      {
+        "name": "nuis:JK_SO_drainage_line",
+        "title": "JK_SO_drainage_line"
+      },
+      {
+        "name": "nuis:JK_SO_drainage_poly",
+        "title": "JK_SO_drainage_poly"
+      },
+      {
+        "name": "nuis:JK_TR_drainage_line",
+        "title": "JK_TR_drainage_line"
+      },
+      {
+        "name": "nuis:JK_TR_drainage_poly",
+        "title": "JK_TR_drainage_poly"
+      },
+      {
+        "name": "nuis:JK_UD_drainage_poly",
+        "title": "JK_UD_drainage_poly"
+      },
+      {
+        "name": "nuis:JK_UR_drainage_line",
+        "title": "JK_UR_drainage_line"
+      },
+      {
+        "name": "nuis:JK_UR_drainage_poly",
+        "title": "JK_UR_drainage_poly"
+      },
+      {
+        "name": "nuis:JK_VI_drainage_line",
+        "title": "JK_VI_drainage_line"
+      },
+      {
+        "name": "nuis:JK_VI_drainage_poly",
+        "title": "JK_VI_drainage_poly"
+      },
+      {
+        "name": "nuis:KA_BE_drainage_line",
+        "title": "KA_BE_drainage_line"
+      },
+      {
+        "name": "nuis:KA_BE_drainage_poly",
+        "title": "KA_BE_drainage_poly"
+      },
+      {
+        "name": "nuis:KA_BID_drainage_line",
+        "title": "KA_BID_drainage_line"
+      },
+      {
+        "name": "nuis:KA_BID_drainage_poly",
+        "title": "KA_BID_drainage_poly"
+      },
+      {
+        "name": "nuis:KA_BI_drainage_line",
+        "title": "KA_BI_drainage_line"
+      },
+      {
+        "name": "nuis:KA_BI_drainage_poly",
+        "title": "KA_BI_drainage_poly"
+      },
+      {
+        "name": "nuis:KA_DE_drainage_line",
+        "title": "KA_DE_drainage_line"
+      },
+      {
+        "name": "nuis:KA_DE_drainage_poly",
+        "title": "KA_DE_drainage_poly"
+      },
+      {
+        "name": "nuis:KA_KO_drainage_line",
+        "title": "KA_KO_drainage_line"
+      },
+      {
+        "name": "nuis:KA_KO_drainage_poly",
+        "title": "KA_KO_drainage_poly"
+      },
+      {
+        "name": "nuis:KA_RA_drainage_line",
+        "title": "KA_RA_drainage_line"
+      },
+      {
+        "name": "nuis:KA_RA_drainage_poly",
+        "title": "KA_RA_drainage_poly"
+      },
+      {
+        "name": "nuis:KL_AL_drainage_line",
+        "title": "KL_AL_drainage_line"
+      },
+      {
+        "name": "nuis:KL_AL_drainage_poly",
+        "title": "KL_AL_drainage_poly"
+      },
+      {
+        "name": "nuis:KL_KOZ_drainage_line",
+        "title": "KL_KOZ_drainage_line"
+      },
+      {
+        "name": "nuis:KL_KOZ_drainage_poly",
+        "title": "KL_KOZ_drainage_poly"
+      },
+      {
+        "name": "nuis:KL_KO_drainage_line",
+        "title": "KL_KO_drainage_line"
+      },
+      {
+        "name": "nuis:KL_KO_drainage_poly",
+        "title": "KL_KO_drainage_poly"
+      },
+      {
+        "name": "nuis:KL_PA_drainage_line",
+        "title": "KL_PA_drainage_line"
+      },
+      {
+        "name": "nuis:KL_PA_drainage_poly",
+        "title": "KL_PA_drainage_poly"
+      },
+      {
+        "name": "nuis:KL_TH_drainage_line",
+        "title": "KL_TH_drainage_line"
+      },
+      {
+        "name": "nuis:KL_TH_drainage_poly",
+        "title": "KL_TH_drainage_poly"
+      },
+      {
+        "name": "nuis:LD_KA_drainage_poly",
+        "title": "LD_KA_drainage_poly"
+      },
+      {
+        "name": "nuis:MH_AU_drainage_line",
+        "title": "MH_AU_drainage_line"
+      },
+      {
+        "name": "nuis:MH_AU_drainage_poly",
+        "title": "MH_AU_drainage_poly"
+      },
+      {
+        "name": "nuis:MH_BH_drainage_line",
+        "title": "MH_BH_drainage_line"
+      },
+      {
+        "name": "nuis:MH_BH_drainage_poly",
+        "title": "MH_BH_drainage_poly"
+      },
+      {
+        "name": "nuis:MH_NA_drainage_line",
+        "title": "MH_NA_drainage_line"
+      },
+      {
+        "name": "nuis:MH_NA_drainage_poly",
+        "title": "MH_NA_drainage_poly"
+      },
+      {
+        "name": "nuis:MH_PU_drainage_line",
+        "title": "MH_PU_drainage_line"
+      },
+      {
+        "name": "nuis:MH_PU_drainage_poly",
+        "title": "MH_PU_drainage_poly"
+      },
+      {
+        "name": "nuis:MH_TH_drainage_line",
+        "title": "MH_TH_drainage_line"
+      },
+      {
+        "name": "nuis:MH_TH_drainage_poly",
+        "title": "MH_TH_drainage_poly"
+      },
+      {
+        "name": "nuis:ML_JO_drainage_line",
+        "title": "ML_JO_drainage_line"
+      },
+      {
+        "name": "nuis:ML_JO_drainage_poly",
+        "title": "ML_JO_drainage_poly"
+      },
+      {
+        "name": "nuis:ML_TU_drainage_line",
+        "title": "ML_TU_drainage_line"
+      },
+      {
+        "name": "nuis:ML_TU_drainage_poly",
+        "title": "ML_TU_drainage_poly"
+      },
+      {
+        "name": "nuis:MN_IM_drainage_line",
+        "title": "MN_IM_drainage_line"
+      },
+      {
+        "name": "nuis:MN_IM_drainage_poly",
+        "title": "MN_IM_drainage_poly"
+      },
+      {
+        "name": "nuis:MN_KA_drainage_line",
+        "title": "MN_KA_drainage_line"
+      },
+      {
+        "name": "nuis:MN_KA_drainage_poly",
+        "title": "MN_KA_drainage_poly"
+      },
+      {
+        "name": "nuis:MP_DE_drainage_line",
+        "title": "MP_DE_drainage_line"
+      },
+      {
+        "name": "nuis:MP_GW_drainage_line",
+        "title": "MP_GW_drainage_line"
+      },
+      {
+        "name": "nuis:MP_GW_drainage_poly",
+        "title": "MP_GW_drainage_poly"
+      },
+      {
+        "name": "nuis:MP_JA_drainage_line",
+        "title": "MP_JA_drainage_line"
+      },
+      {
+        "name": "nuis:MP_JA_drainage_poly",
+        "title": "MP_JA_drainage_poly"
+      },
+      {
+        "name": "nuis:MP_SAT_drainage_line",
+        "title": "MP_SAT_drainage_line"
+      },
+      {
+        "name": "nuis:MP_SAT_drainage_poly",
+        "title": "MP_SAT_drainage_poly"
+      },
+      {
+        "name": "nuis:MP_SA_drainage_line",
+        "title": "MP_SA_drainage_line"
+      },
+      {
+        "name": "nuis:MP_UJ_drainage_line",
+        "title": "MP_UJ_drainage_line"
+      },
+      {
+        "name": "nuis:MP_UJ_drainage_poly",
+        "title": "MP_UJ_drainage_poly"
+      },
+      {
+        "name": "nuis:MZ_CH_drainage_line",
+        "title": "MZ_CH_drainage_line"
+      },
+      {
+        "name": "nuis:MZ_LU_drainage_line",
+        "title": "MZ_LU_drainage_line"
+      },
+      {
+        "name": "nuis:NL_DI_drainage_line",
+        "title": "NL_DI_drainage_line"
+      },
+      {
+        "name": "nuis:NL_DI_drainage_poly",
+        "title": "NL_DI_drainage_poly"
+      },
+      {
+        "name": "nuis:NL_MO_drainage_line",
+        "title": "NL_MO_drainage_line"
+      },
+      {
+        "name": "nuis:NL_MO_drainage_poly",
+        "title": "NL_MO_drainage_poly"
+      },
+      {
+        "name": "nuis:OR_BAR_drainage_poly",
+        "title": "OR_BAR_drainage_poly"
+      },
+      {
+        "name": "nuis:OR_BA_drainage_line",
+        "title": "OR_BA_drainage_line"
+      },
+      {
+        "name": "nuis:OR_BA_drainage_poly",
+        "title": "OR_BA_drainage_poly"
+      },
+      {
+        "name": "nuis:OR_BRA_drainage_line",
+        "title": "OR_BRA_drainage_line"
+      },
+      {
+        "name": "nuis:OR_BRA_drainage_poly",
+        "title": "OR_BRA_drainage_poly"
+      },
+      {
+        "name": "nuis:OR_CU_drainage_line",
+        "title": "OR_CU_drainage_line"
+      },
+      {
+        "name": "nuis:OR_CU_drainage_poly",
+        "title": "OR_CU_drainage_poly"
+      },
+      {
+        "name": "nuis:OR_RA_drainage_line",
+        "title": "OR_RA_drainage_line"
+      },
+      {
+        "name": "nuis:OR_RA_drainage_poly",
+        "title": "OR_RA_drainage_poly"
+      },
+      {
+        "name": "nuis:OR_SA_drainage_line",
+        "title": "OR_SA_drainage_line"
+      },
+      {
+        "name": "nuis:OR_SA_drainage_poly",
+        "title": "OR_SA_drainage_poly"
+      },
+      {
+        "name": "sdv:PB_Watershed",
+        "title": "PB_Watershed"
+      },
+      {
+        "name": "nuis:PJ_AM_drainage_line",
+        "title": "PJ_AM_drainage_line"
+      },
+      {
+        "name": "nuis:PJ_AM_drainage_poly",
+        "title": "PJ_AM_drainage_poly"
+      },
+      {
+        "name": "nuis:PJ_JA_drainage_poly",
+        "title": "PJ_JA_drainage_poly"
+      },
+      {
+        "name": "nuis:PJ_PAT_drainage_line",
+        "title": "PJ_PAT_drainage_line"
+      },
+      {
+        "name": "nuis:PJ_PAT_drainage_poly",
+        "title": "PJ_PAT_drainage_poly"
+      },
+      {
+        "name": "nuis:PJ_PA_drainage_line",
+        "title": "PJ_PA_drainage_line"
+      },
+      {
+        "name": "nuis:PJ_PA_drainage_poly",
+        "title": "PJ_PA_drainage_poly"
+      },
+      {
+        "name": "nuis:PY_KA_drainage_poly",
+        "title": "PY_KA_drainage_poly"
+      },
+      {
+        "name": "nuis:RJ_BA_drainage_line",
+        "title": "RJ_BA_drainage_line"
+      },
+      {
+        "name": "nuis:RJ_BA_drainage_poly",
+        "title": "RJ_BA_drainage_poly"
+      },
+      {
+        "name": "nuis:RJ_BI_drainage_line",
+        "title": "RJ_BI_drainage_line"
+      },
+      {
+        "name": "nuis:RJ_BI_drainage_poly",
+        "title": "RJ_BI_drainage_poly"
+      },
+      {
+        "name": "nuis:RJ_DU_drainage_line",
+        "title": "RJ_DU_drainage_line"
+      },
+      {
+        "name": "nuis:RJ_DU_drainage_poly",
+        "title": "RJ_DU_drainage_poly"
+      },
+      {
+        "name": "nuis:RJ_KA_drainage_line",
+        "title": "RJ_KA_drainage_line"
+      },
+      {
+        "name": "nuis:RJ_KA_drainage_poly",
+        "title": "RJ_KA_drainage_poly"
+      },
+      {
+        "name": "nuis:RJ_MA_drainage_line",
+        "title": "RJ_MA_drainage_line"
+      },
+      {
+        "name": "nuis:RJ_SA_drainage_line",
+        "title": "RJ_SA_drainage_line"
+      },
+      {
+        "name": "nuis:RJ_SA_drainage_poly",
+        "title": "RJ_SA_drainage_poly"
+      },
+      {
+        "name": "sdv:SANTHIPURAM_DRAINAGE",
+        "title": "SANTHIPURAM_DRAINAGE"
+      },
+      {
+        "name": "nuis:SK_GY_drainage_line",
+        "title": "SK_GY_drainage_line"
+      },
+      {
+        "name": "nuis:SK_GY_drainage_poly",
+        "title": "SK_GY_drainage_poly"
+      },
+      {
+        "name": "nuis:SK_JO_drainage_line",
+        "title": "SK_JO_drainage_line"
+      },
+      {
+        "name": "nuis:SK_JO_drainage_poly",
+        "title": "SK_JO_drainage_poly"
+      },
+      {
+        "name": "nuis:SK_MA_drainage_line",
+        "title": "SK_MA_drainage_line"
+      },
+      {
+        "name": "nuis:SK_NA_drainage_line",
+        "title": "SK_NA_drainage_line"
+      },
+      {
+        "name": "nuis:SK_NA_drainage_poly",
+        "title": "SK_NA_drainage_poly"
+      },
+      {
+        "name": "nuis:SK_PA_drainage_line",
+        "title": "SK_PA_drainage_line"
+      },
+      {
+        "name": "nuis:SK_PA_drainage_poly",
+        "title": "SK_PA_drainage_poly"
+      },
+      {
+        "name": "nuis:SK_RAV_drainage_line",
+        "title": "SK_RAV_drainage_line"
+      },
+      {
+        "name": "nuis:SK_RA_drainage_line",
+        "title": "SK_RA_drainage_line"
+      },
+      {
+        "name": "nuis:SK_RA_drainage_poly",
+        "title": "SK_RA_drainage_poly"
+      },
+      {
+        "name": "nuis:SK_RO_drainage_line",
+        "title": "SK_RO_drainage_line"
+      },
+      {
+        "name": "nuis:SK_RO_drainage_poly",
+        "title": "SK_RO_drainage_poly"
+      },
+      {
+        "name": "nuis:SK_SO_drainage_line",
+        "title": "SK_SO_drainage_line"
+      },
+      {
+        "name": "hydrology:SUBBASIN",
+        "title": "SUBBASIN"
+      },
+      {
+        "name": "nuis:TR_DH_drainage_line",
+        "title": "TR_DH_drainage_line"
+      },
+      {
+        "name": "nuis:TR_DH_drainage_poly",
+        "title": "TR_DH_drainage_poly"
+      },
+      {
+        "name": "nuis:TR_KA_drainage_line",
+        "title": "TR_KA_drainage_line"
+      },
+      {
+        "name": "nuis:TR_KA_drainage_poly",
+        "title": "TR_KA_drainage_poly"
+      },
+      {
+        "name": "nuis:TR_KH_drainage_line",
+        "title": "TR_KH_drainage_line"
+      },
+      {
+        "name": "nuis:TR_KH_drainage_poly",
+        "title": "TR_KH_drainage_poly"
+      },
+      {
+        "name": "nuis:TR_RA_drainage_line",
+        "title": "TR_RA_drainage_line"
+      },
+      {
+        "name": "nuis:TR_RA_drainage_poly",
+        "title": "TR_RA_drainage_poly"
+      },
+      {
+        "name": "nuis:TS_AD_drainage_line",
+        "title": "AP_AD_drainage_line"
+      },
+      {
+        "name": "nuis:TS_AD_drainage_poly",
+        "title": "AP_AD_drainage_poly"
+      },
+      {
+        "name": "nuis:TS_NA_drainage_line",
+        "title": "AP_NA_drainage_line"
+      },
+      {
+        "name": "nuis:UP_AL_drainage_line",
+        "title": "UP_AL_drainage_line"
+      },
+      {
+        "name": "nuis:UP_AL_drainage_poly",
+        "title": "UP_AL_drainage_poly"
+      },
+      {
+        "name": "nuis:UP_GH_drainage_poly",
+        "title": "UP_GH_drainage_poly"
+      },
+      {
+        "name": "nuis:UP_KA_drainage_line",
+        "title": "UP_KA_drainage_line"
+      },
+      {
+        "name": "nuis:UP_KA_drainage_poly",
+        "title": "UP_KA_drainage_poly"
+      },
+      {
+        "name": "nuis:UP_LU_drainage_line",
+        "title": "UP_LU_drainage_line"
+      },
+      {
+        "name": "nuis:UP_LU_drainage_poly",
+        "title": "UP_LU_drainage_poly"
+      },
+      {
+        "name": "nuis:UP_VA_drainage_line",
+        "title": "UP_VA_drainage_line"
+      },
+      {
+        "name": "nuis:WB_BA_drainage_line",
+        "title": "WB_BA_drainage_line"
+      },
+      {
+        "name": "nuis:WB_BA_drainage_poly",
+        "title": "WB_BA_drainage_poly"
+      },
+      {
+        "name": "nuis:WB_DU_drainage_line",
+        "title": "WB_DU_drainage_line"
+      },
+      {
+        "name": "nuis:WB_DU_drainage_poly",
+        "title": "WB_DU_drainage_poly"
+      },
+      {
+        "name": "nuis:WB_KH_drainage_line",
+        "title": "WB_KH_drainage_line"
+      },
+      {
+        "name": "nuis:WB_KH_drainage_poly",
+        "title": "WB_KH_drainage_poly"
+      },
+      {
+        "name": "nuis:WB_KU_drainage_line",
+        "title": "WB_KU_drainage_line"
+      },
+      {
+        "name": "nuis:WB_KU_drainage_poly",
+        "title": "WB_KU_drainage_poly"
+      },
+      {
+        "name": "cleanganga:ganga_basin",
+        "title": "ganga_basin"
+      },
+      {
+        "name": "cleanganga:ganga_basin_clip",
+        "title": "ganga_basin_clip"
+      },
+      {
+        "name": "coastal:riverline_vessels",
+        "title": "riverline_vessels"
+      },
+      {
+        "name": "tour:vijayawada_river",
+        "title": "vijayawada_river"
+      },
+      {
+        "name": "cleanganga:wsh_mainriver",
+        "title": "wsh_mainriver"
+      }
+    ],
+    "lulc": [
+      {
+        "name": "cleanganga_Afforestation",
+        "title": "cleanganga_Afforestation"
+      },
+      {
+        "name": "nuis:AND_PB_forest",
+        "title": "AND_PB_forest"
+      },
+      {
+        "name": "basemap:AN_LULC",
+        "title": "AN"
+      },
+      {
+        "name": "sisdpv2:AP_Anantapur_lulc_v2",
+        "title": "AP_Anantapur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AP_Chittoor_lulc_v2",
+        "title": "AP_Chittoor_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AP_Cuddapah_lulc_v2",
+        "title": "AP_Cuddapah_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AP_East_Godavari_lulc_v2",
+        "title": "AP_East_Godavari_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AP_Guntur_lulc_v2",
+        "title": "AP_Guntur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AP_Krishna_lulc_v2",
+        "title": "AP_Krishna_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AP_Kurnool_lulc_v2",
+        "title": "AP_Kurnool_lulc_v2"
+      },
+      {
+        "name": "basemap:AP_LULC",
+        "title": "ap"
+      },
+      {
+        "name": "sdv:AP_LULC50K_1112N",
+        "title": "AP_LULC50K_1112N"
+      },
+      {
+        "name": "nuis:AP_MA_forest",
+        "title": "AP_MA_forest"
+      },
+      {
+        "name": "nuis:AP_MA_forest_boundary",
+        "title": "AP_MA_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:AP_Nellore_lulc_v2",
+        "title": "AP_Nellore_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AP_Prakasam_lulc_v2",
+        "title": "AP_Prakasam_lulc_v2"
+      },
+      {
+        "name": "nuis:AP_SU_forest",
+        "title": "AP_SU_forest"
+      },
+      {
+        "name": "sisdpv2:AP_Srikakulam_lulc_v2",
+        "title": "AP_Srikakulam_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AP_Visakhapatnam_lulc_v2",
+        "title": "AP_Visakhapatnam_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AP_Vizianagaram_lulc_v2",
+        "title": "AP_Vizianagaram_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AP_West_Godavari_lulc_v2",
+        "title": "AP_West_Godavari_lulc_v2"
+      },
+      {
+        "name": "nuis:AR_AL_forest",
+        "title": "AR_AL_forest"
+      },
+      {
+        "name": "sisdpv2:AR_Anjaw_lulc_v2",
+        "title": "AR_Anjaw_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AR_Changlang_lulc_v2",
+        "title": "AR_Changlang_lulc_v2"
+      },
+      {
+        "name": "nuis:AR_DA_forest",
+        "title": "AR_DA_forest"
+      },
+      {
+        "name": "sisdpv2:AR_East_Kameng_lulc_v2",
+        "title": "AR_East_Kameng_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AR_East_Siang_lulc_v2",
+        "title": "AR_East_Siang_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AR_Kurung_Kumey_lulc_v2",
+        "title": "AR_Kurung_Kumey_lulc_v2"
+      },
+      {
+        "name": "basemap:AR_LULC",
+        "title": "AR"
+      },
+      {
+        "name": "sisdpv2:AR_Lohit_lulc_v2",
+        "title": "AR_Lohit_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AR_Longding_lulc_v2",
+        "title": "AR_Longding_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AR_Lower_Dibang_Valley_lulc_v2",
+        "title": "AR_Lower_Dibang_Valley_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AR_Lower_Subansiri_lulc_v2",
+        "title": "AR_Lower_Subansiri_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AR_Papum_Pare_lulc_v2",
+        "title": "AR_Papum_Pare_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AR_Tawang_lulc_v2",
+        "title": "AR_Tawang_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AR_Tirap_lulc_v2",
+        "title": "AR_Tirap_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AR_Upper_Dibang_Valley_lulc_v2",
+        "title": "AR_Upper_Dibang_Valley_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AR_Upper_Siang_lulc_v2",
+        "title": "AR_Upper_Siang_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AR_Upper_Subansiri_lulc_v2",
+        "title": "AR_Upper_Subansiri_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AR_West_Kameng_lulc_v2",
+        "title": "AR_West_Kameng_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AR_West_Siang_lulc_v2",
+        "title": "AR_West_Siang_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AS_Barpeta_lulc_v2",
+        "title": "AS_Barpeta_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AS_Baska_lulc_v2",
+        "title": "AS_Baska_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AS_Bongaigaon_lulc_v2",
+        "title": "AS_Bongaigaon_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AS_Cachar_lulc_v2",
+        "title": "AS_Cachar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AS_Chirang_lulc_v2",
+        "title": "AS_Chirang_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AS_Darrang_lulc_v2",
+        "title": "AS_Darrang_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AS_Dhemaji_lulc_v2",
+        "title": "AS_Dhemaji_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AS_Dhubri_lulc_v2",
+        "title": "AS_Dhubri_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AS_Dibrugarh_lulc_v2",
+        "title": "AS_Dibrugarh_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AS_Goalpara_lulc_v2",
+        "title": "AS_Goalpara_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AS_Golaghat_lulc_v2",
+        "title": "AS_Golaghat_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AS_Hailakandi_lulc_v2",
+        "title": "AS_Hailakandi_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AS_Jorhat_lulc_v2",
+        "title": "AS_Jorhat_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AS_Kamrup_Metro_lulc_v2",
+        "title": "AS_Kamrup_Metro_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AS_Kamrup_Rural_lulc_v2",
+        "title": "AS_Kamrup_Rural_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AS_Karbi_anglong_lulc_v2",
+        "title": "AS_Karbi_anglong_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AS_Karimganj_lulc_v2",
+        "title": "AS_Karimganj_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AS_Kokrajhar_lulc_v2",
+        "title": "AS_Kokrajhar_lulc_v2"
+      },
+      {
+        "name": "basemap:AS_LULC",
+        "title": "as"
+      },
+      {
+        "name": "sisdpv2:AS_Lakhimpur_lulc_v2",
+        "title": "AS_Lakhimpur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AS_Morigaon_lulc_v2",
+        "title": "AS_Morigaon_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AS_Nagaon_lulc_v2",
+        "title": "AS_Nagaon_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AS_Nalbari_lulc_v2",
+        "title": "AS_Nalbari_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AS_North_Cachar_Hills_lulc_v2",
+        "title": "AS_North_Cachar_Hills_lulc_v2"
+      },
+      {
+        "name": "nuis:AS_SI_forest",
+        "title": "AS_SI_forest"
+      },
+      {
+        "name": "sisdpv2:AS_Sibsagar_lulc_v2",
+        "title": "AS_Sibsagar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AS_Sonitpur_lulc_v2",
+        "title": "AS_Sonitpur_lulc_v2"
+      },
+      {
+        "name": "nuis:AS_TE_forest",
+        "title": "AS_TE_forest"
+      },
+      {
+        "name": "sisdpv2:AS_Tinsukia_lulc_v2",
+        "title": "AS_Tinsukia_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:AS_Udalguri_lulc_v2",
+        "title": "AS_Udalguri_lulc_v2"
+      },
+      {
+        "name": "sisdp:Agra_lulc",
+        "title": "Agra_lulc"
+      },
+      {
+        "name": "sisdp:Amritsar_lulc",
+        "title": "Amritsar_lulc"
+      },
+      {
+        "name": "sisdp:Auraiya_lulc",
+        "title": "Auraiya_lulc"
+      },
+      {
+        "name": "sisdpv2:BR_Araria_lulc_v2",
+        "title": "BR_Araria_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Arwal_lulc_v2",
+        "title": "BR_Arwal_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Aurangabad_lulc_v2",
+        "title": "BR_Aurangabad_lulc_v2"
+      },
+      {
+        "name": "nuis:BR_BH_forest",
+        "title": "BR_BH_forest"
+      },
+      {
+        "name": "nuis:BR_BH_forest_boundary",
+        "title": "BR_BH_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:BR_Banka_lulc_v2",
+        "title": "BR_Banka_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Begusarai_lulc_v2",
+        "title": "BR_Begusarai_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Bhagalpur_lulc_v2",
+        "title": "BR_Bhagalpur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Bhojpur_lulc_v2",
+        "title": "BR_Bhojpur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Buxar_lulc_v2",
+        "title": "BR_Buxar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Darbhanga_lulc_v2",
+        "title": "BR_Darbhanga_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Gaya_lulc_v2",
+        "title": "BR_Gaya_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Gopalganj_lulc_v2",
+        "title": "BR_Gopalganj_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Jamui_lulc_v2",
+        "title": "BR_Jamui_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Jehanabad_lulc_v2",
+        "title": "BR_Jehanabad_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Kaimur_Bhabua_lulc_v2",
+        "title": "BR_Kaimur_Bhabua_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Katihar_lulc_v2",
+        "title": "BR_Katihar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Khagaria_lulc_v2",
+        "title": "BR_Khagaria_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Kishanganj_lulc_v2",
+        "title": "BR_Kishanganj_lulc_v2"
+      },
+      {
+        "name": "basemap:BR_LULC",
+        "title": "BR"
+      },
+      {
+        "name": "moef:BR_LULC50K_1112",
+        "title": "BR_LULC50K_1112"
+      },
+      {
+        "name": "sisdpv2:BR_Lakhisarai_lulc_v2",
+        "title": "BR_Lakhisarai_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Madhepura_lulc_v2",
+        "title": "BR_Madhepura_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Madhubani_lulc_v2",
+        "title": "BR_Madhubani_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Munger_lulc_v2",
+        "title": "BR_Munger_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Muzaffarpur_lulc_v2",
+        "title": "BR_Muzaffarpur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Nalanda_lulc_v2",
+        "title": "BR_Nalanda_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Nawada_lulc_v2",
+        "title": "BR_Nawada_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Pashchim_Champaran_lulc_v2",
+        "title": "BR_Pashchim_Champaran_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Patna_lulc_v2",
+        "title": "BR_Patna_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Purba_Champaran_lulc_v2",
+        "title": "BR_Purba_Champaran_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Purnea_lulc_v2",
+        "title": "BR_Purnea_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Rohtas_lulc_v2",
+        "title": "BR_Rohtas_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Saharsa_lulc_v2",
+        "title": "BR_Saharsa_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Samastipur_lulc_v2",
+        "title": "BR_Samastipur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Saran_lulc_v2",
+        "title": "BR_Saran_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Sheikhpura_lulc_v2",
+        "title": "BR_Sheikhpura_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Sheohar_lulc_v2",
+        "title": "BR_Sheohar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Sitamarhi_lulc_v2",
+        "title": "BR_Sitamarhi_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Siwan_lulc_v2",
+        "title": "BR_Siwan_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Supaul_lulc_v2",
+        "title": "BR_Supaul_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:BR_Vaishali_lulc_v2",
+        "title": "BR_Vaishali_lulc_v2"
+      },
+      {
+        "name": "sisdp:Balrampur_lulc",
+        "title": "Balrampur_lulc"
+      },
+      {
+        "name": "sisdp:Banda_lulc",
+        "title": "Banda_lulc"
+      },
+      {
+        "name": "sisdp:Basti_lulc",
+        "title": "Basti_lulc"
+      },
+      {
+        "name": "basemap:CG1_LULC",
+        "title": "CG"
+      },
+      {
+        "name": "nuis:CG_CG_forest",
+        "title": "CG_CG_forest"
+      },
+      {
+        "name": "nuis:CG_CG_forest_boundary",
+        "title": "CG_CG_forest_boundary"
+      },
+      {
+        "name": "nuis:CH_BI_forest",
+        "title": "CH_BI_forest"
+      },
+      {
+        "name": "sisdpv2:CH_Balod_lulc_v2",
+        "title": "CH_Balod_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:CH_Balodbajar_lulc_v2",
+        "title": "CH_Balodbajar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:CH_Balrampur_lulc_v2",
+        "title": "CH_Balrampur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:CH_Bastar_lulc_v2",
+        "title": "CH_Bastar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:CH_Bemetra_lulc_v2",
+        "title": "CH_Bemetra_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:CH_Bijapur_lulc_v2",
+        "title": "CH_Bijapur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:CH_Bilaspur_lulc_v2",
+        "title": "CH_Bilaspur_lulc_v2"
+      },
+      {
+        "name": "nuis:CH_DU_forest",
+        "title": "CH_DU_forest"
+      },
+      {
+        "name": "sisdpv2:CH_Dantewada_lulc_v2",
+        "title": "CH_Dantewada_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:CH_Dhamtari_lulc_v2",
+        "title": "CH_Dhamtari_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:CH_Durg_lulc_v2",
+        "title": "CH_Durg_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:CH_Gariabandh_lulc_v2",
+        "title": "CH_Gariabandh_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:CH_Janjgir-Champa_lulc_v2",
+        "title": "CH_Janjgir-Champa_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:CH_Jashpur_lulc_v2",
+        "title": "CH_Jashpur_lulc_v2"
+      },
+      {
+        "name": "nuis:CH_KO_forest",
+        "title": "CH_KO_forest"
+      },
+      {
+        "name": "nuis:CH_KO_forest_boundary",
+        "title": "CH_KO_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:CH_Kanker_lulc_v2",
+        "title": "CH_Kanker_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:CH_Kawardha_lulc_v2",
+        "title": "CH_Kawardha_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:CH_Kondagaon_lulc_v2",
+        "title": "CH_Kondagaon_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:CH_Korba_lulc_v2",
+        "title": "CH_Korba_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:CH_Koriya_lulc_v2",
+        "title": "CH_Koriya_lulc_v2"
+      },
+      {
+        "name": "basemap:CH_LULC",
+        "title": "CH"
+      },
+      {
+        "name": "moef:CH_LULC50K_1112_GB",
+        "title": "CH_LULC50K_1112_GB"
+      },
+      {
+        "name": "sisdpv2:CH_Mahasamund_lulc_v2",
+        "title": "CH_Mahasamund_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:CH_Mungeli_lulc_v2",
+        "title": "CH_Mungeli_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:CH_Narayanpur_lulc_v2",
+        "title": "CH_Narayanpur_lulc_v2"
+      },
+      {
+        "name": "nuis:CH_RA_forest",
+        "title": "CH_RA_forest"
+      },
+      {
+        "name": "sisdpv2:CH_Raigarh_lulc_v2",
+        "title": "CH_Raigarh_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:CH_Raipur_lulc_v2",
+        "title": "CH_Raipur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:CH_Rajnandgaon_lulc_v2",
+        "title": "CH_Rajnandgaon_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:CH_Sukma_lulc_v2",
+        "title": "CH_Sukma_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:CH_Surajpur_lulc_v2",
+        "title": "CH_Surajpur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:CH_Surguja_lulc_v2",
+        "title": "CH_Surguja_lulc_v2"
+      },
+      {
+        "name": "sisdp:Chandauli_lulc",
+        "title": "Chandauli_lulc"
+      },
+      {
+        "name": "sisdp:Chitrakoot_lulc",
+        "title": "Chitrakoot_lulc"
+      },
+      {
+        "name": "nuis:DD_DA_forest",
+        "title": "DD_DA_forest"
+      },
+      {
+        "name": "sisdpv2:DD_Daman_lulc_v2",
+        "title": "DD_Daman_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:DD_Diu_lulc_v2",
+        "title": "DD_Diu_lulc_v2"
+      },
+      {
+        "name": "basemap:DIU_LULC",
+        "title": "DIU"
+      },
+      {
+        "name": "sisdpv2:DL_Central_lulc_v2",
+        "title": "DL_Central_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:DL_East_lulc_v2",
+        "title": "DL_East_lulc_v2"
+      },
+      {
+        "name": "basemap:DL_LULC",
+        "title": "DL"
+      },
+      {
+        "name": "moef:DL_LULC50K_1112",
+        "title": "DL_LULC50K_1112"
+      },
+      {
+        "name": "sisdpv2:DL_New_Delhi_lulc_v2",
+        "title": "DL_New_Delhi_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:DL_North_East_lulc_v2",
+        "title": "DL_North_East_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:DL_North_West_lulc_v2",
+        "title": "DL_North_West_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:DL_North_lulc_v2",
+        "title": "DL_North_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:DL_South_West_lulc_v2",
+        "title": "DL_South_West_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:DL_South_lulc_v2",
+        "title": "DL_South_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:DL_West_lulc_v2",
+        "title": "DL_West_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:DN_Dadra_Nagar_Haveli_lulc_v2",
+        "title": "DN_Dadra_Nagar_Haveli_lulc_v2"
+      },
+      {
+        "name": "basemap:DN_LULC",
+        "title": "DN"
+      },
+      {
+        "name": "nuis:DN_SI_forest",
+        "title": "DN_SI_forest"
+      },
+      {
+        "name": "nuis:DN_SI_forest_boundary",
+        "title": "DN_SI_forest_boundary"
+      },
+      {
+        "name": "basemap:Daman_LULC",
+        "title": "Daman"
+      },
+      {
+        "name": "sisdp:Etawah_lulc",
+        "title": "Etawah_lulc"
+      },
+      {
+        "name": "sisdp:Fatehpur_lulc",
+        "title": "Fatehpur_lulc"
+      },
+      {
+        "name": "sisdp:Firozpur_lulc",
+        "title": "Firozpur_lulc"
+      },
+      {
+        "name": "nuis:GA_CUR_forest",
+        "title": "GA_CUR_forest"
+      },
+      {
+        "name": "nuis:GA_CU_forest",
+        "title": "GA_CU_forest"
+      },
+      {
+        "name": "basemap:GA_LULC",
+        "title": "GA"
+      },
+      {
+        "name": "nuis:GA_MAP_forest",
+        "title": "GA_MAP_forest"
+      },
+      {
+        "name": "nuis:GA_MA_forest",
+        "title": "GA_MA_forest"
+      },
+      {
+        "name": "nuis:GA_MO_forest",
+        "title": "GA_MO_forest"
+      },
+      {
+        "name": "sisdpv2:GA_North_Goa_lulc_v2",
+        "title": "GA_North_Goa_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:GA_South_Goa_lulc_v2",
+        "title": "GA_South_Goa_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:GJ_Ahmadabad_lulc_v2",
+        "title": "GJ_Ahmadabad_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:GJ_Amreli_lulc_v2",
+        "title": "GJ_Amreli_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:GJ_Anand_lulc_v2",
+        "title": "GJ_Anand_lulc_v2"
+      },
+      {
+        "name": "nuis:GJ_BH_forest",
+        "title": "GJ_BH_forest"
+      },
+      {
+        "name": "sisdpv2:GJ_Banas_Kantha_lulc_v2",
+        "title": "GJ_Banas_Kantha_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:GJ_Bharuch_lulc_v2",
+        "title": "GJ_Bharuch_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:GJ_Bhavnagar_lulc_v2",
+        "title": "GJ_Bhavnagar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:GJ_Dohad_lulc_v2",
+        "title": "GJ_Dohad_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:GJ_Gandhinagar_lulc_v2",
+        "title": "GJ_Gandhinagar_lulc_v2"
+      },
+      {
+        "name": "nuis:GJ_JA_forest",
+        "title": "GJ_JA_forest"
+      },
+      {
+        "name": "sisdpv2:GJ_Jamnagar_lulc_v2",
+        "title": "GJ_Jamnagar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:GJ_Junagadh_lulc_v2",
+        "title": "GJ_Junagadh_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:GJ_Kachchh_lulc_v2",
+        "title": "GJ_Kachchh_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:GJ_Kheda_lulc_v2",
+        "title": "GJ_Kheda_lulc_v2"
+      },
+      {
+        "name": "basemap:GJ_LULC",
+        "title": "GJ"
+      },
+      {
+        "name": "sisdpv2:GJ_Mahesana_lulc_v2",
+        "title": "GJ_Mahesana_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:GJ_Narmada_lulc_v2",
+        "title": "GJ_Narmada_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:GJ_Navsari_lulc_v2",
+        "title": "GJ_Navsari_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:GJ_Panch_Mahals_lulc_v2",
+        "title": "GJ_Panch_Mahals_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:GJ_Patan_lulc_v2",
+        "title": "GJ_Patan_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:GJ_Porbandar_lulc_v2",
+        "title": "GJ_Porbandar_lulc_v2"
+      },
+      {
+        "name": "nuis:GJ_RA_forest",
+        "title": "GJ_RA_forest"
+      },
+      {
+        "name": "nuis:GJ_RA_forest_boundary",
+        "title": "GJ_RA_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:GJ_Rajkot_lulc_v2",
+        "title": "GJ_Rajkot_lulc_v2"
+      },
+      {
+        "name": "nuis:GJ_SU_forest",
+        "title": "GJ_SU_forest"
+      },
+      {
+        "name": "sisdpv2:GJ_Sabar_Kantha_lulc_v2",
+        "title": "GJ_Sabar_Kantha_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:GJ_Surat_lulc_v2",
+        "title": "GJ_Surat_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:GJ_Surendranagar_lulc_v2",
+        "title": "GJ_Surendranagar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:GJ_Tapi_lulc_v2",
+        "title": "GJ_Tapi_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:GJ_The_Dangs_lulc_v2",
+        "title": "GJ_The_Dangs_lulc_v2"
+      },
+      {
+        "name": "nuis:GJ_VA_forest",
+        "title": "GJ_VA_forest"
+      },
+      {
+        "name": "sisdpv2:GJ_Vadodara_lulc_v2",
+        "title": "GJ_Vadodara_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:GJ_Valsad_lulc_v2",
+        "title": "GJ_Valsad_lulc_v2"
+      },
+      {
+        "name": "sisdp:Ganderbal_lulc",
+        "title": "Ganderbal_lulc"
+      },
+      {
+        "name": "sisdp:Ghazipur_lulc",
+        "title": "Ghazipur_lulc"
+      },
+      {
+        "name": "sisdp:Gurdaspur_lulc",
+        "title": "Gurdaspur_lulc"
+      },
+      {
+        "name": "sisdp:Gurgaon_lulc",
+        "title": "Gurgaon_lulc"
+      },
+      {
+        "name": "nuis:HP_DH_forest",
+        "title": "HP_DH_forest"
+      },
+      {
+        "name": "nuis:HP_DH_forest_boundary",
+        "title": "HP_DH_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:HP_Hamirpur_lulc_v2",
+        "title": "HP_Hamirpur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:HP_Kangra_lulc_v2",
+        "title": "HP_Kangra_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:HP_Kullu_lulc_v2",
+        "title": "HP_Kullu_lulc_v2"
+      },
+      {
+        "name": "basemap:HP_LULC",
+        "title": "HP"
+      },
+      {
+        "name": "moef:HP_LULC50K_1112_GB",
+        "title": "HP_LULC50K_1112_GB"
+      },
+      {
+        "name": "nuis:HP_MA_forest",
+        "title": "HP_MA_forest"
+      },
+      {
+        "name": "nuis:HP_MA_forest_boundary",
+        "title": "HP_MA_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:HP_Mandi_lulc_v2",
+        "title": "HP_Mandi_lulc_v2"
+      },
+      {
+        "name": "nuis:HP_NA_forest",
+        "title": "HP_NA_forest"
+      },
+      {
+        "name": "nuis:HP_NA_forest_boundary",
+        "title": "HP_NA_forest_boundary"
+      },
+      {
+        "name": "nuis:HP_SH_forest",
+        "title": "HP_SH_forest"
+      },
+      {
+        "name": "nuis:HP_SH_forest_boundary",
+        "title": "HP_SH_forest_boundary"
+      },
+      {
+        "name": "nuis:HP_SO_forest",
+        "title": "HP_SO_forest"
+      },
+      {
+        "name": "nuis:HP_SO_forest_boundary",
+        "title": "HP_SO_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:HP_Shimla_lulc_v2",
+        "title": "HP_Shimla_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:HP_Sirmaur_lulc_v2",
+        "title": "HP_Sirmaur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:HP_Solan_lulc_v2",
+        "title": "HP_Solan_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:HR_Ambala_lulc_v2",
+        "title": "HR_Ambala_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:HR_Bhiwani_lulc_v2",
+        "title": "HR_Bhiwani_lulc_v2"
+      },
+      {
+        "name": "nuis:HR_FA_forest",
+        "title": "HR_FA_forest"
+      },
+      {
+        "name": "sisdpv2:HR_Faridabad_lulc_v2",
+        "title": "HR_Faridabad_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:HR_Fatehbad_lulc_v2",
+        "title": "HR_Fatehbad_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:HR_Gurgaon_lulc_v2",
+        "title": "HR_Gurgaon_lulc_v2"
+      },
+      {
+        "name": "nuis:HR_HI_forest",
+        "title": "HR_HI_forest"
+      },
+      {
+        "name": "nuis:HR_HI_forest_boundary",
+        "title": "HR_HI_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:HR_Hisar_lulc_v2",
+        "title": "HR_Hisar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:HR_Jhajjar_lulc_v2",
+        "title": "HR_Jhajjar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:HR_Jind_lulc_v2",
+        "title": "HR_Jind_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:HR_Kaithal_lulc_v2",
+        "title": "HR_Kaithal_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:HR_Karnal_lulc_v2",
+        "title": "HR_Karnal_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:HR_Kurukshetra_lulc_v2",
+        "title": "HR_Kurukshetra_lulc_v2"
+      },
+      {
+        "name": "basemap:HR_LULC",
+        "title": "HR"
+      },
+      {
+        "name": "moef:HR_LULC50K_1112_GB",
+        "title": "HR_LULC50K_1112_GB"
+      },
+      {
+        "name": "sisdpv2:HR_Mahendragarh_lulc_v2",
+        "title": "HR_Mahendragarh_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:HR_Mewat_lulc_v2",
+        "title": "HR_Mewat_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:HR_Palwal_lulc_v2",
+        "title": "HR_Palwal_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:HR_Panchkula_lulc_v2",
+        "title": "HR_Panchkula_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:HR_Panipat_lulc_v2",
+        "title": "HR_Panipat_lulc_v2"
+      },
+      {
+        "name": "nuis:HR_RO_forest",
+        "title": "HR_RO_forest"
+      },
+      {
+        "name": "sisdpv2:HR_Rewari_lulc_v2",
+        "title": "HR_Rewari_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:HR_Rohtak_lulc_v2",
+        "title": "HR_Rohtak_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:HR_Sirsa_lulc_v2",
+        "title": "HR_Sirsa_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:HR_Sonipat_lulc_v2",
+        "title": "HR_Sonipat_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:HR_Yamunanagar_lulc_v2",
+        "title": "HR_Yamunanagar_lulc_v2"
+      },
+      {
+        "name": "sisdp:Hamirpur_lulc",
+        "title": "Hamirpur_lulc"
+      },
+      {
+        "name": "nuis:JH_BO_forest",
+        "title": "JH_BO_forest"
+      },
+      {
+        "name": "nuis:JH_BO_forest_boundary",
+        "title": "JH_BO_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:JH_Bokaro_lulc_v2",
+        "title": "JH_Bokaro_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:JH_Chatra_lulc_v2",
+        "title": "JH_Chatra_lulc_v2"
+      },
+      {
+        "name": "nuis:JH_DH_forest",
+        "title": "JH_DH_forest"
+      },
+      {
+        "name": "nuis:JH_DH_forest_boundary",
+        "title": "JH_DH_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:JH_Deoghar_lulc_v2",
+        "title": "JH_Deoghar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:JH_Dhanbad_lulc_v2",
+        "title": "JH_Dhanbad_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:JH_Dumka_lulc_v2",
+        "title": "JH_Dumka_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:JH_Giridih_lulc_v2",
+        "title": "JH_Giridih_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:JH_Godda_lulc_v2",
+        "title": "JH_Godda_lulc_v2"
+      },
+      {
+        "name": "nuis:JH_JA_forest",
+        "title": "JH_JA_forest"
+      },
+      {
+        "name": "nuis:JH_JA_forest_boundary",
+        "title": "JH_JA_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:JH_Jamtara_lulc_v2",
+        "title": "JH_Jamtara_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:JH_Khunti_lulc_v2",
+        "title": "JH_Khunti_lulc_v2"
+      },
+      {
+        "name": "basemap:JH_LULC",
+        "title": "JH"
+      },
+      {
+        "name": "moef:JH_LULC50K_1112_GB",
+        "title": "JH_LULC50K_1112_GB"
+      },
+      {
+        "name": "sisdpv2:JH_Latehar_lulc_v2",
+        "title": "JH_Latehar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:JH_Lohardaga_lulc_v2",
+        "title": "JH_Lohardaga_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:JH_Pakur_lulc_v2",
+        "title": "JH_Pakur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:JH_Palamu_lulc_v2",
+        "title": "JH_Palamu_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:JH_Paschimi_Singhbhum_lulc_v2",
+        "title": "JH_Paschimi_Singhbhum_lulc_v2"
+      },
+      {
+        "name": "nuis:JH_RA_forest",
+        "title": "JH_RA_forest"
+      },
+      {
+        "name": "nuis:JH_RA_forest_boundary",
+        "title": "JH_RA_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:JH_Ranchi_lulc_v2",
+        "title": "JH_Ranchi_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:JH_Sahibganj_lulc_v2",
+        "title": "JH_Sahibganj_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:JH_Saraikela_Kharsawa_lulc_v2",
+        "title": "JH_Saraikela_Kharsawa_lulc_v2"
+      },
+      {
+        "name": "nuis:JK_AC_forest",
+        "title": "JK_AC_forest"
+      },
+      {
+        "name": "nuis:JK_AC_forest_boundary",
+        "title": "JK_AC_forest_boundary"
+      },
+      {
+        "name": "nuis:JK_AK_forest",
+        "title": "JK_AK_forest"
+      },
+      {
+        "name": "sisdpv2:JK_Anantnag_lulc_v2",
+        "title": "JK_Anantnag_lulc_v2"
+      },
+      {
+        "name": "nuis:JK_BAR_forest",
+        "title": "JK_BAR_forest"
+      },
+      {
+        "name": "nuis:JK_BAR_forest_boundary",
+        "title": "JK_BAR_forest_boundary"
+      },
+      {
+        "name": "nuis:JK_BA_forest",
+        "title": "JK_BA_forest"
+      },
+      {
+        "name": "nuis:JK_BA_forest_boundary",
+        "title": "JK_BA_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:JK_Baramulla_lulc_v2",
+        "title": "JK_Baramulla_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:JK_Budgam_lulc_v2",
+        "title": "JK_Budgam_lulc_v2"
+      },
+      {
+        "name": "nuis:JK_DA_forest",
+        "title": "JK_DA_forest"
+      },
+      {
+        "name": "nuis:JK_DA_forest_boundary",
+        "title": "JK_DA_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:JK_Doda_lulc_v2",
+        "title": "JK_Doda_lulc_v2"
+      },
+      {
+        "name": "nuis:JK_GA_forest",
+        "title": "JK_GA_forest"
+      },
+      {
+        "name": "nuis:JK_GA_forest_boundary",
+        "title": "JK_GA_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:JK_Ganderbal_lulc_v2",
+        "title": "JK_Ganderbal_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:JK_Jammu_lulc_v2",
+        "title": "JK_Jammu_lulc_v2"
+      },
+      {
+        "name": "nuis:JK_KI_forest",
+        "title": "JK_KI_forest"
+      },
+      {
+        "name": "nuis:JK_KI_forest_boundary",
+        "title": "JK_KI_forest_boundary"
+      },
+      {
+        "name": "nuis:JK_KO_forest",
+        "title": "JK_KO_forest"
+      },
+      {
+        "name": "nuis:JK_KO_forest_boundary",
+        "title": "JK_KO_forest_boundary"
+      },
+      {
+        "name": "nuis:JK_KU_forest",
+        "title": "JK_KU_forest"
+      },
+      {
+        "name": "nuis:JK_KU_forest_boundary",
+        "title": "JK_KU_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:JK_Kargil_lulc_v2",
+        "title": "JK_Kargil_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:JK_Kulgam_lulc_v2",
+        "title": "JK_Kulgam_lulc_v2"
+      },
+      {
+        "name": "basemap:JK_LULC",
+        "title": "JK"
+      },
+      {
+        "name": "nuis:JK_PO_forest",
+        "title": "JK_PO_forest"
+      },
+      {
+        "name": "nuis:JK_PO_forest_boundary",
+        "title": "JK_PO_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:JK_Poonch_lulc_v2",
+        "title": "JK_Poonch_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:JK_Pulwama_lulc_v2",
+        "title": "JK_Pulwama_lulc_v2"
+      },
+      {
+        "name": "nuis:JK_QA_forest",
+        "title": "JK_QA_forest"
+      },
+      {
+        "name": "nuis:JK_QA_forest_boundary",
+        "title": "JK_QA_forest_boundary"
+      },
+      {
+        "name": "nuis:JK_RAM_forest",
+        "title": "JK_RAM_forest"
+      },
+      {
+        "name": "nuis:JK_RAM_forest_boundary",
+        "title": "JK_RAM_forest_boundary"
+      },
+      {
+        "name": "nuis:JK_RA_forest",
+        "title": "JK_RA_forest"
+      },
+      {
+        "name": "nuis:JK_RA_forest_boundary",
+        "title": "JK_RA_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:JK_Rajouri_lulc_v2",
+        "title": "JK_Rajouri_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:JK_Ramban_lulc_v2",
+        "title": "JK_Ramban_lulc_v2"
+      },
+      {
+        "name": "nuis:JK_SA_forest",
+        "title": "JK_SA_forest"
+      },
+      {
+        "name": "nuis:JK_SOP_forest",
+        "title": "JK_SOP_forest"
+      },
+      {
+        "name": "nuis:JK_SO_forest",
+        "title": "JK_SO_forest"
+      },
+      {
+        "name": "nuis:JK_SO_forest_boundary",
+        "title": "JK_SO_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:JK_Samba_lulc_v2",
+        "title": "JK_Samba_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:JK_Shopain_lulc_v2",
+        "title": "JK_Shopain_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:JK_Srinagar_lulc_v2",
+        "title": "JK_Srinagar_lulc_v2"
+      },
+      {
+        "name": "nuis:JK_TR_forest",
+        "title": "JK_TR_forest"
+      },
+      {
+        "name": "nuis:JK_TR_forest_boundary",
+        "title": "JK_TR_forest_boundary"
+      },
+      {
+        "name": "nuis:JK_UD_forest",
+        "title": "JK_UD_forest"
+      },
+      {
+        "name": "nuis:JK_UR_forest",
+        "title": "JK_UR_forest"
+      },
+      {
+        "name": "nuis:JK_UR_forest_boundary",
+        "title": "JK_UR_forest_boundary"
+      },
+      {
+        "name": "sisdp:Jaipur_lulc",
+        "title": "Jaipur_lulc"
+      },
+      {
+        "name": "sisdp:Jalandhar_lulc",
+        "title": "Jalandhar_lulc"
+      },
+      {
+        "name": "sisdp:Jalaun_lulc",
+        "title": "Jalaun_lulc"
+      },
+      {
+        "name": "sisdp:Jhajhar_lulc",
+        "title": "Jhajhar_lulc"
+      },
+      {
+        "name": "sisdp:Jhansi_lulc",
+        "title": "Jhansi_lulc"
+      },
+      {
+        "name": "sisdp:KARNAL_lulc",
+        "title": "KARNAL_lulc"
+      },
+      {
+        "name": "nuis:KA_BE_forest",
+        "title": "KA_BE_forest"
+      },
+      {
+        "name": "nuis:KA_BE_forest_boundary",
+        "title": "KA_BE_forest_boundary"
+      },
+      {
+        "name": "nuis:KA_BID_forest",
+        "title": "KA_BID_forest"
+      },
+      {
+        "name": "nuis:KA_BID_forest_boundary",
+        "title": "KA_BID_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:KA_Bagalkot_lulc_v2",
+        "title": "KA_Bagalkot_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KA_Banglore_Rural_lulc_v2",
+        "title": "KA_Banglore_Rural_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KA_Banglore_lulc_v2",
+        "title": "KA_Banglore_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KA_Belgaum_lulc_v2",
+        "title": "KA_Belgaum_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KA_Bellary_lulc_v2",
+        "title": "KA_Bellary_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KA_Bidar_lulc_v2",
+        "title": "KA_Bidar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KA_Bijapur_lulc_v2",
+        "title": "KA_Bijapur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KA_Chamarajnagar_lulc_v2",
+        "title": "KA_Chamarajnagar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KA_Chikballapur_lulc_v2",
+        "title": "KA_Chikballapur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KA_Chikmagalur_lulc_v2",
+        "title": "KA_Chikmagalur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KA_Chitradurga_lulc_v2",
+        "title": "KA_Chitradurga_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KA_Dakshina_Kannada_lulc_v2",
+        "title": "KA_Dakshina_Kannada_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KA_Davangere_lulc_v2",
+        "title": "KA_Davangere_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KA_Dharwad_lulc_v2",
+        "title": "KA_Dharwad_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KA_Gadag_lulc_v2",
+        "title": "KA_Gadag_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KA_Gulberga_lulc_v2",
+        "title": "KA_Gulberga_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KA_Hassan_lulc_v2",
+        "title": "KA_Hassan_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KA_Haveri_lulc_v2",
+        "title": "KA_Haveri_lulc_v2"
+      },
+      {
+        "name": "nuis:KA_KO_forest",
+        "title": "KA_KO_forest"
+      },
+      {
+        "name": "nuis:KA_KO_forest_boundary",
+        "title": "KA_KO_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:KA_Kodagu_lulc_v2",
+        "title": "KA_Kodagu_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KA_Kolar_lulc_v2",
+        "title": "KA_Kolar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KA_Koppal_lulc_v2",
+        "title": "KA_Koppal_lulc_v2"
+      },
+      {
+        "name": "basemap:KA_LULC",
+        "title": "KA"
+      },
+      {
+        "name": "sisdpv2:KA_Mandya_lulc_v2",
+        "title": "KA_Mandya_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KA_Mysore_lulc_v2",
+        "title": "KA_Mysore_lulc_v2"
+      },
+      {
+        "name": "nuis:KA_RA_forest",
+        "title": "KA_RA_forest"
+      },
+      {
+        "name": "nuis:KA_RA_forest_boundary",
+        "title": "KA_RA_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:KA_Raichur_lulc_v2",
+        "title": "KA_Raichur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KA_Ramanagar_lulc_v2",
+        "title": "KA_Ramanagar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KA_Shimoga_lulc_v2",
+        "title": "KA_Shimoga_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KA_Tumkur_lulc_v2",
+        "title": "KA_Tumkur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KA_Udupi_lulc_v2",
+        "title": "KA_Udupi_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KA_Uttara_Kannada_lulc_v2",
+        "title": "KA_Uttara_Kannada_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KA_Yadgir_lulc_v2",
+        "title": "KA_Yadgir_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KL_Alapurza_lulc_v2",
+        "title": "KL_Alapurza_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KL_Errnakulam_lulc_v2",
+        "title": "KL_Errnakulam_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KL_Idukki_lulc_v2",
+        "title": "KL_Idukki_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KL_Kannur_lulc_v2",
+        "title": "KL_Kannur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KL_Kasargod_lulc_v2",
+        "title": "KL_Kasargod_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KL_Kollam_lulc_v2",
+        "title": "KL_Kollam_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KL_Kottayam_lulc_v2",
+        "title": "KL_Kottayam_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KL_Kozhikkode_lulc_v2",
+        "title": "KL_Kozhikkode_lulc_v2"
+      },
+      {
+        "name": "basemap:KL_LULC",
+        "title": "KL"
+      },
+      {
+        "name": "sisdpv2:KL_Malappuram_lulc_v2",
+        "title": "KL_Malappuram_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KL_Palakkad_lulc_v2",
+        "title": "KL_Palakkad_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KL_Pathanamthitta_lulc_v2",
+        "title": "KL_Pathanamthitta_lulc_v2"
+      },
+      {
+        "name": "nuis:KL_TH_forest",
+        "title": "KL_TH_forest"
+      },
+      {
+        "name": "nuis:KL_TH_forest_boundary",
+        "title": "KL_TH_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:KL_Thiruvananthapuram_lulc_v2",
+        "title": "KL_Thiruvananthapuram_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KL_Thrissur_lulc_v2",
+        "title": "KL_Thrissur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:KL_Wayanad_lulc_v2",
+        "title": "KL_Wayanad_lulc_v2"
+      },
+      {
+        "name": "sisdp:Kannnauj_lulc",
+        "title": "Kannnauj_lulc"
+      },
+      {
+        "name": "sisdp:Kapurthala_lulc",
+        "title": "Kapurthala_lulc"
+      },
+      {
+        "name": "sisdp:Karauli_lulc",
+        "title": "Karauli_lulc"
+      },
+      {
+        "name": "sisdp:Kurukshetra_lulc",
+        "title": "Kurukshetra_lulc"
+      },
+      {
+        "name": "basemap:LD_LULC",
+        "title": "LD"
+      },
+      {
+        "name": "sisdpv2:LD_Lakshadweep_lulc_v2",
+        "title": "LD_Lakshadweep_lulc_v2"
+      },
+      {
+        "name": "sisdp:LULC10K_1213_2101",
+        "title": "LULC10K_1213_2101"
+      },
+      {
+        "name": "sisdp:LULC10K_1213_2102",
+        "title": "LULC10K_1213_2102"
+      },
+      {
+        "name": "sisdp:LULC10K_1213_2104",
+        "title": "LULC10K_1213_2104"
+      },
+      {
+        "name": "sisdp:LULC10K_1213_2105",
+        "title": "LULC10K_1213_2105"
+      },
+      {
+        "name": "sisdp:LULC10K_1213_2106",
+        "title": "LULC10K_1213_2106"
+      },
+      {
+        "name": "sisdp:LULC10K_1213_2107",
+        "title": "LULC10K_1213_2107"
+      },
+      {
+        "name": "sisdp:LULC10K_1213_2108",
+        "title": "LULC10K_1213_2108"
+      },
+      {
+        "name": "sisdp:LULC10K_1213_2109",
+        "title": "LULC10K_1213_2109"
+      },
+      {
+        "name": "sisdp:LULC10K_1213_2110",
+        "title": "LULC10K_1213_2110"
+      },
+      {
+        "name": "sisdp:LULC10K_1213_2113",
+        "title": "LULC10K_1213_2113"
+      },
+      {
+        "name": "sisdp:LULC10K_1213_2120",
+        "title": "LULC10K_1213_2120"
+      },
+      {
+        "name": "sisdp:LULC10K_1213_2121",
+        "title": "LULC10K_1213_2121"
+      },
+      {
+        "name": "sisdp:LULC10K_1213_2125",
+        "title": "LULC10K_1213_2125"
+      },
+      {
+        "name": "sisdp:LULC10K_1213_2126",
+        "title": "LULC10K_1213_2126"
+      },
+      {
+        "name": "sisdp:LULC10K_1213_2128",
+        "title": "LULC10K_1213_2128"
+      },
+      {
+        "name": "sisdp:LULC10K_1213_2129",
+        "title": "LULC10K_1213_2129"
+      },
+      {
+        "name": "sisdp:LULC10K_1213_2130",
+        "title": "LULC10K_1213_2130"
+      },
+      {
+        "name": "sisdp:Lakhimpur_lulc",
+        "title": "Lakhimpur_lulc"
+      },
+      {
+        "name": "nuis:MH_AU_forest",
+        "title": "MH_AU_forest"
+      },
+      {
+        "name": "nuis:MH_AU_forest_boundary",
+        "title": "MH_AU_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:MH_Ahmednagar_lulc_v2",
+        "title": "MH_Ahmednagar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MH_Akola_lulc_v2",
+        "title": "MH_Akola_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MH_Amravati_lulc_v2",
+        "title": "MH_Amravati_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MH_Aurangabad_lulc_v2",
+        "title": "MH_Aurangabad_lulc_v2"
+      },
+      {
+        "name": "nuis:MH_BH_forest",
+        "title": "MH_BH_forest"
+      },
+      {
+        "name": "nuis:MH_BH_forest_boundary",
+        "title": "MH_BH_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:MH_Beed_lulc_v2",
+        "title": "MH_Beed_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MH_Bhandara_lulc_v2",
+        "title": "MH_Bhandara_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MH_Buldhana_lulc_v2",
+        "title": "MH_Buldhana_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MH_Chandrapur_lulc_v2",
+        "title": "MH_Chandrapur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MH_Dhule_lulc_v2",
+        "title": "MH_Dhule_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MH_Gadchiroli_lulc_v2",
+        "title": "MH_Gadchiroli_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MH_Gondia_lulc_v2",
+        "title": "MH_Gondia_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MH_Hingoli_lulc_v2",
+        "title": "MH_Hingoli_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MH_Jalgaon_lulc_v2",
+        "title": "MH_Jalgaon_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MH_Jalna_lulc_v2",
+        "title": "MH_Jalna_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MH_Kolhapur_lulc_v2",
+        "title": "MH_Kolhapur_lulc_v2"
+      },
+      {
+        "name": "basemap:MH_LULC",
+        "title": "MH"
+      },
+      {
+        "name": "sisdpv2:MH_Latur_lulc_v2",
+        "title": "MH_Latur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MH_Mumbai_Suburban_lulc_v2",
+        "title": "MH_Mumbai_Suburban_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MH_Mumbai_lulc_v2",
+        "title": "MH_Mumbai_lulc_v2"
+      },
+      {
+        "name": "nuis:MH_NA_forest",
+        "title": "MH_NA_forest"
+      },
+      {
+        "name": "nuis:MH_NA_forest_boundary",
+        "title": "MH_NA_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:MH_Nagpur_lulc_v2",
+        "title": "MH_Nagpur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MH_Nanded_lulc_v2",
+        "title": "MH_Nanded_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MH_Nashik_lulc_v2",
+        "title": "MH_Nashik_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MH_Osmanabad_lulc_v2",
+        "title": "MH_Osmanabad_lulc_v2"
+      },
+      {
+        "name": "nuis:MH_PU_forest",
+        "title": "MH_PU_forest"
+      },
+      {
+        "name": "nuis:MH_PU_forest_boundary",
+        "title": "MH_PU_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:MH_Palghar_lulc_v2",
+        "title": "MH_Palghar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MH_Parbhani_lulc_v2",
+        "title": "MH_Parbhani_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MH_Pune_lulc_v2",
+        "title": "MH_Pune_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MH_Raigad_lulc_v2",
+        "title": "MH_Raigad_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MH_Ratnagiri_lulc_v2",
+        "title": "MH_Ratnagiri_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MH_Sangli_lulc_v2",
+        "title": "MH_Sangli_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MH_Satara_lulc_v2",
+        "title": "MH_Satara_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MH_Sindhudurg_lulc_v2",
+        "title": "MH_Sindhudurg_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MH_Solapur_lulc_v2",
+        "title": "MH_Solapur_lulc_v2"
+      },
+      {
+        "name": "nuis:MH_TH_forest",
+        "title": "MH_TH_forest"
+      },
+      {
+        "name": "nuis:MH_TH_forest_boundary",
+        "title": "MH_TH_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:MH_Thane_lulc_v2",
+        "title": "MH_Thane_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MH_Wardha_lulc_v2",
+        "title": "MH_Wardha_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MH_Washim_lulc_v2",
+        "title": "MH_Washim_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MH_Yavatmal_lulc_v2",
+        "title": "MH_Yavatmal_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:ML_East_Garo_Hills_lulc_v2",
+        "title": "ML_East_Garo_Hills_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:ML_East_Khasi_Hills_lulc_v2",
+        "title": "ML_East_Khasi_Hills_lulc_v2"
+      },
+      {
+        "name": "nuis:ML_JO_forest",
+        "title": "ML_JO_forest"
+      },
+      {
+        "name": "sisdpv2:ML_Jaintia_Hills_lulc_v2",
+        "title": "ML_Jaintia_Hills_lulc_v2"
+      },
+      {
+        "name": "basemap:ML_LULC",
+        "title": "ML"
+      },
+      {
+        "name": "sisdpv2:ML_North_Garo_Hills_lulc_v2",
+        "title": "ML_North_Garo_Hills_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:ML_Ri_Bhoi_lulc_v2",
+        "title": "ML_Ri_Bhoi_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:ML_South_Garo_Hills_lulc_v2",
+        "title": "ML_South_Garo_Hills_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:ML_South_Khasi_Hills_lulc_v2",
+        "title": "ML_South_Khasi_Hills_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:ML_Southwest_Garo_Hills_lulc_v2",
+        "title": "ML_Southwest_Garo_Hills_lulc_v2"
+      },
+      {
+        "name": "nuis:ML_TU_forest",
+        "title": "ML_TU_forest"
+      },
+      {
+        "name": "nuis:ML_TU_forest_boundary",
+        "title": "ML_TU_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:ML_West_Garo_Hills_lulc_v2",
+        "title": "ML_West_Garo_Hills_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:ML_West_Jaintia_Hills_lulc_v2",
+        "title": "ML_West_Jaintia_Hills_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:ML_West_Khasi_Hills_lulc_v2",
+        "title": "ML_West_Khasi_Hills_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MN_Bishnupur_lulc_v2",
+        "title": "MN_Bishnupur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MN_Chandel_lulc_v2",
+        "title": "MN_Chandel_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MN_Churachandpur_lulc_v2",
+        "title": "MN_Churachandpur_lulc_v2"
+      },
+      {
+        "name": "nuis:MN_IM_forest",
+        "title": "MN_IM_forest"
+      },
+      {
+        "name": "nuis:MN_IM_forest_boundary",
+        "title": "MN_IM_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:MN_Imphal_East_lulc_v2",
+        "title": "MN_Imphal_East_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MN_Imphal_West_lulc_v2",
+        "title": "MN_Imphal_West_lulc_v2"
+      },
+      {
+        "name": "basemap:MN_LULC",
+        "title": "MN"
+      },
+      {
+        "name": "sisdpv2:MN_Senapati_lulc_v2",
+        "title": "MN_Senapati_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MN_Tamenglong_lulc_v2",
+        "title": "MN_Tamenglong_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MN_Thoubal_lulc_v2",
+        "title": "MN_Thoubal_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MN_Ukhrul_lulc_v2",
+        "title": "MN_Ukhrul_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Agar_Melwa_lulc_v2",
+        "title": "MP_Agar_Melwa_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Alirajpur_lulc_v2",
+        "title": "MP_Alirajpur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Anuppur_lulc_v2",
+        "title": "MP_Anuppur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Ashoknagar_lulc_v2",
+        "title": "MP_Ashoknagar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Balaghat_lulc_v2",
+        "title": "MP_Balaghat_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Barwani_lulc_v2",
+        "title": "MP_Barwani_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Betul_lulc_v2",
+        "title": "MP_Betul_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Bhind_lulc_v2",
+        "title": "MP_Bhind_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Bhopal_lulc_v2",
+        "title": "MP_Bhopal_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Burhanpur_lulc_v2",
+        "title": "MP_Burhanpur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Chhatarpur_lulc_v2",
+        "title": "MP_Chhatarpur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Chhindwara_lulc_v2",
+        "title": "MP_Chhindwara_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Damoh_lulc_v2",
+        "title": "MP_Damoh_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Datia_lulc_v2",
+        "title": "MP_Datia_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Dewas_lulc_v2",
+        "title": "MP_Dewas_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Dhar_lulc_v2",
+        "title": "MP_Dhar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Dindori_lulc_v2",
+        "title": "MP_Dindori_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_East_Nimar_lulc_v2",
+        "title": "MP_East_Nimar_lulc_v2"
+      },
+      {
+        "name": "nuis:MP_GW_forest",
+        "title": "MP_GW_forest"
+      },
+      {
+        "name": "nuis:MP_GW_forest_boundary",
+        "title": "MP_GW_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:MP_Guna_lulc_v2",
+        "title": "MP_Guna_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Gwalior_lulc_v2",
+        "title": "MP_Gwalior_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Harda_lulc_v2",
+        "title": "MP_Harda_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Hoshangabad_lulc_v2",
+        "title": "MP_Hoshangabad_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Indore_lulc_v2",
+        "title": "MP_Indore_lulc_v2"
+      },
+      {
+        "name": "nuis:MP_JA_forest",
+        "title": "MP_JA_forest"
+      },
+      {
+        "name": "nuis:MP_JA_forest_boundary",
+        "title": "MP_JA_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:MP_Jabalpur_lulc_v2",
+        "title": "MP_Jabalpur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Jhabua_lulc_v2",
+        "title": "MP_Jhabua_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Katni_lulc_v2",
+        "title": "MP_Katni_lulc_v2"
+      },
+      {
+        "name": "basemap:MP_LULC",
+        "title": "MP"
+      },
+      {
+        "name": "moef:MP_LULC50K_1112_GB",
+        "title": "MP_LULC50K_1112_GB"
+      },
+      {
+        "name": "sisdpv2:MP_Mandla_lulc_v2",
+        "title": "MP_Mandla_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Mandsaur_lulc_v2",
+        "title": "MP_Mandsaur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Morena_lulc_v2",
+        "title": "MP_Morena_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Narsimhapur_lulc_v2",
+        "title": "MP_Narsimhapur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Neemuch_lulc_v2",
+        "title": "MP_Neemuch_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Panna_lulc_v2",
+        "title": "MP_Panna_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Raisen_lulc_v2",
+        "title": "MP_Raisen_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Rajgarh_lulc_v2",
+        "title": "MP_Rajgarh_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Ratlam_lulc_v2",
+        "title": "MP_Ratlam_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Rewa_lulc_v2",
+        "title": "MP_Rewa_lulc_v2"
+      },
+      {
+        "name": "nuis:MP_SA_forest",
+        "title": "MP_SA_forest"
+      },
+      {
+        "name": "nuis:MP_SA_forest_boundary",
+        "title": "MP_SA_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:MP_Sagar_lulc_v2",
+        "title": "MP_Sagar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Satna_lulc_v2",
+        "title": "MP_Satna_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Sehore_lulc_v2",
+        "title": "MP_Sehore_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Seoni_lulc_v2",
+        "title": "MP_Seoni_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Shahdol_lulc_v2",
+        "title": "MP_Shahdol_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Shajapur_lulc_v2",
+        "title": "MP_Shajapur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Sheopur_lulc_v2",
+        "title": "MP_Sheopur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Shivpuri_lulc_v2",
+        "title": "MP_Shivpuri_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Sidhi_lulc_v2",
+        "title": "MP_Sidhi_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Singrauli_lulc_v2",
+        "title": "MP_Singrauli_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Tikamgarh_lulc_v2",
+        "title": "MP_Tikamgarh_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Ujjain_lulc_v2",
+        "title": "MP_Ujjain_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Umaria_lulc_v2",
+        "title": "MP_Umaria_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_Vidisha_lulc_v2",
+        "title": "MP_Vidisha_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MP_West_Nimar_lulc_v2",
+        "title": "MP_West_Nimar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MZ_Aizwal_lulc_v2",
+        "title": "MZ_Aizwal_lulc_v2"
+      },
+      {
+        "name": "nuis:MZ_CH_forest",
+        "title": "MZ_CH_forest"
+      },
+      {
+        "name": "sisdpv2:MZ_Champai_lulc_v2",
+        "title": "MZ_Champai_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MZ_Kolasib_lulc_v2",
+        "title": "MZ_Kolasib_lulc_v2"
+      },
+      {
+        "name": "basemap:MZ_LULC",
+        "title": "MZ"
+      },
+      {
+        "name": "nuis:MZ_LU_forest",
+        "title": "MZ_LU_forest"
+      },
+      {
+        "name": "sisdpv2:MZ_Lawngtalai_lulc_v2",
+        "title": "MZ_Lawngtalai_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MZ_Lunglei_lulc_v2",
+        "title": "MZ_Lunglei_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MZ_Mamit_lulc_v2",
+        "title": "MZ_Mamit_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MZ_Sahia_lulc_v2",
+        "title": "MZ_Sahia_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:MZ_Serchip_lulc_v2",
+        "title": "MZ_Serchip_lulc_v2"
+      },
+      {
+        "name": "sisdp:Mamit_Lulc",
+        "title": "Mamit_Lulc"
+      },
+      {
+        "name": "sisdp:Mizoram_Aizawl_LULC_",
+        "title": "Mizoram_Aizawl_LULC_"
+      },
+      {
+        "name": "sisdp:Mizoram_Champhai_LULC",
+        "title": "Mizoram_Champhai_LULC"
+      },
+      {
+        "name": "sisdp:Mizoram_Kolasib_LULC_",
+        "title": "Mizoram_Kolasib_LULC_"
+      },
+      {
+        "name": "sisdp:Mohali_lulc",
+        "title": "Mohali_lulc"
+      },
+      {
+        "name": "sisdp:NIZAMABAD_LULC",
+        "title": "NIZAMABAD_LULC"
+      },
+      {
+        "name": "nuis:NL_DI_forest",
+        "title": "NL_DI_forest"
+      },
+      {
+        "name": "nuis:NL_DI_forest_boundary",
+        "title": "NL_DI_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:NL_Dimapur_lulc_v2",
+        "title": "NL_Dimapur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:NL_Kohima_lulc_v2",
+        "title": "NL_Kohima_lulc_v2"
+      },
+      {
+        "name": "basemap:NL_LULC",
+        "title": "NL"
+      },
+      {
+        "name": "nuis:NL_MO_forest",
+        "title": "NL_MO_forest"
+      },
+      {
+        "name": "sisdpv2:NL_Mokokchung_lulc_v2",
+        "title": "NL_Mokokchung_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:NL_Mon_lulc_v2",
+        "title": "NL_Mon_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:NL_Phek_lulc_v2",
+        "title": "NL_Phek_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:NL_Tuensang_lulc_v2",
+        "title": "NL_Tuensang_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:NL_Wokha_lulc_v2",
+        "title": "NL_Wokha_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:NL_Zunheboto_lulc_v2",
+        "title": "NL_Zunheboto_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:OR_Anugul_lulc_v2",
+        "title": "OR_Anugul_lulc_v2"
+      },
+      {
+        "name": "nuis:OR_BAR_forest",
+        "title": "OR_BAR_forest"
+      },
+      {
+        "name": "nuis:OR_BA_forest",
+        "title": "OR_BA_forest"
+      },
+      {
+        "name": "nuis:OR_BA_forest_boundary",
+        "title": "OR_BA_forest_boundary"
+      },
+      {
+        "name": "nuis:OR_BRA_forest",
+        "title": "OR_BRA_forest"
+      },
+      {
+        "name": "sisdpv2:OR_Balangir_lulc_v2",
+        "title": "OR_Balangir_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:OR_Baleshwar_lulc_v2",
+        "title": "OR_Baleshwar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:OR_Bargarh_lulc_v2",
+        "title": "OR_Bargarh_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:OR_Baudh_lulc_v2",
+        "title": "OR_Baudh_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:OR_Bhadrak_lulc_v2",
+        "title": "OR_Bhadrak_lulc_v2"
+      },
+      {
+        "name": "nuis:OR_CU_forest",
+        "title": "OR_CU_forest"
+      },
+      {
+        "name": "nuis:OR_CU_forest_boundary",
+        "title": "OR_CU_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:OR_Cuttack_lulc_v2",
+        "title": "OR_Cuttack_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:OR_Debagarh_lulc_v2",
+        "title": "OR_Debagarh_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:OR_Dhenkanal_lulc_v2",
+        "title": "OR_Dhenkanal_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:OR_Gajapati_lulc_v2",
+        "title": "OR_Gajapati_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:OR_Ganjam_lulc_v2",
+        "title": "OR_Ganjam_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:OR_Jagatsinghpur_lulc_v2",
+        "title": "OR_Jagatsinghpur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:OR_Jajapur_lulc_v2",
+        "title": "OR_Jajapur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:OR_Jharsuguda_lulc_v2",
+        "title": "OR_Jharsuguda_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:OR_Kalahandi_lulc_v2",
+        "title": "OR_Kalahandi_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:OR_Kandhamal_lulc_v2",
+        "title": "OR_Kandhamal_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:OR_Kendrapara_lulc_v2",
+        "title": "OR_Kendrapara_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:OR_Kendujhar_lulc_v2",
+        "title": "OR_Kendujhar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:OR_Khordha_lulc_v2",
+        "title": "OR_Khordha_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:OR_Koraput_lulc_v2",
+        "title": "OR_Koraput_lulc_v2"
+      },
+      {
+        "name": "basemap:OR_LULC",
+        "title": "OR"
+      },
+      {
+        "name": "sisdpv2:OR_Malkangiri_lulc_v2",
+        "title": "OR_Malkangiri_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:OR_Mayurbhanj_lulc_v2",
+        "title": "OR_Mayurbhanj_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:OR_Nabarangapur_lulc_v2",
+        "title": "OR_Nabarangapur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:OR_Nayagarh_lulc_v2",
+        "title": "OR_Nayagarh_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:OR_Nuapada_lulc_v2",
+        "title": "OR_Nuapada_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:OR_Puri_lulc_v2",
+        "title": "OR_Puri_lulc_v2"
+      },
+      {
+        "name": "nuis:OR_RA_forest",
+        "title": "OR_RA_forest"
+      },
+      {
+        "name": "nuis:OR_RA_forest_boundary",
+        "title": "OR_RA_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:OR_Rayagada_lulc_v2",
+        "title": "OR_Rayagada_lulc_v2"
+      },
+      {
+        "name": "nuis:OR_SA_forest",
+        "title": "OR_SA_forest"
+      },
+      {
+        "name": "nuis:OR_SA_forest_boundary",
+        "title": "OR_SA_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:OR_Sambalpur_lulc_v2",
+        "title": "OR_Sambalpur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:OR_Sonapur_lulc_v2",
+        "title": "OR_Sonapur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:OR_Sundargarh_lulc_v2",
+        "title": "OR_Sundargarh_lulc_v2"
+      },
+      {
+        "name": "sdv:PB_40IFP_LANDUSE",
+        "title": "PB_40IFP_LANDUSE"
+      },
+      {
+        "name": "sdv:PB_AYALI_village_LULC_500_0610",
+        "title": "PB_AYALI_village_LULC_500_0610"
+      },
+      {
+        "name": "sisdpv2:PB_Amritsar_lulc_v2",
+        "title": "PB_Amritsar_lulc_v2"
+      },
+      {
+        "name": "sdv:PB_BANOHAR_village_LULC_500_0610",
+        "title": "PB_BANOHAR_village_LULC_500_0610"
+      },
+      {
+        "name": "sisdpv2:PB_Barnala_lulc_v2",
+        "title": "PB_Barnala_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:PB_Bathinda_lulc_v2",
+        "title": "PB_Bathinda_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:PB_Chandigarh_lulc_v2",
+        "title": "PB_Chandigarh_lulc_v2"
+      },
+      {
+        "name": "sdv:PB_Dholbaha_wetland_lulc_2010",
+        "title": "Dholbaha_lulc_2010"
+      },
+      {
+        "name": "sisdpv2:PB_Faridkot_lulc_v2",
+        "title": "PB_Faridkot_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:PB_Fatehgarh_Sahib_lulc_v2",
+        "title": "PB_Fatehgarh_Sahib_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:PB_Fazilka_lulc_v2",
+        "title": "PB_Fazilka_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:PB_Firozpur_lulc_v2",
+        "title": "PB_Firozpur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:PB_Gurdaspur_lulc_v2",
+        "title": "PB_Gurdaspur_lulc_v2"
+      },
+      {
+        "name": "sdv:PB_Harike_lulc_2006",
+        "title": "PB_Harike_lulc_2006"
+      },
+      {
+        "name": "sisdpv2:PB_Hoshiarpur_lulc_v2",
+        "title": "PB_Hoshiarpur_lulc_v2"
+      },
+      {
+        "name": "sdv:PB_Hussainiwala_wetalnd_lulc_2010",
+        "title": "Hussainiwala_lulc_2010"
+      },
+      {
+        "name": "sdv:PB_IFP_LANDUSE_VER2",
+        "title": "PB_IFP_LANDUSE_VER2"
+      },
+      {
+        "name": "sisdpv2:PB_Jalandhar_lulc_v2",
+        "title": "PB_Jalandhar_lulc_v2"
+      },
+      {
+        "name": "sdv:PB_Kanjli_wetlands_lulc_2007",
+        "title": "PB_Kanjli_wetlands_lulc_2007"
+      },
+      {
+        "name": "sisdpv2:PB_Kapurthala_lulc_v2",
+        "title": "PB_Kapurthala_lulc_v2"
+      },
+      {
+        "name": "sdv:PB_Keshopur_wetlands_lulc_2008",
+        "title": "PB_Keshopur_wetlands_lulc_2008"
+      },
+      {
+        "name": "basemap:PB_LULC",
+        "title": "PB"
+      },
+      {
+        "name": "sisdpv2:PB_Ludhiana_lulc_v2",
+        "title": "PB_Ludhiana_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:PB_Mansa_lulc_v2",
+        "title": "PB_Mansa_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:PB_Moga_lulc_v2",
+        "title": "PB_Moga_lulc_v2"
+      },
+      {
+        "name": "sdv:PB_Mohali_Landuse",
+        "title": "PB_Mohali_Landuse"
+      },
+      {
+        "name": "sisdpv2:PB_Mohali_lulc_v2",
+        "title": "PB_Mohali_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:PB_Muktsar_lulc_v2",
+        "title": "PB_Muktsar_lulc_v2"
+      },
+      {
+        "name": "sdv:PB_Nagal_wetlands_lulc_2008",
+        "title": "PB_Nagal_wetlands_lulc_2008"
+      },
+      {
+        "name": "sisdpv2:PB_Pathankot_lulc_v2",
+        "title": "PB_Pathankot_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:PB_Patiala_lulc_v2",
+        "title": "PB_Patiala_lulc_v2"
+      },
+      {
+        "name": "sdv:PB_RAKHRA_village_LULC_500_0610",
+        "title": "PB_RAKHRA_village_LULC_500_0610"
+      },
+      {
+        "name": "sdv:PB_Ropar_wetland_lulc_2007",
+        "title": "Ropar_lulc_2007"
+      },
+      {
+        "name": "sisdpv2:PB_Rupnagar_lulc_v2",
+        "title": "PB_Rupnagar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:PB_SBS_Nagar_lulc_v2",
+        "title": "PB_SBS_Nagar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:PB_Sangrur_lulc_v2",
+        "title": "PB_Sangrur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:PB_Taran_Taran_lulc_v2",
+        "title": "PB_Taran_Taran_lulc_v2"
+      },
+      {
+        "name": "nuis:PJ_AM_forest",
+        "title": "PJ_AM_forest"
+      },
+      {
+        "name": "nuis:PJ_BA_forest",
+        "title": "PJ_BA_forest"
+      },
+      {
+        "name": "nuis:PJ_LU_forest",
+        "title": "PJ_LU_forest"
+      },
+      {
+        "name": "nuis:PJ_PAT_forest",
+        "title": "PJ_PAT_forest"
+      },
+      {
+        "name": "nuis:PJ_PAT_forest_boundary",
+        "title": "PJ_PAT_forest_boundary"
+      },
+      {
+        "name": "nuis:PJ_PA_forest",
+        "title": "PJ_PA_forest"
+      },
+      {
+        "name": "basemap:PY1_LULC",
+        "title": "PY1"
+      },
+      {
+        "name": "basemap:PY2_LULC",
+        "title": "PY2"
+      },
+      {
+        "name": "basemap:PY3_LULC",
+        "title": "PY3"
+      },
+      {
+        "name": "basemap:PY4_LULC",
+        "title": "PY4"
+      },
+      {
+        "name": "sisdpv2:PY_Karaikal_lulc_v2",
+        "title": "PY_Karaikal_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:PY_Mahe_lulc_v2",
+        "title": "PY_Mahe_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:PY_Pondicherry_lulc_v2",
+        "title": "PY_Pondicherry_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:PY_Yanam_lulc_v2",
+        "title": "PY_Yanam_lulc_v2"
+      },
+      {
+        "name": "sisdp:Palwal_lulc",
+        "title": "Palwal_lulc"
+      },
+      {
+        "name": "sisdp:Pathankot_lulc",
+        "title": "Pathankot_lulc"
+      },
+      {
+        "name": "sisdp:Patiala_lulc",
+        "title": "Patiala_lulc"
+      },
+      {
+        "name": "basemap:RJ1_LULC",
+        "title": "RJ1"
+      },
+      {
+        "name": "basemap:RJ2_LULC",
+        "title": "RJ2"
+      },
+      {
+        "name": "sisdpv2:RJ_Ajmer_lulc_v2",
+        "title": "RJ_Ajmer_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:RJ_Alwar_lulc_v2",
+        "title": "RJ_Alwar_lulc_v2"
+      },
+      {
+        "name": "nuis:RJ_BA_forest",
+        "title": "RJ_BA_forest"
+      },
+      {
+        "name": "nuis:RJ_BA_forest_boundary",
+        "title": "RJ_BA_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:RJ_Banswara_lulc_v2",
+        "title": "RJ_Banswara_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:RJ_Baran_lulc_v2",
+        "title": "RJ_Baran_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:RJ_Barmer_lulc_v2",
+        "title": "RJ_Barmer_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:RJ_Bharatpur_lulc_v2",
+        "title": "RJ_Bharatpur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:RJ_Bhilwara_lulc_v2",
+        "title": "RJ_Bhilwara_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:RJ_Bikaner_lulc_v2",
+        "title": "RJ_Bikaner_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:RJ_Bundi_lulc_v2",
+        "title": "RJ_Bundi_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:RJ_Chittaurgarh_lulc_v2",
+        "title": "RJ_Chittaurgarh_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:RJ_Churu_lulc_v2",
+        "title": "RJ_Churu_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:RJ_Dausa_lulc_v2",
+        "title": "RJ_Dausa_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:RJ_Dhaulpur_lulc_v2",
+        "title": "RJ_Dhaulpur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:RJ_Dungarpur_lulc_v2",
+        "title": "RJ_Dungarpur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:RJ_Ganganagar_lulc_v2",
+        "title": "RJ_Ganganagar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:RJ_Hanumangarh_lulc_v2",
+        "title": "RJ_Hanumangarh_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:RJ_Jaipur_lulc_v2",
+        "title": "RJ_Jaipur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:RJ_Jaisalmer_lulc_v2",
+        "title": "RJ_Jaisalmer_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:RJ_Jalore_lulc_v2",
+        "title": "RJ_Jalore_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:RJ_Jhalawar_lulc_v2",
+        "title": "RJ_Jhalawar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:RJ_Jhunjhunun_lulc_v2",
+        "title": "RJ_Jhunjhunun_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:RJ_Jodhpur_lulc_v2",
+        "title": "RJ_Jodhpur_lulc_v2"
+      },
+      {
+        "name": "nuis:RJ_KA_forest",
+        "title": "RJ_KA_forest"
+      },
+      {
+        "name": "nuis:RJ_KA_forest_boundary",
+        "title": "RJ_KA_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:RJ_Karauli_lulc_v2",
+        "title": "RJ_Karauli_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:RJ_Kota_lulc_v2",
+        "title": "RJ_Kota_lulc_v2"
+      },
+      {
+        "name": "nuis:RJ_MA_forest",
+        "title": "RJ_MA_forest"
+      },
+      {
+        "name": "nuis:RJ_MA_forest_boundary",
+        "title": "RJ_MA_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:RJ_Nagaur_lulc_v2",
+        "title": "RJ_Nagaur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:RJ_Pali_lulc_v2",
+        "title": "RJ_Pali_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:RJ_Pratapgarh_lulc_v2",
+        "title": "RJ_Pratapgarh_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:RJ_Rajsamand_lulc_v2",
+        "title": "RJ_Rajsamand_lulc_v2"
+      },
+      {
+        "name": "nuis:RJ_SA_forest",
+        "title": "RJ_SA_forest"
+      },
+      {
+        "name": "nuis:RJ_SA_forest_boundary",
+        "title": "RJ_SA_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:RJ_Sawai_Madhopur_lulc_v2",
+        "title": "RJ_Sawai_Madhopur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:RJ_Sikar_lulc_v2",
+        "title": "RJ_Sikar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:RJ_Sirohi_lulc_v2",
+        "title": "RJ_Sirohi_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:RJ_Tonk_lulc_v2",
+        "title": "RJ_Tonk_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:RJ_Udaipur_lulc_v2",
+        "title": "RJ_Udaipur_lulc_v2"
+      },
+      {
+        "name": "sdv:SANTHIPURAM_LULC",
+        "title": "SANTHIPURAM_LULC"
+      },
+      {
+        "name": "sisdp:SIRSA_lulc",
+        "title": "SIRSA_lulc"
+      },
+      {
+        "name": "sisdpv2:SK_East_Sikkim_lulc_v2",
+        "title": "SK_East_Sikkim_lulc_v2"
+      },
+      {
+        "name": "nuis:SK_GY_forest",
+        "title": "SK_GY_forest"
+      },
+      {
+        "name": "nuis:SK_GY_forest_boundary",
+        "title": "SK_GY_forest_boundary"
+      },
+      {
+        "name": "nuis:SK_JO_forest",
+        "title": "SK_JO_forest"
+      },
+      {
+        "name": "nuis:SK_JO_forest_boundary",
+        "title": "SK_JO_forest_boundary"
+      },
+      {
+        "name": "basemap:SK_LULC",
+        "title": "SK"
+      },
+      {
+        "name": "nuis:SK_MA_forest",
+        "title": "SK_MA_forest"
+      },
+      {
+        "name": "nuis:SK_MA_forest_boundary",
+        "title": "SK_MA_forest_boundary"
+      },
+      {
+        "name": "nuis:SK_NA_forest",
+        "title": "SK_NA_forest"
+      },
+      {
+        "name": "nuis:SK_NA_forest_boundary",
+        "title": "SK_NA_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:SK_North_Sikkim_lulc_v2",
+        "title": "SK_North_Sikkim_lulc_v2"
+      },
+      {
+        "name": "nuis:SK_PA_forest",
+        "title": "SK_PA_forest"
+      },
+      {
+        "name": "nuis:SK_PA_forest_boundary",
+        "title": "SK_PA_forest_boundary"
+      },
+      {
+        "name": "nuis:SK_RAV_forest",
+        "title": "SK_RAV_forest"
+      },
+      {
+        "name": "nuis:SK_RAV_forest_boundary",
+        "title": "SK_RAV_forest_boundary"
+      },
+      {
+        "name": "nuis:SK_RA_forest",
+        "title": "SK_RA_forest"
+      },
+      {
+        "name": "nuis:SK_RA_forest_boundary",
+        "title": "SK_RA_forest_boundary"
+      },
+      {
+        "name": "nuis:SK_RO_forest",
+        "title": "SK_RO_forest"
+      },
+      {
+        "name": "nuis:SK_SO_forest",
+        "title": "SK_SO_forest"
+      },
+      {
+        "name": "nuis:SK_SO_forest_boundary",
+        "title": "SK_SO_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:SK_South_Sikkim_lulc_v2",
+        "title": "SK_South_Sikkim_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:SK_West_Sikkim_lulc_v2",
+        "title": "SK_West_Sikkim_lulc_v2"
+      },
+      {
+        "name": "sisdp:Sibsagrh_lulc",
+        "title": "Sibsagrh_lulc"
+      },
+      {
+        "name": "sisdpv2:TN_Ariyalur_lulc_v2",
+        "title": "TN_Ariyalur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TN_Chennai_lulc_v2",
+        "title": "TN_Chennai_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TN_Coimbatore_lulc_v2",
+        "title": "TN_Coimbatore_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TN_Cuddalore_lulc_v2",
+        "title": "TN_Cuddalore_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TN_Dharmapuri_lulc_v2",
+        "title": "TN_Dharmapuri_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TN_Dindigul_lulc_v2",
+        "title": "TN_Dindigul_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TN_Erode_lulc_v2",
+        "title": "TN_Erode_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TN_Kancheepuram_lulc_v2",
+        "title": "TN_Kancheepuram_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TN_Kanniyakumari_lulc_v2",
+        "title": "TN_Kanniyakumari_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TN_Karur_lulc_v2",
+        "title": "TN_Karur_lulc_v2"
+      },
+      {
+        "name": "basemap:TN_LULC",
+        "title": "TN"
+      },
+      {
+        "name": "sisdpv2:TN_Madurai_lulc_v2",
+        "title": "TN_Madurai_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TN_Nagapattinam_lulc_v2",
+        "title": "TN_Nagapattinam_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TN_Namakkal_lulc_v2",
+        "title": "TN_Namakkal_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TN_Perambalur_lulc_v2",
+        "title": "TN_Perambalur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TN_Pudukkottai_lulc_v2",
+        "title": "TN_Pudukkottai_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TN_Ramanathapuram_lulc_v2",
+        "title": "TN_Ramanathapuram_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TN_Salem_lulc_v2",
+        "title": "TN_Salem_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TN_Sivaganga_lulc_v2",
+        "title": "TN_Sivaganga_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TN_Thanjavur_lulc_v2",
+        "title": "TN_Thanjavur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TN_The_Nilgiris_lulc_v2",
+        "title": "TN_The_Nilgiris_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TN_Theni_lulc_v2",
+        "title": "TN_Theni_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TN_Thiruvallur_lulc_v2",
+        "title": "TN_Thiruvallur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TN_Thiruvarur_lulc_v2",
+        "title": "TN_Thiruvarur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TN_Thoothukkudi_lulc_v2",
+        "title": "TN_Thoothukkudi_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TN_Tirunelveli_lulc_v2",
+        "title": "TN_Tirunelveli_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TN_Tiruvannamalai_lulc_v2",
+        "title": "TN_Tiruvannamalai_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TN_Vellore_lulc_v2",
+        "title": "TN_Vellore_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TN_Viluppuram_lulc_v2",
+        "title": "TN_Viluppuram_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TN_Virudhunagar_lulc_v2",
+        "title": "TN_Virudhunagar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TR_Dhalai_lulc_v2",
+        "title": "TR_Dhalai_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TR_Gomati_lulc_v2",
+        "title": "TR_Gomati_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TR_Khowai_lulc_v2",
+        "title": "TR_Khowai_lulc_v2"
+      },
+      {
+        "name": "basemap:TR_LULC",
+        "title": "TR"
+      },
+      {
+        "name": "sisdpv2:TR_North_lulc_v2",
+        "title": "TR_North_lulc_v2"
+      },
+      {
+        "name": "nuis:TR_RA_forest",
+        "title": "TR_RA_forest"
+      },
+      {
+        "name": "nuis:TR_RA_forest_boundary",
+        "title": "TR_RA_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:TR_Sepahijala_lulc_v2",
+        "title": "TR_Sepahijala_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TR_South_lulc_v2",
+        "title": "TR_South_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TR_Unakoti_lulc_v2",
+        "title": "TR_Unakoti_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TR_West_lulc_v2",
+        "title": "TR_West_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TS_Adilabad_lulc_v2",
+        "title": "TS_Adilabad_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TS_Hyderabad_lulc_v2",
+        "title": "TS_Hyderabad_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TS_Karimnagar_lulc_v2",
+        "title": "TS_Karimnagar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TS_Khammam_lulc_v2",
+        "title": "TS_Khammam_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TS_Mahabubnagar_lulc_v2",
+        "title": "TS_Mahabubnagar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TS_Medak_lulc_v2",
+        "title": "TS_Medak_lulc_v2"
+      },
+      {
+        "name": "nuis:TS_NA_forest",
+        "title": "AP_NA_forest"
+      },
+      {
+        "name": "nuis:TS_NA_forest_boundary",
+        "title": "AP_NA_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:TS_Nalgonda_lulc_v2",
+        "title": "TS_Nalgonda_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TS_Nizamabad_lulc_v2",
+        "title": "TS_Nizamabad_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TS_Rangareddy_lulc_v2",
+        "title": "TS_Rangareddy_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:TS_Warangal_lulc_v2",
+        "title": "TS_Warangal_lulc_v2"
+      },
+      {
+        "name": "sisdp:Taran_Taran_lulc",
+        "title": "Taran_Taran_lulc"
+      },
+      {
+        "name": "sisdpv2:UK_Almora_lulc_v2",
+        "title": "UK_Almora_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UK_Bageshwer_lulc_v2",
+        "title": "UK_Bageshwer_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UK_Chamoli_lulc_v2",
+        "title": "UK_Chamoli_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UK_Champawat_lulc_v2",
+        "title": "UK_Champawat_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UK_Dehradun_lulc_v2",
+        "title": "UK_Dehradun_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UK_Haridwar_lulc_v2",
+        "title": "UK_Haridwar_lulc_v2"
+      },
+      {
+        "name": "basemap:UK_LULC",
+        "title": "UK"
+      },
+      {
+        "name": "moef:UK_LULC50K_1112",
+        "title": "UK_LULC50K_1112"
+      },
+      {
+        "name": "sisdpv2:UK_Nainital_lulc_v2",
+        "title": "UK_Nainital_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UK_Pauri_lulc_v2",
+        "title": "UK_Pauri_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UK_Pithoragarh_lulc_v2",
+        "title": "UK_Pithoragarh_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UK_Rudraprayag_lulc_v2",
+        "title": "UK_Rudraprayag_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UK_Tehri_lulc_v2",
+        "title": "UK_Tehri_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UK_Udham_Singh_Nagar_lulc_v2",
+        "title": "UK_Udham_Singh_Nagar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UK_Uttarkashi_lulc_v2",
+        "title": "UK_Uttarkashi_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Agra_lulc_v2",
+        "title": "UP_Agra_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Aligarh_lulc_v2",
+        "title": "UP_Aligarh_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Allahabad_lulc_v2",
+        "title": "UP_Allahabad_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Ambedkar_Nagar_lulc_v2",
+        "title": "UP_Ambedkar_Nagar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Amethi_lulc_v2",
+        "title": "UP_Amethi_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Auraiya_lulc_v2",
+        "title": "UP_Auraiya_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Azamgarh_lulc_v2",
+        "title": "UP_Azamgarh_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Baghpat_lulc_v2",
+        "title": "UP_Baghpat_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Bahraich_lulc_v2",
+        "title": "UP_Bahraich_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Ballia_lulc_v2",
+        "title": "UP_Ballia_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Balrampur_lulc_v2",
+        "title": "UP_Balrampur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Banda_lulc_v2",
+        "title": "UP_Banda_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Bara_Banki_lulc_v2",
+        "title": "UP_Bara_Banki_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Bareilly_lulc_v2",
+        "title": "UP_Bareilly_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Basti_lulc_v2",
+        "title": "UP_Basti_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Bhimnagar_lulc_v2",
+        "title": "UP_Bhimnagar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Bijnor_lulc_v2",
+        "title": "UP_Bijnor_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Budaun_lulc_v2",
+        "title": "UP_Budaun_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Bulandshahr_lulc_v2",
+        "title": "UP_Bulandshahr_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Chandauli_lulc_v2",
+        "title": "UP_Chandauli_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Chitrakoot_lulc_v2",
+        "title": "UP_Chitrakoot_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Deoria_lulc_v2",
+        "title": "UP_Deoria_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Etah_lulc_v2",
+        "title": "UP_Etah_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Etawah_lulc_v2",
+        "title": "UP_Etawah_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Faizabad_lulc_v2",
+        "title": "UP_Faizabad_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Farrukhabad_lulc_v2",
+        "title": "UP_Farrukhabad_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Fatehpur_lulc_v2",
+        "title": "UP_Fatehpur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Firozabad_lulc_v2",
+        "title": "UP_Firozabad_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Gautam_Buddha_Nagar_lulc_v2",
+        "title": "UP_Gautam_Buddha_Nagar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Ghaziabad_lulc_v2",
+        "title": "UP_Ghaziabad_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Ghazipur_lulc_v2",
+        "title": "UP_Ghazipur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Gonda_lulc_v2",
+        "title": "UP_Gonda_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Gorakhpur_lulc_v2",
+        "title": "UP_Gorakhpur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Hamirpur_lulc_v2",
+        "title": "UP_Hamirpur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Hardoi_lulc_v2",
+        "title": "UP_Hardoi_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Hathras_lulc_v2",
+        "title": "UP_Hathras_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Jalaun_lulc_v2",
+        "title": "UP_Jalaun_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Jaunpur_lulc_v2",
+        "title": "UP_Jaunpur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Jhansi_lulc_v2",
+        "title": "UP_Jhansi_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Jyotiba_Phule_Nagar_lulc_v2",
+        "title": "UP_Jyotiba_Phule_Nagar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Kannauj_lulc_v2",
+        "title": "UP_Kannauj_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Kanpur_Dehat_lulc_v2",
+        "title": "UP_Kanpur_Dehat_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Kanpur_Nagar_lulc_v2",
+        "title": "UP_Kanpur_Nagar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Kansi_Ram_Nagar_lulc_v2",
+        "title": "UP_Kansi_Ram_Nagar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Kaushambi_lulc_v2",
+        "title": "UP_Kaushambi_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Kushinagar_lulc_v2",
+        "title": "UP_Kushinagar_lulc_v2"
+      },
+      {
+        "name": "basemap:UP_LULC",
+        "title": "UP_LULC"
+      },
+      {
+        "name": "moef:UP_LULC50K_1112",
+        "title": "UP_LULC50K_1112"
+      },
+      {
+        "name": "nuis:UP_LU_forest",
+        "title": "UP_LU_forest"
+      },
+      {
+        "name": "nuis:UP_LU_forest_boundary",
+        "title": "UP_LU_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:UP_Lakhimpur_lulc_v2",
+        "title": "UP_Lakhimpur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Lalitpur_lulc_v2",
+        "title": "UP_Lalitpur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Lucknow_lulc_v2",
+        "title": "UP_Lucknow_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Maharajganj_lulc_v2",
+        "title": "UP_Maharajganj_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Mahoba_lulc_v2",
+        "title": "UP_Mahoba_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Mainpuri_lulc_v2",
+        "title": "UP_Mainpuri_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Mathura_lulc_v2",
+        "title": "UP_Mathura_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Mau_lulc_v2",
+        "title": "UP_Mau_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Meerut_lulc_v2",
+        "title": "UP_Meerut_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Mirzapur_lulc_v2",
+        "title": "UP_Mirzapur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Moradabad_lulc_v2",
+        "title": "UP_Moradabad_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Muzzafarnagar_lulc_v2",
+        "title": "UP_Muzzafarnagar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Panchshil_Nagar_lulc_v2",
+        "title": "UP_Panchshil_Nagar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Pilibhit_lulc_v2",
+        "title": "UP_Pilibhit_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Prabudhinagar_lulc_v2",
+        "title": "UP_Prabudhinagar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Pratapgarh_lulc_v2",
+        "title": "UP_Pratapgarh_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Rae_Bareli_lulc_v2",
+        "title": "UP_Rae_Bareli_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Rampur_lulc_v2",
+        "title": "UP_Rampur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Saharanpur_lulc_v2",
+        "title": "UP_Saharanpur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Sant_Kabir_Nagar_lulc_v2",
+        "title": "UP_Sant_Kabir_Nagar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Sant_Ravi_Das_Nagar_(Bhadohi)_lulc_v2",
+        "title": "UP_Sant_Ravi_Das_Nagar_(Bhadohi)_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Shahjahanpur_lulc_v2",
+        "title": "UP_Shahjahanpur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Shrawasti_lulc_v2",
+        "title": "UP_Shrawasti_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Siddharth_Nagar_lulc_v2",
+        "title": "UP_Siddharth_Nagar_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Sitapur_lulc_v2",
+        "title": "UP_Sitapur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Sonbhadra_lulc_v2",
+        "title": "UP_Sonbhadra_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Sultanpur_lulc_v2",
+        "title": "UP_Sultanpur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Unnao_lulc_v2",
+        "title": "UP_Unnao_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:UP_Varanasi_lulc_v2",
+        "title": "UP_Varanasi_lulc_v2"
+      },
+      {
+        "name": "sisdp:Villupuram_lulc",
+        "title": "Villupuram_lulc"
+      },
+      {
+        "name": "nuis:WB_BA_forest",
+        "title": "WB_BA_forest"
+      },
+      {
+        "name": "nuis:WB_BA_forest_boundary",
+        "title": "WB_BA_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:WB_Bankura_lulc_v2",
+        "title": "WB_Bankura_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:WB_Bardhman_lulc_v2",
+        "title": "WB_Bardhman_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:WB_Birbhum_lulc_v2",
+        "title": "WB_Birbhum_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:WB_Coochbihar_lulc_v2",
+        "title": "WB_Coochbihar_lulc_v2"
+      },
+      {
+        "name": "nuis:WB_DU_forest",
+        "title": "WB_DU_forest"
+      },
+      {
+        "name": "nuis:WB_DU_forest_boundary",
+        "title": "WB_DU_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:WB_Dakshin_Dinajpur_lulc_v2",
+        "title": "WB_Dakshin_Dinajpur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:WB_Darjeeling_lulc_v2",
+        "title": "WB_Darjeeling_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:WB_East_Maedinipur_lulc_v2",
+        "title": "WB_East_Maedinipur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:WB_Hooghly_lulc_v2",
+        "title": "WB_Hooghly_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:WB_Howrah_lulc_v2",
+        "title": "WB_Howrah_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:WB_Jalpaiguri_lulc_v2",
+        "title": "WB_Jalpaiguri_lulc_v2"
+      },
+      {
+        "name": "nuis:WB_KH_forest",
+        "title": "WB_KH_forest"
+      },
+      {
+        "name": "nuis:WB_KH_forest_boundary",
+        "title": "WB_KH_forest_boundary"
+      },
+      {
+        "name": "nuis:WB_KU_forest",
+        "title": "WB_KU_forest"
+      },
+      {
+        "name": "nuis:WB_KU_forest_boundary",
+        "title": "WB_KU_forest_boundary"
+      },
+      {
+        "name": "sisdpv2:WB_Kolkata_lulc_v2",
+        "title": "WB_Kolkata_lulc_v2"
+      },
+      {
+        "name": "basemap:WB_LULC",
+        "title": "WB"
+      },
+      {
+        "name": "moef:WB_LULC50K_1112",
+        "title": "WB_LULC50K_1112"
+      },
+      {
+        "name": "sisdpv2:WB_Malda_lulc_v2",
+        "title": "WB_Malda_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:WB_Murshidabad_lulc_v2",
+        "title": "WB_Murshidabad_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:WB_Nadia_lulc_v2",
+        "title": "WB_Nadia_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:WB_North_24_Parganas_lulc_v2",
+        "title": "WB_North_24_Parganas_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:WB_Puruliya_lulc_v2",
+        "title": "WB_Puruliya_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:WB_South_24_Parganas_lulc_v2",
+        "title": "WB_South_24_Parganas_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:WB_Uttar_Dinajpur_lulc_v2",
+        "title": "WB_Uttar_Dinajpur_lulc_v2"
+      },
+      {
+        "name": "sisdpv2:WB_West_Medinipur_lulc_v2",
+        "title": "WB_West_Medinipur_lulc_v2"
+      },
+      {
+        "name": "sisdp:Yamuna_Nagar_lulc",
+        "title": "Yamuna_Nagar_lulc"
+      },
+      {
+        "name": "sisdp:ananthapur_lulc1",
+        "title": "ananthapur_lulc1"
+      },
+      {
+        "name": "cleanganga:cleanganga_Afforestation_UP",
+        "title": "cleanganga_Afforestation_UP"
+      },
+      {
+        "name": "cleanganga:cleanganga_Afforestation_West_Bengal",
+        "title": "cleanganga_Afforestation_West_Bengal"
+      },
+      {
+        "name": "coastal:cps_lulc_mod",
+        "title": "cps_lulc_mod"
+      },
+      {
+        "name": "sisdp:dungarpur_lulc",
+        "title": "dungarpur_lulc"
+      },
+      {
+        "name": "sisdp:jagatsinghpur_lulc",
+        "title": "jagatsinghpur_lulc"
+      },
+      {
+        "name": "sisdp:jaunpur_lulc",
+        "title": "jaunpur_lulc"
+      },
+      {
+        "name": "sisdp:jhunjunu_lulc",
+        "title": "jhunjunu_lulc"
+      },
+      {
+        "name": "sisdp:kaithal_lulc",
+        "title": "kaithal_lulc"
+      },
+      {
+        "name": "sdv:pb_ba_lulc_municipal",
+        "title": "pb_ba_lulc_municipal"
+      },
+      {
+        "name": "nuis:pb_lu_lulc_zonea",
+        "title": "zone_a"
+      },
+      {
+        "name": "nuis:pb_lu_lulc_zoneb",
+        "title": "zone_b"
+      },
+      {
+        "name": "nuis:pb_lu_lulc_zonec",
+        "title": "zone_c"
+      },
+      {
+        "name": "nuis:pb_lu_lulc_zoned",
+        "title": "zone_d"
+      },
+      {
+        "name": "sisdp:pulwama_lulc",
+        "title": "pulwama_lulc"
+      },
+      {
+        "name": "sisdp:sherchip_Lulc",
+        "title": "sherchip_Lulc"
+      },
+      {
+        "name": "sisdp:shopian_lulc",
+        "title": "shopian_lulc"
+      },
+      {
+        "name": "basemap:sisdp_gj1_lulc",
+        "title": "kachchh"
+      },
+      {
+        "name": "basemap:sisdp_gj2_lulc",
+        "title": "north"
+      },
+      {
+        "name": "basemap:sisdp_gj3_lulc",
+        "title": "saurastra"
+      },
+      {
+        "name": "basemap:sisdp_gj4_lulc",
+        "title": "south"
+      },
+      {
+        "name": "sisdp:srinagar_lulc",
+        "title": "srinagar_lulc"
+      },
+      {
+        "name": "tour:vijayawada_lulc",
+        "title": "ap_clip"
+      }
+    ]
+  }
+}

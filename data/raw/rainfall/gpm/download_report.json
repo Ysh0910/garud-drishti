@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-09-15T12:23:17.351364+00:00",
+  "summary": {
+    "gpm_daily_count": 40,
+    "gpm_daily_size_mb": 1256.85,
+    "gpm_halfhourly_count": 30,
+    "gpm_halfhourly_size_mb": 226.54,
+    "smap_count": 2,
+    "smap_size_mb": 1316.23,
+    "total_storage_mb": 2799.62
+  },
+  "datasets": {
+    "gpm_daily": {
+      "status": "PRESENT",
+      "count": 40,
+      "directory": "data\\raw\\rainfall\\gpm\\daily",
+      "tested_readable": true,
+      "sample_files": [
+        "3B-DAY.MS.MRG.3IMERG.20240701-S000000-E235959.V07B.nc4",
+        "3B-DAY.MS.MRG.3IMERG.20240702-S000000-E235959.V07B.nc4",
+        "3B-DAY.MS.MRG.3IMERG.20240703-S000000-E235959.V07B.nc4",
+        "3B-DAY.MS.MRG.3IMERG.20240704-S000000-E235959.V07B.nc4",
+        "3B-DAY.MS.MRG.3IMERG.20240705-S000000-E235959.V07B.nc4"
+      ]
+    },
+    "gpm_halfhourly": {
+      "status": "PRESENT",
+      "count": 30,
+      "directory": "data\\raw\\rainfall\\gpm\\half_hourly",
+      "tested_readable": true,
+      "sample_files": [
+        "3B-HHR.MS.MRG.3IMERG.20250715-S000000-E002959.0000.V07B.HDF5",
+        "3B-HHR.MS.MRG.3IMERG.20250715-S003000-E005959.0030.V07B.HDF5",
+        "3B-HHR.MS.MRG.3IMERG.20250715-S010000-E012959.0060.V07B.HDF5",
+        "3B-HHR.MS.MRG.3IMERG.20250715-S013000-E015959.0090.V07B.HDF5",
+        "3B-HHR.MS.MRG.3IMERG.20250715-S020000-E022959.0120.V07B.HDF5"
+      ]
+    },
+    "smap": {
+      "status": "PRESENT",
+      "count": 2,
+      "directory": "data\\raw\\soil_moisture\\smap",
+      "tested_readable": true,
+      "sample_files": [
+        "SMAP_L3_SM_P_E_20240601_R19240_001.h5",
+        "SMAP_L3_SM_P_E_20240601_R19240_001.h5"
+      ]
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "inspection_time": "2026-09-15T10:55:56.634411Z",
+  "scripts": {
+    "SPL3SMAP": {
+      "path": "data\\raw\\nsidc-download_SPL3SMAP.003_2026-09-11.py",
+      "exists": true,
+      "short_name": "SPL3SMAP",
+      "version": "003",
+      "time_start": "2023-12-31T18:30:00Z",
+      "time_end": "2025-12-31T18:29:59Z",
+      "bounding_box": "",
+      "polygon": "",
+      "filename_filter": "",
+      "product_description": "SMAP L3 Passive Daily 36km soil moisture (Version 003)"
+    },
+    "NSIDC-0800": {
+      "path": "data\\raw\\nsidc-download_NSIDC-0800.002_2026-09-11.py",
+      "exists": true,
+      "short_name": "NSIDC-0800",
+      "version": "2",
+      "time_start": "2015-03-31T00:00:00Z",
+      "time_end": "2026-06-30T23:59:59Z",
+      "bounding_box": "",
+      "polygon": "",
+      "filename_filter": "",
+      "product_description": "SMAP Enhanced L3 Passive Daily 9km soil moisture (Version 2)"
+    }
+  },
+  "actual_data_present": false,
+  "notes": [
+    "No actual SMAP .h5/.hdf/.nc data files found in data/raw/",
+    "Authentication via NASA Earthdata required to download",
+    "Use environment variables EARTHDATA_USER and EARTHDATA_PASSWORD"
+  ],
+  "actual_data_files": []
+}
