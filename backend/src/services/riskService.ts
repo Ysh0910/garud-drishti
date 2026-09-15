@@ -1,6 +1,6 @@
 import { riskRepository, RiskCellRecord } from '../repositories/riskRepository';
 import { BoundingBox } from '../repositories/geo';
-import { mockMlAdapter } from '../adapters/mlAdapter';
+import { mlAdapter, MLPredictionResult } from '../adapters/mlAdapter';
 import { MockRiskCell } from '../adapters/mockRiskData';
 import {
   RiskLevel,
@@ -89,6 +89,22 @@ export function scoreToRiskLevel(score: number): RiskLevel {
   return 'CRITICAL';
 }
 
+export function scoreToRiskState(score: number): RiskState {
+  if (score <= 20) return 'NORMAL';
+  if (score <= 40) return 'WATCH';
+  if (score <= 60) return 'ELEVATED';
+  if (score <= 80) return 'HIGH';
+  return 'CRITICAL';
+}
+
+export function deriveTrend(currentRisk: number, futureRisk: number | null): Trend {
+  if (futureRisk === null || futureRisk === undefined) return 'STABLE';
+  const diff = futureRisk - currentRisk;
+  if (diff >= 5) return 'INCREASING';
+  if (diff <= -5) return 'DECREASING';
+  return 'STABLE';
+}
+
 export function buildForecasts(
   f6h: number | null,
   f24h: number | null,
@@ -147,13 +163,13 @@ export class RiskService {
         return this.mapCellToPointResponse(cell, lat, lon);
       }
     } catch (err) {
-      console.warn('[riskService] Database lookup failed, falling back to mock adapter:', err);
+      console.warn('[riskService] Database lookup failed, falling back to ML adapter:', err);
     }
 
-    // Fallback to mock adapter
-    const mock = await mockMlAdapter.getPointPrediction(lat, lon);
-    if (mock) {
-      return this.mapMockToPointResponse(mock, lat, lon);
+    // Call ML adapter (handles live ML inference + mock fallback seamlessly)
+    const mlPrediction = await mlAdapter.getPointPrediction(lat, lon);
+    if (mlPrediction) {
+      return this.mapMLPredictionToPointResponse(mlPrediction, lat, lon);
     }
 
     // Synthetic fallback for arbitrary point outside seeded cells
@@ -170,7 +186,7 @@ export class RiskService {
       data_quality: 'GOOD',
       forecasts: buildForecasts(42, 45, 38, 30),
       updated_at: new Date().toISOString(),
-      model_version: 'dynamic_xgb_v1',
+      model_version: 'dynamic_risk_xgboost_v1:v1.0',
     };
   }
 
@@ -187,11 +203,11 @@ export class RiskService {
     try {
       cells = await riskRepository.findInBbox(bbox, minRisk);
     } catch (err) {
-      console.warn('[riskService] Database grid query failed, using mock fallback:', err);
+      console.warn('[riskService] Database grid query failed, using ML fallback:', err);
     }
 
     if (cells.length === 0) {
-      const mockCells = await mockMlAdapter.getGridPredictions(bbox, minRisk);
+      const mockCells = await mlAdapter.getGridPredictions(bbox, minRisk);
       return this.buildMockFeatureCollection(mockCells, horizon);
     }
 
@@ -205,7 +221,7 @@ export class RiskService {
         horizon,
         generated_at: new Date().toISOString(),
         total_cells: cells.length,
-        model_version: cells[0]?.model_version || 'dynamic_xgb_v1',
+        model_version: cells[0]?.model_version || 'dynamic_risk_xgboost_v1:v1.0',
       },
       features: cells.map((cell) => {
         let score = cell.current_risk;
@@ -228,7 +244,7 @@ export class RiskService {
             confidence: cell.confidence,
             data_quality: cell.data_quality,
             updated_at: cell.updated_at.toISOString(),
-            model_version: cell.model_version || 'dynamic_xgb_v1',
+            model_version: cell.model_version || 'dynamic_risk_xgboost_v1:v1.0',
           },
         };
       }),
@@ -255,7 +271,7 @@ export class RiskService {
           confidence: cell.confidence,
           data_quality: cell.data_quality,
           updated_at: cell.updated_at.toISOString(),
-          model_version: cell.model_version || 'dynamic_xgb_v1',
+          model_version: cell.model_version || 'dynamic_risk_xgboost_v1:v1.0',
           forecasts: buildForecasts(
             cell.forecast_6h,
             cell.forecast_24h,
@@ -281,10 +297,10 @@ export class RiskService {
         };
       }
     } catch (err) {
-      console.warn('[riskService] Database findById failed, checking mock:', err);
+      console.warn('[riskService] Database findById failed, checking ML adapter:', err);
     }
 
-    const mock = await mockMlAdapter.getZonePrediction(cellId);
+    const mock = await mlAdapter.getZonePrediction(cellId);
     if (!mock) {
       throw notFound(`RiskZone '${cellId}'`);
     }
@@ -369,34 +385,38 @@ export class RiskService {
         cell.forecast_72h,
       ),
       updated_at: cell.updated_at.toISOString(),
-      model_version: cell.model_version || 'dynamic_xgb_v1',
+      model_version: cell.model_version || 'dynamic_risk_xgboost_v1:v1.0',
     };
   }
 
-  private mapMockToPointResponse(
-    mock: MockRiskCell,
+  private mapMLPredictionToPointResponse(
+    pred: MLPredictionResult,
     lat: number,
     lon: number,
   ): RiskPointResponse {
+    const riskLevel = scoreToRiskLevel(pred.current_risk);
+    const riskState = scoreToRiskState(pred.current_risk);
+    const trend = deriveTrend(pred.current_risk, pred.risk_24h);
+
     return {
       latitude: lat,
       longitude: lon,
-      cell_id: mock.cell_id,
-      base_susceptibility: mock.base_susceptibility,
-      current_risk: mock.current_risk,
-      risk_level: mock.risk_level,
-      risk_state: mock.risk_state,
-      trend: mock.trend,
-      confidence: mock.confidence,
-      data_quality: mock.data_quality,
+      cell_id: pred.cell_id ?? null,
+      base_susceptibility: pred.base_susceptibility,
+      current_risk: pred.current_risk,
+      risk_level: riskLevel,
+      risk_state: riskState,
+      trend,
+      confidence: pred.confidence,
+      data_quality: pred.data_quality,
       forecasts: buildForecasts(
-        mock.forecast_6h,
-        mock.forecast_24h,
-        mock.forecast_48h,
-        mock.forecast_72h,
+        pred.forecast_6h ?? null,
+        pred.forecast_24h ?? pred.risk_24h ?? null,
+        pred.forecast_48h ?? null,
+        pred.forecast_72h ?? null,
       ),
-      updated_at: mock.updated_at,
-      model_version: mock.model_version,
+      updated_at: new Date().toISOString(),
+      model_version: pred.model_version || 'dynamic_risk_xgboost_v1:v1.0',
     };
   }
 
@@ -414,7 +434,7 @@ export class RiskService {
         horizon,
         generated_at: new Date().toISOString(),
         total_cells: mockCells.length,
-        model_version: 'dynamic_xgb_v1',
+        model_version: mockCells[0]?.model_version || 'dynamic_risk_xgboost_v1:v1.0',
       },
       features: mockCells.map((mock) => {
         let score = mock.current_risk;

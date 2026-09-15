@@ -77,7 +77,7 @@ export const MOCK_RISK_CELLS: MockRiskCell[] = [
     forecast_24h: 92,
     forecast_48h: 78,
     forecast_72h: 65,
-    model_version: 'dynamic_xgb_v1',
+    model_version: 'dynamic_risk_xgboost_v1:v1.0',
     updated_at: new Date().toISOString(),
     terrain: {
       elevation_m: 1450.0,
@@ -138,7 +138,7 @@ export const MOCK_RISK_CELLS: MockRiskCell[] = [
     forecast_24h: 75,
     forecast_48h: 60,
     forecast_72h: 50,
-    model_version: 'dynamic_xgb_v1',
+    model_version: 'dynamic_risk_xgboost_v1:v1.0',
     updated_at: new Date().toISOString(),
     terrain: {
       elevation_m: 1680.0,
@@ -197,7 +197,7 @@ export const MOCK_RISK_CELLS: MockRiskCell[] = [
     forecast_24h: 50,
     forecast_48h: 40,
     forecast_72h: 35,
-    model_version: 'dynamic_xgb_v1',
+    model_version: 'dynamic_risk_xgboost_v1:v1.0',
     updated_at: new Date().toISOString(),
     terrain: {
       elevation_m: 1300.0,
@@ -248,7 +248,7 @@ export const MOCK_RISK_CELLS: MockRiskCell[] = [
     forecast_24h: 22,
     forecast_48h: 18,
     forecast_72h: 15,
-    model_version: 'dynamic_xgb_v1',
+    model_version: 'dynamic_risk_xgboost_v1:v1.0',
     updated_at: new Date().toISOString(),
     terrain: {
       elevation_m: 950.0,
