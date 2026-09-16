@@ -1,7 +1,9 @@
 import { useEffect } from 'react';
-import { TOTAL_MONITORED_ZONES, ZONE_SUMMARIES } from '../../mocks/zones';
+import { useZoneSummaries } from '../../hooks/api';
+import { TOTAL_MONITORED_ZONES } from '../../mocks/zones';
 import { useDashboardStore, type RankBy } from '../../store/dashboardStore';
 import { formatDelta, formatScore01, riskBadgeClass, trendGlyph } from '../../utils/risk';
+import PanelStatus from '../common/PanelStatus';
 
 const RANK_OPTIONS: { key: RankBy; label: string }[] = [
   { key: 'RISK_X_EXPOSURE', label: 'RISK × EXPOSURE' },
@@ -13,8 +15,9 @@ const COLS = '26px minmax(0,1fr) 96px 52px 46px';
 
 export default function ZoneTriagePanel() {
   const { selectedCellId, selectZone, rankBy, setRankBy, selectedState, selectedDistrict } = useDashboardStore();
+  const { data: zones, isLoading, isError } = useZoneSummaries();
 
-  let scoped = ZONE_SUMMARIES;
+  let scoped = zones ?? [];
   if (selectedState !== 'All States') scoped = scoped.filter((z) => z.state === selectedState);
   if (selectedDistrict !== 'All districts') scoped = scoped.filter((z) => z.district === selectedDistrict);
 
@@ -31,7 +34,22 @@ export default function ZoneTriagePanel() {
       selectZone(rows[0].cell_id);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedState, selectedDistrict]);
+  }, [selectedState, selectedDistrict, zones]);
+
+  if (isLoading) {
+    return (
+      <div className="panel">
+        <PanelStatus kind="loading" message="Loading monitored zones…" />
+      </div>
+    );
+  }
+  if (isError) {
+    return (
+      <div className="panel">
+        <PanelStatus kind="error" message="Zone triage list unavailable right now." />
+      </div>
+    );
+  }
 
   return (
     <div className="panel">

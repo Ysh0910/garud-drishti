@@ -1,9 +1,62 @@
+import type { FeatureCollection, Point } from 'geojson';
 import maplibregl, { type Map as MlMap } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { forwardRef, useEffect, useImperativeHandle, useRef } from 'react';
-import { CITIZEN_REPORT_POINTS, NER_BOUNDS, RISK_GRID, STATE_BOUNDS } from '../../mocks/riskGrid';
+import { buildDistrictAggregates, NER_BOUNDS, RISK_GRID, STATE_BOUNDS } from '../../mocks/riskGrid';
+import { useReports } from '../../hooks/api';
 import { RISK_LEVEL_HEX } from '../../utils/risk';
 import { useDashboardStore } from '../../store/dashboardStore';
+
+function reportsToGeoJson(
+  reports: { report_id: string; latitude: number; longitude: number; status: string }[],
+): FeatureCollection<Point, { report_id: string; status: string }> {
+  return {
+    type: 'FeatureCollection',
+    features: reports.map((r) => ({
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [r.longitude, r.latitude] },
+      properties: { report_id: r.report_id, status: r.status },
+    })),
+  };
+}
+
+/** 8x8 diagonal-stripe pattern used to texture low-confidence zones — see confidence legend. */
+function createDiagonalHatchImage(): ImageData {
+  const size = 8;
+  const canvas = document.createElement('canvas');
+  canvas.width = size;
+  canvas.height = size;
+  const ctx = canvas.getContext('2d')!;
+  ctx.strokeStyle = 'rgba(27,33,29,0.5)';
+  ctx.lineWidth = 1.6;
+  ctx.beginPath();
+  // Two diagonal segments so the stripe tiles seamlessly at every edge.
+  ctx.moveTo(-1, size + 1);
+  ctx.lineTo(size + 1, -1);
+  ctx.moveTo(-1, size / 2 - size);
+  ctx.lineTo(size / 2, -1);
+  ctx.moveTo(size / 2, size + 1);
+  ctx.lineTo(size + 1, size / 2);
+  ctx.stroke();
+  return ctx.getImageData(0, 0, size, size);
+}
+
+function applyRiskLayerVisibility(map: MlMap, activeMapLayer: string, coarse: boolean) {
+  const showDetail = activeMapLayer === 'RISK' && !coarse ? 'visible' : 'none';
+  const showAggregate = activeMapLayer === 'RISK' && coarse ? 'visible' : 'none';
+  const showInventory = activeMapLayer === 'INVENTORY' ? 'visible' : 'none';
+  const set = (id: string, v: string) => {
+    if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', v);
+  };
+  set('risk-grid-fill', showDetail);
+  set('risk-grid-outline', showDetail);
+  set('risk-grid-hatch', showDetail);
+  set('risk-grid-outline-unknown', showDetail);
+  set('district-aggregate-circle', showAggregate);
+  set('district-aggregate-label', showAggregate);
+  set('landslide-heat', showInventory);
+  set('landslide-points', showInventory);
+}
 
 export interface RiskMapHandle {
   zoomIn: () => void;
@@ -31,7 +84,8 @@ const RiskMap = forwardRef<RiskMapHandle, RiskMapProps>(function RiskMap({ heigh
   const selectZone = useDashboardStore((s) => s.selectZone);
   const selectedState = useDashboardStore((s) => s.selectedState);
   const activeMapLayer = useDashboardStore((s) => s.activeMapLayer);
-  const isFirstStateChange = useRef(true);
+  const isFirstJump = useRef(true);
+  const { data: reports } = useReports();
 
   useImperativeHandle(ref, () => ({
     zoomIn: () => mapRef.current?.zoomIn(),
@@ -52,12 +106,15 @@ const RiskMap = forwardRef<RiskMapHandle, RiskMapProps>(function RiskMap({ heigh
     mapRef.current = map;
 
     map.on('load', () => {
+      if (!map.hasImage('diag-hatch')) {
+        map.addImage('diag-hatch', createDiagonalHatchImage());
+      }
+
       map.addSource('risk-grid', { type: 'geojson', data: RISK_GRID as any });
       map.addLayer({
         id: 'risk-grid-fill',
         type: 'fill',
         source: 'risk-grid',
-        layout: { visibility: activeMapLayer === 'RISK' ? 'visible' : 'none' },
         paint: {
           'fill-color': [
             'match',
@@ -69,24 +126,115 @@ const RiskMap = forwardRef<RiskMapHandle, RiskMapProps>(function RiskMap({ heigh
             'VERY_LOW', RISK_LEVEL_HEX.VERY_LOW,
             '#8A8F88',
           ],
-          'fill-opacity': 0.75,
+          // Low/unknown-confidence zones are deliberately less opaque — see the
+          // CONFIDENCE legend (solid = high, hatched = low, dashed/muted = unknown).
+          'fill-opacity': ['match', ['get', 'confidence_tier'], 'unknown', 0.35, 0.75],
         },
+      });
+      // Diagonal hatch overlay for low- (but not unknown-) confidence zones.
+      map.addLayer({
+        id: 'risk-grid-hatch',
+        type: 'fill',
+        source: 'risk-grid',
+        filter: ['==', ['get', 'confidence_tier'], 'low'],
+        paint: { 'fill-pattern': 'diag-hatch' },
       });
       map.addLayer({
         id: 'risk-grid-outline',
         type: 'line',
         source: 'risk-grid',
-        layout: { visibility: activeMapLayer === 'RISK' ? 'visible' : 'none' },
         paint: { 'line-color': '#1B211D', 'line-width': 1 },
       });
-      map.addSource('citizen-reports', { type: 'geojson', data: CITIZEN_REPORT_POINTS as any });
+      // Dashed accent for zones with no confidence value at all (drawn over the base outline).
+      map.addLayer({
+        id: 'risk-grid-outline-unknown',
+        type: 'line',
+        source: 'risk-grid',
+        filter: ['==', ['get', 'confidence_tier'], 'unknown'],
+        paint: { 'line-color': '#8A8F88', 'line-width': 2, 'line-dasharray': [2, 2] },
+      });
+
+      // District-level aggregation — real mean of member zones' risk_score, rendered as
+      // proportional circles at each district's centroid rather than invented boundary
+      // polygons (see mocks/riskGrid.ts buildDistrictAggregates for why).
+      map.addSource('district-aggregate', { type: 'geojson', data: buildDistrictAggregates() as any });
+      map.addLayer({
+        id: 'district-aggregate-circle',
+        type: 'circle',
+        source: 'district-aggregate',
+        paint: {
+          'circle-radius': ['interpolate', ['linear'], ['get', 'zone_count'], 1, 22, 5, 40],
+          'circle-color': [
+            'match',
+            ['get', 'risk_level'],
+            'CRITICAL', RISK_LEVEL_HEX.CRITICAL,
+            'HIGH', RISK_LEVEL_HEX.HIGH,
+            'MODERATE', RISK_LEVEL_HEX.MODERATE,
+            'LOW', RISK_LEVEL_HEX.LOW,
+            'VERY_LOW', RISK_LEVEL_HEX.VERY_LOW,
+            '#8A8F88',
+          ],
+          'circle-opacity': 0.82,
+          'circle-stroke-color': '#FCFBF7',
+          'circle-stroke-width': 2,
+        },
+      });
+      map.addLayer({
+        id: 'district-aggregate-label',
+        type: 'symbol',
+        source: 'district-aggregate',
+        layout: {
+          'text-field': ['concat', ['get', 'district'], '\n', ['to-string', ['get', 'avg_risk_score']]],
+          'text-size': 11,
+          'text-line-height': 1.2,
+        },
+        paint: { 'text-color': '#FCFBF7', 'text-halo-color': 'rgba(0,0,0,0.25)', 'text-halo-width': 1 },
+      });
+
+      const aggregatePopup = new maplibregl.Popup({ closeButton: false, closeOnClick: false });
+      map.on('mousemove', 'district-aggregate-circle', (e) => {
+        map.getCanvas().style.cursor = 'pointer';
+        const p = e.features?.[0]?.properties as Record<string, unknown> | undefined;
+        if (!p || !e.lngLat) return;
+        aggregatePopup
+          .setLngLat(e.lngLat)
+          .setHTML(
+            `<div style="font-family: var(--font-mono, monospace); font-size: 11px; line-height: 1.5;">` +
+              `<strong>${p.district}</strong>, ${p.state}<br/>` +
+              `Avg. risk score: ${p.avg_risk_score} (${p.risk_level})<br/>` +
+              `${p.zone_count} monitored zone(s)` +
+              `</div>`,
+          )
+          .addTo(map);
+      });
+      map.on('mouseleave', 'district-aggregate-circle', () => {
+        map.getCanvas().style.cursor = '';
+        aggregatePopup.remove();
+      });
+      map.on('click', 'district-aggregate-circle', (e) => {
+        const cellId = e.features?.[0]?.properties?.top_cell_id;
+        if (cellId) selectZone(cellId);
+      });
+
+      applyRiskLayerVisibility(map, activeMapLayer, Boolean(coarse));
+
+      // Seeded empty — populated by the reports-sync effect once useReports() resolves,
+      // so the map never shows stale hardcoded points once real report data exists.
+      map.addSource('citizen-reports', { type: 'geojson', data: reportsToGeoJson([]) as any });
       map.addLayer({
         id: 'citizen-reports-points',
         type: 'circle',
         source: 'citizen-reports',
         paint: {
           'circle-radius': 5,
-          'circle-color': '#FCFBF7',
+          'circle-color': [
+            'match',
+            ['get', 'status'],
+            'VERIFIED', '#3E8E5B',
+            'REJECTED', '#B9A9A5',
+            'PROBABLE', '#D9A526',
+            '#FCFBF7',
+          ],
           'circle-stroke-color': '#3E463F',
           'circle-stroke-width': 1.6,
         },
@@ -206,29 +354,54 @@ const RiskMap = forwardRef<RiskMapHandle, RiskMapProps>(function RiskMap({ heigh
     map.resize();
   }, [height]);
 
-  // Toggle which map layer is visible (RISK grid vs real landslide inventory heatmap).
+  // Keep the citizen-report markers in sync with the real report data (useReports()) —
+  // verifying/rejecting a report in the review modal now moves/updates its map marker
+  // instead of the map showing a frozen hardcoded set.
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !map.isStyleLoaded() || !map.getSource('citizen-reports') || !reports) return;
+    (map.getSource('citizen-reports') as maplibregl.GeoJSONSource).setData(reportsToGeoJson(reports) as any);
+  }, [reports]);
+
+  // Toggle which map layer is visible: RISK detail grid vs DISTRICT AGGREGATE circles
+  // (both under the RISK layer button) vs the real landslide INVENTORY heatmap.
   useEffect(() => {
     const map = mapRef.current;
     if (!map || !map.isStyleLoaded()) return;
-    const riskVisible = activeMapLayer === 'RISK' ? 'visible' : 'none';
-    const inventoryVisible = activeMapLayer === 'INVENTORY' ? 'visible' : 'none';
-    if (map.getLayer('risk-grid-fill')) map.setLayoutProperty('risk-grid-fill', 'visibility', riskVisible);
-    if (map.getLayer('risk-grid-outline')) map.setLayoutProperty('risk-grid-outline', 'visibility', riskVisible);
-    if (map.getLayer('landslide-heat')) map.setLayoutProperty('landslide-heat', 'visibility', inventoryVisible);
-    if (map.getLayer('landslide-points')) map.setLayoutProperty('landslide-points', 'visibility', inventoryVisible);
-  }, [activeMapLayer]);
+    applyRiskLayerVisibility(map, activeMapLayer, Boolean(coarse));
+  }, [activeMapLayer, coarse]);
 
-  // Fly to the selected state's bounds whenever it changes (initial mount keeps the full-NER view).
+  // Jump the map whenever the selected zone OR state changes (initial mount keeps the
+  // full-NER view). Prefers flying precisely to the selected cell's own footprint —
+  // that's what makes clicking a zone anywhere (triage table, Response Priority,
+  // the map itself) actually visible on the map, not just a state-level pan.
   useEffect(() => {
-    if (isFirstStateChange.current) {
-      isFirstStateChange.current = false;
+    if (isFirstJump.current) {
+      isFirstJump.current = false;
       return;
     }
     const map = mapRef.current;
     if (!map) return;
+
+    const feature = RISK_GRID.features.find((f) => f.properties.cell_id === selectedCellId);
+    if (feature) {
+      const ring = feature.geometry.coordinates[0];
+      const lons = ring.map((c) => c[0]);
+      const lats = ring.map((c) => c[1]);
+      const margin = 0.5; // degrees — a neighbourhood-level view, not a street-level zoom into a tiny mock polygon
+      map.fitBounds(
+        [
+          [Math.min(...lons) - margin, Math.min(...lats) - margin],
+          [Math.max(...lons) + margin, Math.max(...lats) + margin],
+        ],
+        { duration: 800, maxZoom: 10 },
+      );
+      return;
+    }
+
     const bounds = selectedState === 'All States' ? NER_BOUNDS : STATE_BOUNDS[selectedState];
     if (bounds) map.fitBounds(bounds, { padding: 32, duration: 800 });
-  }, [selectedState]);
+  }, [selectedCellId, selectedState]);
 
   return <div ref={containerRef} style={{ width: '100%', height, background: coarse ? '#EEEBE3' : undefined }} />;
 });

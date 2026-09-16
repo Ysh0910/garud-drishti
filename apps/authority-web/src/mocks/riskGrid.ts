@@ -14,9 +14,18 @@ export interface RiskZoneProperties {
   response_priority: string;
   trend: string;
   confidence: number | null;
+  /** Precomputed once here rather than as a null-check inside a MapLibre style expression. */
+  confidence_tier: 'high' | 'low' | 'unknown';
   data_quality: string;
   updated_at: string;
   model_version: string;
+  district: string;
+  state: string;
+}
+
+function confidenceTier(confidence: number | null): RiskZoneProperties['confidence_tier'] {
+  if (confidence == null) return 'unknown';
+  return confidence >= 0.7 ? 'high' : 'low';
 }
 
 function square(lon: number, lat: number, half: number): Polygon {
@@ -41,6 +50,9 @@ function feature(
   half: number,
   risk_score: number,
   risk_level: RiskZoneProperties['risk_level'],
+  confidence: number | null,
+  district: string,
+  state: string,
 ): Feature<Polygon, RiskZoneProperties> {
   return {
     type: 'Feature',
@@ -53,52 +65,92 @@ function feature(
       risk_state: risk_level,
       response_priority: risk_level === 'CRITICAL' || risk_level === 'HIGH' ? 'HIGH' : 'MEDIUM',
       trend: 'INCREASING',
-      confidence: null,
+      confidence,
+      confidence_tier: confidenceTier(confidence),
       data_quality: 'DEGRADED',
       updated_at: '2026-09-13T14:30:00Z',
       model_version: 'dynamic_xgb_v1',
+      district,
+      state,
     },
   };
 }
 
+// Confidence values match the ones already shown elsewhere (SituationReportPage's
+// priority table) rather than inventing new numbers for the same zones.
 export const RISK_GRID: FeatureCollection<Polygon, RiskZoneProperties> = {
   type: 'FeatureCollection',
   features: [
-    feature('NER-ML-042', 91.7323, 25.2702, 0.06, 87, 'CRITICAL'),
-    feature('NER-ML-051', 91.5822, 25.2977, 0.06, 81, 'CRITICAL'),
-    feature('NER-MZ-118', 92.8395, 23.3041, 0.05, 74, 'HIGH'),
-    feature('NER-AR-007', 95.8434, 28.5, 0.07, 69, 'HIGH'),
-    feature('NER-SK-023', 88.5322, 27.5115, 0.05, 52, 'MODERATE'),
-    feature('NER-MN-064', 93.5028, 24.9836, 0.05, 44, 'MODERATE'),
-    feature('NER-NL-031', 94.4931, 25.6634, 0.05, 28, 'LOW'),
+    feature('NER-ML-042', 91.7323, 25.2702, 0.06, 87, 'CRITICAL', null, 'East Khasi Hills', 'Meghalaya'),
+    feature('NER-ML-051', 91.5822, 25.2977, 0.06, 81, 'CRITICAL', 0.68, 'East Khasi Hills', 'Meghalaya'),
+    feature('NER-MZ-118', 92.8395, 23.3041, 0.05, 74, 'HIGH', 0.72, 'Serchhip', 'Mizoram'),
+    feature('NER-AR-007', 95.8434, 28.5, 0.07, 69, 'HIGH', 0.61, 'Dibang Valley', 'Arunachal Pradesh'),
+    feature('NER-SK-023', 88.5322, 27.5115, 0.05, 52, 'MODERATE', 0.77, 'Mangan', 'Sikkim'),
+    feature('NER-MN-064', 93.5028, 24.9836, 0.05, 44, 'MODERATE', null, 'Tamenglong', 'Manipur'),
+    feature('NER-NL-031', 94.4931, 25.6634, 0.05, 28, 'LOW', null, 'Phek', 'Nagaland'),
   ],
 };
 
-export interface CitizenReportPointProperties {
-  report_id: string;
-  status: string;
+/**
+ * Real district-level aggregation (mean risk score of member zones) rendered as
+ * proportional circles at each district's centroid — NOT fake district boundary
+ * polygons. We don't have surveyed district boundaries for the whole region
+ * (checked data/raw/boundaries/: GADM and OSM extracts only cover state-level
+ * admin boundaries here), so drawing invented polygon shapes would misrepresent
+ * them as real administrative boundaries. The aggregation math itself is real.
+ */
+export interface DistrictAggregateProperties {
+  district: string;
+  state: string;
+  avg_risk_score: number;
+  risk_level: RiskZoneProperties['risk_level'];
+  zone_count: number;
+  top_cell_id: string; // highest-risk member zone, used when the marker is clicked
 }
 
-export const CITIZEN_REPORT_POINTS: FeatureCollection<Point, CitizenReportPointProperties> = {
-  type: 'FeatureCollection',
-  features: [
-    {
+/** Canonical score→band thresholds per contracts/enums.md RiskLevel. */
+export function scoreToRiskLevel(score: number): RiskZoneProperties['risk_level'] {
+  if (score >= 81) return 'CRITICAL';
+  if (score >= 61) return 'HIGH';
+  if (score >= 41) return 'MODERATE';
+  if (score >= 21) return 'LOW';
+  return 'VERY_LOW';
+}
+
+export function buildDistrictAggregates(): FeatureCollection<Point, DistrictAggregateProperties> {
+  const groups = new Map<string, Feature<Polygon, RiskZoneProperties>[]>();
+  for (const f of RISK_GRID.features) {
+    const key = `${f.properties.state}::${f.properties.district}`;
+    const list = groups.get(key) ?? [];
+    list.push(f);
+    groups.set(key, list);
+  }
+
+  const features: Feature<Point, DistrictAggregateProperties>[] = [];
+  for (const [key, members] of groups) {
+    const [state, district] = key.split('::');
+    const avgScore = members.reduce((sum, m) => sum + m.properties.risk_score, 0) / members.length;
+    const centroidLon = members.reduce((sum, m) => sum + m.geometry.coordinates[0][0][0], 0) / members.length;
+    const centroidLat = members.reduce((sum, m) => sum + m.geometry.coordinates[0][0][1], 0) / members.length;
+    const top = [...members].sort((a, b) => b.properties.risk_score - a.properties.risk_score)[0];
+
+    features.push({
       type: 'Feature',
-      geometry: { type: 'Point', coordinates: [91.7362, 25.2688] },
-      properties: { report_id: 'CR-2291', status: 'PENDING' },
-    },
-    {
-      type: 'Feature',
-      geometry: { type: 'Point', coordinates: [91.7286, 25.2611] },
-      properties: { report_id: 'CR-2288', status: 'PENDING' },
-    },
-    {
-      type: 'Feature',
-      geometry: { type: 'Point', coordinates: [91.7052, 25.2984] },
-      properties: { report_id: 'CR-2280', status: 'VERIFIED' },
-    },
-  ],
-};
+      geometry: { type: 'Point', coordinates: [centroidLon, centroidLat] },
+      properties: {
+        district,
+        state,
+        avg_risk_score: Math.round(avgScore),
+        risk_level: scoreToRiskLevel(avgScore),
+        zone_count: members.length,
+        top_cell_id: top.properties.cell_id,
+      },
+    });
+  }
+
+  return { type: 'FeatureCollection', features };
+}
+
 
 export const NER_BOUNDS: [[number, number], [number, number]] = [
   [87.5, 21.5],

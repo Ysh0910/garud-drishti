@@ -61,6 +61,8 @@ interface DashboardState {
   activeMapLayer: MapLayer;
 
   selectZone: (cellId: string) => void;
+  /** Select a zone AND bring its state/district filter along — for cross-scope jumps (e.g. from Response Priority). */
+  jumpToZone: (cellId: string, state: string) => void;
   setSelectedState: (state: string) => void;
   setSelectedDistrict: (district: string) => void;
   setHorizon: (h: HorizonKey) => void;
@@ -87,6 +89,7 @@ export const useDashboardStore = create<DashboardState>((set) => ({
   activeMapLayer: 'RISK',
 
   selectZone: (cellId) => set({ selectedCellId: cellId }),
+  jumpToZone: (cellId, state) => set({ selectedCellId: cellId, selectedState: state, selectedDistrict: 'All districts' }),
   setSelectedState: (selectedState) => set({ selectedState, selectedDistrict: 'All districts' }),
   setSelectedDistrict: (selectedDistrict) => set({ selectedDistrict }),
   setHorizon: (horizon) => set({ horizon }),

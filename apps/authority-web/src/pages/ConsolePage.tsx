@@ -6,6 +6,7 @@ import SelectedZonePanel from '../components/zone/SelectedZonePanel';
 import AlertCenterPanel from '../components/alerts/AlertCenterPanel';
 import CitizenReportQueuePanel from '../components/reports/CitizenReportQueuePanel';
 import ReportReviewModal from '../components/reports/ReportReviewModal';
+import ResponsePriorityPanel from '../components/priority/ResponsePriorityPanel';
 
 export default function ConsolePage() {
   return (
@@ -15,10 +16,14 @@ export default function ConsolePage() {
 
         <KpiRow />
 
-        <div className="grid-divider" style={{ gridTemplateColumns: '360px minmax(0,1fr) 340px', alignItems: 'stretch' }}>
+        <div id="map-and-zone-row" className="grid-divider" style={{ gridTemplateColumns: '360px minmax(0,1fr) 340px', alignItems: 'stretch' }}>
           <ZoneTriagePanel />
           <RiskMapPanel />
           <SelectedZonePanel />
+        </div>
+
+        <div style={{ background: 'var(--panel-bg)', borderTop: '1px solid var(--hairline)' }}>
+          <ResponsePriorityPanel />
         </div>
 
         <div className="grid-divider" style={{ gridTemplateColumns: 'minmax(0,1fr) minmax(0,1fr)' }}>

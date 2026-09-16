@@ -1,4 +1,4 @@
-import type { DataQuality, ReportCategory, ReportStatus, ReportedSeverity, RiskLevel, Trend } from './enums';
+import type { AlertState, DataQuality, ReportCategory, ReportStatus, ReportedSeverity, RiskLevel, Trend } from './enums';
 
 /**
  * UI-facing zone summary as consumed by the triage worklist.
@@ -12,9 +12,20 @@ export interface ZoneSummary {
   state: string;
   risk_score: number; // 0-100
   risk_level: RiskLevel;
+  confidence: number | null; // 0-1, nullable per contracts/risk.md
   trend: Trend;
   trend_delta: number; // signed, 0-1 scale, matches the design's "▲.12" style deltas
   population_exposed: number;
+  /** Prioritization exposure correlates — see services/api/prioritization.ts for how they're used. */
+  exposureFactors: {
+    nearby_villages_count: number;
+    has_national_highway: boolean;
+    has_state_highway: boolean;
+    critical_facilities_count: number;
+    has_hospital: boolean;
+    has_school_or_shelter: boolean;
+    has_power_or_comm: boolean;
+  };
 }
 
 export interface ShapFactor {
@@ -41,6 +52,14 @@ export interface CitizenEvidenceThumb {
   status: ReportStatus;
 }
 
+/** Mirrors contracts/risk.md's ForecastEntry exactly. */
+export interface ForecastEntry {
+  horizon: 'current' | '6h' | '24h' | '48h' | '72h';
+  risk_score: number; // 0-100
+  risk_level: RiskLevel;
+  validated: boolean;
+}
+
 export interface ZoneDetail extends ZoneSummary {
   confidence: number | null; // 0-1, nullable per contracts/risk.md
   data_quality: DataQuality;
@@ -48,6 +67,7 @@ export interface ZoneDetail extends ZoneSummary {
   model_version: string;
   topFactors: ShapFactor[];
   whyNow: WhyNowFactor[];
+  forecasts: ForecastEntry[];
   exposure: ExposureSummary;
   recentEvidence: CitizenEvidenceThumb[];
 }
@@ -74,6 +94,8 @@ export interface CitizenReportRow {
   report_id: string;
   title: string;
   cell_id: string;
+  latitude: number;
+  longitude: number;
   reported_severity: ReportedSeverity;
   category: ReportCategory;
   status: ReportStatus;
@@ -94,9 +116,12 @@ export interface AlertRow {
   cell_id: string;
   label: string;
   created_label: string;
-  approval: 'AWAITING' | 'APPROVED';
+  /** Mirrors contracts/alerts.md AlertState — see CONTRACT_DECISIONS.md CD-003. */
+  state: AlertState;
   approvedBy?: string;
   approvedAtLabel?: string;
+  resolvedBy?: string;
+  resolvedAtLabel?: string;
   runLabel?: string;
   decisionTrail?: AlertDecisionEvent[];
 }
