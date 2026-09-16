@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
-import { CITIZEN_REPORTS } from '../../mocks/reports';
+import { useReports } from '../../hooks/api';
 import { useDashboardStore } from '../../store/dashboardStore';
+import PanelStatus from '../common/PanelStatus';
 import WarnBanner from '../common/WarnBanner';
 
 const STATUS_CLASS: Record<string, string> = {
@@ -13,10 +14,12 @@ const STATUS_CLASS: Record<string, string> = {
 
 export default function CitizenReportQueuePanel() {
   const { reportFilter, setReportFilter, openReport } = useDashboardStore();
+  const { data: reports, isLoading, isError } = useReports();
   const [focusedIndex, setFocusedIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement | null>(null);
 
-  const rows = reportFilter === 'PENDING' ? CITIZEN_REPORTS.filter((r) => r.status === 'PENDING') : CITIZEN_REPORTS;
+  const allReports = reports ?? [];
+  const rows = reportFilter === 'PENDING' ? allReports.filter((r) => r.status === 'PENDING') : allReports;
 
   useEffect(() => {
     setFocusedIndex(0);
@@ -34,12 +37,27 @@ export default function CitizenReportQueuePanel() {
     return () => window.removeEventListener('keydown', onKeyDown);
   }, [rows, focusedIndex, openReport]);
 
+  if (isLoading) {
+    return (
+      <div className="panel">
+        <PanelStatus kind="loading" message="Loading citizen reports…" />
+      </div>
+    );
+  }
+  if (isError) {
+    return (
+      <div className="panel">
+        <PanelStatus kind="error" message="Citizen report queue unavailable right now." />
+      </div>
+    );
+  }
+
   return (
     <div className="panel" ref={containerRef} tabIndex={0} style={{ outline: 'none' }}>
       <div className="panel-head">
         <div style={{ display: 'flex', alignItems: 'baseline', gap: 10 }}>
           <div className="panel-title">CITIZEN REPORT QUEUE</div>
-          <div className="panel-subtle">{CITIZEN_REPORTS.filter((r) => r.status === 'PENDING').length} PENDING</div>
+          <div className="panel-subtle">{allReports.filter((r) => r.status === 'PENDING').length} PENDING</div>
         </div>
         <div className="seg">
           <button

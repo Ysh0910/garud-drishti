@@ -1,29 +1,12 @@
 import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
-import { ZONE_SUMMARIES } from '../mocks/zones';
 import { RAINFALL_CONTEXT } from '../mocks/rainfall';
-import { DASHBOARD_SUMMARY } from '../mocks/dashboard';
+import { useDashboardSummary, usePriorityRanking } from '../hooks/api';
 import RiskMapPanelMap from '../components/map/RiskMap';
 import { formatScore01 } from '../utils/risk';
 import '../styles/situationReport.css';
 
 const PRIORITY_COLS = '24px 104px 92px 50px 56px minmax(0,1fr)';
-
-const PRIORITY_ACTIONS: Record<string, string> = {
-  'NER-ML-042': '4,820 people · NH-6 · alert awaiting approval',
-  'NER-ML-051': '3,110 people · 1 PHC · road patrol requested',
-  'NER-MZ-118': '1,340 people · alert awaiting approval',
-  'NER-AR-007': '610 people · alert approved 12:14, 12 Sep',
-  'NER-SK-023': '2,100 people · monitoring only',
-};
-
-const PRIORITY_CONF: Record<string, string> = {
-  'NER-ML-042': 'N/A',
-  'NER-ML-051': '0.68',
-  'NER-MZ-118': '0.72',
-  'NER-AR-007': '0.61',
-  'NER-SK-023': '0.77',
-};
 
 const RISK_LEVEL_INK: Record<string, string> = {
   CRITICAL: 'var(--risk-critical)',
@@ -34,9 +17,34 @@ const RISK_LEVEL_INK: Record<string, string> = {
 };
 
 export default function SituationReportPage() {
-  const priorityZones = ZONE_SUMMARIES.slice(0, 5);
+  const { data: summary, isLoading: summaryLoading, isError: summaryError } = useDashboardSummary();
+  const { data: ranking, isLoading: rankingLoading, isError: rankingError } = usePriorityRanking();
   const rc = RAINFALL_CONTEXT;
   const points = rc.series.map((p) => `${(p.x / 1000) * 400},${(p.y / 104) * 86}`).join(' ');
+  const priorityZones = (ranking ?? []).slice(0, 5);
+
+  if (summaryLoading || rankingLoading) {
+    return (
+      <div className="sr-wrapper">
+        <div className="sr-page" style={{ padding: 60, textAlign: 'center' }}>
+          <span className="mono" style={{ color: 'var(--ink-faint)' }}>
+            Loading situation report…
+          </span>
+        </div>
+      </div>
+    );
+  }
+  if (summaryError || rankingError || !summary) {
+    return (
+      <div className="sr-wrapper">
+        <div className="sr-page" style={{ padding: 60, textAlign: 'center' }}>
+          <span className="mono" style={{ color: 'var(--warn-text)' }}>
+            Situation report data unavailable right now.
+          </span>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="sr-wrapper">
@@ -75,10 +83,10 @@ export default function SituationReportPage() {
         </div>
 
         <div className="grid-divider sr-kpis" style={{ gridTemplateColumns: 'repeat(4, minmax(0,1fr))', border: '1px solid var(--hairline-soft)' }}>
-          <ReportKpi label="CRITICAL ZONES" value={DASHBOARD_SUMMARY.kpi.critical_zones} />
-          <ReportKpi label="HIGH-RISK ZONES" value={DASHBOARD_SUMMARY.kpi.high_risk_zones} />
-          <ReportKpi label="VILLAGES AT RISK" value={DASHBOARD_SUMMARY.kpi.villages_at_risk} />
-          <ReportKpi label="ALERTS ISSUED 24 h" value={DASHBOARD_SUMMARY.kpi.active_alerts} />
+          <ReportKpi label="CRITICAL ZONES" value={summary.kpi.critical_zones} />
+          <ReportKpi label="HIGH-RISK ZONES" value={summary.kpi.high_risk_zones} />
+          <ReportKpi label="VILLAGES AT RISK" value={summary.kpi.villages_at_risk} />
+          <ReportKpi label="ALERTS ISSUED 24 h" value={summary.kpi.active_alerts} />
         </div>
 
         <div className="sr-section-map">
@@ -112,30 +120,36 @@ export default function SituationReportPage() {
             <div style={{ textAlign: 'right' }}>CONF.</div>
             <div>EXPOSURE / ACTION TAKEN</div>
           </div>
-          {priorityZones.map((z, i) => (
-            <div
-              key={z.cell_id}
-              style={{
-                display: 'grid',
-                gridTemplateColumns: PRIORITY_COLS,
-                gap: 8,
-                padding: '8px 0',
-                borderBottom: '1px solid var(--hairline-softer)',
-                alignItems: 'center',
-                font: "400 11.5px/1 var(--font-mono)",
-                color: 'var(--ink)',
-              }}
-            >
-              <div style={{ color: 'var(--ink-muted)' }}>{i + 1}</div>
-              <div style={{ fontWeight: 500 }}>{z.cell_id}</div>
-              <div style={{ color: RISK_LEVEL_INK[z.risk_level], fontWeight: 600 }}>{z.risk_level.replace('_', ' ')}</div>
-              <div style={{ textAlign: 'right', fontWeight: 600 }}>{formatScore01(z.risk_score)}</div>
-              <div style={{ textAlign: 'right', color: PRIORITY_CONF[z.cell_id] === 'N/A' ? 'var(--ink-faint)' : 'var(--ink)' }}>
-                {PRIORITY_CONF[z.cell_id]}
+          {priorityZones.map((entry, i) => {
+            const z = entry.zone;
+            return (
+              <div
+                key={z.cell_id}
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: PRIORITY_COLS,
+                  gap: 8,
+                  padding: '8px 0',
+                  borderBottom: '1px solid var(--hairline-softer)',
+                  alignItems: 'center',
+                  font: "400 11.5px/1 var(--font-mono)",
+                  color: 'var(--ink)',
+                }}
+              >
+                <div style={{ color: 'var(--ink-muted)' }}>{i + 1}</div>
+                <div style={{ fontWeight: 500 }}>{z.cell_id}</div>
+                <div style={{ color: RISK_LEVEL_INK[z.risk_level], fontWeight: 600 }}>{z.risk_level.replace('_', ' ')}</div>
+                <div style={{ textAlign: 'right', fontWeight: 600 }}>{formatScore01(z.risk_score)}</div>
+                <div style={{ textAlign: 'right', color: z.confidence == null ? 'var(--ink-faint)' : 'var(--ink)' }}>
+                  {z.confidence == null ? 'N/A' : z.confidence.toFixed(2)}
+                </div>
+                <div style={{ fontFamily: 'var(--font-sans)' }}>
+                  {z.population_exposed.toLocaleString()} people · {entry.response_priority} priority ({entry.priority_score}) ·{' '}
+                  {entry.priority_reasons[0]}
+                </div>
               </div>
-              <div style={{ fontFamily: 'var(--font-sans)' }}>{PRIORITY_ACTIONS[z.cell_id]}</div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         <div className="sr-section-split" style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1.2fr) minmax(0,1fr)', gap: 26 }}>

@@ -1,6 +1,9 @@
-import { TOTAL_MONITORED_ZONES, ZONE_SUMMARIES } from '../../mocks/zones';
+import { useEffect } from 'react';
+import { useZoneSummaries } from '../../hooks/api';
+import { TOTAL_MONITORED_ZONES } from '../../mocks/zones';
 import { useDashboardStore, type RankBy } from '../../store/dashboardStore';
 import { formatDelta, formatScore01, riskBadgeClass, trendGlyph } from '../../utils/risk';
+import PanelStatus from '../common/PanelStatus';
 
 const RANK_OPTIONS: { key: RankBy; label: string }[] = [
   { key: 'RISK_X_EXPOSURE', label: 'RISK × EXPOSURE' },
@@ -11,14 +14,42 @@ const RANK_OPTIONS: { key: RankBy; label: string }[] = [
 const COLS = '26px minmax(0,1fr) 96px 52px 46px';
 
 export default function ZoneTriagePanel() {
-  const { selectedCellId, selectZone, rankBy, setRankBy } = useDashboardStore();
+  const { selectedCellId, selectZone, rankBy, setRankBy, selectedState, selectedDistrict } = useDashboardStore();
+  const { data: zones, isLoading, isError } = useZoneSummaries();
 
-  const rows = [...ZONE_SUMMARIES].sort((a, b) => {
+  let scoped = zones ?? [];
+  if (selectedState !== 'All States') scoped = scoped.filter((z) => z.state === selectedState);
+  if (selectedDistrict !== 'All districts') scoped = scoped.filter((z) => z.district === selectedDistrict);
+
+  const rows = [...scoped].sort((a, b) => {
     if (rankBy === 'SCORE') return b.risk_score - a.risk_score;
     if (rankBy === 'TREND') return Math.abs(b.trend_delta) - Math.abs(a.trend_delta);
     // RISK_X_EXPOSURE: approximate a combined ranking
     return b.risk_score * b.population_exposed - a.risk_score * a.population_exposed;
   });
+
+  // Keep the selected zone in sync with the current state/district scope.
+  useEffect(() => {
+    if (rows.length > 0 && !rows.some((z) => z.cell_id === selectedCellId)) {
+      selectZone(rows[0].cell_id);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedState, selectedDistrict, zones]);
+
+  if (isLoading) {
+    return (
+      <div className="panel">
+        <PanelStatus kind="loading" message="Loading monitored zones…" />
+      </div>
+    );
+  }
+  if (isError) {
+    return (
+      <div className="panel">
+        <PanelStatus kind="error" message="Zone triage list unavailable right now." />
+      </div>
+    );
+  }
 
   return (
     <div className="panel">
@@ -116,6 +147,12 @@ export default function ZoneTriagePanel() {
           </button>
         );
       })}
+
+      {rows.length === 0 && (
+        <div style={{ padding: '24px 16px', font: "400 12px/1.5 var(--font-sans)", color: 'var(--ink-faint)' }}>
+          No monitored zones in this demo dataset for {selectedDistrict !== 'All districts' ? selectedDistrict : selectedState}.
+        </div>
+      )}
 
       <div style={{ padding: '11px 16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 'auto' }}>
         <span className="mono" style={{ fontSize: 11, color: 'var(--ink-faint)' }}>

@@ -1,11 +1,28 @@
+import type { CSSProperties } from 'react';
 import { Link } from 'react-router-dom';
+import { districtsForState } from '../../mocks/zones';
+import { NER_STATES, useDashboardStore } from '../../store/dashboardStore';
 
 interface HeaderProps {
   runLabel: string;
   updatedLabel: string;
 }
 
+const selectStyle: CSSProperties = {
+  appearance: 'none',
+  WebkitAppearance: 'none',
+  MozAppearance: 'none',
+  background: 'transparent',
+  border: 'none',
+  color: 'var(--header-ink)',
+  font: "500 13px/1 var(--font-sans)",
+  cursor: 'pointer',
+};
+
 export default function Header({ runLabel, updatedLabel }: HeaderProps) {
+  const { selectedState, selectedDistrict, setSelectedState, setSelectedDistrict } = useDashboardStore();
+  const districts = districtsForState(selectedState);
+
   return (
     <div
       style={{
@@ -64,8 +81,20 @@ export default function Header({ runLabel, updatedLabel }: HeaderProps) {
           <div style={{ font: "500 11px/1 var(--font-mono)", letterSpacing: '0.12em', color: 'var(--header-ink-dimmer)' }}>
             STATE
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8, font: "500 13px/1 var(--font-sans)" }}>
-            Meghalaya <span style={{ fontSize: 9, color: 'var(--header-ink-dim)' }}>▼</span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+            <select
+              value={selectedState}
+              onChange={(e) => setSelectedState(e.target.value)}
+              style={selectStyle}
+              aria-label="Filter by state"
+            >
+              {NER_STATES.map((s) => (
+                <option key={s} value={s} style={{ color: '#1B211D' }}>
+                  {s}
+                </option>
+              ))}
+            </select>
+            <span style={{ fontSize: 9, color: 'var(--header-ink-dim)', pointerEvents: 'none' }}>▼</span>
           </div>
         </div>
 
@@ -81,10 +110,54 @@ export default function Header({ runLabel, updatedLabel }: HeaderProps) {
           <div style={{ font: "500 11px/1 var(--font-mono)", letterSpacing: '0.12em', color: 'var(--header-ink-dimmer)' }}>
             DISTRICT
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8, font: "500 13px/1 var(--font-sans)" }}>
-            All districts (11) <span style={{ fontSize: 9, color: 'var(--header-ink-dim)' }}>▼</span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+            <select
+              value={selectedDistrict}
+              onChange={(e) => setSelectedDistrict(e.target.value)}
+              style={selectStyle}
+              disabled={selectedState === 'All States'}
+              aria-label="Filter by district"
+            >
+              <option value="All districts" style={{ color: '#1B211D' }}>
+                All districts{districts.length > 0 ? ` (${districts.length})` : ''}
+              </option>
+              {districts.map((d) => (
+                <option key={d} value={d} style={{ color: '#1B211D' }}>
+                  {d}
+                </option>
+              ))}
+            </select>
+            <span style={{ fontSize: 9, color: 'var(--header-ink-dim)', pointerEvents: 'none' }}>▼</span>
           </div>
         </div>
+
+        <Link
+          to="/situation-report"
+          className="mono"
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 7,
+            padding: '7px 12px',
+            marginLeft: 4,
+            color: 'var(--header-ink)',
+            background: 'transparent',
+            border: '1px solid rgba(157,179,166,.5)',
+            fontSize: 11.5,
+            fontWeight: 600,
+            letterSpacing: '0.04em',
+            textDecoration: 'none',
+            whiteSpace: 'nowrap',
+          }}
+        >
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <path d="M14 2v6h6" />
+            <path d="M9 13h6" />
+            <path d="M9 17h6" />
+          </svg>
+          SITUATION REPORT
+        </Link>
 
         <div
           style={{

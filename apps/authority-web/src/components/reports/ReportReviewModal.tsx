@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { CITIZEN_REPORTS } from '../../mocks/reports';
-import { SELECTED_ZONE_DETAIL, ZONE_SUMMARIES } from '../../mocks/zones';
+import { useReports, useVerifyReport, useZoneSummaries } from '../../hooks/api';
 import { useDashboardStore } from '../../store/dashboardStore';
 import { formatScore01, riskBadgeClass } from '../../utils/risk';
 import WarnBanner from '../common/WarnBanner';
@@ -9,25 +8,39 @@ export default function ReportReviewModal() {
   const activeReportId = useDashboardStore((s) => s.activeReportId);
   const openReport = useDashboardStore((s) => s.openReport);
   const [note, setNote] = useState('');
+  const [rejectError, setRejectError] = useState<string | null>(null);
+  const { data: reports } = useReports();
+  const { data: zones } = useZoneSummaries();
+  const verifyReport = useVerifyReport();
 
-  if (!activeReportId) return null;
-  const index = CITIZEN_REPORTS.findIndex((r) => r.report_id === activeReportId);
-  const report = CITIZEN_REPORTS[index] ?? CITIZEN_REPORTS[0];
-  const pendingCount = CITIZEN_REPORTS.filter((r) => r.status === 'PENDING').length;
+  if (!activeReportId || !reports || reports.length === 0) return null;
+  const allReports = reports;
+  const index = allReports.findIndex((r) => r.report_id === activeReportId);
+  const report = allReports[index] ?? allReports[0];
+  const pendingCount = allReports.filter((r) => r.status === 'PENDING').length;
 
-  const zone = ZONE_SUMMARIES.find((z) => z.cell_id === report.cell_id);
-  const nearbyScore = zone ? formatScore01(zone.risk_score) : formatScore01(SELECTED_ZONE_DETAIL.risk_score);
-  const nearbyLevel = zone?.risk_level ?? SELECTED_ZONE_DETAIL.risk_level;
+  const zone = zones?.find((z) => z.cell_id === report.cell_id);
+  const nearbyScore = zone ? formatScore01(zone.risk_score) : null;
+  const nearbyLevel = zone?.risk_level ?? null;
 
   function go(delta: number) {
-    const next = (index + delta + CITIZEN_REPORTS.length) % CITIZEN_REPORTS.length;
-    openReport(CITIZEN_REPORTS[next].report_id);
+    const next = (index + delta + allReports.length) % allReports.length;
+    openReport(allReports[next].report_id);
     setNote('');
+    setRejectError(null);
   }
 
-  function decide(label: string) {
-    alert(`${label} recorded for ${report.report_id} (demo only — verification does not change the model risk state).`);
-    openReport(null);
+  function decide(action: 'VERIFY' | 'REJECT' | 'MARK_PROBABLE') {
+    // Backend requires a non-empty rejection_reason for REJECT — contracts/reports.md.
+    if (action === 'REJECT' && !note.trim()) {
+      setRejectError('A reason is required to reject a report — add one in the note field above.');
+      return;
+    }
+    setRejectError(null);
+    verifyReport.mutate(
+      { reportId: report.report_id, action, rejectionReason: action === 'REJECT' ? note.trim() : undefined },
+      { onSuccess: () => openReport(null) },
+    );
   }
 
   return (
@@ -141,14 +154,20 @@ export default function ReportReviewModal() {
                   <span className="mono" style={{ fontSize: 11, letterSpacing: '0.1em', color: 'var(--ink-muted)' }}>
                     MODEL RISK STATE
                   </span>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-                    <div className={riskBadgeClass(nearbyLevel)} style={{ width: 11, height: 11, padding: 0 }} />
-                    <span className="mono" style={{ fontSize: 12.5, fontWeight: 600, color: 'var(--ink)' }}>
-                      {nearbyLevel.replace('_', ' ')}
+                  {nearbyLevel ? (
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                      <div className={riskBadgeClass(nearbyLevel)} style={{ width: 11, height: 11, padding: 0 }} />
+                      <span className="mono" style={{ fontSize: 12.5, fontWeight: 600, color: 'var(--ink)' }}>
+                        {nearbyLevel.replace('_', ' ')}
+                      </span>
+                    </div>
+                  ) : (
+                    <span className="mono" style={{ fontSize: 12.5, color: 'var(--ink-faint)' }}>
+                      N/A
                     </span>
-                  </div>
+                  )}
                   <span className="mono" style={{ fontSize: 11, color: 'var(--ink-faint)' }}>
-                    score {nearbyScore} · conf. N/A
+                    score {nearbyScore ?? 'N/A'} · conf. N/A
                   </span>
                 </div>
                 <div style={{ background: 'var(--panel-bg-tint)', padding: '10px 11px', display: 'flex', flexDirection: 'column', gap: 5 }}>
@@ -191,20 +210,34 @@ export default function ReportReviewModal() {
                   style={{ border: '1px solid var(--border-mid)', background: '#FDFCF9', padding: '9px 10px', font: "400 11.5px/1.4 var(--font-sans)", color: 'var(--ink)', minHeight: 34, resize: 'vertical' }}
                 />
               </div>
-              <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1.15fr) minmax(0,1fr) minmax(0,1fr)', gap: 9 }}>
-                <button className="btn btn-primary" onClick={() => decide('Verification')}>
-                  VERIFY REPORT
-                </button>
-                <button className="btn btn-outline" onClick={() => decide('Follow-up request')}>
-                  FOLLOW-UP
-                </button>
-                <button className="btn btn-danger-outline" onClick={() => decide('Rejection')}>
-                  REJECT
-                </button>
-              </div>
-              <div className="mono" style={{ fontSize: 11.5, lineHeight: 1.5, color: 'var(--ink-faint)' }}>
-                Verification records the report as field evidence. It does not change the model risk state for {report.cell_id}.
-              </div>
+              {report.status === 'PENDING' ? (
+                <>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1.15fr) minmax(0,1fr) minmax(0,1fr)', gap: 9 }}>
+                    <button className="btn btn-primary" disabled={verifyReport.isPending} onClick={() => decide('VERIFY')}>
+                      {verifyReport.isPending && verifyReport.variables?.action === 'VERIFY' ? 'VERIFYING…' : 'VERIFY REPORT'}
+                    </button>
+                    <button className="btn btn-outline" disabled={verifyReport.isPending} onClick={() => decide('MARK_PROBABLE')}>
+                      {verifyReport.isPending && verifyReport.variables?.action === 'MARK_PROBABLE' ? 'MARKING…' : 'FOLLOW-UP'}
+                    </button>
+                    <button className="btn btn-danger-outline" disabled={verifyReport.isPending} onClick={() => decide('REJECT')}>
+                      {verifyReport.isPending && verifyReport.variables?.action === 'REJECT' ? 'REJECTING…' : 'REJECT'}
+                    </button>
+                  </div>
+                  {rejectError && (
+                    <div className="mono" style={{ fontSize: 11, color: 'var(--warn-text)' }}>
+                      {rejectError}
+                    </div>
+                  )}
+                  <div className="mono" style={{ fontSize: 11.5, lineHeight: 1.5, color: 'var(--ink-faint)' }}>
+                    Verification records the report as field evidence. It does not change the model risk state for {report.cell_id}.
+                    "Follow-up" marks the report PROBABLE — the real API has no separate follow-up action.
+                  </div>
+                </>
+              ) : (
+                <div className="mono" style={{ fontSize: 12, color: 'var(--ink-soft)' }}>
+                  Already <strong>{report.status}</strong> — no further action needed.
+                </div>
+              )}
             </div>
           </div>
         </div>

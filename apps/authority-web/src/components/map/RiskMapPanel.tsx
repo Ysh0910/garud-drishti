@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { RISK_BAND_RANGE } from '../../types/enums';
-import { SCRUB_STEPS, useDashboardStore, type ScrubKey } from '../../store/dashboardStore';
+import { SCRUB_STEPS, useDashboardStore, type MapLayer, type ScrubKey } from '../../store/dashboardStore';
 import RiskMap, { type RiskMapHandle } from './RiskMap';
 import RainfallChart from '../charts/RainfallChart';
 
@@ -22,7 +22,8 @@ const RISK_BAND_ORDER: Array<{ key: keyof typeof RISK_BAND_RANGE; token: string 
   { key: 'VERY_LOW', token: 'var(--risk-very-low)' },
 ];
 
-const LAYERS: Array<'RISK' | 'RAINFALL' | 'SLOPE' | 'ROADS'> = ['RISK', 'RAINFALL', 'SLOPE', 'ROADS'];
+const LAYERS: MapLayer[] = ['RISK', 'INVENTORY', 'RAINFALL', 'SLOPE', 'ROADS'];
+const ENABLED_LAYERS = new Set<MapLayer>(['RISK', 'INVENTORY']);
 
 function bannerFor(scrub: ScrubKey) {
   const idx = SCRUB_STEPS.indexOf(scrub);
@@ -116,23 +117,46 @@ export default function RiskMapPanel() {
             whiteSpace: 'nowrap',
           }}
         >
-          <div className="mono" style={{ fontSize: 11, letterSpacing: '0.12em', color: 'var(--ink-muted)', marginBottom: 9 }}>
-            RISK BAND
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-            {RISK_BAND_ORDER.map((b) => (
-              <div key={b.key} style={{ display: 'flex', alignItems: 'center', gap: 9 }}>
-                <div style={{ width: 16, height: 11, background: b.token }} />
-                <span className="mono" style={{ fontSize: 11, fontWeight: 600, color: 'var(--ink)' }}>
-                  {b.key.replace('_', ' ')}
-                </span>
-                <span className="mono" style={{ fontSize: 11, color: 'var(--ink-faint)', marginLeft: 'auto' }}>
-                  {RISK_BAND_RANGE[b.key]}
-                </span>
+          {activeMapLayer === 'INVENTORY' ? (
+            <>
+              <div className="mono" style={{ fontSize: 11, letterSpacing: '0.12em', color: 'var(--ink-muted)', marginBottom: 9 }}>
+                LANDSLIDE INVENTORY
               </div>
-            ))}
-          </div>
-          {confidenceTexture && (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 9 }}>
+                  <div style={{ width: 16, height: 11, background: 'linear-gradient(90deg, var(--risk-very-low), var(--risk-moderate), var(--risk-critical))' }} />
+                  <span className="mono" style={{ fontSize: 11, color: 'var(--ink-soft)' }}>
+                    Density / sim. intensity
+                  </span>
+                </div>
+                <div className="mono" style={{ fontSize: 10.5, color: 'var(--ink-faint)', lineHeight: 1.4, whiteSpace: 'normal', maxWidth: 220 }}>
+                  820 GSI-recorded events. Heat weight is a SIMULATED heuristic
+                  (slope + type) — the source data has no measured severity
+                  field.
+                </div>
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="mono" style={{ fontSize: 11, letterSpacing: '0.12em', color: 'var(--ink-muted)', marginBottom: 9 }}>
+                RISK BAND
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                {RISK_BAND_ORDER.map((b) => (
+                  <div key={b.key} style={{ display: 'flex', alignItems: 'center', gap: 9 }}>
+                    <div style={{ width: 16, height: 11, background: b.token }} />
+                    <span className="mono" style={{ fontSize: 11, fontWeight: 600, color: 'var(--ink)' }}>
+                      {b.key.replace('_', ' ')}
+                    </span>
+                    <span className="mono" style={{ fontSize: 11, color: 'var(--ink-faint)', marginLeft: 'auto' }}>
+                      {RISK_BAND_RANGE[b.key]}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
+          {activeMapLayer !== 'INVENTORY' && confidenceTexture && (
             <div style={{ marginTop: 9, paddingTop: 9, borderTop: '1px solid var(--hairline-soft)', display: 'flex', flexDirection: 'column', gap: 6 }}>
               <div className="mono" style={{ fontSize: 11, letterSpacing: '0.12em', color: 'var(--ink-muted)' }}>
                 CONFIDENCE
@@ -178,26 +202,29 @@ export default function RiskMapPanel() {
         </div>
 
         <div style={{ position: 'absolute', right: 16, bottom: 44, display: 'flex', gap: 1, background: 'var(--border-strong)', border: '1px solid var(--border-strong)' }}>
-          {LAYERS.map((layer) => (
-            <button
-              key={layer}
-              className="mono"
-              disabled={layer !== 'RISK'}
-              onClick={() => setMapLayer(layer)}
-              title={layer === 'RISK' ? undefined : 'No mock data available for this layer yet'}
-              style={{
-                background: activeMapLayer === layer ? 'var(--header-bg-alt)' : 'var(--panel-bg)',
-                color: activeMapLayer === layer ? 'var(--header-ink)' : 'var(--ink-soft)',
-                border: 'none',
-                padding: '7px 12px',
-                fontSize: 11.5,
-                cursor: layer === 'RISK' ? 'pointer' : 'not-allowed',
-                opacity: layer === 'RISK' ? 1 : 0.55,
-              }}
-            >
-              {layer}
-            </button>
-          ))}
+          {LAYERS.map((layer) => {
+            const enabled = ENABLED_LAYERS.has(layer);
+            return (
+              <button
+                key={layer}
+                className="mono"
+                disabled={!enabled}
+                onClick={() => setMapLayer(layer)}
+                title={enabled ? undefined : 'No mock data available for this layer yet'}
+                style={{
+                  background: activeMapLayer === layer ? 'var(--header-bg-alt)' : 'var(--panel-bg)',
+                  color: activeMapLayer === layer ? 'var(--header-ink)' : 'var(--ink-soft)',
+                  border: 'none',
+                  padding: '7px 12px',
+                  fontSize: 11.5,
+                  cursor: enabled ? 'pointer' : 'not-allowed',
+                  opacity: enabled ? 1 : 0.55,
+                }}
+              >
+                {layer}
+              </button>
+            );
+          })}
         </div>
       </div>
 

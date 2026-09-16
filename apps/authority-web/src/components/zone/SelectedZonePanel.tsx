@@ -1,15 +1,62 @@
-import { SELECTED_ZONE_DETAIL, TOTAL_MONITORED_ZONES, ZONE_SUMMARIES } from '../../mocks/zones';
+import { useZoneDetail, useZoneSummaries } from '../../hooks/api';
+import { TOTAL_MONITORED_ZONES } from '../../mocks/zones';
 import { useDashboardStore } from '../../store/dashboardStore';
+import type { DataQuality } from '../../types/enums';
 import { formatScore01, riskBadgeClass, trendGlyph } from '../../utils/risk';
+import PanelStatus from '../common/PanelStatus';
+import ForecastPanel from './ForecastPanel';
+
+const DATA_QUALITY_STYLE: Record<DataQuality, { color: string; bg: string }> = {
+  GOOD: { color: 'var(--good-ink)', bg: 'var(--good-bg)' },
+  DEGRADED: { color: 'var(--warn-text)', bg: 'var(--warn-bg)' },
+  STALE: { color: 'var(--warn-text)', bg: 'var(--warn-bg)' },
+  MISSING: { color: 'var(--rejected-ink)', bg: 'var(--rejected-bg)' },
+};
+
+function DataQualityBadge({ quality }: { quality: DataQuality }) {
+  const style = DATA_QUALITY_STYLE[quality];
+  return (
+    <span
+      className="mono"
+      style={{
+        fontSize: 10.5,
+        fontWeight: 600,
+        letterSpacing: '0.04em',
+        padding: '2px 7px',
+        color: style.color,
+        background: style.bg,
+      }}
+      title="Data quality — freshness/completeness of inputs behind this prediction (contracts/risk.md)"
+    >
+      DATA: {quality}
+    </span>
+  );
+}
 
 export default function SelectedZonePanel() {
   const selectedCellId = useDashboardStore((s) => s.selectedCellId);
   const openReport = useDashboardStore((s) => s.openReport);
 
-  const summary = ZONE_SUMMARIES.find((z) => z.cell_id === selectedCellId) ?? ZONE_SUMMARIES[0];
-  // Only NER-ML-042 has full mock detail authored; fall back gracefully otherwise.
-  const detail = summary.cell_id === SELECTED_ZONE_DETAIL.cell_id ? SELECTED_ZONE_DETAIL : { ...SELECTED_ZONE_DETAIL, ...summary };
-  const rank = ZONE_SUMMARIES.findIndex((z) => z.cell_id === summary.cell_id) + 1;
+  const { data: zones } = useZoneSummaries();
+  const { data: detail, isLoading, isError } = useZoneDetail(selectedCellId);
+
+  if (isLoading || !detail) {
+    return (
+      <div className="panel">
+        <PanelStatus kind="loading" message="Loading zone detail…" />
+      </div>
+    );
+  }
+  if (isError) {
+    return (
+      <div className="panel">
+        <PanelStatus kind="error" message="Zone detail unavailable right now." />
+      </div>
+    );
+  }
+
+  const summary = detail;
+  const rank = (zones?.findIndex((z) => z.cell_id === summary.cell_id) ?? -1) + 1;
   const { glyph, color } = trendGlyph(summary.trend);
 
   const maxAbsWhyNow = Math.max(...detail.whyNow.map((f) => Math.abs(f.sincePreviousRun)), 0.01);
@@ -82,11 +129,16 @@ export default function SelectedZonePanel() {
           </div>
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: 7, font: "400 11.5px/1 var(--font-mono)", color: 'var(--ink-faint)' }}>
-          <div style={{ width: 5, height: 5, borderRadius: '50%', background: 'var(--good)' }} />
-          LAST UPDATED {detail.updated_at_label.toUpperCase()}
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 7, font: "400 11.5px/1 var(--font-mono)", color: 'var(--ink-faint)' }}>
+            <div style={{ width: 5, height: 5, borderRadius: '50%', background: 'var(--good)' }} />
+            LAST UPDATED {detail.updated_at_label.toUpperCase()}
+          </div>
+          <DataQualityBadge quality={detail.data_quality} />
         </div>
       </div>
+
+      <ForecastPanel forecasts={detail.forecasts} />
 
       <div style={{ padding: '16px 18px', borderBottom: '1px solid var(--hairline-soft)', display: 'flex', flexDirection: 'column', gap: 11 }}>
         <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
@@ -97,6 +149,11 @@ export default function SelectedZonePanel() {
             Δ SHAP
           </div>
         </div>
+        {detail.whyNow.length === 0 && (
+          <div className="mono" style={{ fontSize: 11.5, color: 'var(--ink-faint)' }}>
+            No SHAP delta recorded yet for this zone.
+          </div>
+        )}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
           {detail.whyNow.map((f) => {
             const pct = (Math.abs(f.sincePreviousRun) / maxAbsWhyNow) * 44;
@@ -160,7 +217,12 @@ export default function SelectedZonePanel() {
             VIEW ALL {detail.recentEvidence.length} →
           </a>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: `repeat(${detail.recentEvidence.length}, minmax(0,1fr))`, gap: 8 }}>
+        {detail.recentEvidence.length === 0 && (
+          <div className="mono" style={{ fontSize: 11.5, color: 'var(--ink-faint)' }}>
+            No citizen evidence recorded near this zone yet.
+          </div>
+        )}
+        <div style={{ display: 'grid', gridTemplateColumns: `repeat(${Math.max(detail.recentEvidence.length, 1)}, minmax(0,1fr))`, gap: 8 }}>
           {detail.recentEvidence.map((ev) => (
             <button
               key={ev.report_id}
