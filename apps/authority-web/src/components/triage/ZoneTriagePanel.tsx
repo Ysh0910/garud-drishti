@@ -111,37 +111,38 @@ export default function ZoneTriagePanel() {
               gridTemplateColumns: COLS,
               gap: 8,
               padding: '10px 16px',
+              borderTop: 'none',
+              borderRight: 'none',
               borderBottom: '1px solid var(--hairline-softer)',
-              borderLeft: isSelected ? '3px solid var(--risk-critical)' : '3px solid transparent',
+              borderLeft: isSelected ? '3.5px solid var(--risk-critical)' : '3.5px solid transparent',
               alignItems: 'center',
               background: isSelected ? 'var(--panel-bg-critical-row)' : 'transparent',
-              border: 'none',
-              borderBottomStyle: 'solid',
               textAlign: 'left',
               cursor: 'pointer',
               width: '100%',
               font: 'inherit',
               color: 'inherit',
+              transition: 'background 0.12s ease',
             }}
           >
-            <div className="mono" style={{ fontSize: 11.5, color: 'var(--ink-muted)' }}>
+            <div className="mono" style={{ fontSize: 11.5, fontWeight: isSelected ? 700 : 500, color: isSelected ? 'var(--ink)' : 'var(--ink-muted)' }}>
               {i + 1}
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 2, minWidth: 0 }}>
-              <span className="mono" style={{ fontSize: 12.5, lineHeight: 1, color: 'var(--ink)' }}>
+              <span className="mono" style={{ fontSize: 12.5, fontWeight: isSelected ? 700 : 600, lineHeight: 1, color: 'var(--ink)' }}>
                 {zone.cell_id}
               </span>
               <span style={{ font: "400 11px/1 var(--font-sans)", color: 'var(--ink-faint)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                {zone.label} · {zone.population_exposed.toLocaleString()} exposed
+                {zone.district} · {zone.population_exposed.toLocaleString()} exp.
               </span>
             </div>
-            <div className={riskBadgeClass(zone.risk_level)} style={{ textAlign: 'center' }}>
+            <div className={riskBadgeClass(zone.risk_level)} style={{ textAlign: 'center', padding: '3px 6px', fontSize: 10.5 }}>
               {zone.risk_level.replace('_', ' ')}
             </div>
-            <div className="mono" style={{ fontSize: 12.5, fontWeight: 600, color: 'var(--ink)', textAlign: 'right' }}>
+            <div className="mono tabular" style={{ fontSize: 13, fontWeight: 700, color: 'var(--ink)', textAlign: 'right' }}>
               {formatScore01(zone.risk_score)}
             </div>
-            <div className="mono" style={{ fontSize: 11.5, fontWeight: 500, color, textAlign: 'right' }}>
+            <div className="mono" style={{ fontSize: 11.5, fontWeight: 600, color, textAlign: 'right' }}>
               {glyph} {formatDelta(zone.trend_delta)}
             </div>
           </button>

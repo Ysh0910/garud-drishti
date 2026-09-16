@@ -189,36 +189,86 @@ export default function RiskMapPanel() {
           )}
         </div>
 
-        <div style={{ position: 'absolute', right: 16, top: 16, display: 'flex', flexDirection: 'column', gap: 1, background: 'var(--border-strong)', border: '1px solid var(--border-strong)' }}>
-          <button className="mono" onClick={() => mapRef.current?.zoomIn()} style={{ background: 'var(--panel-bg)', border: 'none', width: 30, height: 30, fontSize: 15, color: 'var(--ink)', cursor: 'pointer' }}>
+        <div
+          style={{
+            position: 'absolute',
+            right: 16,
+            top: 16,
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 1,
+            background: 'var(--border-strong)',
+            border: '1px solid var(--border-strong)',
+            boxShadow: '0 2px 6px rgba(0,0,0,0.08)',
+            zIndex: 10,
+          }}
+        >
+          <button
+            className="mono"
+            onClick={() => mapRef.current?.zoomIn()}
+            title="Zoom In"
+            style={{ background: 'var(--panel-bg)', border: 'none', width: 32, height: 32, fontSize: 16, fontWeight: 600, color: 'var(--ink)', cursor: 'pointer' }}
+          >
             +
           </button>
-          <button className="mono" onClick={() => mapRef.current?.zoomOut()} style={{ background: 'var(--panel-bg)', border: 'none', width: 30, height: 30, fontSize: 15, color: 'var(--ink)', cursor: 'pointer' }}>
+          <button
+            className="mono"
+            onClick={() => mapRef.current?.zoomOut()}
+            title="Zoom Out"
+            style={{ background: 'var(--panel-bg)', border: 'none', width: 32, height: 32, fontSize: 16, fontWeight: 600, color: 'var(--ink)', cursor: 'pointer' }}
+          >
             −
           </button>
-          <button className="mono" onClick={() => mapRef.current?.resetNorth()} style={{ background: 'var(--panel-bg)', border: 'none', width: 30, height: 30, fontSize: 9, color: 'var(--ink)', cursor: 'pointer' }}>
+          <button
+            className="mono"
+            onClick={() => mapRef.current?.resetNorth()}
+            title="Reset North"
+            style={{ background: 'var(--panel-bg)', border: 'none', width: 32, height: 32, fontSize: 11, fontWeight: 700, color: 'var(--ink)', cursor: 'pointer' }}
+          >
             N
+          </button>
+          <button
+            className="mono"
+            onClick={() => mapRef.current?.fitNer()}
+            title="Fit Entire North Eastern Region"
+            style={{ background: 'var(--panel-bg)', border: 'none', width: 32, height: 32, fontSize: 9.5, fontWeight: 700, letterSpacing: '0.04em', color: 'var(--header-bg)', cursor: 'pointer' }}
+          >
+            NER
           </button>
         </div>
 
-        <div style={{ position: 'absolute', right: 16, bottom: 44, display: 'flex', gap: 1, background: 'var(--border-strong)', border: '1px solid var(--border-strong)' }}>
+        <div
+          style={{
+            position: 'absolute',
+            right: 16,
+            bottom: 44,
+            display: 'flex',
+            gap: 1,
+            background: 'var(--border-strong)',
+            border: '1px solid var(--border-strong)',
+            boxShadow: '0 2px 6px rgba(0,0,0,0.08)',
+            zIndex: 10,
+          }}
+        >
           {LAYERS.map((layer) => {
             const enabled = ENABLED_LAYERS.has(layer);
+            const active = activeMapLayer === layer;
             return (
               <button
                 key={layer}
                 className="mono"
                 disabled={!enabled}
                 onClick={() => setMapLayer(layer)}
-                title={enabled ? undefined : 'No mock data available for this layer yet'}
+                title={enabled ? `Switch to ${layer} layer` : 'Layer data not available'}
                 style={{
-                  background: activeMapLayer === layer ? 'var(--header-bg-alt)' : 'var(--panel-bg)',
-                  color: activeMapLayer === layer ? 'var(--header-ink)' : 'var(--ink-soft)',
+                  background: active ? 'var(--header-bg)' : 'var(--panel-bg)',
+                  color: active ? 'var(--header-ink)' : 'var(--ink-soft)',
                   border: 'none',
-                  padding: '7px 12px',
+                  padding: '7px 13px',
                   fontSize: 11.5,
+                  fontWeight: active ? 600 : 500,
                   cursor: enabled ? 'pointer' : 'not-allowed',
-                  opacity: enabled ? 1 : 0.55,
+                  opacity: enabled ? 1 : 0.5,
                 }}
               >
                 {layer}

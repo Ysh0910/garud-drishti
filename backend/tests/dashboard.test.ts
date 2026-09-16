@@ -1,4 +1,5 @@
 import { describe, it, expect } from '@jest/globals';
+import { randomUUID } from 'crypto';
 import request from 'supertest';
 import { createApp } from '../src/app';
 import { reportService } from '../src/services/reportService';
@@ -59,7 +60,7 @@ describe('Phase 11: Dashboard Aggregation (GET /api/v1/dashboard/summary)', () =
 
     // Ingest a new pending citizen report
     await reportService.createReport({
-      client_report_id: 'a0b1c2d3-e4f5-4a6b-8c7d-9e0f1a2b3c4d',
+      client_report_id: randomUUID(),
       latitude: 27.33,
       longitude: 88.61,
       captured_at: new Date().toISOString(),
@@ -67,7 +68,6 @@ describe('Phase 11: Dashboard Aggregation (GET /api/v1/dashboard/summary)', () =
       description: 'Dashboard KPI test rockfall event',
       severity: 'HIGH',
     });
-
 
     const updatedRes = await request(app).get('/api/v1/dashboard/summary');
     expect(updatedRes.body.kpi.new_reports).toBeGreaterThanOrEqual(initialNewReports + 1);
