@@ -23,10 +23,23 @@ from fastapi.middleware.cors import CORSMiddleware
 from ml.feature_engineering.feature_store import feature_store
 from ml.inference.predictor import GarudDrishtiInferenceEngine
 
+from contextlib import asynccontextmanager
+
+# Initialize Inference Engine
+engine: Optional[GarudDrishtiInferenceEngine] = None
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    global engine
+    engine = GarudDrishtiInferenceEngine()
+    yield
+
 app = FastAPI(
-    title="GARUD DRISHTI ML Inference API",
-    description="Operational ML Early Warning & Risk Inference Microservice for North Eastern India",
-    version="1.0.0"
+    title="GARUD DRISHTI — ML Inference Microservice",
+    description="High-throughput spatial inference engine for landslide susceptibility and dynamic trigger risk.",
+    version="1.0.0",
+    lifespan=lifespan,
 )
 
 # CORS middleware
@@ -37,15 +50,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-# Initialize Inference Engine
-engine: Optional[GarudDrishtiInferenceEngine] = None
-
-
-@app.on_event("startup")
-def load_models():
-    global engine
-    engine = GarudDrishtiInferenceEngine()
 
 
 class PointPredictionRequest(BaseModel):
