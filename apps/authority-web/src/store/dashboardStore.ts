@@ -32,8 +32,25 @@ export const SCRUB_TO_HORIZON: Record<ScrubKey, HorizonKey> = {
 
 export type RankBy = 'RISK_X_EXPOSURE' | 'SCORE' | 'TREND';
 
+export type MapLayer = 'RISK' | 'INVENTORY' | 'RAINFALL' | 'SLOPE' | 'ROADS';
+
+/** The eight NER states — real administrative names, not derived from mock zone data. */
+export const NER_STATES = [
+  'All States',
+  'Arunachal Pradesh',
+  'Assam',
+  'Manipur',
+  'Meghalaya',
+  'Mizoram',
+  'Nagaland',
+  'Sikkim',
+  'Tripura',
+] as const;
+
 interface DashboardState {
   selectedCellId: string;
+  selectedState: string;
+  selectedDistrict: string;
   horizon: HorizonKey;
   scrub: ScrubKey;
   coarse: boolean;
@@ -41,9 +58,11 @@ interface DashboardState {
   rankBy: RankBy;
   reportFilter: 'PENDING' | 'ALL';
   activeReportId: string | null;
-  activeMapLayer: 'RISK' | 'RAINFALL' | 'SLOPE' | 'ROADS';
+  activeMapLayer: MapLayer;
 
   selectZone: (cellId: string) => void;
+  setSelectedState: (state: string) => void;
+  setSelectedDistrict: (district: string) => void;
   setHorizon: (h: HorizonKey) => void;
   setScrub: (s: ScrubKey) => void;
   toggleCoarse: () => void;
@@ -51,11 +70,13 @@ interface DashboardState {
   setRankBy: (r: RankBy) => void;
   setReportFilter: (f: 'PENDING' | 'ALL') => void;
   openReport: (id: string | null) => void;
-  setMapLayer: (l: 'RISK' | 'RAINFALL' | 'SLOPE' | 'ROADS') => void;
+  setMapLayer: (l: MapLayer) => void;
 }
 
 export const useDashboardStore = create<DashboardState>((set) => ({
   selectedCellId: 'NER-ML-042',
+  selectedState: 'Meghalaya',
+  selectedDistrict: 'All districts',
   horizon: 'current',
   scrub: 'now',
   coarse: false,
@@ -66,6 +87,8 @@ export const useDashboardStore = create<DashboardState>((set) => ({
   activeMapLayer: 'RISK',
 
   selectZone: (cellId) => set({ selectedCellId: cellId }),
+  setSelectedState: (selectedState) => set({ selectedState, selectedDistrict: 'All districts' }),
+  setSelectedDistrict: (selectedDistrict) => set({ selectedDistrict }),
   setHorizon: (horizon) => set({ horizon }),
   setScrub: (scrub) => set({ scrub, horizon: SCRUB_TO_HORIZON[scrub] }),
   toggleCoarse: () => set((s) => ({ coarse: !s.coarse })),

@@ -4,6 +4,7 @@
  * decimals, matching the approved design's "0.87 · 0-1 scale" presentation).
  */
 import type { ZoneDetail, ZoneSummary } from '../types/zone';
+import { NER_DISTRICTS } from './districts';
 
 export const ZONE_SUMMARIES: ZoneSummary[] = [
   {
@@ -86,6 +87,16 @@ export const ZONE_SUMMARIES: ZoneSummary[] = [
 ];
 
 export const TOTAL_MONITORED_ZONES = 412;
+
+/** All real districts for a state (see mocks/districts.ts) — not just ones with a monitored zone. */
+export function districtsForState(state: string): string[] {
+  return [...(NER_DISTRICTS[state] ?? [])].sort((a, b) => a.localeCompare(b));
+}
+
+/** Whether any mocked zone actually exists in this district (used to keep the triage list honest). */
+export function hasMonitoredZones(state: string, district: string): boolean {
+  return ZONE_SUMMARIES.some((z) => z.state === state && (district === 'All districts' || z.district === district));
+}
 
 export const SELECTED_ZONE_DETAIL: ZoneDetail = {
   ...ZONE_SUMMARIES[0],

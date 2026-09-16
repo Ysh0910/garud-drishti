@@ -104,3 +104,42 @@ export const NER_BOUNDS: [[number, number], [number, number]] = [
   [87.5, 21.5],
   [97.5, 29.5],
 ];
+
+/**
+ * Approximate real bounding boxes for each NER state — for map navigation only
+ * (zooming the view), not surveyed/authoritative administrative boundaries.
+ */
+export const STATE_BOUNDS: Record<string, [[number, number], [number, number]]> = {
+  'Arunachal Pradesh': [
+    [91.6, 26.6],
+    [97.4, 29.4],
+  ],
+  Assam: [
+    [89.7, 24.1],
+    [96.0, 28.2],
+  ],
+  Manipur: [
+    [93.0, 23.8],
+    [94.8, 25.7],
+  ],
+  Meghalaya: [
+    [89.8, 25.0],
+    [92.8, 26.1],
+  ],
+  Mizoram: [
+    [92.2, 21.9],
+    [93.5, 24.5],
+  ],
+  Nagaland: [
+    [93.3, 25.2],
+    [95.3, 27.1],
+  ],
+  Sikkim: [
+    [88.0, 27.0],
+    [88.9, 28.2],
+  ],
+  Tripura: [
+    [91.1, 22.9],
+    [92.4, 24.5],
+  ],
+};
