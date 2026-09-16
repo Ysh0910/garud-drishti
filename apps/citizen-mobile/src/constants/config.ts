@@ -8,12 +8,12 @@ export const APP_CONFIG = {
   tagline: 'See the Risk. Act Before the Disaster.',
   
   // Backend API URL:
-  // Use http://10.0.2.2:8000 for Android Emulator connecting to host machine FastAPI
+  // Use http://10.0.2.2:8000 for Android Emulator connecting to host machine
   // Use http://localhost:8000 for web or iOS simulator
-  apiBaseUrl: process.env.REACT_APP_API_URL || 'http://10.0.2.2:8000',
+  apiBaseUrl: (typeof process !== 'undefined' && process.env?.REACT_APP_API_URL) || 'http://localhost:8000',
 
-  // Mock mode toggle: allows 100% full application demo independent of backend uptime
-  useMockTransport: true,
+  // Mock mode toggle: false enables live HTTP connection to backend API
+  useMockTransport: false,
 
   // Fallback demo coordinates in North Eastern Region (Meghalaya / Sikkim)
   defaultLocation: {
