@@ -158,22 +158,30 @@ export function ReportHazardScreen(): React.JSX.Element {
 
   return (
     <View style={styles.container}>
+      {/* Top Header */}
       <View style={styles.header}>
-        <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
+        <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton} activeOpacity={0.7}>
           <Text style={styles.backButtonText}>← Back</Text>
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>New Hazard Observation</Text>
+        <View style={styles.titleContainer}>
+          <Text style={styles.headerTitle}>New Incident Observation</Text>
+          <Text style={styles.headerSubtitle}>Field Hazard Report</Text>
+        </View>
         <View style={styles.placeholder} />
       </View>
 
-      <ScrollView style={styles.formScroll} contentContainerStyle={styles.formContent}>
-        {/* Category Selector */}
+      <ScrollView
+        style={styles.formScroll}
+        contentContainerStyle={styles.formContent}
+        showsVerticalScrollIndicator={false}
+      >
+        {/* 1. Category Selector */}
         <CategorySelector
           selectedCategory={category}
           onSelectCategory={handleSelectCategory}
         />
 
-        {/* GPS Location Component */}
+        {/* 2. GPS Location Component */}
         <LocationBadge
           latitude={location?.latitude ?? 0}
           longitude={location?.longitude ?? 0}
@@ -185,31 +193,48 @@ export function ReportHazardScreen(): React.JSX.Element {
           onRefresh={acquireLocation}
         />
 
-        {/* Field Photo Attachment (Live Camera Only) */}
+        {/* 3. Field Photo Attachment (Live Camera Only) */}
         <PhotoPicker photo={photo} onPhotoSelected={handlePhotoSelected} />
 
-        {/* Severity Assessment */}
-        <View style={styles.severitySection}>
-          <Text style={styles.fieldLabel}>REPORTED OBSERVER SEVERITY</Text>
+        {/* 4. Severity Assessment */}
+        <View style={styles.section}>
+          <View style={styles.sectionHeaderRow}>
+            <Text style={styles.sectionLabel}>Observer Severity</Text>
+            <Text style={styles.sectionHint}>Estimated impact</Text>
+          </View>
           <View style={styles.severityRow}>
-            {(['LOW', 'MEDIUM', 'HIGH'] as ReportSeverity[]).map((sev) => {
-              const isSelected = severity === sev;
+            {(
+              [
+                { id: 'LOW', label: 'Low', color: '#047857', bg: '#ECFDF5', border: '#A7F3D0' },
+                { id: 'MEDIUM', label: 'Medium', color: '#B45309', bg: '#FFFBEB', border: '#FDE68A' },
+                { id: 'HIGH', label: 'High', color: '#B91C1C', bg: '#FEF2F2', border: '#FECACA' },
+              ] as const
+            ).map((sev) => {
+              const isSelected = severity === sev.id;
               return (
                 <TouchableOpacity
-                  key={sev}
+                  key={sev.id}
                   style={[
                     styles.severityBtn,
-                    isSelected && styles.severityBtnSelected,
+                    isSelected && {
+                      backgroundColor: sev.bg,
+                      borderColor: sev.border,
+                      borderWidth: 1.5,
+                    },
                   ]}
-                  onPress={() => handleSeveritySelect(sev)}
+                  onPress={() => handleSeveritySelect(sev.id)}
+                  activeOpacity={0.7}
                 >
                   <Text
                     style={[
                       styles.severityBtnText,
-                      isSelected && styles.severityBtnTextSelected,
+                      isSelected && {
+                        color: sev.color,
+                        fontWeight: '800',
+                      },
                     ]}
                   >
-                    {sev}
+                    {sev.label}
                   </Text>
                 </TouchableOpacity>
               );
@@ -217,157 +242,184 @@ export function ReportHazardScreen(): React.JSX.Element {
           </View>
         </View>
 
-        {/* Description Input */}
-        <View style={styles.inputSection}>
-          <Text style={styles.fieldLabel}>DESCRIPTION / FIELD OBSERVATION (OPTIONAL)</Text>
+        {/* 5. Description Input */}
+        <View style={styles.section}>
+          <View style={styles.sectionHeaderRow}>
+            <Text style={styles.sectionLabel}>Field Notes</Text>
+            <Text style={styles.sectionHint}>Optional</Text>
+          </View>
           <TextInput
             style={styles.textInput}
-            placeholder="E.g., Visible widening crack along highway cutting; minor rock fragments falling..."
+            placeholder="E.g., Tension crack widening along roadside; minor rock debris on pavement..."
             placeholderTextColor={COLORS.textMuted}
             value={description}
             onChangeText={setDescription}
             multiline
-            numberOfLines={4}
+            numberOfLines={3}
             maxLength={1000}
           />
           <Text style={styles.charCount}>{description.length}/1000</Text>
         </View>
 
-        {/* Submit Action */}
+        {/* 6. Submit Action */}
         <TouchableOpacity
           style={[styles.submitButton, isSubmitting && styles.submitButtonDisabled]}
           onPress={handleSubmit}
           disabled={isSubmitting}
-          activeOpacity={0.8}
+          activeOpacity={0.85}
         >
           {isSubmitting ? (
             <ActivityIndicator color={COLORS.textInverse} />
           ) : (
-            <Text style={styles.submitButtonText}>Submit Hazard Observation</Text>
+            <Text style={styles.submitButtonText}>Submit Hazard Observation →</Text>
           )}
         </TouchableOpacity>
       </ScrollView>
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.background,
+    backgroundColor: '#F8FAFC',
   },
   header: {
-    backgroundColor: COLORS.primary,
-    paddingTop: SPACING.xl,
-    paddingBottom: SPACING.md,
-    paddingHorizontal: SPACING.lg,
+    backgroundColor: '#0F172A',
+    paddingTop: 16,
+    paddingBottom: 12,
+    paddingHorizontal: 16,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+    borderBottomWidth: 1,
+    borderBottomColor: '#1E293B',
   },
   backButton: {
     paddingVertical: 4,
     paddingHorizontal: 8,
+    borderRadius: RADIUS.sm,
+    backgroundColor: 'rgba(255, 255, 255, 0.08)',
   },
   backButtonText: {
-    color: COLORS.textInverse,
+    color: '#F8FAFC',
     fontWeight: '700',
-    fontSize: 14,
+    fontSize: 13,
+  },
+  titleContainer: {
+    alignItems: 'center',
   },
   headerTitle: {
-    color: COLORS.textInverse,
-    fontSize: 16,
+    color: '#FFFFFF',
+    fontSize: 15,
     fontWeight: '800',
+    letterSpacing: 0.2,
+  },
+  headerSubtitle: {
+    color: '#94A3B8',
+    fontSize: 11,
+    fontWeight: '500',
+    marginTop: 1,
   },
   placeholder: {
-    width: 48,
+    width: 54,
   },
   formScroll: {
     flex: 1,
   },
   formContent: {
-    padding: SPACING.lg,
-    paddingBottom: SPACING.xxl,
+    paddingHorizontal: 16,
+    paddingTop: 14,
+    paddingBottom: 32,
   },
-  fieldLabel: {
-    fontSize: 12,
-    fontWeight: '800',
-    color: COLORS.textSecondary,
-    marginBottom: 6,
-    letterSpacing: 0.5,
+  section: {
+    marginBottom: SPACING.md,
   },
-  severitySection: {
-    marginVertical: SPACING.sm,
+  sectionHeaderRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  sectionLabel: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: COLORS.textPrimary,
+    letterSpacing: 0.2,
+  },
+  sectionHint: {
+    fontSize: 11,
+    fontWeight: '600',
+    color: COLORS.textMuted,
   },
   severityRow: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    gap: 8,
   },
   severityBtn: {
     flex: 1,
     backgroundColor: COLORS.surface,
-    borderWidth: 1.5,
+    borderWidth: 1,
     borderColor: COLORS.border,
     borderRadius: RADIUS.md,
-    paddingVertical: 10,
-    marginHorizontal: 4,
+    paddingVertical: 9,
     alignItems: 'center',
-  },
-  severityBtnSelected: {
-    backgroundColor: '#E3F2FD',
-    borderColor: COLORS.primaryLight,
+    justifyContent: 'center',
+    shadowColor: '#0F172A',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.03,
+    shadowRadius: 2,
+    elevation: 1,
   },
   severityBtnText: {
     fontSize: 12,
-    fontWeight: '700',
+    fontWeight: '600',
     color: COLORS.textSecondary,
-  },
-  severityBtnTextSelected: {
-    color: COLORS.primary,
-    fontWeight: '900',
-  },
-  inputSection: {
-    marginVertical: SPACING.sm,
   },
   textInput: {
     backgroundColor: COLORS.surface,
     borderWidth: 1,
     borderColor: COLORS.border,
     borderRadius: RADIUS.md,
-    padding: SPACING.md,
-    fontSize: 14,
+    padding: 10,
+    fontSize: 13,
     color: COLORS.textPrimary,
     textAlignVertical: 'top',
-    minHeight: 90,
+    minHeight: 72,
+    shadowColor: '#0F172A',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.03,
+    shadowRadius: 2,
+    elevation: 1,
   },
   charCount: {
-    fontSize: 11,
+    fontSize: 10.5,
     color: COLORS.textMuted,
     textAlign: 'right',
-    marginTop: 4,
+    marginTop: 3,
   },
   submitButton: {
-    backgroundColor: COLORS.primary,
-    borderRadius: RADIUS.md,
-    paddingVertical: 16,
+    backgroundColor: '#0F172A',
+    borderRadius: RADIUS.lg,
+    paddingVertical: 14,
     alignItems: 'center',
-    marginTop: SPACING.lg,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
-    shadowRadius: 4,
+    justifyContent: 'center',
+    marginTop: SPACING.sm,
+    shadowColor: '#0F172A',
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.15,
+    shadowRadius: 5,
     elevation: 3,
   },
   submitButtonDisabled: {
     opacity: 0.6,
   },
   submitButtonText: {
-    color: COLORS.textInverse,
-    fontSize: 16,
+    color: '#FFFFFF',
+    fontSize: 14.5,
     fontWeight: '800',
-    letterSpacing: 0.5,
+    letterSpacing: 0.3,
   },
 });
 
 ReportHazardScreen.displayName = 'ReportHazardScreen';
-

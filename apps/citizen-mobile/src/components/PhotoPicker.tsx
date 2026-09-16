@@ -36,33 +36,30 @@ export const PhotoPicker: React.FC<PhotoPickerProps> = ({
 
   return (
     <View style={styles.container}>
-      <Text style={styles.label}>LIVE EVIDENCE PHOTO (CAMERA ONLY) *</Text>
+      <View style={styles.headerRow}>
+        <Text style={styles.sectionLabel}>Evidence Photo</Text>
+        <Text style={styles.requiredBadge}>* Camera Only</Text>
+      </View>
 
       {photo ? (
         <View style={styles.previewContainer}>
           <Image source={{ uri: photo.uri }} style={styles.thumbnail} />
           <View style={styles.photoMeta}>
-            <View style={styles.badgeRow}>
-              <View style={styles.liveBadge}>
-                <Text style={styles.liveBadgeText}>● LIVE CAMERA FIX</Text>
-              </View>
+            <View style={styles.liveBadge}>
+              <Text style={styles.liveBadgeText}>● LIVE CAMERA FIX</Text>
             </View>
             <Text style={styles.photoName} numberOfLines={1}>
               {photo.name || 'live_capture.jpg'}
             </Text>
             <Text style={styles.photoSub}>
-              Captured: {formatDateTime(photo.capturedAt)}
+              {formatDateTime(photo.capturedAt)}
+              {photo.sizeBytes ? ` • ${(photo.sizeBytes / 1024).toFixed(0)} KB` : ''}
             </Text>
-            {photo.sizeBytes && (
-              <Text style={styles.sizeText}>
-                Size: {(photo.sizeBytes / 1024).toFixed(0)} KB
-              </Text>
-            )}
             <View style={styles.actionRow}>
-              <TouchableOpacity onPress={handleOpenLiveCamera} style={styles.retakeBtn}>
+              <TouchableOpacity onPress={handleOpenLiveCamera} style={styles.retakeBtn} activeOpacity={0.7}>
                 <Text style={styles.retakeText}>Retake</Text>
               </TouchableOpacity>
-              <TouchableOpacity onPress={handleRemovePhoto} style={styles.removeBtn}>
+              <TouchableOpacity onPress={handleRemovePhoto} style={styles.removeBtn} activeOpacity={0.7}>
                 <Text style={styles.removeText}>Remove</Text>
               </TouchableOpacity>
             </View>
@@ -72,23 +69,25 @@ export const PhotoPicker: React.FC<PhotoPickerProps> = ({
         <TouchableOpacity
           style={styles.pickerBox}
           onPress={handleOpenLiveCamera}
-          activeOpacity={0.7}
+          activeOpacity={0.75}
         >
           <View style={styles.cameraIconContainer}>
             <Text style={styles.cameraIcon}>📸</Text>
           </View>
-          <Text style={styles.pickerTitle}>Open Live Camera & Capture</Text>
-          <Text style={styles.pickerSub}>
-            Requests camera permission • Live sensor capture only
-          </Text>
-          <View style={styles.liveOnlyPill}>
-            <Text style={styles.liveOnlyText}>✓ Anti-Fraud: Direct Camera Feed</Text>
+          <View style={styles.pickerTextCol}>
+            <Text style={styles.pickerTitle}>Capture Field Photo</Text>
+            <Text style={styles.pickerSub}>
+              Live camera sensor • Geo-tagged evidence
+            </Text>
+          </View>
+          <View style={styles.openPill}>
+            <Text style={styles.openPillText}>Open</Text>
           </View>
         </TouchableOpacity>
       )}
 
       <Text style={styles.disclaimerText}>
-        🛡️ Live photographs provide verifiable field ground-truth for disaster authorities. Gallery/file uploads are disabled to prevent stale reports.
+        🛡️ Hardware camera only. Gallery uploads are disabled to ensure authentic ground-truth.
       </Text>
 
       {/* Live Viewfinder Modal */}
@@ -105,139 +104,145 @@ PhotoPicker.displayName = 'PhotoPicker';
 
 const styles = StyleSheet.create({
   container: {
-    marginVertical: SPACING.sm,
+    marginBottom: SPACING.md,
   },
-  label: {
-    fontSize: 12,
-    fontWeight: '800',
-    color: COLORS.textSecondary,
-    letterSpacing: 0.5,
-    marginBottom: 6,
+  headerRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  sectionLabel: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: COLORS.textPrimary,
+    letterSpacing: 0.2,
+  },
+  requiredBadge: {
+    fontSize: 11,
+    fontWeight: '600',
+    color: COLORS.textMuted,
   },
   pickerBox: {
     backgroundColor: COLORS.surface,
-    borderWidth: 2,
-    borderColor: '#90CAF9',
+    borderWidth: 1.5,
+    borderColor: '#BAE6FD',
     borderStyle: 'dashed',
     borderRadius: RADIUS.lg,
-    padding: SPACING.lg,
+    paddingVertical: 12,
+    paddingHorizontal: 14,
+    flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
+    shadowColor: '#0F172A',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.03,
+    shadowRadius: 2,
+    elevation: 1,
   },
   cameraIconContainer: {
-    width: 54,
-    height: 54,
-    borderRadius: 27,
-    backgroundColor: '#E3F2FD',
+    width: 38,
+    height: 38,
+    borderRadius: 19,
+    backgroundColor: '#F0F9FF',
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: 6,
+    marginRight: 12,
   },
   cameraIcon: {
-    fontSize: 26,
+    fontSize: 18,
+  },
+  pickerTextCol: {
+    flex: 1,
   },
   pickerTitle: {
-    fontSize: 15,
-    fontWeight: '800',
-    color: COLORS.primaryLight,
+    fontSize: 13.5,
+    fontWeight: '700',
+    color: '#0284C7',
   },
   pickerSub: {
-    fontSize: 12,
-    color: COLORS.textMuted,
-    marginTop: 2,
-    textAlign: 'center',
-  },
-  liveOnlyPill: {
-    backgroundColor: '#E8F5E9',
-    paddingVertical: 3,
-    paddingHorizontal: 10,
-    borderRadius: RADIUS.full,
-    marginTop: 8,
-  },
-  liveOnlyText: {
-    color: COLORS.online,
     fontSize: 11,
+    color: COLORS.textMuted,
+    marginTop: 1,
+  },
+  openPill: {
+    backgroundColor: '#0284C7',
+    paddingVertical: 5,
+    paddingHorizontal: 12,
+    borderRadius: RADIUS.full,
+  },
+  openPillText: {
+    color: '#FFFFFF',
+    fontSize: 11.5,
     fontWeight: '700',
   },
   previewContainer: {
-    flexDirection: 'row',
     backgroundColor: COLORS.surface,
     borderWidth: 1,
     borderColor: COLORS.border,
     borderRadius: RADIUS.lg,
-    padding: SPACING.md,
+    padding: 10,
+    flexDirection: 'row',
     alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.05,
-    shadowRadius: 3,
-    elevation: 2,
   },
   thumbnail: {
-    width: 80,
-    height: 80,
+    width: 68,
+    height: 68,
     borderRadius: RADIUS.md,
-    backgroundColor: COLORS.surfaceMuted,
+    backgroundColor: '#0F172A',
   },
   photoMeta: {
+    marginLeft: 12,
     flex: 1,
-    minWidth: 0,
-    marginLeft: SPACING.md,
-  },
-  badgeRow: {
-    flexDirection: 'row',
-    marginBottom: 4,
   },
   liveBadge: {
-    backgroundColor: '#FFEBEE',
+    backgroundColor: '#ECFDF5',
     paddingVertical: 2,
     paddingHorizontal: 6,
     borderRadius: RADIUS.sm,
+    alignSelf: 'flex-start',
+    marginBottom: 4,
   },
   liveBadgeText: {
-    color: '#C62828',
-    fontSize: 10,
+    color: '#047857',
+    fontSize: 9.5,
     fontWeight: '800',
+    letterSpacing: 0.5,
   },
   photoName: {
-    fontSize: 13,
-    fontWeight: '800',
+    fontSize: 12,
+    fontWeight: '700',
     color: COLORS.textPrimary,
   },
   photoSub: {
-    fontSize: 11,
-    color: COLORS.textSecondary,
-    marginTop: 2,
-  },
-  sizeText: {
-    fontSize: 11,
+    fontSize: 10.5,
     color: COLORS.textMuted,
+    marginTop: 1,
   },
   actionRow: {
     flexDirection: 'row',
-    marginTop: 6,
     gap: 12,
+    marginTop: 6,
   },
   retakeBtn: {
-    alignSelf: 'flex-start',
+    paddingVertical: 2,
   },
   retakeText: {
-    color: COLORS.primaryLight,
-    fontSize: 12,
+    fontSize: 11.5,
     fontWeight: '700',
+    color: '#0284C7',
   },
   removeBtn: {
-    alignSelf: 'flex-start',
+    paddingVertical: 2,
   },
   removeText: {
-    color: COLORS.riskCritical,
-    fontSize: 12,
+    fontSize: 11.5,
     fontWeight: '700',
+    color: '#DC2626',
   },
   disclaimerText: {
-    fontSize: 11,
+    fontSize: 10.5,
     color: COLORS.textMuted,
     marginTop: 6,
-    lineHeight: 15,
+    lineHeight: 14,
   },
 });

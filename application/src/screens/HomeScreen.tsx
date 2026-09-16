@@ -77,6 +77,7 @@ export function HomeScreen(): React.JSX.Element {
       <ScrollView
         style={styles.scrollView}
         contentContainerStyle={styles.scrollContent}
+        showsVerticalScrollIndicator={false}
         refreshControl={
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} colors={[COLORS.primary]} />
         }
@@ -98,24 +99,26 @@ export function HomeScreen(): React.JSX.Element {
           <TouchableOpacity
             style={styles.reportButton}
             onPress={() => handleQuickReport()}
-            activeOpacity={0.8}
+            activeOpacity={0.85}
           >
             <View style={styles.reportIconBox}>
-              <Text style={styles.reportIconSymbol}>+</Text>
+              <Text style={styles.reportIconSymbol}>📸</Text>
             </View>
             <View style={styles.reportButtonTextCol}>
-              <Text style={styles.reportButtonTitle}>FILE GROUND HAZARD REPORT</Text>
+              <Text style={styles.reportButtonTitle}>Report Ground Hazard</Text>
               <Text style={styles.reportButtonSub}>
                 Direct GPS & Live Camera Evidence Dispatch
               </Text>
             </View>
-            <Text style={styles.reportArrow}>→</Text>
+            <View style={styles.reportArrowCircle}>
+              <Text style={styles.reportArrow}>→</Text>
+            </View>
           </TouchableOpacity>
 
           {/* Quick Precursor Shortcuts */}
           <View style={styles.quickRow}>
             <TouchableOpacity
-              style={styles.quickChip}
+              style={[styles.quickChip, styles.quickChipCrack]}
               onPress={() => handleQuickReport('CRACK')}
               activeOpacity={0.7}
             >
@@ -124,7 +127,7 @@ export function HomeScreen(): React.JSX.Element {
             </TouchableOpacity>
 
             <TouchableOpacity
-              style={styles.quickChip}
+              style={[styles.quickChip, styles.quickChipRock]}
               onPress={() => handleQuickReport('ROCKFALL')}
               activeOpacity={0.7}
             >
@@ -133,12 +136,21 @@ export function HomeScreen(): React.JSX.Element {
             </TouchableOpacity>
 
             <TouchableOpacity
-              style={styles.quickChip}
+              style={[styles.quickChip, styles.quickChipRoad]}
               onPress={() => handleQuickReport('ROAD_BLOCKAGE')}
               activeOpacity={0.7}
             >
               <Text style={styles.quickChipIcon}>🚧</Text>
-              <Text style={styles.quickChipText}>Road Block</Text>
+              <Text style={styles.quickChipText}>Blockage</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={[styles.quickChip, styles.quickChipSoil]}
+              onPress={() => handleQuickReport('SOIL_MOVEMENT')}
+              activeOpacity={0.7}
+            >
+              <Text style={styles.quickChipIcon}>⛰️</Text>
+              <Text style={styles.quickChipText}>Soil Move</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -146,10 +158,10 @@ export function HomeScreen(): React.JSX.Element {
         {/* Recent Incidents Dispatch List */}
         <View style={styles.sectionHeader}>
           <View>
-            <Text style={styles.sectionTitle}>SECTOR OBSERVATION LOG</Text>
-            <Text style={styles.sectionSubtitle}>Verified Authority Situational Stream</Text>
+            <Text style={styles.sectionTitle}>Sector Observation Stream</Text>
+            <Text style={styles.sectionSubtitle}>Verified field ground-truth telemetry</Text>
           </View>
-          <TouchableOpacity onPress={() => navigation.navigate('MyReports')}>
+          <TouchableOpacity onPress={() => navigation.navigate('MyReports')} activeOpacity={0.7}>
             <Text style={styles.viewAllText}>All Reports ({recentReports.length}) →</Text>
           </TouchableOpacity>
         </View>
@@ -161,86 +173,103 @@ export function HomeScreen(): React.JSX.Element {
             ))
           ) : (
             <View style={styles.emptyState}>
-              <Text style={styles.emptyStateText}>No active hazard records logged in this grid cell.</Text>
+              <View style={styles.emptyIconCircle}>
+                <Text style={styles.emptyIcon}>🛰️</Text>
+              </View>
+              <Text style={styles.emptyStateText}>No Active Incidents in Grid NER-0042</Text>
               <Text style={styles.emptyStateSub}>
-                Field observations submitted by citizens and responders automatically update the district early-warning model.
+                Field observations submitted by citizens and volunteers dynamically calibrate the regional landslide model.
               </Text>
+              <TouchableOpacity
+                style={styles.emptyActionBtn}
+                onPress={() => handleQuickReport()}
+                activeOpacity={0.7}
+              >
+                <Text style={styles.emptyActionText}>+ File Observation</Text>
+              </TouchableOpacity>
             </View>
           )}
         </View>
       </ScrollView>
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.background,
+    backgroundColor: '#F8FAFC',
   },
   scrollView: {
     flex: 1,
   },
   scrollContent: {
-    paddingBottom: SPACING.xxl,
+    paddingBottom: 28,
   },
   actionSection: {
-    paddingHorizontal: SPACING.lg,
-    marginTop: SPACING.md,
+    paddingHorizontal: 14,
+    marginTop: 12,
   },
   reportButton: {
-    backgroundColor: COLORS.primary,
-    borderRadius: RADIUS.lg,
-    paddingVertical: SPACING.md + 2,
-    paddingHorizontal: SPACING.md,
+    backgroundColor: '#0F172A',
+    borderRadius: RADIUS.xl,
+    paddingVertical: 12,
+    paddingHorizontal: 14,
     flexDirection: 'row',
     alignItems: 'center',
     borderWidth: 1,
     borderColor: '#1E293B',
     shadowColor: '#0F172A',
-    shadowOffset: { width: 0, height: 4 },
+    shadowOffset: { width: 0, height: 3 },
     shadowOpacity: 0.12,
-    shadowRadius: 8,
+    shadowRadius: 6,
     elevation: 3,
   },
   reportIconBox: {
-    width: 36,
-    height: 36,
-    borderRadius: 8,
-    backgroundColor: '#DC2626',
+    width: 38,
+    height: 38,
+    borderRadius: 19,
+    backgroundColor: 'rgba(239, 68, 68, 0.15)',
+    borderWidth: 1,
+    borderColor: 'rgba(239, 68, 68, 0.3)',
     alignItems: 'center',
     justifyContent: 'center',
-    marginRight: SPACING.md,
+    marginRight: 12,
   },
   reportIconSymbol: {
-    fontSize: 22,
-    color: '#FFF',
-    fontWeight: '900',
-    lineHeight: 24,
+    fontSize: 18,
   },
   reportButtonTextCol: {
     flex: 1,
   },
   reportButtonTitle: {
-    fontSize: 13,
-    fontWeight: '900',
-    color: '#F8FAFC',
-    letterSpacing: 0.5,
+    fontSize: 14,
+    fontWeight: '800',
+    color: '#FFFFFF',
+    letterSpacing: 0.2,
   },
   reportButtonSub: {
-    fontSize: 11,
+    fontSize: 10.5,
     color: '#94A3B8',
-    marginTop: 2,
+    marginTop: 1,
+  },
+  reportArrowCircle: {
+    width: 28,
+    height: 28,
+    borderRadius: 14,
+    backgroundColor: 'rgba(255, 255, 255, 0.08)',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   reportArrow: {
-    fontSize: 16,
-    color: '#64748B',
+    fontSize: 13,
+    color: '#94A3B8',
     fontWeight: '800',
   },
   quickRow: {
     flexDirection: 'row',
     marginTop: 8,
-    gap: 8,
+    gap: 6,
   },
   quickChip: {
     flex: 1,
@@ -250,39 +279,58 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: COLORS.surface,
     borderWidth: 1,
-    borderColor: COLORS.border,
-    borderRadius: RADIUS.sm,
-    paddingVertical: 7,
+    borderColor: '#E2E8F0',
+    borderRadius: RADIUS.md,
+    paddingVertical: 6,
     paddingHorizontal: 4,
+    shadowColor: '#0F172A',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.03,
+    shadowRadius: 2,
+    elevation: 1,
+  },
+  quickChipCrack: {
+    backgroundColor: '#FFFBEB',
+    borderColor: '#FDE68A',
+  },
+  quickChipRock: {
+    backgroundColor: '#F8FAFC',
+    borderColor: '#E2E8F0',
+  },
+  quickChipRoad: {
+    backgroundColor: '#FFF7ED',
+    borderColor: '#FFEDD5',
+  },
+  quickChipSoil: {
+    backgroundColor: '#F0FDF4',
+    borderColor: '#DCFCE7',
   },
   quickChipIcon: {
     fontSize: 12,
     marginRight: 4,
   },
   quickChipText: {
-    fontSize: 11,
+    fontSize: 10.5,
     fontWeight: '700',
-    color: COLORS.textPrimary,
+    color: '#334155',
   },
   sectionHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'flex-end',
-    paddingHorizontal: SPACING.lg,
-    marginTop: SPACING.xl,
-    marginBottom: SPACING.sm,
+    paddingHorizontal: 14,
+    marginTop: 16,
+    marginBottom: 8,
   },
   sectionTitle: {
-    fontSize: 11,
-    fontFamily: 'monospace',
-    fontWeight: '800',
-    color: COLORS.textMuted,
-    letterSpacing: 0.6,
+    fontSize: 13,
+    fontWeight: '700',
+    color: '#0F172A',
+    letterSpacing: 0.1,
   },
   sectionSubtitle: {
-    fontSize: 12,
-    fontWeight: '700',
-    color: COLORS.textPrimary,
+    fontSize: 10.5,
+    color: '#64748B',
     marginTop: 1,
   },
   viewAllText: {
@@ -291,30 +339,60 @@ const styles = StyleSheet.create({
     color: '#0284C7',
   },
   reportsContainer: {
-    paddingHorizontal: SPACING.lg,
+    paddingHorizontal: 14,
   },
   emptyState: {
     backgroundColor: COLORS.surface,
-    borderRadius: RADIUS.md,
-    padding: SPACING.xl,
+    borderRadius: RADIUS.lg,
+    padding: 18,
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: COLORS.border,
+    borderColor: '#E2E8F0',
+    shadowColor: '#0F172A',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.03,
+    shadowRadius: 3,
+    elevation: 1,
+  },
+  emptyIconCircle: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    backgroundColor: '#EFF6FF',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 8,
+  },
+  emptyIcon: {
+    fontSize: 18,
   },
   emptyStateText: {
     fontSize: 13,
     fontWeight: '700',
-    color: COLORS.textSecondary,
+    color: '#0F172A',
     textAlign: 'center',
   },
   emptyStateSub: {
     fontSize: 11,
-    color: COLORS.textMuted,
+    color: '#64748B',
     textAlign: 'center',
-    marginTop: 4,
-    lineHeight: 16,
+    marginTop: 3,
+    lineHeight: 15,
+  },
+  emptyActionBtn: {
+    marginTop: 10,
+    backgroundColor: '#EFF6FF',
+    paddingVertical: 5,
+    paddingHorizontal: 12,
+    borderRadius: RADIUS.full,
+    borderWidth: 1,
+    borderColor: '#BFDBFE',
+  },
+  emptyActionText: {
+    fontSize: 11,
+    fontWeight: '700',
+    color: '#1D4ED8',
   },
 });
 
 HomeScreen.displayName = 'HomeScreen';
-

@@ -29,9 +29,15 @@ const CategorySelectorComponent: React.FC<CategorySelectorProps> = ({
   selectedCategory,
   onSelectCategory,
 }) => {
+  const selectedItem = REPORT_CATEGORIES.find((c) => c.id === selectedCategory);
+
   return (
     <View style={styles.container}>
-      <Text style={styles.sectionLabel}>SELECT INCIDENT CATEGORY *</Text>
+      <View style={styles.headerRow}>
+        <Text style={styles.sectionLabel}>Incident Category</Text>
+        <Text style={styles.requiredBadge}>* Required</Text>
+      </View>
+
       <View style={styles.grid}>
         {REPORT_CATEGORIES.map((item) => {
           const isSelected = selectedCategory === item.id;
@@ -45,7 +51,7 @@ const CategorySelectorComponent: React.FC<CategorySelectorProps> = ({
                 isSelected && styles.chipSelected,
               ]}
               onPress={() => onSelectCategory(item.id)}
-              activeOpacity={0.65}
+              activeOpacity={0.7}
             >
               <Text style={styles.chipIcon}>{icon}</Text>
               <Text
@@ -53,6 +59,7 @@ const CategorySelectorComponent: React.FC<CategorySelectorProps> = ({
                   styles.chipLabel,
                   isSelected && styles.chipLabelSelected,
                 ]}
+                numberOfLines={1}
               >
                 {item.label}
               </Text>
@@ -60,10 +67,12 @@ const CategorySelectorComponent: React.FC<CategorySelectorProps> = ({
           );
         })}
       </View>
-      {selectedCategory && (
+
+      {selectedItem && (
         <View style={styles.descriptionBox}>
-          <Text style={styles.selectedDescription}>
-            ℹ️ {REPORT_CATEGORIES.find((c) => c.id === selectedCategory)?.description}
+          <Text style={styles.selectedDescription} numberOfLines={2}>
+            <Text style={styles.descTitle}>{selectedItem.label}: </Text>
+            {selectedItem.description}
           </Text>
         </View>
       )}
@@ -76,67 +85,89 @@ export const CategorySelector = memo(CategorySelectorComponent);
 
 const styles = StyleSheet.create({
   container: {
-    marginVertical: SPACING.sm,
+    marginBottom: SPACING.md,
+  },
+  headerRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 8,
   },
   sectionLabel: {
-    fontSize: 12,
-    fontWeight: '800',
-    color: COLORS.textSecondary,
-    marginBottom: SPACING.sm,
-    letterSpacing: 0.5,
+    fontSize: 13,
+    fontWeight: '700',
+    color: COLORS.textPrimary,
+    letterSpacing: 0.2,
+  },
+  requiredBadge: {
+    fontSize: 11,
+    fontWeight: '600',
+    color: COLORS.textMuted,
   },
   grid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    marginHorizontal: -4,
+    marginHorizontal: -3,
   },
   chip: {
     backgroundColor: COLORS.surface,
     borderRadius: RADIUS.md,
-    borderWidth: 1.5,
+    borderWidth: 1,
     borderColor: COLORS.border,
-    paddingVertical: 10,
-    paddingHorizontal: 12,
-    margin: 4,
-    flexBasis: '46%',
+    paddingVertical: 7,
+    paddingHorizontal: 10,
+    margin: 3,
+    flexBasis: '47%',
     flexGrow: 1,
-    minWidth: 120,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'flex-start',
-    shadowColor: '#000',
+    shadowColor: '#0F172A',
     shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.04,
+    shadowOpacity: 0.03,
     shadowRadius: 2,
     elevation: 1,
   },
   chipSelected: {
-    backgroundColor: '#E3F2FD',
-    borderColor: COLORS.primaryLight,
-    borderWidth: 2,
+    backgroundColor: '#EFF6FF',
+    borderColor: '#2563EB',
+    borderWidth: 1.5,
+    shadowColor: '#2563EB',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.12,
+    shadowRadius: 3,
+    elevation: 2,
   },
   chipIcon: {
-    fontSize: 18,
-    marginRight: 8,
+    fontSize: 16,
+    marginRight: 6,
   },
   chipLabel: {
-    fontSize: 13,
-    fontWeight: '700',
-    color: COLORS.textPrimary,
+    fontSize: 12,
+    fontWeight: '600',
+    color: COLORS.textSecondary,
+    flexShrink: 1,
   },
   chipLabelSelected: {
-    color: COLORS.primary,
-    fontWeight: '900',
+    color: '#1D4ED8',
+    fontWeight: '800',
   },
   descriptionBox: {
-    backgroundColor: '#F0F4F8',
-    padding: SPACING.sm,
+    backgroundColor: '#F8FAFC',
+    borderLeftWidth: 3,
+    borderLeftColor: '#2563EB',
+    paddingVertical: 6,
+    paddingHorizontal: 10,
     borderRadius: RADIUS.sm,
     marginTop: 6,
   },
   selectedDescription: {
-    fontSize: 12,
+    fontSize: 11,
     color: COLORS.textSecondary,
-    fontStyle: 'italic',
+    lineHeight: 15,
+  },
+  descTitle: {
+    fontWeight: '700',
+    color: COLORS.textPrimary,
   },
 });

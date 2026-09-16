@@ -36,9 +36,9 @@ function LocationBadgeComponent({
   return (
     <View style={styles.container}>
       <View style={styles.headerRow}>
-        <Text style={styles.label}>OBSERVATION LOCATION & SECTOR (GPS) *</Text>
+        <Text style={styles.sectionLabel}>Observation Location</Text>
         {onRefresh && (
-          <TouchableOpacity onPress={onRefresh} disabled={isLoading} style={styles.refreshBtn}>
+          <TouchableOpacity onPress={onRefresh} disabled={isLoading} style={styles.refreshBtn} activeOpacity={0.7}>
             <Text style={styles.refreshText}>{isLoading ? 'Locating...' : '🔄 Refresh GPS'}</Text>
           </TouchableOpacity>
         )}
@@ -49,64 +49,66 @@ function LocationBadgeComponent({
           <View style={styles.loadingContainer}>
             <ActivityIndicator size="small" color={COLORS.primaryLight} />
             <View style={styles.loadingCol}>
-              <Text style={styles.loadingTitle}>Acquiring GPS satellite fix...</Text>
-              <Text style={styles.loadingSub}>Triangulating coordinates & resolving exact area sector...</Text>
+              <Text style={styles.loadingTitle}>Acquiring GPS Fix...</Text>
+              <Text style={styles.loadingSub}>Triangulating coordinates & resolving sector...</Text>
             </View>
           </View>
         ) : (
           <>
-            {/* Prominent Exact Area Name Banner */}
-            <View style={styles.areaBanner}>
+            {/* Primary Location Row */}
+            <View style={styles.areaRow}>
               <View style={styles.pinCircle}>
                 <Text style={styles.pinIcon}>📍</Text>
               </View>
               <View style={styles.areaTextCol}>
-                <Text style={styles.areaTitle} numberOfLines={2}>
+                <Text style={styles.areaTitle} numberOfLines={1}>
                   {areaDetails?.areaName || 'Geological Observation Sector'}
                 </Text>
-                <Text style={styles.areaSubtitle} numberOfLines={2}>
+                <Text style={styles.areaSubtitle} numberOfLines={1}>
                   {areaDetails?.formattedAddress ||
                     `${areaDetails?.district || 'District Region'}, ${areaDetails?.state || 'Monitoring Zone'}`}
                 </Text>
               </View>
             </View>
 
-            {/* Geological Sector & Terrain Classification Box */}
+            {/* Geological Sector & Elevation Badges */}
             {areaDetails && (
-              <View style={styles.terrainBox}>
-                <View style={styles.terrainRow}>
-                  <Text style={styles.terrainTag}>GEO-SECTOR</Text>
-                  <Text style={styles.terrainVal}>{areaDetails.geologicalGrid || 'NER-GRID-42'}</Text>
-                  <View style={styles.dotSeparator} />
-                  <Text style={styles.terrainTag}>ELEVATION</Text>
-                  <Text style={styles.terrainVal}>~{areaDetails.elevationM || 1485} m MSL</Text>
+              <View style={styles.metaRow}>
+                <View style={styles.metaTag}>
+                  <Text style={styles.metaText}>
+                    Grid: {areaDetails.geologicalGrid || 'NER-GRID-42'}
+                  </Text>
+                </View>
+                <View style={styles.metaTag}>
+                  <Text style={styles.metaText}>
+                    Elev: ~{areaDetails.elevationM || 1485}m MSL
+                  </Text>
                 </View>
                 {areaDetails.terrainZone && (
-                  <Text style={styles.terrainZoneText} numberOfLines={1}>
-                    🏔️ {areaDetails.terrainZone}
-                  </Text>
+                  <View style={[styles.metaTag, styles.metaTagHighlight]}>
+                    <Text style={styles.metaTextHighlight} numberOfLines={1}>
+                      {areaDetails.terrainZone}
+                    </Text>
+                  </View>
                 )}
               </View>
             )}
 
-            {/* Coordinate Telemetry & Quality Chips */}
+            {/* Coordinates & Accuracy Strip */}
             <View style={styles.telemetryRow}>
-              <View style={styles.coordBox}>
-                <Text style={styles.coordLabel}>WGS-84 FIX</Text>
-                <Text style={styles.coordsText}>{formatCoordinates(latitude, longitude)}</Text>
-              </View>
+              <Text style={styles.coordsText}>{formatCoordinates(latitude, longitude)}</Text>
 
               <View style={styles.badgesCol}>
                 <View
                   style={[
                     styles.accuracyPill,
-                    { backgroundColor: isGoodAccuracy ? '#E8F5E9' : '#FFF3E0' },
+                    { backgroundColor: isGoodAccuracy ? '#ECFDF5' : '#FFFBEB' },
                   ]}
                 >
                   <Text
                     style={[
                       styles.accuracyText,
-                      { color: isGoodAccuracy ? COLORS.online : '#E65100' },
+                      { color: isGoodAccuracy ? '#047857' : '#B45309' },
                     ]}
                   >
                     {formatAccuracy(accuracyM)} {isGoodAccuracy ? '• Fix OK' : ''}
@@ -115,7 +117,7 @@ function LocationBadgeComponent({
 
                 {isMockFallback && (
                   <View style={styles.simPill}>
-                    <Text style={styles.simText}>DEMO REGION</Text>
+                    <Text style={styles.simText}>DEMO</Text>
                   </View>
                 )}
               </View>
@@ -135,28 +137,28 @@ export const LocationBadge = React.memo(LocationBadgeComponent);
 
 const styles = StyleSheet.create({
   container: {
-    marginVertical: SPACING.sm,
+    marginBottom: SPACING.md,
   },
   headerRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 6,
+    marginBottom: 8,
   },
-  label: {
-    fontSize: 12,
-    fontWeight: '800',
-    color: COLORS.textSecondary,
-    letterSpacing: 0.5,
+  sectionLabel: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: COLORS.textPrimary,
+    letterSpacing: 0.2,
   },
   refreshBtn: {
     paddingVertical: 2,
     paddingHorizontal: 6,
   },
   refreshText: {
-    fontSize: 12,
+    fontSize: 11,
     fontWeight: '700',
-    color: COLORS.primaryLight,
+    color: '#0284C7',
   },
   card: {
     backgroundColor: COLORS.surface,
@@ -166,14 +168,14 @@ const styles = StyleSheet.create({
     padding: SPACING.md,
     shadowColor: '#0F172A',
     shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.05,
+    shadowOpacity: 0.04,
     shadowRadius: 3,
-    elevation: 2,
+    elevation: 1,
   },
   loadingContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingVertical: SPACING.md,
+    paddingVertical: SPACING.sm,
   },
   loadingCol: {
     marginLeft: SPACING.md,
@@ -181,7 +183,7 @@ const styles = StyleSheet.create({
   },
   loadingTitle: {
     fontSize: 13,
-    fontWeight: '800',
+    fontWeight: '700',
     color: COLORS.textPrimary,
   },
   loadingSub: {
@@ -189,123 +191,105 @@ const styles = StyleSheet.create({
     color: COLORS.textMuted,
     marginTop: 2,
   },
-  areaBanner: {
+  areaRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingBottom: SPACING.sm,
-    borderBottomWidth: 1,
-    borderBottomColor: COLORS.borderDark,
   },
   pinCircle: {
-    width: 38,
-    height: 38,
-    borderRadius: 19,
-    backgroundColor: 'rgba(2, 132, 199, 0.12)',
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    backgroundColor: '#EFF6FF',
     alignItems: 'center',
     justifyContent: 'center',
-    marginRight: SPACING.md,
+    marginRight: 10,
   },
   pinIcon: {
-    fontSize: 18,
+    fontSize: 16,
   },
   areaTextCol: {
     flex: 1,
   },
   areaTitle: {
-    fontSize: 14,
-    fontWeight: '900',
+    fontSize: 13.5,
+    fontWeight: '800',
     color: COLORS.textPrimary,
-    letterSpacing: 0.2,
+    letterSpacing: 0.1,
   },
   areaSubtitle: {
     fontSize: 11,
     color: COLORS.textSecondary,
-    marginTop: 2,
+    marginTop: 1,
   },
-  terrainBox: {
+  metaRow: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 6,
+    marginTop: 8,
+    paddingTop: 8,
+    borderTopWidth: 1,
+    borderTopColor: '#F1F5F9',
+  },
+  metaTag: {
     backgroundColor: '#F8FAFC',
     borderRadius: RADIUS.sm,
-    paddingVertical: 8,
-    paddingHorizontal: 10,
-    marginTop: 8,
-    borderLeftWidth: 3,
-    borderLeftColor: '#0284C7',
+    paddingVertical: 2,
+    paddingHorizontal: 6,
+    borderWidth: 1,
+    borderColor: '#E2E8F0',
   },
-  terrainRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
+  metaTagHighlight: {
+    backgroundColor: '#F0F9FF',
+    borderColor: '#BAE6FD',
   },
-  terrainTag: {
-    fontSize: 9,
-    fontFamily: 'monospace',
-    fontWeight: '800',
-    color: COLORS.textMuted,
-    letterSpacing: 0.5,
-  },
-  terrainVal: {
+  metaText: {
     fontSize: 10,
-    fontFamily: 'monospace',
-    fontWeight: '800',
-    color: COLORS.textPrimary,
-    marginLeft: 4,
-  },
-  dotSeparator: {
-    width: 3,
-    height: 3,
-    borderRadius: 1.5,
-    backgroundColor: COLORS.textMuted,
-    marginHorizontal: 8,
-  },
-  terrainZoneText: {
-    fontSize: 10,
-    color: '#0369A1',
     fontWeight: '600',
-    marginTop: 3,
+    color: COLORS.textSecondary,
+    fontFamily: 'monospace',
+  },
+  metaTextHighlight: {
+    fontSize: 10,
+    fontWeight: '700',
+    color: '#0369A1',
   },
   telemetryRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginTop: 10,
-    paddingTop: 6,
-  },
-  coordBox: {
-    flex: 1,
-  },
-  coordLabel: {
-    fontSize: 9,
-    fontFamily: 'monospace',
-    fontWeight: '700',
-    color: COLORS.textMuted,
-    letterSpacing: 0.5,
+    marginTop: 8,
+    paddingTop: 8,
+    borderTopWidth: 1,
+    borderTopColor: '#F1F5F9',
   },
   coordsText: {
-    fontSize: 13,
-    fontWeight: '800',
+    fontSize: 11.5,
+    fontWeight: '700',
     color: COLORS.textPrimary,
-    marginTop: 1,
+    fontFamily: 'monospace',
   },
   badgesCol: {
-    alignItems: 'flex-end',
-    gap: 4,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 5,
   },
   accuracyPill: {
-    paddingVertical: 3,
-    paddingHorizontal: 8,
+    paddingVertical: 2,
+    paddingHorizontal: 7,
     borderRadius: RADIUS.full,
   },
   accuracyText: {
     fontSize: 10,
-    fontWeight: '800',
+    fontWeight: '700',
   },
   simPill: {
-    backgroundColor: '#EDE7F6',
+    backgroundColor: '#F3E8FF',
     paddingVertical: 2,
-    paddingHorizontal: 8,
+    paddingHorizontal: 6,
     borderRadius: RADIUS.sm,
   },
   simText: {
-    color: '#512DA8',
+    color: '#7E22CE',
     fontSize: 9,
     fontWeight: '800',
     letterSpacing: 0.5,
@@ -313,6 +297,6 @@ const styles = StyleSheet.create({
   errorNote: {
     marginTop: 6,
     fontSize: 11,
-    color: '#D32F2F',
+    color: '#DC2626',
   },
 });
