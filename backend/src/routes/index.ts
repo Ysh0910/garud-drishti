@@ -15,6 +15,7 @@ import reportsRouter from './reports';
 import { assetsRouter, roadsRouter, villagesRouter } from './exposure';
 import prioritizationRouter from './prioritization';
 import alertsRouter from './alerts';
+import dashboardRouter from './dashboard';
 
 // Mount Risk API (/api/v1/risk)
 router.use('/risk', riskRouter);
@@ -33,10 +34,10 @@ router.use('/prioritization', prioritizationRouter);
 // Mount Alerts API (/api/v1/alerts)
 router.use('/alerts', alertsRouter);
 
-// Future sub-routers (uncomment as phases are implemented):
-// import dashboardRouter from './dashboard';
-// router.use('/dashboard', dashboardRouter);
+// Mount Dashboard API (/api/v1/dashboard)
+router.use('/dashboard', dashboardRouter);
 
 export default router;
+
 
 
