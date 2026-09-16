@@ -3,6 +3,7 @@ import { NetworkService } from '../src/services/networkService';
 import { ReportQueueManager } from '../src/storage/reportQueue';
 import { setStorageAdapterForTesting, IStorageAdapter } from '../src/storage/storageAdapter';
 import { ReportCreateRequest } from '../src/types/reports';
+import { reportService } from '../src/services/reportService';
 
 class MockTestStorage implements IStorageAdapter {
   private memory = new Map<string, string>();
@@ -23,6 +24,7 @@ class MockTestStorage implements IStorageAdapter {
 export async function runNetworkServiceTests() {
   console.log('\n--- Running NetworkService & Sync Tests ---');
   setStorageAdapterForTesting(new MockTestStorage());
+  reportService.useMock();
 
   // 1. Initial status
   NetworkService.setOnline(true);
