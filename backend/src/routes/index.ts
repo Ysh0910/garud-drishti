@@ -13,21 +13,25 @@ export { healthRouter };
 
 import reportsRouter from './reports';
 
+import { assetsRouter, roadsRouter, villagesRouter } from './exposure';
+
 // Mount Risk API (/api/v1/risk)
 router.use('/risk', riskRouter);
 
 // Mount Citizen Reports API (/api/v1/reports)
 router.use('/reports', reportsRouter);
 
+// Mount Exposure APIs (/api/v1/assets, /api/v1/roads, /api/v1/villages)
+router.use('/assets', assetsRouter);
+router.use('/roads', roadsRouter);
+router.use('/villages', villagesRouter);
+
 // Future sub-routers (uncomment as phases are implemented):
 // import alertsRouter from './alerts';
-// import exposureRouter from './exposure';
 // import dashboardRouter from './dashboard';
 
 // router.use('/alerts', alertsRouter);
-// router.use('/roads', exposureRouter);
-// router.use('/villages', exposureRouter);
-// router.use('/assets', exposureRouter);
 // router.use('/dashboard', dashboardRouter);
+
 
 export default router;
