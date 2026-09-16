@@ -11,20 +11,33 @@ const router = Router();
 
 export { healthRouter };
 
+import reportsRouter from './reports';
+import { assetsRouter, roadsRouter, villagesRouter } from './exposure';
+import prioritizationRouter from './prioritization';
+import alertsRouter from './alerts';
+import dashboardRouter from './dashboard';
+
 // Mount Risk API (/api/v1/risk)
 router.use('/risk', riskRouter);
 
-// Future sub-routers (uncomment as phases are implemented):
-// import reportsRouter from './reports';
-// import alertsRouter from './alerts';
-// import exposureRouter from './exposure';
-// import dashboardRouter from './dashboard';
+// Mount Citizen Reports API (/api/v1/reports)
+router.use('/reports', reportsRouter);
 
-// router.use('/reports', reportsRouter);
-// router.use('/alerts', alertsRouter);
-// router.use('/roads', exposureRouter);
-// router.use('/villages', exposureRouter);
-// router.use('/assets', exposureRouter);
-// router.use('/dashboard', dashboardRouter);
+// Mount Exposure APIs (/api/v1/assets, /api/v1/roads, /api/v1/villages)
+router.use('/assets', assetsRouter);
+router.use('/roads', roadsRouter);
+router.use('/villages', villagesRouter);
+
+// Mount Response Prioritisation API (/api/v1/prioritization)
+router.use('/prioritization', prioritizationRouter);
+
+// Mount Alerts API (/api/v1/alerts)
+router.use('/alerts', alertsRouter);
+
+// Mount Dashboard API (/api/v1/dashboard)
+router.use('/dashboard', dashboardRouter);
 
 export default router;
+
+
+

@@ -88,5 +88,10 @@ export const validationError = (message: string, details?: unknown): ValidationE
 export const internalError = (message = 'An unexpected error occurred.'): InternalError =>
   new InternalError(message);
 
+export const conflict = (message = 'Resource conflict.', details?: unknown): ConflictError =>
+  new ConflictError(message, details);
+
 export const serviceUnavailable = (message: string): ServiceUnavailableError =>
   new ServiceUnavailableError(message);
+
+
