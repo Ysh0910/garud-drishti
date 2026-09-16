@@ -12,8 +12,8 @@ const router = Router();
 export { healthRouter };
 
 import reportsRouter from './reports';
-
 import { assetsRouter, roadsRouter, villagesRouter } from './exposure';
+import prioritizationRouter from './prioritization';
 
 // Mount Risk API (/api/v1/risk)
 router.use('/risk', riskRouter);
@@ -26,6 +26,9 @@ router.use('/assets', assetsRouter);
 router.use('/roads', roadsRouter);
 router.use('/villages', villagesRouter);
 
+// Mount Response Prioritisation API (/api/v1/prioritization)
+router.use('/prioritization', prioritizationRouter);
+
 // Future sub-routers (uncomment as phases are implemented):
 // import alertsRouter from './alerts';
 // import dashboardRouter from './dashboard';
@@ -33,5 +36,5 @@ router.use('/villages', villagesRouter);
 // router.use('/alerts', alertsRouter);
 // router.use('/dashboard', dashboardRouter);
 
-
 export default router;
+
