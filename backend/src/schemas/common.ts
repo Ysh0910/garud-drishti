@@ -88,8 +88,14 @@ export const paginationQuerySchema = z.object({
 });
 
 /**
+ * Validates UUID
+ */
+export const uuidSchema = z.string().uuid('Invalid UUID identifier');
+
+/**
  * Validates UUID param
  */
 export const uuidParamSchema = z.object({
-  id: z.string().uuid('Invalid UUID identifier'),
+  id: uuidSchema,
 });
+
