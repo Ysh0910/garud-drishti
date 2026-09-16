@@ -32,14 +32,40 @@ export class ApiClient {
     formData.append('captured_at', payload.captured_at);
     if (payload.severity) formData.append('severity', payload.severity);
 
-    if (payload.photo) {
-      const photoFile = {
-        uri: payload.photo.uri,
-        name: payload.photo.name || `hazard_${Date.now()}.jpg`,
-        type: payload.photo.type || 'image/jpeg',
-      };
-      // In React Native FormData accepts an object for files
-      formData.append('photo', photoFile as unknown as Blob);
+    if (payload.photo && payload.photo.uri) {
+      const photoName = payload.photo.name || `hazard_${Date.now()}.jpg`;
+      const photoType = payload.photo.type || 'image/jpeg';
+
+      if (typeof window !== 'undefined' && payload.photo.uri.startsWith('data:')) {
+        try {
+          const byteString = atob(payload.photo.uri.split(',')[1]);
+          const ab = new ArrayBuffer(byteString.length);
+          const ia = new Uint8Array(ab);
+          for (let i = 0; i < byteString.length; i++) {
+            ia[i] = byteString.charCodeAt(i);
+          }
+          const blob = new Blob([ab], { type: photoType });
+          formData.append('photo', blob, photoName);
+        } catch (e) {
+          console.warn('[ApiClient] Failed to convert base64 to Blob, sending as object:', e);
+          formData.append('photo', payload.photo.uri);
+        }
+      } else if (typeof window !== 'undefined' && payload.photo.uri.startsWith('blob:')) {
+        try {
+          const res = await fetch(payload.photo.uri);
+          const blob = await res.blob();
+          formData.append('photo', blob, photoName);
+        } catch (e) {
+          console.warn('[ApiClient] Failed to fetch blob URI:', e);
+        }
+      } else {
+        const photoFile = {
+          uri: payload.photo.uri,
+          name: photoName,
+          type: photoType,
+        };
+        formData.append('photo', photoFile as unknown as Blob);
+      }
     }
 
     const response = await fetch(url, {

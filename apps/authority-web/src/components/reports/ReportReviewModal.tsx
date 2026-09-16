@@ -85,15 +85,24 @@ export default function ReportReviewModal() {
 
         <div style={{ display: 'grid', gridTemplateColumns: '368px minmax(0,1fr)', gap: 1, background: 'var(--hairline-soft)' }}>
           <div style={{ background: 'var(--panel-bg)', padding: 20, display: 'flex', flexDirection: 'column', gap: 12 }}>
-            <div className="thumb-photo" style={{ height: 286, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: 10 }}>
-              <div style={{ alignSelf: 'flex-start', background: 'rgba(252,251,247,.92)', border: '1px solid var(--border-mid)', padding: '4px 7px' }} className="mono">
+            <div className="thumb-photo" style={{ height: 286, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: 10, position: 'relative', overflow: 'hidden' }}>
+              {report.media_url ? (
+                <img
+                  src={report.media_url.startsWith('http') || report.media_url.startsWith('data:') ? report.media_url : `http://localhost:8000${report.media_url}`}
+                  alt="Citizen Field Evidence"
+                  style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+                />
+              ) : null}
+              <div style={{ position: 'relative', zIndex: 2, alignSelf: 'flex-start', background: 'rgba(252,251,247,.92)', border: '1px solid var(--border-mid)', padding: '4px 7px' }} className="mono">
                 <span style={{ fontSize: 11, color: 'var(--ink-muted)' }}>SUBMITTED PHOTO 1 / 1</span>
               </div>
-              <div className="mono" style={{ fontSize: 11, lineHeight: 1.5, color: 'var(--ink-muted)' }}>
-                DROP CITIZEN PHOTO HERE
-                <br />
-                EXIF {report.time_label} · 3024 × 4032
-              </div>
+              {!report.media_url ? (
+                <div className="mono" style={{ fontSize: 11, lineHeight: 1.5, color: 'var(--ink-muted)' }}>
+                  CITIZEN PHOTO EVIDENCE
+                  <br />
+                  EXIF {report.time_label} · Captured on-device
+                </div>
+              ) : null}
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 7, paddingTop: 6, borderTop: '1px solid var(--hairline-soft)' }}>
               <div className="mono" style={{ fontSize: 11, letterSpacing: '0.12em', color: 'var(--ink-muted)' }}>

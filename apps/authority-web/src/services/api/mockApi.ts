@@ -3,9 +3,10 @@ import { DASHBOARD_SUMMARY } from '../../mocks/dashboard';
 import { CITIZEN_REPORTS } from '../../mocks/reports';
 import { scoreToRiskLevel } from '../../mocks/riskGrid';
 import { SELECTED_ZONE_DETAIL, ZONE_SUMMARIES } from '../../mocks/zones';
+import { RISK_GRID } from '../../mocks/riskGrid';
 import type { AlertRow, CitizenReportRow, ForecastEntry, ZoneDetail, ZoneSummary } from '../../types/zone';
 import type { Api } from './index';
-import type { DashboardSummaryDto, PrioritizationInputDto, PrioritizationResultDto } from './types';
+import type { DashboardSummaryDto, PrioritizationInputDto, PrioritizationResultDto, RiskGridResponseDto } from './types';
 import { calculateResponsePriority } from './prioritization';
 
 /** Small, deterministic network-latency simulation so loading states are actually exercised in the UI. */
@@ -50,6 +51,19 @@ function buildFallbackForecasts(summary: ZoneSummary): ForecastEntry[] {
 export const mockApi: Api = {
   async getDashboardSummary(): Promise<DashboardSummaryDto> {
     return delay(DASHBOARD_SUMMARY);
+  },
+
+  async getRiskGrid(): Promise<RiskGridResponseDto> {
+    return delay({
+      type: 'FeatureCollection',
+      features: (RISK_GRID.features as any) || [],
+      meta: {
+        horizon: 'current',
+        generated_at: new Date().toISOString(),
+        total_cells: RISK_GRID.features.length,
+        model_version: 'dynamic_xgb_v1',
+      },
+    });
   },
 
   async getZoneSummaries(): Promise<ZoneSummary[]> {

@@ -103,6 +103,7 @@ export interface CitizenReportRow {
   description: string;
   gps_label: string;
   submitted_label: string;
+  media_url?: string | null;
 }
 
 export interface AlertDecisionEvent {

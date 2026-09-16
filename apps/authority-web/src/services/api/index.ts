@@ -1,5 +1,5 @@
 import type { AlertRow, CitizenReportRow, ZoneDetail, ZoneSummary } from '../../types/zone';
-import type { DashboardSummaryDto, PrioritizationInputDto, PrioritizationResultDto, ReportVerifyAction } from './types';
+import type { DashboardSummaryDto, PrioritizationInputDto, PrioritizationResultDto, ReportVerifyAction, RiskGridResponseDto } from './types';
 
 /**
  * The one boundary components are allowed to depend on for server data.
@@ -9,6 +9,7 @@ import type { DashboardSummaryDto, PrioritizationInputDto, PrioritizationResultD
  */
 export interface Api {
   getDashboardSummary(): Promise<DashboardSummaryDto>;
+  getRiskGrid(bbox?: string): Promise<RiskGridResponseDto>;
   getZoneSummaries(): Promise<ZoneSummary[]>;
   getZoneDetail(cellId: string): Promise<ZoneDetail>;
   getAlerts(): Promise<AlertRow[]>;

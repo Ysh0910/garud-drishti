@@ -28,6 +28,7 @@ import { ReportQueueManager } from '../storage/reportQueue';
 import { NetworkService } from '../services/networkService';
 import { generateUUID } from '../utils/id';
 import { COLORS, SPACING, RADIUS } from '../constants/theme';
+import { APP_CONFIG } from '../constants/config';
 
 type ReportScreenNavProp = StackNavigationProp<RootStackParamList, 'ReportHazard'>;
 type ReportScreenRouteProp = RouteProp<RootStackParamList, 'ReportHazard'>;
@@ -36,9 +37,9 @@ export function ReportHazardScreen(): React.JSX.Element {
   const navigation = useNavigation<ReportScreenNavProp>();
   const route = useRoute<ReportScreenRouteProp>();
 
-  // Form states
-  const [category, setCategory] = useState<ReportCategory | null>(
-    route.params?.preselectedCategory || null
+  // Form states - default to ROCKFALL for immediate usability
+  const [category, setCategory] = useState<ReportCategory>(
+    route.params?.preselectedCategory || 'ROCKFALL'
   );
   const [description, setDescription] = useState('');
   const [severity, setSeverity] = useState<ReportSeverity>('MEDIUM');
@@ -51,12 +52,25 @@ export function ReportHazardScreen(): React.JSX.Element {
   // Submission state
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Fetch initial GPS
+  // Fetch initial GPS with instant fallback
   const acquireLocation = useCallback(async () => {
     setIsLocating(true);
     try {
       const res = await LocationService.getCurrentLocation();
       setLocation(res);
+    } catch {
+      const fallbackArea = LocationService.getRegionalAreaDetails(
+        APP_CONFIG.defaultLocation.latitude,
+        APP_CONFIG.defaultLocation.longitude,
+      );
+      setLocation({
+        success: true,
+        latitude: APP_CONFIG.defaultLocation.latitude,
+        longitude: APP_CONFIG.defaultLocation.longitude,
+        timestamp: new Date().toISOString(),
+        isMockFallback: true,
+        areaDetails: fallbackArea,
+      });
     } finally {
       setIsLocating(false);
     }
@@ -79,55 +93,50 @@ export function ReportHazardScreen(): React.JSX.Element {
   }, []);
 
   const handleSubmit = async () => {
-    if (!category) {
-      Alert.alert('Required Field', 'Please select an incident category.');
-      return;
-    }
-
-    if (!location) {
-      Alert.alert('Location Required', 'Acquiring GPS location. Please wait a moment.');
-      return;
-    }
+    const lat = location?.latitude || APP_CONFIG.defaultLocation.latitude;
+    const lon = location?.longitude || APP_CONFIG.defaultLocation.longitude;
+    const accuracy = location?.accuracy_m || APP_CONFIG.defaultLocation.accuracy_m;
 
     setIsSubmitting(true);
-
     const clientReportId = generateUUID();
     const capturedAt = new Date().toISOString();
 
     const payload: ReportCreateRequest = {
       client_report_id: clientReportId,
-      category,
+      category: category || 'ROCKFALL',
       description: description.trim() || undefined,
-      latitude: location.latitude,
-      longitude: location.longitude,
-      location_accuracy_m: location.accuracy_m,
+      latitude: lat,
+      longitude: lon,
+      location_accuracy_m: accuracy,
       captured_at: capturedAt,
       severity,
       photo: photo || undefined,
     };
 
+    console.log('[ReportHazardScreen] Submitting observation to backend:', payload);
+
     const isOnline = NetworkService.getStatus();
 
     if (!isOnline) {
-      // Offline mode: Enqueue to local storage immediately
+      console.log('[ReportHazardScreen] Network offline, enqueuing locally...');
       await ReportQueueManager.enqueue(payload);
-
       setIsSubmitting(false);
       navigation.replace('ReportConfirmation', {
         reportId: `QUEUED-${clientReportId.substring(0, 8)}`,
         clientReportId,
         capturedAt,
-        category,
-        latitude: location.latitude,
-        longitude: location.longitude,
+        category: payload.category,
+        latitude: lat,
+        longitude: lon,
         isOfflineQueued: true,
       });
       return;
     }
 
-    // Online mode: Submit to service
     try {
+      console.log('[ReportHazardScreen] Sending HTTP POST to backend...');
       const response = await reportService.submitReport(payload);
+      console.log('[ReportHazardScreen] Received backend confirmation:', response);
       setIsSubmitting(false);
 
       navigation.replace('ReportConfirmation', {
@@ -139,18 +148,18 @@ export function ReportHazardScreen(): React.JSX.Element {
         longitude: response.longitude,
         isOfflineQueued: false,
       });
-    } catch {
-      // Network failed mid-upload: Enqueue for background retry
+    } catch (err) {
+      console.warn('[ReportHazardScreen] Direct upload failed, queuing for retry:', err);
       await ReportQueueManager.enqueue(payload);
-
       setIsSubmitting(false);
+
       navigation.replace('ReportConfirmation', {
         reportId: `QUEUED-${clientReportId.substring(0, 8)}`,
         clientReportId,
         capturedAt,
-        category,
-        latitude: location.latitude,
-        longitude: location.longitude,
+        category: payload.category,
+        latitude: lat,
+        longitude: lon,
         isOfflineQueued: true,
       });
     }

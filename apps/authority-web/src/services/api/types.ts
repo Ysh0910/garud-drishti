@@ -94,6 +94,7 @@ export interface ReportDto {
   captured_at: string;
   submitted_at: string;
   severity: 'LOW' | 'MEDIUM' | 'HIGH' | null;
+  media_url?: string | null;
   nearest_cell_id: string | null;
   verified_by: string | null;
   verified_at: string | null;

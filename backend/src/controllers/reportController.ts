@@ -4,6 +4,9 @@ import { ReportFilter } from '../repositories/reportRepository';
 import { ReportCategory, ReportStatus } from '../types';
 import { BoundingBox } from '../repositories/geo';
 
+import fs from 'fs';
+import path from 'path';
+
 export class ReportController {
   /**
    * POST /api/v1/reports
@@ -14,6 +17,20 @@ export class ReportController {
       let mediaUrl = req.body.media_url || null;
       if (req.file) {
         mediaUrl = `/uploads/${req.file.filename}`;
+      } else if (typeof req.body.photo === 'string' && req.body.photo.startsWith('data:image')) {
+        try {
+          const uploadsDir = path.resolve(process.cwd(), 'uploads');
+          if (!fs.existsSync(uploadsDir)) fs.mkdirSync(uploadsDir, { recursive: true });
+          const base64Data = req.body.photo.split(';base64,').pop();
+          if (base64Data) {
+            const filename = `report_${Date.now()}_${Math.random().toString(36).substring(2, 8)}.jpg`;
+            const filePath = path.join(uploadsDir, filename);
+            fs.writeFileSync(filePath, base64Data, { encoding: 'base64' });
+            mediaUrl = `/uploads/${filename}`;
+          }
+        } catch (e) {
+          console.warn('[reportController] Could not write base64 image:', e);
+        }
       }
 
       const lat =

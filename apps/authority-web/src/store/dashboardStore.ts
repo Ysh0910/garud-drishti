@@ -76,8 +76,8 @@ interface DashboardState {
 }
 
 export const useDashboardStore = create<DashboardState>((set) => ({
-  selectedCellId: 'NER-ML-042',
-  selectedState: 'Meghalaya',
+  selectedCellId: 'CELL_NER_001',
+  selectedState: 'All States',
   selectedDistrict: 'All districts',
   horizon: 'current',
   scrub: 'now',

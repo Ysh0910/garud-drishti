@@ -117,10 +117,15 @@ export function scoreToRiskLevel(score: number): RiskZoneProperties['risk_level'
   return 'VERY_LOW';
 }
 
-export function buildDistrictAggregates(): FeatureCollection<Point, DistrictAggregateProperties> {
+export function buildDistrictAggregates(
+  customFeatures?: Feature<Polygon, RiskZoneProperties>[],
+): FeatureCollection<Point, DistrictAggregateProperties> {
+  const sourceFeatures = customFeatures && customFeatures.length > 0 ? customFeatures : RISK_GRID.features;
   const groups = new Map<string, Feature<Polygon, RiskZoneProperties>[]>();
-  for (const f of RISK_GRID.features) {
-    const key = `${f.properties.state}::${f.properties.district}`;
+  for (const f of sourceFeatures) {
+    const state = f.properties.state || (f.properties as any).state || 'Sikkim';
+    const district = f.properties.district || (f.properties as any).district || 'East Sikkim';
+    const key = `${state}::${district}`;
     const list = groups.get(key) ?? [];
     list.push(f);
     groups.set(key, list);
@@ -129,10 +134,16 @@ export function buildDistrictAggregates(): FeatureCollection<Point, DistrictAggr
   const features: Feature<Point, DistrictAggregateProperties>[] = [];
   for (const [key, members] of groups) {
     const [state, district] = key.split('::');
-    const avgScore = members.reduce((sum, m) => sum + m.properties.risk_score, 0) / members.length;
-    const centroidLon = members.reduce((sum, m) => sum + m.geometry.coordinates[0][0][0], 0) / members.length;
-    const centroidLat = members.reduce((sum, m) => sum + m.geometry.coordinates[0][0][1], 0) / members.length;
-    const top = [...members].sort((a, b) => b.properties.risk_score - a.properties.risk_score)[0];
+    const avgScore = members.reduce((sum, m) => sum + (m.properties.risk_score ?? 0), 0) / members.length;
+    const centroidLon = members.reduce((sum, m) => {
+      const r = m.geometry?.coordinates?.[0];
+      return sum + (r ? r[0][0] : 88.5);
+    }, 0) / members.length;
+    const centroidLat = members.reduce((sum, m) => {
+      const r = m.geometry?.coordinates?.[0];
+      return sum + (r ? r[0][1] : 27.3);
+    }, 0) / members.length;
+    const top = [...members].sort((a, b) => (b.properties.risk_score ?? 0) - (a.properties.risk_score ?? 0))[0];
 
     features.push({
       type: 'Feature',

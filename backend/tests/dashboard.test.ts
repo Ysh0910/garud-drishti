@@ -59,7 +59,7 @@ describe('Phase 11: Dashboard Aggregation (GET /api/v1/dashboard/summary)', () =
 
     // Ingest a new pending citizen report
     await reportService.createReport({
-      client_report_id: `rpt_dash_test_${Date.now()}`,
+      client_report_id: 'a0b1c2d3-e4f5-4a6b-8c7d-9e0f1a2b3c4d',
       latitude: 27.33,
       longitude: 88.61,
       captured_at: new Date().toISOString(),

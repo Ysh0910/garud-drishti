@@ -8,11 +8,23 @@ import { api, getPriorityRanking } from '../services/api';
 import type { PrioritizationInputDto, ReportVerifyAction } from '../services/api/types';
 
 export function useDashboardSummary() {
-  return useQuery({ queryKey: ['dashboard-summary'], queryFn: () => api.getDashboardSummary() });
+  return useQuery({
+    queryKey: ['dashboard-summary'],
+    queryFn: () => api.getDashboardSummary(),
+    refetchInterval: 3000,
+  });
+}
+
+export function useRiskGrid(bbox?: string) {
+  return useQuery({
+    queryKey: ['risk-grid', bbox],
+    queryFn: () => api.getRiskGrid(bbox),
+    refetchInterval: 5000,
+  });
 }
 
 export function useZoneSummaries() {
-  return useQuery({ queryKey: ['zone-summaries'], queryFn: () => api.getZoneSummaries() });
+  return useQuery({ queryKey: ['zone-summaries'], queryFn: () => api.getZoneSummaries(), refetchInterval: 10000 });
 }
 
 export function useZoneDetail(cellId: string | null) {
@@ -24,7 +36,11 @@ export function useZoneDetail(cellId: string | null) {
 }
 
 export function useAlerts() {
-  return useQuery({ queryKey: ['alerts'], queryFn: () => api.getAlerts() });
+  return useQuery({
+    queryKey: ['alerts'],
+    queryFn: () => api.getAlerts(),
+    refetchInterval: 3000,
+  });
 }
 
 export function useApproveAlert() {
@@ -46,7 +62,11 @@ export function useResolveAlert() {
 }
 
 export function useReports() {
-  return useQuery({ queryKey: ['reports'], queryFn: () => api.getReports() });
+  return useQuery({
+    queryKey: ['reports'],
+    queryFn: () => api.getReports(),
+    refetchInterval: 3000,
+  });
 }
 
 export function useVerifyReport() {
