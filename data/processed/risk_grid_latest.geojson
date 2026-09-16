@@ -1,0 +1,1736 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "meta": {
+    "generated_at": "2026-09-16T12:35:05.802363+00:00",
+    "total_cells": 35,
+    "bbox": {
+      "min_lat": 27.0,
+      "max_lat": 28.0,
+      "min_lon": 88.0,
+      "max_lon": 89.5
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              87.875,
+              26.875
+            ],
+            [
+              88.125,
+              26.875
+            ],
+            [
+              88.125,
+              27.125
+            ],
+            [
+              87.875,
+              27.125
+            ],
+            [
+              87.875,
+              26.875
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2700_8800",
+        "latitude": 27.0,
+        "longitude": 88.0,
+        "state": "Sikkim",
+        "elevation_m": 1750.0,
+        "slope_deg": 28.5,
+        "base_susceptibility": 100,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 49.69,
+        "rainfall_72h_mm": 85.47,
+        "soil_moisture": 0.336,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              88.125,
+              26.875
+            ],
+            [
+              88.375,
+              26.875
+            ],
+            [
+              88.375,
+              27.125
+            ],
+            [
+              88.125,
+              27.125
+            ],
+            [
+              88.125,
+              26.875
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2700_8825",
+        "latitude": 27.0,
+        "longitude": 88.25,
+        "state": "Sikkim",
+        "elevation_m": 1800.0,
+        "slope_deg": 28.5,
+        "base_susceptibility": 100,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 49.69,
+        "rainfall_72h_mm": 85.47,
+        "soil_moisture": 0.339,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              88.375,
+              26.875
+            ],
+            [
+              88.625,
+              26.875
+            ],
+            [
+              88.625,
+              27.125
+            ],
+            [
+              88.375,
+              27.125
+            ],
+            [
+              88.375,
+              26.875
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2700_8850",
+        "latitude": 27.0,
+        "longitude": 88.5,
+        "state": "Sikkim",
+        "elevation_m": 1850.0,
+        "slope_deg": 28.5,
+        "base_susceptibility": 99,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 49.69,
+        "rainfall_72h_mm": 85.47,
+        "soil_moisture": 0.342,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              88.625,
+              26.875
+            ],
+            [
+              88.875,
+              26.875
+            ],
+            [
+              88.875,
+              27.125
+            ],
+            [
+              88.625,
+              27.125
+            ],
+            [
+              88.625,
+              26.875
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2700_8875",
+        "latitude": 27.0,
+        "longitude": 88.75,
+        "state": "Sikkim",
+        "elevation_m": 1900.0,
+        "slope_deg": 28.5,
+        "base_susceptibility": 100,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 49.69,
+        "rainfall_72h_mm": 85.47,
+        "soil_moisture": 0.345,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              88.875,
+              26.875
+            ],
+            [
+              89.125,
+              26.875
+            ],
+            [
+              89.125,
+              27.125
+            ],
+            [
+              88.875,
+              27.125
+            ],
+            [
+              88.875,
+              26.875
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2700_8900",
+        "latitude": 27.0,
+        "longitude": 89.0,
+        "state": "Sikkim",
+        "elevation_m": 1950.0,
+        "slope_deg": 28.5,
+        "base_susceptibility": 100,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 49.69,
+        "rainfall_72h_mm": 85.47,
+        "soil_moisture": 0.348,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              89.125,
+              26.875
+            ],
+            [
+              89.375,
+              26.875
+            ],
+            [
+              89.375,
+              27.125
+            ],
+            [
+              89.125,
+              27.125
+            ],
+            [
+              89.125,
+              26.875
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2700_8925",
+        "latitude": 27.0,
+        "longitude": 89.25,
+        "state": "Sikkim",
+        "elevation_m": 2000.0,
+        "slope_deg": 28.5,
+        "base_susceptibility": 100,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 49.69,
+        "rainfall_72h_mm": 85.47,
+        "soil_moisture": 0.352,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              89.375,
+              26.875
+            ],
+            [
+              89.625,
+              26.875
+            ],
+            [
+              89.625,
+              27.125
+            ],
+            [
+              89.375,
+              27.125
+            ],
+            [
+              89.375,
+              26.875
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2700_8950",
+        "latitude": 27.0,
+        "longitude": 89.5,
+        "state": "Sikkim",
+        "elevation_m": 2050.0,
+        "slope_deg": 28.5,
+        "base_susceptibility": 100,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 49.69,
+        "rainfall_72h_mm": 85.47,
+        "soil_moisture": 0.355,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              87.875,
+              27.125
+            ],
+            [
+              88.125,
+              27.125
+            ],
+            [
+              88.125,
+              27.375
+            ],
+            [
+              87.875,
+              27.375
+            ],
+            [
+              87.875,
+              27.125
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2725_8800",
+        "latitude": 27.25,
+        "longitude": 88.0,
+        "state": "Sikkim",
+        "elevation_m": 1912.5,
+        "slope_deg": 29.5,
+        "base_susceptibility": 99,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 51.24,
+        "rainfall_72h_mm": 88.13,
+        "soil_moisture": 0.34,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              88.125,
+              27.125
+            ],
+            [
+              88.375,
+              27.125
+            ],
+            [
+              88.375,
+              27.375
+            ],
+            [
+              88.125,
+              27.375
+            ],
+            [
+              88.125,
+              27.125
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2725_8825",
+        "latitude": 27.25,
+        "longitude": 88.25,
+        "state": "Sikkim",
+        "elevation_m": 1962.5,
+        "slope_deg": 29.5,
+        "base_susceptibility": 100,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 51.24,
+        "rainfall_72h_mm": 88.13,
+        "soil_moisture": 0.343,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              88.375,
+              27.125
+            ],
+            [
+              88.625,
+              27.125
+            ],
+            [
+              88.625,
+              27.375
+            ],
+            [
+              88.375,
+              27.375
+            ],
+            [
+              88.375,
+              27.125
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2725_8850",
+        "latitude": 27.25,
+        "longitude": 88.5,
+        "state": "Sikkim",
+        "elevation_m": 2012.5,
+        "slope_deg": 29.5,
+        "base_susceptibility": 100,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 51.24,
+        "rainfall_72h_mm": 88.13,
+        "soil_moisture": 0.346,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              88.625,
+              27.125
+            ],
+            [
+              88.875,
+              27.125
+            ],
+            [
+              88.875,
+              27.375
+            ],
+            [
+              88.625,
+              27.375
+            ],
+            [
+              88.625,
+              27.125
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2725_8875",
+        "latitude": 27.25,
+        "longitude": 88.75,
+        "state": "Sikkim",
+        "elevation_m": 2062.5,
+        "slope_deg": 29.5,
+        "base_susceptibility": 100,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 51.24,
+        "rainfall_72h_mm": 88.13,
+        "soil_moisture": 0.349,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              88.875,
+              27.125
+            ],
+            [
+              89.125,
+              27.125
+            ],
+            [
+              89.125,
+              27.375
+            ],
+            [
+              88.875,
+              27.375
+            ],
+            [
+              88.875,
+              27.125
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2725_8900",
+        "latitude": 27.25,
+        "longitude": 89.0,
+        "state": "Sikkim",
+        "elevation_m": 2112.5,
+        "slope_deg": 29.5,
+        "base_susceptibility": 100,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 51.24,
+        "rainfall_72h_mm": 88.13,
+        "soil_moisture": 0.352,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              89.125,
+              27.125
+            ],
+            [
+              89.375,
+              27.125
+            ],
+            [
+              89.375,
+              27.375
+            ],
+            [
+              89.125,
+              27.375
+            ],
+            [
+              89.125,
+              27.125
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2725_8925",
+        "latitude": 27.25,
+        "longitude": 89.25,
+        "state": "Sikkim",
+        "elevation_m": 2162.5,
+        "slope_deg": 29.5,
+        "base_susceptibility": 100,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 51.24,
+        "rainfall_72h_mm": 88.13,
+        "soil_moisture": 0.356,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              89.375,
+              27.125
+            ],
+            [
+              89.625,
+              27.125
+            ],
+            [
+              89.625,
+              27.375
+            ],
+            [
+              89.375,
+              27.375
+            ],
+            [
+              89.375,
+              27.125
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2725_8950",
+        "latitude": 27.25,
+        "longitude": 89.5,
+        "state": "Sikkim",
+        "elevation_m": 2212.5,
+        "slope_deg": 29.5,
+        "base_susceptibility": 100,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 51.24,
+        "rainfall_72h_mm": 88.13,
+        "soil_moisture": 0.359,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              87.875,
+              27.375
+            ],
+            [
+              88.125,
+              27.375
+            ],
+            [
+              88.125,
+              27.625
+            ],
+            [
+              87.875,
+              27.625
+            ],
+            [
+              87.875,
+              27.375
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2750_8800",
+        "latitude": 27.5,
+        "longitude": 88.0,
+        "state": "Sikkim",
+        "elevation_m": 2075.0,
+        "slope_deg": 30.5,
+        "base_susceptibility": 100,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 52.68,
+        "rainfall_72h_mm": 90.61,
+        "soil_moisture": 0.344,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              88.125,
+              27.375
+            ],
+            [
+              88.375,
+              27.375
+            ],
+            [
+              88.375,
+              27.625
+            ],
+            [
+              88.125,
+              27.625
+            ],
+            [
+              88.125,
+              27.375
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2750_8825",
+        "latitude": 27.5,
+        "longitude": 88.25,
+        "state": "Sikkim",
+        "elevation_m": 2125.0,
+        "slope_deg": 30.5,
+        "base_susceptibility": 100,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 52.68,
+        "rainfall_72h_mm": 90.61,
+        "soil_moisture": 0.346,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              88.375,
+              27.375
+            ],
+            [
+              88.625,
+              27.375
+            ],
+            [
+              88.625,
+              27.625
+            ],
+            [
+              88.375,
+              27.625
+            ],
+            [
+              88.375,
+              27.375
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2750_8850",
+        "latitude": 27.5,
+        "longitude": 88.5,
+        "state": "Sikkim",
+        "elevation_m": 2175.0,
+        "slope_deg": 30.5,
+        "base_susceptibility": 100,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 52.68,
+        "rainfall_72h_mm": 90.61,
+        "soil_moisture": 0.349,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              88.625,
+              27.375
+            ],
+            [
+              88.875,
+              27.375
+            ],
+            [
+              88.875,
+              27.625
+            ],
+            [
+              88.625,
+              27.625
+            ],
+            [
+              88.625,
+              27.375
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2750_8875",
+        "latitude": 27.5,
+        "longitude": 88.75,
+        "state": "Sikkim",
+        "elevation_m": 2225.0,
+        "slope_deg": 30.5,
+        "base_susceptibility": 100,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 52.68,
+        "rainfall_72h_mm": 90.61,
+        "soil_moisture": 0.352,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              88.875,
+              27.375
+            ],
+            [
+              89.125,
+              27.375
+            ],
+            [
+              89.125,
+              27.625
+            ],
+            [
+              88.875,
+              27.625
+            ],
+            [
+              88.875,
+              27.375
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2750_8900",
+        "latitude": 27.5,
+        "longitude": 89.0,
+        "state": "Sikkim",
+        "elevation_m": 2275.0,
+        "slope_deg": 30.5,
+        "base_susceptibility": 100,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 52.68,
+        "rainfall_72h_mm": 90.61,
+        "soil_moisture": 0.355,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              89.125,
+              27.375
+            ],
+            [
+              89.375,
+              27.375
+            ],
+            [
+              89.375,
+              27.625
+            ],
+            [
+              89.125,
+              27.625
+            ],
+            [
+              89.125,
+              27.375
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2750_8925",
+        "latitude": 27.5,
+        "longitude": 89.25,
+        "state": "Sikkim",
+        "elevation_m": 2325.0,
+        "slope_deg": 30.5,
+        "base_susceptibility": 99,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 52.68,
+        "rainfall_72h_mm": 90.61,
+        "soil_moisture": 0.359,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              89.375,
+              27.375
+            ],
+            [
+              89.625,
+              27.375
+            ],
+            [
+              89.625,
+              27.625
+            ],
+            [
+              89.375,
+              27.625
+            ],
+            [
+              89.375,
+              27.375
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2750_8950",
+        "latitude": 27.5,
+        "longitude": 89.5,
+        "state": "Sikkim",
+        "elevation_m": 2375.0,
+        "slope_deg": 30.5,
+        "base_susceptibility": 100,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 52.68,
+        "rainfall_72h_mm": 90.61,
+        "soil_moisture": 0.363,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              87.875,
+              27.625
+            ],
+            [
+              88.125,
+              27.625
+            ],
+            [
+              88.125,
+              27.875
+            ],
+            [
+              87.875,
+              27.875
+            ],
+            [
+              87.875,
+              27.625
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2775_8800",
+        "latitude": 27.75,
+        "longitude": 88.0,
+        "state": "Sikkim",
+        "elevation_m": 2237.5,
+        "slope_deg": 31.5,
+        "base_susceptibility": 100,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 54.01,
+        "rainfall_72h_mm": 92.9,
+        "soil_moisture": 0.346,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              88.125,
+              27.625
+            ],
+            [
+              88.375,
+              27.625
+            ],
+            [
+              88.375,
+              27.875
+            ],
+            [
+              88.125,
+              27.875
+            ],
+            [
+              88.125,
+              27.625
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2775_8825",
+        "latitude": 27.75,
+        "longitude": 88.25,
+        "state": "Sikkim",
+        "elevation_m": 2287.5,
+        "slope_deg": 31.5,
+        "base_susceptibility": 100,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 54.01,
+        "rainfall_72h_mm": 92.9,
+        "soil_moisture": 0.348,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              88.375,
+              27.625
+            ],
+            [
+              88.625,
+              27.625
+            ],
+            [
+              88.625,
+              27.875
+            ],
+            [
+              88.375,
+              27.875
+            ],
+            [
+              88.375,
+              27.625
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2775_8850",
+        "latitude": 27.75,
+        "longitude": 88.5,
+        "state": "Sikkim",
+        "elevation_m": 2337.5,
+        "slope_deg": 31.5,
+        "base_susceptibility": 100,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 54.01,
+        "rainfall_72h_mm": 92.9,
+        "soil_moisture": 0.351,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              88.625,
+              27.625
+            ],
+            [
+              88.875,
+              27.625
+            ],
+            [
+              88.875,
+              27.875
+            ],
+            [
+              88.625,
+              27.875
+            ],
+            [
+              88.625,
+              27.625
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2775_8875",
+        "latitude": 27.75,
+        "longitude": 88.75,
+        "state": "Sikkim",
+        "elevation_m": 2387.5,
+        "slope_deg": 31.5,
+        "base_susceptibility": 99,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 54.01,
+        "rainfall_72h_mm": 92.9,
+        "soil_moisture": 0.354,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              88.875,
+              27.625
+            ],
+            [
+              89.125,
+              27.625
+            ],
+            [
+              89.125,
+              27.875
+            ],
+            [
+              88.875,
+              27.875
+            ],
+            [
+              88.875,
+              27.625
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2775_8900",
+        "latitude": 27.75,
+        "longitude": 89.0,
+        "state": "Sikkim",
+        "elevation_m": 2437.5,
+        "slope_deg": 31.5,
+        "base_susceptibility": 100,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 54.01,
+        "rainfall_72h_mm": 92.9,
+        "soil_moisture": 0.358,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              89.125,
+              27.625
+            ],
+            [
+              89.375,
+              27.625
+            ],
+            [
+              89.375,
+              27.875
+            ],
+            [
+              89.125,
+              27.875
+            ],
+            [
+              89.125,
+              27.625
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2775_8925",
+        "latitude": 27.75,
+        "longitude": 89.25,
+        "state": "Sikkim",
+        "elevation_m": 2487.5,
+        "slope_deg": 31.5,
+        "base_susceptibility": 100,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 54.01,
+        "rainfall_72h_mm": 92.9,
+        "soil_moisture": 0.361,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              89.375,
+              27.625
+            ],
+            [
+              89.625,
+              27.625
+            ],
+            [
+              89.625,
+              27.875
+            ],
+            [
+              89.375,
+              27.875
+            ],
+            [
+              89.375,
+              27.625
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2775_8950",
+        "latitude": 27.75,
+        "longitude": 89.5,
+        "state": "Sikkim",
+        "elevation_m": 2537.5,
+        "slope_deg": 31.5,
+        "base_susceptibility": 100,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 54.01,
+        "rainfall_72h_mm": 92.9,
+        "soil_moisture": 0.365,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              87.875,
+              27.875
+            ],
+            [
+              88.125,
+              27.875
+            ],
+            [
+              88.125,
+              28.125
+            ],
+            [
+              87.875,
+              28.125
+            ],
+            [
+              87.875,
+              27.875
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2800_8800",
+        "latitude": 28.0,
+        "longitude": 88.0,
+        "state": "Sikkim",
+        "elevation_m": 2400.0,
+        "slope_deg": 32.5,
+        "base_susceptibility": 100,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 55.23,
+        "rainfall_72h_mm": 95.0,
+        "soil_moisture": 0.347,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              88.125,
+              27.875
+            ],
+            [
+              88.375,
+              27.875
+            ],
+            [
+              88.375,
+              28.125
+            ],
+            [
+              88.125,
+              28.125
+            ],
+            [
+              88.125,
+              27.875
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2800_8825",
+        "latitude": 28.0,
+        "longitude": 88.25,
+        "state": "Sikkim",
+        "elevation_m": 2450.0,
+        "slope_deg": 32.5,
+        "base_susceptibility": 99,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 55.23,
+        "rainfall_72h_mm": 95.0,
+        "soil_moisture": 0.35,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              88.375,
+              27.875
+            ],
+            [
+              88.625,
+              27.875
+            ],
+            [
+              88.625,
+              28.125
+            ],
+            [
+              88.375,
+              28.125
+            ],
+            [
+              88.375,
+              27.875
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2800_8850",
+        "latitude": 28.0,
+        "longitude": 88.5,
+        "state": "Sikkim",
+        "elevation_m": 2500.0,
+        "slope_deg": 32.5,
+        "base_susceptibility": 100,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 55.23,
+        "rainfall_72h_mm": 95.0,
+        "soil_moisture": 0.353,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              88.625,
+              27.875
+            ],
+            [
+              88.875,
+              27.875
+            ],
+            [
+              88.875,
+              28.125
+            ],
+            [
+              88.625,
+              28.125
+            ],
+            [
+              88.625,
+              27.875
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2800_8875",
+        "latitude": 28.0,
+        "longitude": 88.75,
+        "state": "Sikkim",
+        "elevation_m": 2550.0,
+        "slope_deg": 32.5,
+        "base_susceptibility": 100,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 55.23,
+        "rainfall_72h_mm": 95.0,
+        "soil_moisture": 0.356,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              88.875,
+              27.875
+            ],
+            [
+              89.125,
+              27.875
+            ],
+            [
+              89.125,
+              28.125
+            ],
+            [
+              88.875,
+              28.125
+            ],
+            [
+              88.875,
+              27.875
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2800_8900",
+        "latitude": 28.0,
+        "longitude": 89.0,
+        "state": "Sikkim",
+        "elevation_m": 2600.0,
+        "slope_deg": 32.5,
+        "base_susceptibility": 100,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 55.23,
+        "rainfall_72h_mm": 95.0,
+        "soil_moisture": 0.359,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              89.125,
+              27.875
+            ],
+            [
+              89.375,
+              27.875
+            ],
+            [
+              89.375,
+              28.125
+            ],
+            [
+              89.125,
+              28.125
+            ],
+            [
+              89.125,
+              27.875
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2800_8925",
+        "latitude": 28.0,
+        "longitude": 89.25,
+        "state": "Sikkim",
+        "elevation_m": 2650.0,
+        "slope_deg": 32.5,
+        "base_susceptibility": 100,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 55.23,
+        "rainfall_72h_mm": 95.0,
+        "soil_moisture": 0.363,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              89.375,
+              27.875
+            ],
+            [
+              89.625,
+              27.875
+            ],
+            [
+              89.625,
+              28.125
+            ],
+            [
+              89.375,
+              28.125
+            ],
+            [
+              89.375,
+              27.875
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "NER_CELL_2800_8950",
+        "latitude": 28.0,
+        "longitude": 89.5,
+        "state": "Sikkim",
+        "elevation_m": 2700.0,
+        "slope_deg": 32.5,
+        "base_susceptibility": 100,
+        "current_risk": 0,
+        "risk_level": "VERY_LOW",
+        "risk_24h": 1,
+        "risk_24h_level": "VERY_LOW",
+        "data_quality": "GOOD",
+        "rainfall_24h_mm": 55.23,
+        "rainfall_72h_mm": 95.0,
+        "soil_moisture": 0.367,
+        "model_version": "v1.0",
+        "updated_at": "2026-09-16T12:35:05.802363+00:00"
+      }
+    }
+  ]
+}
