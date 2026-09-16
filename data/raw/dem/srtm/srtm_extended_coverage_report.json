@@ -1,0 +1,365 @@
+{
+  "script": "extend_srtm_coverage.py",
+  "generated_at": "2026-09-15T11:58:27.745215Z",
+  "source": "Viewfinder Panoramas DEM3",
+  "source_url": "http://viewfinderpanoramas.org/dem3/",
+  "ner_bbox": [
+    20,
+    87,
+    32,
+    98
+  ],
+  "tiles_before": 192,
+  "packages": [
+    {
+      "package": "G45",
+      "lat_range": [
+        20,
+        30
+      ],
+      "lon_range": [
+        84,
+        90
+      ],
+      "status": "ALREADY_PRESENT",
+      "tiles_count": 24
+    },
+    {
+      "package": "G46",
+      "lat_range": [
+        20,
+        30
+      ],
+      "lon_range": [
+        90,
+        96
+      ],
+      "status": "ALREADY_PRESENT",
+      "tiles_count": 24
+    },
+    {
+      "package": "G47",
+      "lat_range": [
+        20,
+        30
+      ],
+      "lon_range": [
+        96,
+        102
+      ],
+      "status": "ALREADY_PRESENT",
+      "tiles_count": 24
+    },
+    {
+      "package": "H45",
+      "lat_range": [
+        28,
+        32
+      ],
+      "lon_range": [
+        84,
+        90
+      ],
+      "status": "DOWNLOADED",
+      "tiles_count": 24,
+      "new_tiles": [
+        "N28E084.hgt",
+        "N28E085.hgt",
+        "N28E086.hgt",
+        "N28E087.hgt",
+        "N28E088.hgt",
+        "N28E089.hgt",
+        "N29E084.hgt",
+        "N29E085.hgt",
+        "N29E086.hgt",
+        "N29E087.hgt",
+        "N29E088.hgt",
+        "N29E089.hgt",
+        "N30E084.hgt",
+        "N30E085.hgt",
+        "N30E086.hgt",
+        "N30E087.hgt",
+        "N30E088.hgt",
+        "N30E089.hgt",
+        "N31E084.hgt",
+        "N31E085.hgt",
+        "N31E086.hgt",
+        "N31E087.hgt",
+        "N31E088.hgt",
+        "N31E089.hgt"
+      ]
+    },
+    {
+      "package": "H46",
+      "lat_range": [
+        28,
+        32
+      ],
+      "lon_range": [
+        90,
+        96
+      ],
+      "status": "DOWNLOADED",
+      "tiles_count": 24,
+      "new_tiles": [
+        "N28E090.hgt",
+        "N28E091.hgt",
+        "N28E092.hgt",
+        "N28E093.hgt",
+        "N28E094.hgt",
+        "N28E095.hgt",
+        "N29E090.hgt",
+        "N29E091.hgt",
+        "N29E092.hgt",
+        "N29E093.hgt",
+        "N29E094.hgt",
+        "N29E095.hgt",
+        "N30E090.hgt",
+        "N30E091.hgt",
+        "N30E092.hgt",
+        "N30E093.hgt",
+        "N30E094.hgt",
+        "N30E095.hgt",
+        "N31E090.hgt",
+        "N31E091.hgt",
+        "N31E092.hgt",
+        "N31E093.hgt",
+        "N31E094.hgt",
+        "N31E095.hgt"
+      ]
+    },
+    {
+      "package": "H47",
+      "lat_range": [
+        28,
+        32
+      ],
+      "lon_range": [
+        96,
+        102
+      ],
+      "status": "DOWNLOADED",
+      "tiles_count": 24,
+      "new_tiles": [
+        "N28E096.hgt",
+        "N28E097.hgt",
+        "N28E098.hgt",
+        "N28E099.hgt",
+        "N28E100.hgt",
+        "N28E101.hgt",
+        "N29E096.hgt",
+        "N29E097.hgt",
+        "N29E098.hgt",
+        "N29E099.hgt",
+        "N29E100.hgt",
+        "N29E101.hgt",
+        "N30E096.hgt",
+        "N30E097.hgt",
+        "N30E098.hgt",
+        "N30E099.hgt",
+        "N30E100.hgt",
+        "N30E101.hgt",
+        "N31E096.hgt",
+        "N31E097.hgt",
+        "N31E098.hgt",
+        "N31E099.hgt",
+        "N31E100.hgt",
+        "N31E101.hgt"
+      ]
+    },
+    {
+      "package": "J45",
+      "lat_range": [
+        16,
+        24
+      ],
+      "lon_range": [
+        84,
+        90
+      ],
+      "status": "ALREADY_PRESENT",
+      "tiles_count": 24
+    },
+    {
+      "package": "J46",
+      "lat_range": [
+        16,
+        24
+      ],
+      "lon_range": [
+        90,
+        96
+      ],
+      "status": "ALREADY_PRESENT",
+      "tiles_count": 24
+    },
+    {
+      "package": "J47",
+      "lat_range": [
+        16,
+        24
+      ],
+      "lon_range": [
+        96,
+        102
+      ],
+      "status": "DOWNLOADED",
+      "tiles_count": 24,
+      "new_tiles": [
+        "N36E096.hgt",
+        "N36E097.hgt",
+        "N36E098.hgt",
+        "N36E099.hgt",
+        "N36E100.hgt",
+        "N36E101.hgt",
+        "N37E096.hgt",
+        "N37E097.hgt",
+        "N37E098.hgt",
+        "N37E099.hgt",
+        "N37E100.hgt",
+        "N37E101.hgt",
+        "N38E096.hgt",
+        "N38E097.hgt",
+        "N38E098.hgt",
+        "N38E099.hgt",
+        "N38E100.hgt",
+        "N38E101.hgt",
+        "N39E096.hgt",
+        "N39E097.hgt",
+        "N39E098.hgt",
+        "N39E099.hgt",
+        "N39E100.hgt",
+        "N39E101.hgt"
+      ]
+    }
+  ],
+  "tiles_added": [
+    "N28E084",
+    "N28E085",
+    "N28E086",
+    "N28E087",
+    "N28E088",
+    "N28E089",
+    "N29E084",
+    "N29E085",
+    "N29E086",
+    "N29E087",
+    "N29E088",
+    "N29E089",
+    "N30E084",
+    "N30E085",
+    "N30E086",
+    "N30E087",
+    "N30E088",
+    "N30E089",
+    "N31E084",
+    "N31E085",
+    "N31E086",
+    "N31E087",
+    "N31E088",
+    "N31E089",
+    "N28E090",
+    "N28E091",
+    "N28E092",
+    "N28E093",
+    "N28E094",
+    "N28E095",
+    "N29E090",
+    "N29E091",
+    "N29E092",
+    "N29E093",
+    "N29E094",
+    "N29E095",
+    "N30E090",
+    "N30E091",
+    "N30E092",
+    "N30E093",
+    "N30E094",
+    "N30E095",
+    "N31E090",
+    "N31E091",
+    "N31E092",
+    "N31E093",
+    "N31E094",
+    "N31E095",
+    "N28E096",
+    "N28E097",
+    "N28E098",
+    "N28E099",
+    "N28E100",
+    "N28E101",
+    "N29E096",
+    "N29E097",
+    "N29E098",
+    "N29E099",
+    "N29E100",
+    "N29E101",
+    "N30E096",
+    "N30E097",
+    "N30E098",
+    "N30E099",
+    "N30E100",
+    "N30E101",
+    "N31E096",
+    "N31E097",
+    "N31E098",
+    "N31E099",
+    "N31E100",
+    "N31E101",
+    "N36E096",
+    "N36E097",
+    "N36E098",
+    "N36E099",
+    "N36E100",
+    "N36E101",
+    "N37E096",
+    "N37E097",
+    "N37E098",
+    "N37E099",
+    "N37E100",
+    "N37E101",
+    "N38E096",
+    "N38E097",
+    "N38E098",
+    "N38E099",
+    "N38E100",
+    "N38E101",
+    "N39E096",
+    "N39E097",
+    "N39E098",
+    "N39E099",
+    "N39E100",
+    "N39E101"
+  ],
+  "status": "COMPLETE",
+  "tiles_after": 288,
+  "new_tiles_count": 96,
+  "coverage": {
+    "expected_ner_tiles": 132,
+    "covered": 88,
+    "missing_count": 44,
+    "missing_tiles": [
+      "N20E087",
+      "N20E088",
+      "N20E089",
+      "N20E090",
+      "N20E091",
+      "N20E092",
+      "N20E093",
+      "N20E094",
+      "N20E095",
+      "N20E096",
+      "N20E097",
+      "N21E087",
+      "N21E088",
+      "N21E089",
+      "N21E090",
+      "N21E091",
+      "N21E092",
+      "N21E093",
+      "N21E094",
+      "N21E095"
+    ],
+    "coverage_pct": 66.7
+  }
+}

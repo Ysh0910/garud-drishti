@@ -1,0 +1,54 @@
+import type { CitizenReportRow } from '../types/zone';
+
+/** SYNTHETIC DEMO DATA — citizen reports are evidence, not automatic alerts. */
+export const CITIZEN_REPORTS: CitizenReportRow[] = [
+  {
+    report_id: 'CR-2291',
+    title: 'Road crack widening · NH-6 km 41',
+    cell_id: 'NER-ML-042',
+    reported_severity: 'HIGH',
+    category: 'CRACK',
+    status: 'PENDING',
+    time_label: '14:18 IST',
+    description:
+      "Crack across the hill-side lane has widened since yesterday evening, roughly a hand's width now. Water is running out of the cut slope above it. Two houses sit directly below the road. Buses are still using the road.",
+    gps_label: '25.2702° N, 91.7323° E',
+    submitted_label: 'SUBMITTED 14:18 IST · ANON-CITIZEN · APP v1.2',
+  },
+  {
+    report_id: 'CR-2288',
+    title: 'Debris across culvert · Laitkynsew',
+    cell_id: 'NER-ML-042',
+    reported_severity: 'MEDIUM',
+    category: 'ROAD_BLOCKAGE',
+    status: 'PENDING',
+    time_label: '13:02 IST',
+    description: 'Debris and mud blocking the culvert near Laitkynsew junction after overnight rain.',
+    gps_label: '25.2611° N, 91.7286° E',
+    submitted_label: 'SUBMITTED 13:02 IST · ANON-CITIZEN · APP v1.2',
+  },
+  {
+    report_id: 'CR-2280',
+    title: 'Slope seepage behind school · Mawkdok',
+    cell_id: 'NER-ML-039',
+    reported_severity: 'LOW',
+    category: 'SEEPAGE',
+    status: 'VERIFIED',
+    time_label: '11:47 IST',
+    description: 'Steady water seepage observed on the slope behind the government school.',
+    gps_label: '25.2984° N, 91.7052° E',
+    submitted_label: 'SUBMITTED 11:47 IST · ANON-CITIZEN · APP v1.2',
+  },
+  {
+    report_id: 'CR-2274',
+    title: 'Duplicate of CR-2271 · same location',
+    cell_id: 'NER-MZ-118',
+    reported_severity: 'HIGH',
+    category: 'ROCKFALL',
+    status: 'REJECTED',
+    time_label: '10:21 IST',
+    description: 'Duplicate submission of an existing verified report at the same location.',
+    gps_label: '23.3041° N, 92.8395° E',
+    submitted_label: 'SUBMITTED 10:21 IST · ANON-CITIZEN · APP v1.2',
+  },
+];

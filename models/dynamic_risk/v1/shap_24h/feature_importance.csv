@@ -1,0 +1,13 @@
+feature,mean_abs_shap
+rainfall_72h_mm,2.7637484
+rainfall_24h_mm,2.48646
+base_susceptibility,1.5170937
+rainfall_7d_mm,1.1911231
+soil_moisture,0.78608394
+rainfall_12h_mm,0.62739176
+forecast_rain_48h_mm,0.4919459
+rainfall_3h_mm,0.1304319
+rainfall_1h_mm,0.12198794
+rainfall_6h_mm,0.105537325
+forecast_rain_24h_mm,0.048818447
+forecast_rain_6h_mm,0.027441816

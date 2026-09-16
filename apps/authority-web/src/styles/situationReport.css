@@ -1,0 +1,123 @@
+.sr-wrapper {
+  min-height: 100%;
+  background: var(--page-bg);
+  padding: 32px 0;
+}
+
+.sr-toolbar {
+  margin: 0 auto 16px;
+  width: 794px;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sr-page {
+  width: 794px;
+  max-width: 100%;
+  margin: 0 auto;
+  background: var(--panel-bg);
+}
+
+.sr-header {
+  padding: 30px 0 14px;
+}
+
+.sr-kpis {
+  margin: 18px 40px 0;
+}
+
+.sr-section-map {
+  margin: 20px 40px 0;
+}
+
+.sr-section-priority {
+  margin: 22px 40px 0;
+}
+
+.sr-section-split {
+  margin: 22px 40px 0;
+}
+
+.sr-footer {
+  margin: 24px 40px 0;
+  padding-top: 14px;
+}
+
+.sr-disclaimer {
+  margin: 18px 40px 0;
+  padding-bottom: 30px;
+}
+
+/*
+ * The report is meant to be a single A4 page (see the design's "printable
+ * one-pager" brief). @page pins the sheet size/margins and the rules below
+ * claw back the on-screen spacing that would otherwise push it to a 2nd page.
+ * Custom-property overrides win over inline styles that reference var(...),
+ * everything else needs !important to beat an inline style's specificity.
+ */
+@media print {
+  @page {
+    size: A4;
+    margin: 9mm;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .sr-wrapper {
+    padding: 0 !important;
+    background: #fff !important;
+  }
+
+  .sr-page {
+    width: 100% !important;
+  }
+
+  .sr-header {
+    padding: 0 0 10px !important;
+  }
+
+  .sr-kpis {
+    margin: 10px 0 0 !important;
+  }
+
+  .sr-section-map {
+    margin: 12px 0 0 !important;
+  }
+
+  .sr-section-priority {
+    margin: 12px 0 0 !important;
+  }
+
+  .sr-section-split {
+    margin: 12px 0 0 !important;
+  }
+
+  .sr-footer {
+    margin: 14px 0 0 !important;
+    padding-top: 10px !important;
+  }
+
+  .sr-disclaimer {
+    margin: 8px 0 0 !important;
+    padding-bottom: 4px !important;
+  }
+
+  .sr-header,
+  .sr-kpis,
+  .sr-section-map,
+  .sr-section-priority,
+  .sr-section-split,
+  .sr-footer,
+  .sr-disclaimer {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+}

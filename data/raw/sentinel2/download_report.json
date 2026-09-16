@@ -1,0 +1,9 @@
+{
+  "generated_at": "2026-09-15T11:15:49.530066Z",
+  "status": "CATALOG_ONLY",
+  "catalog_items": 20,
+  "actual_files_downloaded": 0,
+  "notes": [
+    "Found 20 S2 scenes with <=30% cloud cover. Actual download requires Copernicus credentials."
+  ]
+}

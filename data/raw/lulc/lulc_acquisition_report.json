@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-09-15T11:15:55.391548Z",
+  "status": "COMPLETED_WITH_BLOCKERS",
+  "bhuvan_status": "REQUIRES_MANUAL_REQUEST",
+  "alternative_sources": [
+    {
+      "name": "ESRI 2020 Land Cover (10m)",
+      "status": "ACCESSIBLE",
+      "details": "Time series of annual global maps of land use and land cover (LULC). It currently has data from 2017-2023. The maps are derived from ESA Sentinel-2 imagery at 10m resolution. Each map is a composite o"
+    }
+  ],
+  "files_created": [
+    "data\\raw\\lulc\\bhuvan\\bhuvan_lulc_acquisition_guide.json",
+    "data\\raw\\lulc\\lulc_alternative_sources.json",
+    "data\\raw\\lulc\\sentinel2_derived\\s2_lulc_pipeline_spec.json"
+  ],
+  "summary": {
+    "bhuvan_lulc": "REQUIRES_MANUAL_REQUEST",
+    "esri_lulc": "ACCESSIBLE",
+    "sentinel2_pipeline": "DOCUMENTED",
+    "recommended_action": "1. Request Bhuvan LULC via portal (authoritative reference). 2. Download ESRI 2020 10m LULC if Bhuvan not available. 3. Use Sentinel-2 derived LULC as fallback for model development."
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "categorical_columns": [
+    "landcover",
+    "geology",
+    "geomorphology",
+    "hydrological_condition"
+  ],
+  "category_maps": {
+    "landcover": {
+      "Cropland / Agriculture": 1,
+      "Tree Cover / Dense Forest": 2
+    },
+    "geology": {
+      "Calcisols": 1,
+      "Ferralsols (Iron-Rich Tropical)": 2,
+      "Fluvisols (Alluvial Floodplain)": 3,
+      "Kastanozems": 4,
+      "Lixisols": 5,
+      "Luvisols (Fertile Clay)": 6,
+      "Mountain Litho-Soil Complex": 7,
+      "Vertisols (Swelling Clay)": 8
+    },
+    "geomorphology": {
+      "Dissected Hill Slope": 1,
+      "Steep Mountain Ridge": 2,
+      "Valley Floor / Terrace": 3
+    },
+    "hydrological_condition": {
+      "Neutral Planar Drainage": 1
+    }
+  },
+  "is_fitted": true
+}

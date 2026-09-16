@@ -1,0 +1,222 @@
+{
+  "generated_at": "2026-09-15T11:14:17.768565+00:00",
+  "endpoint": "https://bhuvan-vec1.nrsc.gov.in/bhuvan/wms",
+  "slope_layers_downloaded": 7,
+  "lulc_layers_downloaded": 20,
+  "watershed_layers_downloaded": 15,
+  "slope_results": {
+    "assam": {
+      "layer": "sdv:as_slope",
+      "status": "OK",
+      "note": "32KB",
+      "file": "data\\raw\\geomorphology\\slope_assam.png"
+    },
+    "meghalaya": {
+      "layer": "sdv:ml_slope",
+      "status": "OK",
+      "note": "32KB",
+      "file": "data\\raw\\geomorphology\\slope_meghalaya.png"
+    },
+    "manipur": {
+      "layer": "sdv:mn_slope",
+      "status": "OK",
+      "note": "32KB",
+      "file": "data\\raw\\geomorphology\\slope_manipur.png"
+    },
+    "mizoram": {
+      "layer": "sdv:mz_slope",
+      "status": "OK",
+      "note": "32KB",
+      "file": "data\\raw\\geomorphology\\slope_mizoram.png"
+    },
+    "nagaland": {
+      "layer": "sdv:nl_slope",
+      "status": "OK",
+      "note": "32KB",
+      "file": "data\\raw\\geomorphology\\slope_nagaland.png"
+    },
+    "sikkim": {
+      "layer": "sdv:sk_slope",
+      "status": "OK",
+      "note": "32KB",
+      "file": "data\\raw\\geomorphology\\slope_sikkim.png"
+    },
+    "tripura": {
+      "layer": "sdv:tr_slope",
+      "status": "OK",
+      "note": "32KB",
+      "file": "data\\raw\\geomorphology\\slope_tripura.png"
+    }
+  },
+  "lulc_results": {
+    "nuis:AR_AL_forest": {
+      "title": "AR_AL_forest",
+      "status": "OK",
+      "note": "32KB"
+    },
+    "sisdpv2:AR_Anjaw_lulc_v2": {
+      "title": "AR_Anjaw_lulc_v2",
+      "status": "OK",
+      "note": "32KB"
+    },
+    "sisdpv2:AR_Changlang_lulc_v2": {
+      "title": "AR_Changlang_lulc_v2",
+      "status": "OK",
+      "note": "32KB"
+    },
+    "nuis:AR_DA_forest": {
+      "title": "AR_DA_forest",
+      "status": "OK",
+      "note": "32KB"
+    },
+    "sisdpv2:AR_East_Kameng_lulc_v2": {
+      "title": "AR_East_Kameng_lulc_v2",
+      "status": "OK",
+      "note": "32KB"
+    },
+    "sisdpv2:AR_East_Siang_lulc_v2": {
+      "title": "AR_East_Siang_lulc_v2",
+      "status": "OK",
+      "note": "32KB"
+    },
+    "sisdpv2:AR_Kurung_Kumey_lulc_v2": {
+      "title": "AR_Kurung_Kumey_lulc_v2",
+      "status": "OK",
+      "note": "32KB"
+    },
+    "basemap:AR_LULC": {
+      "title": "AR",
+      "status": "OK",
+      "note": "32KB"
+    },
+    "sisdpv2:AR_Lohit_lulc_v2": {
+      "title": "AR_Lohit_lulc_v2",
+      "status": "OK",
+      "note": "32KB"
+    },
+    "sisdpv2:AR_Longding_lulc_v2": {
+      "title": "AR_Longding_lulc_v2",
+      "status": "OK",
+      "note": "32KB"
+    },
+    "sisdpv2:AR_Lower_Dibang_Valley_lulc_v2": {
+      "title": "AR_Lower_Dibang_Valley_lulc_v2",
+      "status": "OK",
+      "note": "32KB"
+    },
+    "sisdpv2:AR_Lower_Subansiri_lulc_v2": {
+      "title": "AR_Lower_Subansiri_lulc_v2",
+      "status": "OK",
+      "note": "32KB"
+    },
+    "sisdpv2:AR_Papum_Pare_lulc_v2": {
+      "title": "AR_Papum_Pare_lulc_v2",
+      "status": "OK",
+      "note": "32KB"
+    },
+    "sisdpv2:AR_Tawang_lulc_v2": {
+      "title": "AR_Tawang_lulc_v2",
+      "status": "OK",
+      "note": "32KB"
+    },
+    "sisdpv2:AR_Tirap_lulc_v2": {
+      "title": "AR_Tirap_lulc_v2",
+      "status": "OK",
+      "note": "32KB"
+    },
+    "sisdpv2:AR_Upper_Dibang_Valley_lulc_v2": {
+      "title": "AR_Upper_Dibang_Valley_lulc_v2",
+      "status": "OK",
+      "note": "32KB"
+    },
+    "sisdpv2:AR_Upper_Siang_lulc_v2": {
+      "title": "AR_Upper_Siang_lulc_v2",
+      "status": "OK",
+      "note": "32KB"
+    },
+    "sisdpv2:AR_Upper_Subansiri_lulc_v2": {
+      "title": "AR_Upper_Subansiri_lulc_v2",
+      "status": "OK",
+      "note": "32KB"
+    },
+    "sisdpv2:AR_West_Kameng_lulc_v2": {
+      "title": "AR_West_Kameng_lulc_v2",
+      "status": "OK",
+      "note": "32KB"
+    },
+    "sisdpv2:AR_West_Siang_lulc_v2": {
+      "title": "AR_West_Siang_lulc_v2",
+      "status": "OK",
+      "note": "32KB"
+    }
+  },
+  "watershed_results": {
+    "cite:bhuvan_watershed": {
+      "status": "OK",
+      "note": "32KB"
+    },
+    "nuis:AR_AL_drainage_line": {
+      "status": "OK",
+      "note": "32KB"
+    },
+    "nuis:AR_AL_drainage_poly": {
+      "status": "OK",
+      "note": "32KB"
+    },
+    "nuis:AR_DA_drainage_line": {
+      "status": "OK",
+      "note": "32KB"
+    },
+    "nuis:AR_DA_drainage_poly": {
+      "status": "OK",
+      "note": "32KB"
+    },
+    "nuis:AS_DI_drainage_poly": {
+      "status": "OK",
+      "note": "32KB"
+    },
+    "nuis:AS_NA_drainage_line": {
+      "status": "OK",
+      "note": "32KB"
+    },
+    "nuis:AS_NA_drainage_poly": {
+      "status": "OK",
+      "note": "32KB"
+    },
+    "nuis:AS_SI_drainage_line": {
+      "status": "OK",
+      "note": "32KB"
+    },
+    "nuis:AS_SI_drainage_poly": {
+      "status": "OK",
+      "note": "32KB"
+    },
+    "nuis:AS_TE_drainage_line": {
+      "status": "OK",
+      "note": "32KB"
+    },
+    "nuis:AS_TE_drainage_poly": {
+      "status": "OK",
+      "note": "32KB"
+    },
+    "nuis:AS_TI_drainage_line": {
+      "status": "OK",
+      "note": "32KB"
+    },
+    "nuis:AS_TI_drainage_poly": {
+      "status": "OK",
+      "note": "32KB"
+    },
+    "nuis:BR_AR_drainage_poly": {
+      "status": "OK",
+      "note": "32KB"
+    }
+  },
+  "notes": [
+    "Slope layers serve as geomorphology proxy (terrain steepness per state).",
+    "No dedicated geomorphology layer found on accessible Bhuvan WMS endpoints.",
+    "DEM-derived geomorphology (slope, aspect, curvature, TWI) recommended via SRTM HGT files.",
+    "Bhuvan LULC 1:50K shapefiles require manual portal request.",
+    "WMS PNG layers are visualization aids; vector/raster data preferred for ML features."
+  ]
+}

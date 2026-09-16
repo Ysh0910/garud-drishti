@@ -1,0 +1,52 @@
+{
+  "model_name": "Model 2 \u2014 Dynamic Risk",
+  "validation_strategy": "Spatio-Temporal Split",
+  "dataset_size": 3000,
+  "validation_samples": 600,
+  "current_risk_metrics": {
+    "threshold": 0.5,
+    "confusion_matrix": {
+      "true_negatives": 537,
+      "false_positives": 1,
+      "false_negatives": 0,
+      "true_positives": 62
+    },
+    "accuracy": 0.9983,
+    "precision": 0.9841,
+    "recall_sensitivity": 1.0,
+    "specificity": 0.9981,
+    "f1_score": 0.992,
+    "mcc": 0.9911,
+    "cohens_kappa": 0.9911,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "brier_score": 0.0012,
+    "log_loss": 0.0038,
+    "false_positive_rate": 0.0019,
+    "false_negative_rate": 0.0,
+    "expected_calibration_error": 0.1617
+  },
+  "risk_24h_metrics": {
+    "threshold": 0.5,
+    "confusion_matrix": {
+      "true_negatives": 529,
+      "false_positives": 0,
+      "false_negatives": 1,
+      "true_positives": 70
+    },
+    "accuracy": 0.9983,
+    "precision": 1.0,
+    "recall_sensitivity": 0.9859,
+    "specificity": 1.0,
+    "f1_score": 0.9929,
+    "mcc": 0.992,
+    "cohens_kappa": 0.992,
+    "roc_auc": 1.0,
+    "pr_auc": 0.9998,
+    "brier_score": 0.0016,
+    "log_loss": 0.0067,
+    "false_positive_rate": 0.0,
+    "false_negative_rate": 0.0141,
+    "expected_calibration_error": 0.001
+  }
+}

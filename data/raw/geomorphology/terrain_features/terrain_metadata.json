@@ -1,0 +1,57 @@
+{
+  "generated_at": "2026-09-15T11:33:40.541953+00:00",
+  "source": "SRTM DEM via Viewfinder Panoramas DEM3",
+  "crs": "EPSG:4326 (WGS84)",
+  "resolution_degrees": {
+    "x": 0.0008333333333333334,
+    "y": 0.0008333333333333334
+  },
+  "resolution_metres_approx": {
+    "x": 83.9,
+    "y": 92.6
+  },
+  "ner_extent": {
+    "lat": [
+      20,
+      30
+    ],
+    "lon": [
+      88,
+      98
+    ]
+  },
+  "grid_size": {
+    "rows": 4801,
+    "cols": 13201
+  },
+  "source_tiles": 88,
+  "features": {
+    "elevation_ner.tif": {
+      "unit": "metres",
+      "description": "Elevation above sea level",
+      "min": -28.0,
+      "max": 8556.0
+    },
+    "slope_ner.tif": {
+      "unit": "degrees",
+      "description": "Terrain slope (Zevenbergen & Thorne)",
+      "min": 0.0,
+      "max": 76.44718933105469
+    },
+    "aspect_ner.tif": {
+      "unit": "degrees (0=N, clockwise)",
+      "description": "Slope aspect direction"
+    },
+    "curvature_ner.tif": {
+      "unit": "1/m^2",
+      "description": "Total curvature (Laplacian, positive=convex)"
+    }
+  },
+  "nodata_value": -9999.0,
+  "notes": [
+    "HGT tiles have no explicit CRS \u2014 WGS84/EPSG:4326 assumed (SRTM standard).",
+    "Slope/aspect/curvature computed using finite differences with approximate metre cell sizes at 25N.",
+    "For production use, reproject to UTM (EPSG:32645/32646) before computing terrain derivatives.",
+    "These features serve as the geomorphology layer for Model 1 (susceptibility)."
+  ]
+}

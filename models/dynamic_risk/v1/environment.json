@@ -1,0 +1,5 @@
+{
+  "python_version": "3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]",
+  "xgboost_version": "3.4.1",
+  "platform": "Windows-10-10.0.19045-SP0"
+}

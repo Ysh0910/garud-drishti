@@ -1,0 +1,16 @@
+dataset,path,file_type,size_bytes,status,coverage,temporal_resolution,spatial_resolution,source,notes
+GSI Landslide Inventory,data/raw/gsi/gsi_landslide_inventory.csv,CSV,12466951,PRESENT,NER + India (historical),event-based,point,GSI PDF extraction,"36372 records, 13246 with coordinates"
+ISRO Landslide Atlas,data/raw/landslide_atlas/landslide_atlas_inventory.csv,CSV,18505,PRESENT,India,event-based,district,ISRO Atlas PDF extraction,168 records (state/district level)
+Combined Landslide Inventory,data/raw/landslide_inventory/combined_landslide_inventory.csv,CSV,1814267,PRESENT,NER + India,event-based,point+district,GSI + ISRO merged,"0 records, 2041 georeferenced"
+SRTM DEM,data/raw/dem/srtm/,HGT,978284644,PRESENT,NER lat 20-32N lon 84-102E,static,~90m,Viewfinder Panoramas DEM3,288 HGT tiles
+Terrain Features (DEM-derived),data/raw/geomorphology/terrain_features/,GeoTIFF,758556758,PRESENT,NER,static,~90m,Derived from SRTM HGT,"slope, aspect, curvature, elevation"
+IMD Rainfall 25km,data/raw/RF25_ind2025_rfp25.nc,NetCDF,25431832,PRESENT,India,daily,25km,IMD,Year 2025
+GPM Daily IMERG,data/raw/rainfall/gpm/daily/,nc4,0,PRESENT,NER (global available),daily,0.1 deg (~10km),NASA GPM,"Manifest with ~10,135 URLs present. Needs NASA Earthdata auth."
+GPM Half-Hourly IMERG,data/raw/rainfall/gpm/half_hourly/,HDF5,0,PRESENT,NER (global available),30min,0.1 deg (~10km),NASA GPM,"Manifest with ~486,480 URLs. Needs NASA Earthdata auth."
+SMAP Soil Moisture,data/raw/soil_moisture/smap/,HDF5,0,PRESENT,NER,daily,36km,NSIDC,Download scripts ready. Needs NASA Earthdata auth.
+Sentinel-1 GRD,data/raw/sentinel1/catalog.json,STAC catalog,530,PRESENT,NER,12-day repeat,10m,Copernicus Data Space,20 items cataloged. Needs Copernicus auth to download.
+Sentinel-2 L2A,data/raw/sentinel2/catalog.json,STAC catalog,542,PRESENT,NER,5-day repeat,10-20m,Copernicus Data Space,20 items cataloged. Needs Copernicus auth to download.
+NER Administrative Boundary,data/raw/boundaries/,GeoPackage/GeoJSON,4221846,PRESENT,8 NER states,static,admin-level,GADM v4.1 + OSM,8 states covered
+OSM NER Roads/Infrastructure,data/raw/north-eastern-zone.gpkg,GeoPackage,630083584,PRESENT,NER,2026-09-10 snapshot,vector,Geofabrik,"Roads, waterways, buildings, settlements"
+Geology (SoilGrids proxy),data/raw/geology/soilgrids_wrb_ner.tif,GeoTIFF,4080197,PROXY_ONLY,NER,static,250m,SoilGrids ISRIC,WRB soil classification used as geology proxy. Authoritative GSI data requires Bhukosh registration.
+LULC - ESA WorldCover 10m,data/raw/lulc/esa_worldcover/,GeoTIFF,998385239,PRESENT,NER,2021,10m,ESA WorldCover v200,12 tiles covering NER
