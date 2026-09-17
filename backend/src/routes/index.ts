@@ -17,6 +17,9 @@ import prioritizationRouter from './prioritization';
 import alertsRouter from './alerts';
 import dashboardRouter from './dashboard';
 
+// Mount Health API (/api/v1/health)
+router.use('/health', healthRouter);
+
 // Mount Risk API (/api/v1/risk)
 router.use('/risk', riskRouter);
 
