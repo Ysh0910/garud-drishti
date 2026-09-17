@@ -10,7 +10,31 @@ services:
     environment:
       - DATABASE_URL=postgresql://netra:netra_pass@db:5432/netra_gis
       - REDIS_URL=redis://redis:6379/0
+      - ML_SERVICE_URL=http://ml-service:5000
       - SMS_MODE=mock
+    depends_on:
+      - db
+      - redis
+      - ml-service
+
+  ml-service:
+    build:
+      context: ../..
+      dockerfile: infrastructure/docker/Dockerfile.ml
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+      - HOST=0.0.0.0
+      - DATABASE_URL=postgresql://netra:netra_pass@db:5432/netra_gis
+      - REDIS_URL=redis://redis:6379/0
+    volumes:
+      - ../../models:/app/models:ro
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
     depends_on:
       - db
       - redis
@@ -33,3 +57,4 @@ services:
 
 volumes:
   postgres_data:
+

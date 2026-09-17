@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: garud-drishti-ml-service
+    env: docker
+    dockerfilePath: infrastructure/docker/Dockerfile.ml
+    dockerContext: .
+    region: singapore
+    plan: starter
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: SMS_MODE
+        value: mock

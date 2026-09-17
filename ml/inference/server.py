@@ -177,4 +177,9 @@ def predict_grid(req: GridPredictionRequest):
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=5000)
+    import os
+    port = int(os.getenv("PORT", "5000"))
+    host = os.getenv("HOST", "0.0.0.0")
+    print(f"🚀 Starting GARUD DRISHTI ML Inference Microservice on {host}:{port}...")
+    uvicorn.run(app, host=host, port=port)
+
