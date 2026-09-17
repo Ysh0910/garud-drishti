@@ -80,6 +80,7 @@ function applyRiskLayerVisibility(map: MlMap, activeMapLayer: string, coarse: bo
   const set = (id: string, v: string) => {
     if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', v);
   };
+  set('risk-heatmap', showDetail);
   set('risk-grid-fill', showDetail);
   set('risk-grid-outline', showDetail);
   set('risk-grid-hatch', showDetail);
@@ -153,9 +154,10 @@ const RiskMap = forwardRef<RiskMapHandle, RiskMapProps>(function RiskMap({ heigh
       const initialGrid = riskGridData ?? (RISK_GRID as any);
       const initialPoints = gridToCentroidPoints(initialGrid);
 
-      // 1. Polygon risk grid source (background spatial boundary context)
+      // 1. Polygon risk grid source (spatial boundary context)
       map.addSource('risk-grid', { type: 'geojson', data: initialGrid });
 
+      // Transparent polygon hit-test layer for easy click selection
       map.addLayer({
         id: 'risk-grid-fill',
         type: 'fill',
@@ -171,32 +173,20 @@ const RiskMap = forwardRef<RiskMapHandle, RiskMapProps>(function RiskMap({ heigh
             'VERY_LOW', RISK_LEVEL_HEX.VERY_LOW,
             '#8A8F88',
           ],
-          'fill-opacity': ['match', ['get', 'confidence_tier'], 'unknown', 0.12, 0.22],
+          'fill-opacity': 0.0,
         },
       });
 
-      // Diagonal hatch overlay for low-confidence zones
-      map.addLayer({
-        id: 'risk-grid-hatch',
-        type: 'fill',
-        source: 'risk-grid',
-        filter: ['==', ['get', 'confidence_tier'], 'low'],
-        paint: { 'fill-pattern': 'diag-hatch', 'fill-opacity': 0.35 },
-      });
-
+      // Subtle boundary outline only for selected zone
       map.addLayer({
         id: 'risk-grid-outline',
         type: 'line',
         source: 'risk-grid',
-        paint: { 'line-color': '#1B211D', 'line-width': 1, 'line-opacity': 0.4 },
-      });
-
-      map.addLayer({
-        id: 'risk-grid-outline-unknown',
-        type: 'line',
-        source: 'risk-grid',
-        filter: ['==', ['get', 'confidence_tier'], 'unknown'],
-        paint: { 'line-color': '#8A8F88', 'line-width': 1.5, 'line-dasharray': [2, 2], 'line-opacity': 0.6 },
+        paint: {
+          'line-color': '#1B211D',
+          'line-width': 2,
+          'line-opacity': ['case', ['==', ['get', 'cell_id'], selectedCellId ?? ''], 0.85, 0.0],
+        },
       });
 
       // 2. Centroid points source with MapLibre point clustering at low zoom (< 7)
@@ -206,6 +196,60 @@ const RiskMap = forwardRef<RiskMapHandle, RiskMapProps>(function RiskMap({ heigh
         cluster: true,
         clusterMaxZoom: 7,
         clusterRadius: 45,
+      });
+
+      // Dynamic Continuous Environmental Risk Heatmap Surface
+      map.addLayer({
+        id: 'risk-heatmap',
+        type: 'heatmap',
+        source: 'risk-grid-points',
+        paint: {
+          'heatmap-weight': [
+            'interpolate',
+            ['linear'],
+            ['get', 'risk_score'],
+            0, 0.05,
+            30, 0.35,
+            60, 0.70,
+            85, 1.0,
+          ],
+          'heatmap-intensity': [
+            'interpolate',
+            ['linear'],
+            ['zoom'],
+            4, 0.75,
+            8, 1.35,
+            12, 1.95,
+          ],
+          'heatmap-color': [
+            'interpolate',
+            ['linear'],
+            ['heatmap-density'],
+            0, 'rgba(46,125,91,0)',
+            0.15, 'rgba(46,125,91,0.60)',
+            0.35, 'rgba(125,156,60,0.72)',
+            0.55, 'rgba(227,161,48,0.85)',
+            0.75, 'rgba(201,99,27,0.92)',
+            0.95, 'rgba(142,36,32,0.98)',
+          ],
+          'heatmap-radius': [
+            'interpolate',
+            ['linear'],
+            ['zoom'],
+            4, 26,
+            7, 48,
+            10, 76,
+            14, 110,
+          ],
+          'heatmap-opacity': [
+            'interpolate',
+            ['linear'],
+            ['zoom'],
+            4, 0.85,
+            8, 0.78,
+            12, 0.65,
+          ],
+        },
       });
 
       // Cluster bubbles for low zoom
@@ -275,7 +319,7 @@ const RiskMap = forwardRef<RiskMapHandle, RiskMapProps>(function RiskMap({ heigh
         },
       });
 
-      // Individual risk zone circle marker
+      // Individual risk zone circle marker (interactive focus nodes)
       map.addLayer({
         id: 'risk-points-circle',
         type: 'circle',
@@ -286,9 +330,9 @@ const RiskMap = forwardRef<RiskMapHandle, RiskMapProps>(function RiskMap({ heigh
             'interpolate',
             ['linear'],
             ['zoom'],
-            6, 10,
-            10, 14,
-            14, 18,
+            6, 9,
+            10, 13,
+            14, 17,
           ],
           'circle-color': [
             'match',
@@ -302,7 +346,7 @@ const RiskMap = forwardRef<RiskMapHandle, RiskMapProps>(function RiskMap({ heigh
           ],
           'circle-stroke-color': '#FCFBF7',
           'circle-stroke-width': 2,
-          'circle-opacity': 0.96,
+          'circle-opacity': 0.95,
         },
       });
 
@@ -592,20 +636,20 @@ const RiskMap = forwardRef<RiskMapHandle, RiskMapProps>(function RiskMap({ heigh
       map.setPaintProperty('risk-grid-outline', 'line-width', [
         'case',
         ['==', ['get', 'cell_id'], selectedCellId ?? ''],
-        3,
-        1,
+        2.5,
+        0,
       ]);
       map.setPaintProperty('risk-grid-outline', 'line-color', [
         'case',
         ['==', ['get', 'cell_id'], selectedCellId ?? ''],
         '#1B211D',
-        '#3E463F',
+        'transparent',
       ]);
       map.setPaintProperty('risk-grid-outline', 'line-opacity', [
         'case',
         ['==', ['get', 'cell_id'], selectedCellId ?? ''],
         0.95,
-        0.35,
+        0.0,
       ]);
     }
 
