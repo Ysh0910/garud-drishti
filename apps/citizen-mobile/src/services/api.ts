@@ -7,6 +7,27 @@ import { APP_CONFIG } from '../constants/config';
 import { ReportCreateRequest, ReportResponse } from '../types/reports';
 import { RiskPointResponse } from '../types/risk';
 
+export interface CitizenAnalysisData {
+  report_id: string;
+  status: string;
+  environmental_risk: number;
+  image_confidence: number;
+  credibility: number;
+  observed_impact: number;
+  exposure: number;
+  response_priority: number;
+  coordination_risk: number;
+  priority_level: string;
+  recommended_action: string;
+  landslide_detected: boolean;
+  road_blockage_detected: boolean;
+  debris_detected: boolean;
+  visible_affected_fraction: number;
+  audit_positive_signals: string[];
+  audit_risk_flags: string[];
+  decision_path: string[];
+}
+
 export class ApiClient {
   private static baseUrl = APP_CONFIG.apiBaseUrl;
 
@@ -33,37 +54,40 @@ export class ApiClient {
     if (payload.severity) formData.append('severity', payload.severity);
 
     if (payload.photo && payload.photo.uri) {
-      const photoName = payload.photo.name || `hazard_${Date.now()}.jpg`;
-      const photoType = payload.photo.type || 'image/jpeg';
+      const uri = payload.photo.uri;
+      const fileName = payload.photo.name || `hazard_${Date.now()}.jpg`;
+      const mimeType = payload.photo.type || 'image/jpeg';
 
-      if (typeof window !== 'undefined' && payload.photo.uri.startsWith('data:')) {
+      if (typeof window !== 'undefined' && uri.startsWith('data:')) {
+        // Convert data URI to Blob for browser environment
         try {
-          const byteString = atob(payload.photo.uri.split(',')[1]);
+          const parts = uri.split(',');
+          const byteString = atob(parts[1]);
           const ab = new ArrayBuffer(byteString.length);
           const ia = new Uint8Array(ab);
           for (let i = 0; i < byteString.length; i++) {
             ia[i] = byteString.charCodeAt(i);
           }
-          const blob = new Blob([ab], { type: photoType });
-          formData.append('photo', blob, photoName);
+          const blob = new Blob([ab], { type: mimeType });
+          formData.append('photo', blob, fileName);
         } catch (e) {
-          console.warn('[ApiClient] Failed to convert base64 to Blob, sending as object:', e);
-          formData.append('photo', payload.photo.uri);
+          console.warn('[ApiClient] Failed to parse photo data URI, attaching as file object:', e);
+          const photoFile = { uri, name: fileName, type: mimeType };
+          formData.append('photo', photoFile as unknown as Blob);
         }
-      } else if (typeof window !== 'undefined' && payload.photo.uri.startsWith('blob:')) {
+      } else if (typeof window !== 'undefined' && uri.startsWith('blob:')) {
         try {
-          const res = await fetch(payload.photo.uri);
+          const res = await fetch(uri);
           const blob = await res.blob();
-          formData.append('photo', blob, photoName);
+          formData.append('photo', blob, fileName);
         } catch (e) {
           console.warn('[ApiClient] Failed to fetch blob URI:', e);
+          const photoFile = { uri, name: fileName, type: mimeType };
+          formData.append('photo', photoFile as unknown as Blob);
         }
       } else {
-        const photoFile = {
-          uri: payload.photo.uri,
-          name: photoName,
-          type: photoType,
-        };
+        // Native React Native format
+        const photoFile = { uri, name: fileName, type: mimeType };
         formData.append('photo', photoFile as unknown as Blob);
       }
     }
@@ -102,5 +126,15 @@ export class ApiClient {
       throw new Error(`Failed to fetch point risk: ${response.statusText}`);
     }
     return (await response.json()) as RiskPointResponse;
+  }
+
+  /** Fetch AI Vision analysis details from GET /api/v1/citizen/reports/{report_id}/analysis */
+  static async getReportAnalysis(reportId: string): Promise<CitizenAnalysisData> {
+    const url = `${this.baseUrl}/api/v1/citizen/reports/${reportId}/analysis`;
+    const response = await fetch(url, { headers: { Accept: 'application/json' } });
+    if (!response.ok) {
+      throw new Error(`Failed to fetch report analysis: ${response.statusText}`);
+    }
+    return (await response.json()) as CitizenAnalysisData;
   }
 }
