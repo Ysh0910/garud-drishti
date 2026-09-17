@@ -143,6 +143,66 @@ class OperationalPipelineRunner:
             "status": "success",
             "cells_processed": cell_count,
             "duration_seconds": duration_sec,
+            "generated_at": start_time.isoformat(),
+            "features": features_geojson,
+        }
+
+    def run_multi_sector_cycle(
+        self,
+        sectors: List[Dict[str, Any]],
+        step_deg: float = 0.25,
+        output_geojson_path: Optional[Path] = None
+    ) -> Dict[str, Any]:
+        """
+        Executes complete environmental data ingestion and ML risk inference
+        across all defined North Eastern state sectors, saving a unified GeoJSON dataset.
+        """
+        start_time = datetime.now(timezone.utc)
+        logger.info(f"Starting Multi-Sector Ingestion & Inference across {len(sectors)} state sectors")
+
+        all_features: List[Dict[str, Any]] = []
+        total_cells = 0
+
+        for sector in sectors:
+            logger.info(f"Sensing sector: {sector['name']} (BBox: {sector['min_lat']},{sector['min_lon']} to {sector['max_lat']},{sector['max_lon']})")
+            bbox = {
+                "min_lat": sector["min_lat"],
+                "max_lat": sector["max_lat"],
+                "min_lon": sector["min_lon"],
+                "max_lon": sector["max_lon"],
+            }
+            res = self.run_ingestion_cycle(bbox, step_deg=step_deg, output_geojson_path=None)
+            sector_features = res.get("features", [])
+            all_features.extend(sector_features)
+            total_cells += len(sector_features)
+
+        geojson_payload = {
+            "type": "FeatureCollection",
+            "crs": {
+                "type": "name",
+                "properties": {"name": "urn:ogc:def:crs:OGC:1.3:CRS84"}
+            },
+            "meta": {
+                "generated_at": start_time.isoformat(),
+                "total_cells": total_cells,
+                "total_sectors": len(sectors),
+            },
+            "features": all_features
+        }
+
+        if output_geojson_path:
+            output_geojson_path.parent.mkdir(parents=True, exist_ok=True)
+            with open(output_geojson_path, "w", encoding="utf-8") as f:
+                json.dump(geojson_payload, f, indent=2)
+            logger.info(f"Saved consolidated regional risk grid ({total_cells} cells) to: {output_geojson_path}")
+
+        duration_sec = (datetime.now(timezone.utc) - start_time).total_seconds()
+        logger.info(f"Multi-sector cycle completed: {total_cells} cells processed across {len(sectors)} sectors in {duration_sec:.2f}s")
+
+        return {
+            "status": "success",
+            "cells_processed": total_cells,
+            "duration_seconds": duration_sec,
             "generated_at": start_time.isoformat()
         }
 

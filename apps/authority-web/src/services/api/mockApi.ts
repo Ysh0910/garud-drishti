@@ -104,6 +104,27 @@ export const mockApi: Api = {
     return delay(ALERT_ROWS);
   },
 
+  async createAlert(data): Promise<AlertRow> {
+    const newAlert: AlertRow = {
+      alert_id: `ALT-SIM-${Date.now()}`,
+      cell_id: data.cell_id,
+      label: data.zone_name || `Zone ${data.cell_id}`,
+      severity: (data.severity as any) || 'CRITICAL',
+      state: 'ACTIVE',
+      created_label: nowLabel(),
+      approvedBy: 'R. Baruah (Demo Dispatch)',
+      approvedAtLabel: nowLabel(),
+      decisionTrail: [
+        {
+          time_label: nowLabel(),
+          text: `Alert dispatched by R. Baruah (MSDMA): ${data.trigger_reason}`,
+        },
+      ],
+    };
+    ALERT_ROWS.unshift(newAlert);
+    return delay(newAlert, 150);
+  },
+
   async approveAlert(alertId, approverName): Promise<AlertRow> {
     const alert = ALERT_ROWS.find((a) => a.alert_id === alertId);
     if (!alert) throw new Error(`Unknown alert: ${alertId}`);

@@ -22,40 +22,39 @@ from ml.ingestion.pipeline_runner import OperationalPipelineRunner
 logging.basicConfig(level=logging.INFO, format="[%(asctime)s] [%(levelname)s] [%(name)s] %(message)s")
 logger = logging.getLogger("ScheduledMonitor")
 
-# Pilot Bounding Boxes across North Eastern Region
+# Comprehensive Monitored Sectors across all 8 North Eastern States
 NER_MONITOR_BOUNDS = [
-    # 1. Sikkim - North Bengal High Risk Corridor
+    # 1. Sikkim - Teesta Valley & Gangtok Corridor
     {"name": "Sikkim & Teesta Valley", "min_lat": 27.0, "max_lat": 27.8, "min_lon": 88.2, "max_lon": 89.0},
-    # 2. Meghalaya Escarpment & NH-106 Corridor
-    {"name": "Meghalaya Escarpment & Mawkdok", "min_lat": 25.2, "max_lat": 25.8, "min_lon": 91.5, "max_lon": 92.2},
-    # 3. Mizoram & Barak Basin Corridor
+    # 2. Meghalaya - Khasi Escarpment & Mawkdok Corridor
+    {"name": "Meghalaya Escarpment & NH-106", "min_lat": 25.2, "max_lat": 25.8, "min_lon": 91.5, "max_lon": 92.2},
+    # 3. Mizoram - Aizawl Basin & Serchhip Corridor
     {"name": "Mizoram - Aizawl Basin", "min_lat": 23.4, "max_lat": 24.2, "min_lon": 92.4, "max_lon": 93.0},
+    # 4. Arunachal Pradesh - Tawang & West Kameng Corridor
+    {"name": "Arunachal Pradesh - Tawang Valley", "min_lat": 27.2, "max_lat": 27.8, "min_lon": 91.8, "max_lon": 92.6},
+    # 5. Nagaland - Kohima & Dzukou Corridor
+    {"name": "Nagaland - Kohima Range", "min_lat": 25.4, "max_lat": 26.0, "min_lon": 93.8, "max_lon": 94.4},
+    # 6. Manipur - Senapati & NH-37 Mountain Corridor
+    {"name": "Manipur - Senapati Corridor", "min_lat": 24.6, "max_lat": 25.2, "min_lon": 93.6, "max_lon": 94.2},
+    # 7. Tripura - Jampui Hills & North Tripura Ridge
+    {"name": "Tripura - Jampui Hills", "min_lat": 23.8, "max_lat": 24.4, "min_lon": 91.8, "max_lon": 92.4},
+    # 8. Assam - Dima Hasao & Haflong Hill Tracts
+    {"name": "Assam - Dima Hasao Escarpment", "min_lat": 25.0, "max_lat": 25.6, "min_lon": 92.8, "max_lon": 93.4},
 ]
 
 
 def run_monitoring_cycle(runner: OperationalPipelineRunner) -> None:
-    """Executes a full monitoring cycle across key regional corridors."""
+    """Executes a full monitoring cycle across all 8 North Eastern state sectors."""
     logger.info("================================================================")
     logger.info("🚀 EXECUTING AUTOMATED REGIONAL RISK INGESTION & MONITORING CYCLE")
+    logger.info("📡 COVERAGE: ALL 8 NORTH EASTERN STATES (Sikkim, Meghalaya, Mizoram, Arunachal, Nagaland, Manipur, Tripura, Assam)")
     logger.info("================================================================")
 
-    total_cells = 0
-    cycle_start = time.time()
+    output_path = PROJECT_ROOT / "data" / "processed" / "risk_grid_latest.geojson"
+    res = runner.run_multi_sector_cycle(NER_MONITOR_BOUNDS, step_deg=0.25, output_geojson_path=output_path)
 
-    for sector in NER_MONITOR_BOUNDS:
-        logger.info(f"Sensing sector: {sector['name']} (BBox: {sector['min_lat']},{sector['min_lon']} to {sector['max_lat']},{sector['max_lon']})")
-        bbox = {
-            "min_lat": sector["min_lat"],
-            "max_lat": sector["max_lat"],
-            "min_lon": sector["min_lon"],
-            "max_lon": sector["max_lon"],
-        }
-        res = runner.run_ingestion_cycle(bbox, step_deg=0.25)
-        total_cells += res.get("cells_processed", 0)
-
-    duration = time.time() - cycle_start
-    logger.info(f"✅ Ingestion cycle complete: {total_cells} cells processed in {duration:.2f}s across NER corridors.")
-    logger.info(f"Risk Grid updated: {PROJECT_ROOT / 'data' / 'processed' / 'risk_grid_latest.geojson'}\n")
+    logger.info(f"✅ Ingestion cycle complete: {res['cells_processed']} cells processed across {len(NER_MONITOR_BOUNDS)} state sectors in {res['duration_seconds']:.2f}s.")
+    logger.info(f"Risk Grid updated: {output_path}\n")
 
 
 def start_daemon(interval_seconds: int = 300, single_run: bool = False):

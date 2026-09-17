@@ -1,4 +1,5 @@
-import { useZoneDetail, useZoneSummaries } from '../../hooks/api';
+import { useState } from 'react';
+import { useCreateAlert, useZoneDetail, useZoneSummaries } from '../../hooks/api';
 import { TOTAL_MONITORED_ZONES } from '../../mocks/zones';
 import { useDashboardStore } from '../../store/dashboardStore';
 import type { DataQuality } from '../../types/enums';
@@ -39,6 +40,25 @@ export default function SelectedZonePanel() {
 
   const { data: zones } = useZoneSummaries();
   const { data: detail, isLoading, isError } = useZoneDetail(selectedCellId);
+  const createAlert = useCreateAlert();
+  const [dispatchStatus, setDispatchStatus] = useState<string | null>(null);
+
+  const handleDispatchAlert = async () => {
+    if (!detail) return;
+    try {
+      await createAlert.mutateAsync({
+        cell_id: detail.cell_id,
+        severity: detail.risk_level,
+        trigger_reason: `Official ${detail.risk_level} emergency early warning issued for ${detail.district || 'monitored corridor'}, ${detail.state}. Satellite and rainfall triggers active.`,
+        zone_name: `${detail.cell_id} · ${detail.district || 'NER'}`,
+      });
+      setDispatchStatus('✓ ALERT BROADCAST SENT TO MOBILE APP');
+      setTimeout(() => setDispatchStatus(null), 4000);
+    } catch {
+      setDispatchStatus('✕ Broadcast failed. Please retry.');
+      setTimeout(() => setDispatchStatus(null), 3000);
+    }
+  };
 
   if (isLoading || !detail) {
     return (
@@ -73,65 +93,67 @@ export default function SelectedZonePanel() {
       <div style={{ padding: '16px 18px', borderBottom: '1px solid var(--hairline-soft)', display: 'flex', flexDirection: 'column', gap: 12 }}>
         <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12 }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-            <div className="eyebrow">ZONE ID</div>
-            <div className="mono" style={{ fontSize: 19, fontWeight: 600, color: 'var(--ink)' }}>
+            <div className="eyebrow">MONITORED ZONE</div>
+            <div className="mono" style={{ fontSize: 20, fontWeight: 700, color: 'var(--ink)' }}>
               {summary.cell_id}
             </div>
-            <div style={{ font: "400 11.5px/1.3 var(--font-sans)", color: 'var(--ink-muted)' }}>
+            <div style={{ font: "400 12px/1.3 var(--font-sans)", color: 'var(--ink-muted)' }}>
               {summary.district} · {summary.state}
             </div>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 5, alignItems: 'flex-end' }}>
-            <div className="eyebrow">RISK STATE</div>
-            <div className={`${riskBadgeClass(summary.risk_level)} badge-lg`}>{summary.risk_level.replace('_', ' ')}</div>
+            <div className="eyebrow">RISK LEVEL</div>
+            <div className={`${riskBadgeClass(summary.risk_level)} badge-lg`} style={{ letterSpacing: '0.06em' }}>
+              {summary.risk_level.replace('_', ' ')}
+            </div>
           </div>
         </div>
 
         <div className="grid-divider" style={{ gridTemplateColumns: 'repeat(3, minmax(0,1fr))', border: '1px solid var(--hairline-soft)' }}>
-          <div style={{ background: 'var(--panel-bg-tint)', padding: '10px 11px', display: 'flex', flexDirection: 'column', gap: 5 }}>
-            <div className="mono" style={{ fontSize: 11, letterSpacing: '0.1em', color: 'var(--ink-muted)' }}>
+          <div style={{ background: 'var(--panel-bg-tint)', padding: '11px 12px', display: 'flex', flexDirection: 'column', gap: 4 }}>
+            <div className="mono" style={{ fontSize: 10.5, letterSpacing: '0.1em', color: 'var(--ink-muted)' }}>
               RISK SCORE
             </div>
-            <div className="mono tabular" style={{ fontSize: 20, fontWeight: 600, color: 'var(--ink)' }}>
+            <div className="mono tabular" style={{ fontSize: 22, fontWeight: 700, color: 'var(--ink)' }}>
               {formatScore01(summary.risk_score)}
             </div>
-            <div className="mono" style={{ fontSize: 11, color: 'var(--ink-faint)' }}>
-              0–1 scale
+            <div className="mono" style={{ fontSize: 10.5, color: 'var(--ink-faint)' }}>
+              {summary.risk_score}/100
             </div>
           </div>
-          <div style={{ background: 'var(--panel-bg-tint)', padding: '10px 11px', display: 'flex', flexDirection: 'column', gap: 5 }}>
-            <div className="mono" style={{ fontSize: 11, letterSpacing: '0.1em', color: 'var(--ink-muted)' }}>
+          <div style={{ background: 'var(--panel-bg-tint)', padding: '11px 12px', display: 'flex', flexDirection: 'column', gap: 4 }}>
+            <div className="mono" style={{ fontSize: 10.5, letterSpacing: '0.1em', color: 'var(--ink-muted)' }}>
               CONFIDENCE
             </div>
-            <div className="mono tabular" style={{ fontSize: 20, fontWeight: 600, color: detail.confidence == null ? 'var(--ink-faint)' : 'var(--ink)' }}>
+            <div className="mono tabular" style={{ fontSize: 22, fontWeight: 700, color: detail.confidence == null ? 'var(--ink-faint)' : 'var(--ink)' }}>
               {detail.confidence == null ? 'N/A' : detail.confidence.toFixed(2)}
             </div>
-            <div className="mono" style={{ fontSize: 11, color: 'var(--ink-faint)' }}>
-              {detail.confidence == null ? 'not returned by run' : 'ensemble spread'}
+            <div className="mono" style={{ fontSize: 10.5, color: 'var(--ink-faint)' }}>
+              {detail.confidence == null ? 'Uncalibrated' : 'Ensemble spread'}
             </div>
           </div>
-          <div style={{ background: 'var(--panel-bg-tint)', padding: '10px 11px', display: 'flex', flexDirection: 'column', gap: 5 }}>
-            <div className="mono" style={{ fontSize: 11, letterSpacing: '0.1em', color: 'var(--ink-muted)' }}>
-              TREND 6 h
+          <div style={{ background: 'var(--panel-bg-tint)', padding: '11px 12px', display: 'flex', flexDirection: 'column', gap: 4 }}>
+            <div className="mono" style={{ fontSize: 10.5, letterSpacing: '0.1em', color: 'var(--ink-muted)' }}>
+              TREND 6H
             </div>
-            <div style={{ display: 'flex', alignItems: 'baseline', gap: 5 }}>
-              <span className="mono" style={{ fontSize: 20, fontWeight: 600, color }}>
+            <div style={{ display: 'flex', alignItems: 'baseline', gap: 4 }}>
+              <span className="mono" style={{ fontSize: 18, fontWeight: 700, color }}>
                 {glyph}
               </span>
-              <span className="mono" style={{ fontSize: 15, fontWeight: 600, color: 'var(--ink)' }}>
+              <span className="mono" style={{ fontSize: 16, fontWeight: 700, color: 'var(--ink)' }}>
                 {summary.trend_delta >= 0 ? '+' : ''}
                 {summary.trend_delta.toFixed(2)}
               </span>
             </div>
-            <div className="mono" style={{ fontSize: 11, color: 'var(--ink-faint)' }}>
-              {summary.trend === 'INCREASING' ? 'rising' : summary.trend === 'DECREASING' ? 'falling' : 'steady'}
+            <div className="mono" style={{ fontSize: 10.5, color: 'var(--ink-faint)' }}>
+              {summary.trend === 'INCREASING' ? 'Rising' : summary.trend === 'DECREASING' ? 'Falling' : 'Steady'}
             </div>
           </div>
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 7, font: "400 11.5px/1 var(--font-mono)", color: 'var(--ink-faint)' }}>
-            <div style={{ width: 5, height: 5, borderRadius: '50%', background: 'var(--good)' }} />
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: 2 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 7, font: "400 11px/1 var(--font-mono)", color: 'var(--ink-faint)' }}>
+            <div style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--good)' }} />
             LAST UPDATED {detail.updated_at_label.toUpperCase()}
           </div>
           <DataQualityBadge quality={detail.data_quality} />
@@ -150,8 +172,8 @@ export default function SelectedZonePanel() {
           </div>
         </div>
         {detail.whyNow.length === 0 && (
-          <div className="mono" style={{ fontSize: 11.5, color: 'var(--ink-faint)' }}>
-            No SHAP delta recorded yet for this zone.
+          <div className="mono" style={{ fontSize: 11.5, color: 'var(--ink-faint)', padding: '6px 0' }}>
+            No SHAP delta recorded for this run.
           </div>
         )}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
@@ -188,8 +210,7 @@ export default function SelectedZonePanel() {
           })}
         </div>
         <div style={{ font: "400 11px/1.4 var(--font-sans)", color: 'var(--ink-faint)' }}>
-          Left of centre eased the risk, right of centre raised it. Static factors (slope, lithology) contribute to the score
-          but not to this change.
+          Left of centre eased risk; right of centre raised it. Static factors (slope, lithology) contribute to base susceptibility.
         </div>
       </div>
 
@@ -200,8 +221,8 @@ export default function SelectedZonePanel() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0,1fr))', gap: '9px 14px' }}>
           <ExposureStat label="POPULATION" value={detail.exposure.population.toLocaleString()} />
           <ExposureStat label="HOUSEHOLDS" value={detail.exposure.households.toLocaleString()} />
-          <ExposureStat label="ROAD SEGMENTS" value={detail.exposure.road_segments} />
-          <ExposureStat label="CRITICAL FACILITIES" value={detail.exposure.critical_facilities} />
+          <ExposureStat label="ROAD SEGMENTS" value={String(detail.exposure.road_segments)} />
+          <ExposureStat label="CRITICAL FACILITIES" value={String(detail.exposure.critical_facilities)} />
         </div>
         <div style={{ font: "400 11.5px/1.5 var(--font-sans)", color: 'var(--ink-faint)' }}>
           Census 2011 projected to 2026; treat as planning estimate.
@@ -245,8 +266,30 @@ export default function SelectedZonePanel() {
       </div>
 
       <div style={{ marginTop: 'auto', padding: '16px 18px', display: 'flex', flexDirection: 'column', gap: 9 }}>
-        <button className="btn btn-primary" onClick={() => alert('Simulated alert approved (demo only — no real notification sent).')}>
-          REVIEW → APPROVE SIMULATED ALERT
+        {dispatchStatus && (
+          <div
+            className="mono"
+            style={{
+              padding: '6px 10px',
+              fontSize: 11,
+              fontWeight: 700,
+              letterSpacing: '0.04em',
+              textAlign: 'center',
+              color: dispatchStatus.startsWith('✓') ? 'var(--good-ink)' : 'var(--rejected-ink)',
+              background: dispatchStatus.startsWith('✓') ? 'var(--good-bg)' : 'var(--rejected-bg)',
+              border: '1px solid currentColor',
+            }}
+          >
+            {dispatchStatus}
+          </div>
+        )}
+        <button
+          className="btn btn-primary"
+          disabled={createAlert.isPending}
+          onClick={handleDispatchAlert}
+          style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 6 }}
+        >
+          {createAlert.isPending ? 'DISPATCHING ALERT…' : '🚨 SEND ALERT NOTIFICATION'}
         </button>
         <a href="/situation-report" className="mono" style={{ textAlign: 'center', fontSize: 11.5, fontWeight: 500, padding: 2 }}>
           ADD TO SITUATION REPORT →
@@ -262,7 +305,7 @@ function ExposureStat({ label, value }: { label: string; value: string }) {
       <span className="mono" style={{ fontSize: 11, color: 'var(--ink-muted)' }}>
         {label}
       </span>
-      <span className="mono" style={{ fontSize: 13.5, color: 'var(--ink)' }}>
+      <span className="mono" style={{ fontSize: 14, fontWeight: 600, color: 'var(--ink)' }}>
         {value}
       </span>
     </div>

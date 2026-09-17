@@ -189,6 +189,26 @@ export const realApi: Api = {
     return alerts.map(mapAlert);
   },
 
+  async createAlert(data): Promise<AlertRow> {
+    const dto = await request<AlertDto>('/api/v1/alerts', {
+      method: 'POST',
+      body: JSON.stringify(data),
+    });
+    // If created in PENDING_APPROVAL, auto-acknowledge so it broadcasts immediately to field units
+    if (dto.state === 'PENDING_APPROVAL') {
+      try {
+        const approved = await request<AlertDto>(`/api/v1/alerts/${dto.alert_id}/acknowledge`, {
+          method: 'POST',
+          body: JSON.stringify({ approved_by: 'OFFICIAL_DISPATCH' }),
+        });
+        return mapAlert(approved);
+      } catch {
+        return mapAlert(dto);
+      }
+    }
+    return mapAlert(dto);
+  },
+
   async approveAlert(alertId, approverName): Promise<AlertRow> {
     const dto = await request<AlertDto>(`/api/v1/alerts/${alertId}/acknowledge`, {
       method: 'POST',

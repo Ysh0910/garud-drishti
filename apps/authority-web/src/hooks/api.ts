@@ -43,6 +43,15 @@ export function useAlerts() {
   });
 }
 
+export function useCreateAlert() {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: (data: { cell_id: string; severity: string; trigger_reason: string; zone_name?: string }) =>
+      api.createAlert(data),
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: ['alerts'] }),
+  });
+}
+
 export function useApproveAlert() {
   const queryClient = useQueryClient();
   return useMutation({

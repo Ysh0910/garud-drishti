@@ -209,3 +209,37 @@ kbd {
 .scrollbar-thin {
   scrollbar-width: thin;
 }
+
+/* MapLibre custom popup styling */
+.maplibregl-popup-content {
+  background: rgba(252, 251, 247, 0.98) !important;
+  border: 1px solid var(--border-strong) !important;
+  border-radius: 0px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12) !important;
+  padding: 10px 12px !important;
+}
+
+.maplibregl-popup-anchor-bottom .maplibregl-popup-tip {
+  border-top-color: var(--border-strong) !important;
+}
+.maplibregl-popup-anchor-top .maplibregl-popup-tip {
+  border-bottom-color: var(--border-strong) !important;
+}
+.maplibregl-popup-anchor-left .maplibregl-popup-tip {
+  border-right-color: var(--border-strong) !important;
+}
+.maplibregl-popup-anchor-right .maplibregl-popup-tip {
+  border-left-color: var(--border-strong) !important;
+}
+
+/* Accessibility: respect user prefers-reduced-motion setting */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
