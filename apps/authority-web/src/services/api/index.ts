@@ -13,6 +13,8 @@ export interface Api {
   getZoneSummaries(): Promise<ZoneSummary[]>;
   getZoneDetail(cellId: string): Promise<ZoneDetail>;
   getAlerts(): Promise<AlertRow[]>;
+  /** Create / Broadcast alert notification. Mirrors POST /api/v1/alerts. */
+  createAlert(data: { cell_id: string; severity: string; trigger_reason: string; zone_name?: string }): Promise<AlertRow>;
   /** PENDING_APPROVAL -> ACTIVE. Mirrors POST /api/v1/alerts/{id}/acknowledge. */
   approveAlert(alertId: string, approverName: string): Promise<AlertRow>;
   /** ACTIVE | ESCALATED -> RESOLVED. Mirrors POST /api/v1/alerts/{id}/resolve. */

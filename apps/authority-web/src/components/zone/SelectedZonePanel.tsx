@@ -1,4 +1,5 @@
-import { useZoneDetail, useZoneSummaries } from '../../hooks/api';
+import { useState } from 'react';
+import { useCreateAlert, useZoneDetail, useZoneSummaries } from '../../hooks/api';
 import { TOTAL_MONITORED_ZONES } from '../../mocks/zones';
 import { useDashboardStore } from '../../store/dashboardStore';
 import type { DataQuality } from '../../types/enums';
@@ -39,6 +40,25 @@ export default function SelectedZonePanel() {
 
   const { data: zones } = useZoneSummaries();
   const { data: detail, isLoading, isError } = useZoneDetail(selectedCellId);
+  const createAlert = useCreateAlert();
+  const [dispatchStatus, setDispatchStatus] = useState<string | null>(null);
+
+  const handleDispatchAlert = async () => {
+    if (!detail) return;
+    try {
+      await createAlert.mutateAsync({
+        cell_id: detail.cell_id,
+        severity: detail.risk_level,
+        trigger_reason: `Official ${detail.risk_level} emergency early warning issued for ${detail.district || 'monitored corridor'}, ${detail.state}. Satellite and rainfall triggers active.`,
+        zone_name: `${detail.cell_id} · ${detail.district || 'NER'}`,
+      });
+      setDispatchStatus('✓ ALERT BROADCAST SENT TO MOBILE APP');
+      setTimeout(() => setDispatchStatus(null), 4000);
+    } catch {
+      setDispatchStatus('✕ Broadcast failed. Please retry.');
+      setTimeout(() => setDispatchStatus(null), 3000);
+    }
+  };
 
   if (isLoading || !detail) {
     return (
@@ -246,8 +266,30 @@ export default function SelectedZonePanel() {
       </div>
 
       <div style={{ marginTop: 'auto', padding: '16px 18px', display: 'flex', flexDirection: 'column', gap: 9 }}>
-        <button className="btn btn-primary" onClick={() => alert('Simulated alert approved (demo only — no real notification sent).')}>
-          REVIEW → APPROVE SIMULATED ALERT
+        {dispatchStatus && (
+          <div
+            className="mono"
+            style={{
+              padding: '6px 10px',
+              fontSize: 11,
+              fontWeight: 700,
+              letterSpacing: '0.04em',
+              textAlign: 'center',
+              color: dispatchStatus.startsWith('✓') ? 'var(--good-ink)' : 'var(--rejected-ink)',
+              background: dispatchStatus.startsWith('✓') ? 'var(--good-bg)' : 'var(--rejected-bg)',
+              border: '1px solid currentColor',
+            }}
+          >
+            {dispatchStatus}
+          </div>
+        )}
+        <button
+          className="btn btn-primary"
+          disabled={createAlert.isPending}
+          onClick={handleDispatchAlert}
+          style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 6 }}
+        >
+          {createAlert.isPending ? 'DISPATCHING ALERT…' : '🚨 SEND ALERT NOTIFICATION'}
         </button>
         <a href="/situation-report" className="mono" style={{ textAlign: 'center', fontSize: 11.5, fontWeight: 500, padding: 2 }}>
           ADD TO SITUATION REPORT →

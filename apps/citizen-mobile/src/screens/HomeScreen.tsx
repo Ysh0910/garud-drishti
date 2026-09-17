@@ -19,9 +19,12 @@ import { RootStackParamList } from '../types/navigation';
 import { Header } from '../components/Header';
 import { RiskSummaryCard } from '../components/RiskSummaryCard';
 import { OfflineQueueBanner } from '../components/OfflineQueueBanner';
+import { EmergencyAlertNotification } from '../components/EmergencyAlertNotification';
 import { ReportCard } from '../components/ReportCard';
 import { COLORS, SPACING, RADIUS } from '../constants/theme';
 import { RiskService } from '../services/riskService';
+import { alertService } from '../services/alertService';
+import { AlertResponse } from '../types/alerts';
 import { RiskPointResponse } from '../types/risk';
 import { ReportResponse } from '../types/reports';
 import { ReportCategory } from '../types/enums';
@@ -36,6 +39,7 @@ export function HomeScreen(): React.JSX.Element {
   const [recentReports, setRecentReports] = useState<ReportResponse[]>([]);
   const [pendingQueueCount, setPendingQueueCount] = useState(0);
   const [refreshing, setRefreshing] = useState(false);
+  const [activeAlert, setActiveAlert] = useState<AlertResponse | null>(null);
 
   const loadData = useCallback(async () => {
     try {
@@ -47,6 +51,12 @@ export function HomeScreen(): React.JSX.Element {
 
       const reports = await reportService.getReports();
       setRecentReports(reports.slice(0, 3));
+
+      // Also check latest active alerts
+      const active = await alertService.getActiveAlerts();
+      if (active.length > 0) {
+        setActiveAlert(active[0]);
+      }
     } catch (err) {
       console.error('Failed loading home data', err);
     }
@@ -54,16 +64,33 @@ export function HomeScreen(): React.JSX.Element {
 
   useEffect(() => {
     loadData();
+    alertService.requestNotificationPermission();
+    alertService.startPolling(4000);
+
+    const unsubAlerts = alertService.subscribe((newAlert) => {
+      setActiveAlert(newAlert);
+    });
+
     const unsubscribe = navigation.addListener('focus', () => {
       loadData();
     });
-    return unsubscribe;
+
+    return () => {
+      alertService.stopPolling();
+      unsubAlerts();
+      unsubscribe();
+    };
   }, [navigation, loadData]);
 
   const onRefresh = async () => {
     setRefreshing(true);
     await loadData();
     setRefreshing(false);
+  };
+
+  const handleDismissAlert = (alertId: string) => {
+    alertService.dismissAlert(alertId);
+    setActiveAlert(null);
   };
 
   const handleQuickReport = (cat?: ReportCategory) => {
@@ -87,6 +114,14 @@ export function HomeScreen(): React.JSX.Element {
           pendingCount={pendingQueueCount}
           onSyncComplete={loadData}
         />
+
+        {/* Live Authority Emergency Alert Notification Banner */}
+        {activeAlert && (
+          <EmergencyAlertNotification
+            alert={activeAlert}
+            onDismiss={() => handleDismissAlert(activeAlert.alert_id)}
+          />
+        )}
 
         {/* Tactical Risk Spectrum & Telemetry Card */}
         <RiskSummaryCard
