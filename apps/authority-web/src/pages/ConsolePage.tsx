@@ -16,7 +16,7 @@ export default function ConsolePage() {
 
         <KpiRow />
 
-        <div id="map-and-zone-row" className="grid-divider" style={{ gridTemplateColumns: '360px minmax(0,1fr) 340px', alignItems: 'stretch' }}>
+        <div id="map-and-zone-row" className="grid-divider" style={{ gridTemplateColumns: '380px minmax(0,1fr) 340px', alignItems: 'stretch' }}>
           <ZoneTriagePanel />
           <RiskMapPanel />
           <SelectedZonePanel />

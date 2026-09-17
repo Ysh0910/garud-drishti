@@ -11,7 +11,7 @@ const RANK_OPTIONS: { key: RankBy; label: string }[] = [
   { key: 'TREND', label: 'TREND' },
 ];
 
-const COLS = '26px minmax(0,1fr) 96px 52px 46px';
+const COLS = '22px minmax(0,1fr) 78px 44px 50px';
 
 export default function ZoneTriagePanel() {
   const { selectedCellId, selectZone, rankBy, setRankBy, selectedState, selectedDistrict } = useDashboardStore();
@@ -83,18 +83,19 @@ export default function ZoneTriagePanel() {
         style={{
           display: 'grid',
           gridTemplateColumns: COLS,
-          gap: 8,
-          padding: '8px 16px',
+          gap: 6,
+          padding: '8px 14px',
           background: 'var(--panel-bg-row-alt)',
           borderBottom: '1px solid var(--hairline-soft)',
           font: "500 11px/1 var(--font-mono)",
           letterSpacing: '0.09em',
           color: 'var(--ink-muted)',
+          alignItems: 'center',
         }}
       >
         <div>#</div>
         <div>ZONE</div>
-        <div>STATE</div>
+        <div style={{ textAlign: 'center' }}>LEVEL</div>
         <div style={{ textAlign: 'right' }}>SCORE</div>
         <div style={{ textAlign: 'right' }}>TREND</div>
       </div>
@@ -109,8 +110,8 @@ export default function ZoneTriagePanel() {
             style={{
               display: 'grid',
               gridTemplateColumns: COLS,
-              gap: 8,
-              padding: '10px 16px',
+              gap: 6,
+              padding: '10px 14px',
               borderTop: 'none',
               borderRight: 'none',
               borderBottom: '1px solid var(--hairline-softer)',
@@ -128,21 +129,57 @@ export default function ZoneTriagePanel() {
             <div className="mono" style={{ fontSize: 11.5, fontWeight: isSelected ? 700 : 500, color: isSelected ? 'var(--ink)' : 'var(--ink-muted)' }}>
               {i + 1}
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 2, minWidth: 0 }}>
-              <span className="mono" style={{ fontSize: 12.5, fontWeight: isSelected ? 700 : 600, lineHeight: 1, color: 'var(--ink)' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 2, minWidth: 0, overflow: 'hidden' }}>
+              <span
+                className="mono"
+                style={{
+                  fontSize: 12,
+                  fontWeight: isSelected ? 700 : 600,
+                  lineHeight: 1.1,
+                  color: 'var(--ink)',
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  whiteSpace: 'nowrap',
+                }}
+                title={zone.cell_id}
+              >
                 {zone.cell_id}
               </span>
-              <span style={{ font: "400 11px/1 var(--font-sans)", color: 'var(--ink-faint)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+              <span
+                style={{
+                  font: "400 11px/1.2 var(--font-sans)",
+                  color: 'var(--ink-faint)',
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  whiteSpace: 'nowrap',
+                }}
+                title={`${zone.district} · ${zone.population_exposed.toLocaleString()} exp.`}
+              >
                 {zone.district} · {zone.population_exposed.toLocaleString()} exp.
               </span>
             </div>
-            <div className={riskBadgeClass(zone.risk_level)} style={{ textAlign: 'center', padding: '3px 6px', fontSize: 10.5 }}>
-              {zone.risk_level.replace('_', ' ')}
+            <div style={{ display: 'flex', justifyContent: 'center', minWidth: 0, overflow: 'hidden' }}>
+              <span
+                className={riskBadgeClass(zone.risk_level)}
+                style={{
+                  textAlign: 'center',
+                  padding: '3px 5px',
+                  fontSize: 10,
+                  letterSpacing: '0.03em',
+                  whiteSpace: 'nowrap',
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  display: 'inline-block',
+                  maxWidth: '100%',
+                }}
+              >
+                {zone.risk_level.replace('_', ' ')}
+              </span>
             </div>
-            <div className="mono tabular" style={{ fontSize: 13, fontWeight: 700, color: 'var(--ink)', textAlign: 'right' }}>
+            <div className="mono tabular" style={{ fontSize: 13, fontWeight: 700, color: 'var(--ink)', textAlign: 'right', whiteSpace: 'nowrap' }}>
               {formatScore01(zone.risk_score)}
             </div>
-            <div className="mono" style={{ fontSize: 11.5, fontWeight: 600, color, textAlign: 'right' }}>
+            <div className="mono" style={{ fontSize: 11.5, fontWeight: 600, color, textAlign: 'right', whiteSpace: 'nowrap' }}>
               {glyph} {formatDelta(zone.trend_delta)}
             </div>
           </button>
