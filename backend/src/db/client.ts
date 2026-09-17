@@ -14,11 +14,19 @@ export function getPool(): pg.Pool {
     const connectionString =
       config.DATABASE_URL || 'postgresql://netra:netra_pass@localhost:5432/netra_gis';
 
+    const isRemote =
+      connectionString.includes('supabase') ||
+      connectionString.includes('render.com') ||
+      connectionString.includes('railway') ||
+      connectionString.includes('neon.tech') ||
+      connectionString.includes('sslmode=require');
+
     pool = new Pool({
       connectionString,
       max: isTest ? 5 : 20,
       idleTimeoutMillis: 30000,
-      connectionTimeoutMillis: 5000,
+      connectionTimeoutMillis: 10000,
+      ssl: isRemote ? { rejectUnauthorized: false } : undefined,
     });
 
     pool.on('error', (err) => {

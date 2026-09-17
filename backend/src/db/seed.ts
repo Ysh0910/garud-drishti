@@ -87,17 +87,17 @@ export async function seedDatabase(): Promise<void> {
       (
         'ROAD_NH106_ML_01', 'ROAD', 'NH-106 Shillong-Nongstoin Corridor',
         ST_GeomFromGeoJSON('{"type":"LineString","coordinates":[[91.55,25.30],[91.60,25.35],[91.70,25.40]]}'),
-        'NH', NULL, 'NER_CELL_2525_9150', NOW()
+        'NH', NULL, 'CELL_NER_002', NOW()
       ),
       (
         'VIL_MAWKTYRSHAT_01', 'VILLAGE', 'Mawktyrshat Village',
         ST_GeomFromGeoJSON('{"type":"Point","coordinates":[91.62,25.34]}'),
-        NULL, 890, 'NER_CELL_2525_9150', NOW()
+        NULL, 890, 'CELL_NER_002', NOW()
       ),
       (
         'ROAD_NH54_MZ_01', 'ROAD', 'NH-54 Aizawl-Lunglei Highway',
         ST_GeomFromGeoJSON('{"type":"LineString","coordinates":[[92.70,23.70],[92.75,23.75],[92.80,23.80]]}'),
-        'NH', NULL, 'NER_CELL_2375_9275', NOW()
+        'NH', NULL, 'CELL_NER_003', NOW()
       )
       ON CONFLICT (asset_id) DO NOTHING;
     `);
@@ -123,7 +123,7 @@ export async function seedDatabase(): Promise<void> {
       ),
       (
         'b2c3d4e5-f6a7-8b9c-0d1e-2f3a4b5c6d7e',
-        'NER_CELL_2525_9150',
+        'CELL_NER_002',
         'Cherrapunji-Mawkdok Escarpment',
         'HIGH',
         'ACTIVE',

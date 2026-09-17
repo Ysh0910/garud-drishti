@@ -173,7 +173,7 @@ export class HttpMLAdapter implements IMLAdapter {
   private baseUrl: string;
   private timeoutMs: number;
 
-  constructor(baseUrl: string, timeoutMs = 3000) {
+  constructor(baseUrl: string, timeoutMs = 5000) {
     this.baseUrl = baseUrl.replace(/\/+$/, '');
     this.timeoutMs = timeoutMs;
   }
@@ -184,6 +184,11 @@ export class HttpMLAdapter implements IMLAdapter {
       const timeout = setTimeout(() => controller.abort(), this.timeoutMs);
 
       const res = await fetch(`${this.baseUrl}/health`, {
+        headers: {
+          'Accept': 'application/json',
+          'ngrok-skip-browser-warning': 'true',
+          'User-Agent': 'GARUD-DRISHTI-Backend',
+        },
         signal: controller.signal,
       });
       clearTimeout(timeout);
@@ -201,7 +206,11 @@ export class HttpMLAdapter implements IMLAdapter {
       // Support either GET /api/v1/risk/:latitude/:longitude or POST /api/v1/risk/point
       const res = await fetch(`${this.baseUrl}/api/v1/risk/${lat}/${lon}`, {
         method: 'GET',
-        headers: { 'Accept': 'application/json' },
+        headers: {
+          'Accept': 'application/json',
+          'ngrok-skip-browser-warning': 'true',
+          'User-Agent': 'GARUD-DRISHTI-Backend',
+        },
         signal: controller.signal,
       });
       clearTimeout(timeout);
