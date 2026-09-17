@@ -6,17 +6,39 @@ Enforces all contracts, deduplication, async/sync AI processing, and authority r
 """
 
 from datetime import datetime, timezone
+import sys
+from pathlib import Path
 from typing import Dict, List, Optional, Any
 import uuid
 
-from backend.app.reports.models import (
-    ReportCategory,
-    ReportStatus,
-    ReportResponse,
-    CitizenReportAnalysisResponse,
-    ReviewDecision,
-    AuthorityReviewResponse,
-)
+# Ensure root is in sys.path
+PROJECT_ROOT = Path(__file__).resolve().parents[4]
+BACKEND_DIR = Path(__file__).resolve().parents[3]
+for p in [str(PROJECT_ROOT), str(BACKEND_DIR)]:
+    if p not in sys.path:
+        sys.path.insert(0, p)
+
+try:
+    from app.reports.models import (
+        ReportCategory,
+        ReportStatus,
+        ReportResponse,
+        CitizenReportAnalysisResponse,
+        ReviewDecision,
+        VerifyAction,
+        AuthorityReviewResponse,
+    )
+except ImportError:
+    from backend.app.reports.models import (
+        ReportCategory,
+        ReportStatus,
+        ReportResponse,
+        CitizenReportAnalysisResponse,
+        ReviewDecision,
+        VerifyAction,
+        AuthorityReviewResponse,
+    )
+
 from ml.vision.pipeline import CitizenAIPipeline, FullCitizenAnalysisResult
 from ml.vision.coordination import CoordinatedFraudDetector, ReportClusterItem
 
@@ -49,10 +71,6 @@ class ReportService:
         environmental_risk_score: float = 65.0,
         base_susceptibility: float = 55.0,
     ) -> Dict[str, Any]:
-        """
-        Creates a new hazard report and triggers AI analysis pipeline.
-        Deduplicates on client_report_id if provided.
-        """
         if client_report_id and client_report_id in self._client_id_map:
             existing_id = self._client_id_map[client_report_id]
             return self._reports[existing_id]
@@ -60,16 +78,13 @@ class ReportService:
         report_id = str(uuid.uuid4())
         submitted_at = datetime.now(timezone.utc)
 
-        # Map category safely
         try:
             cat_enum = ReportCategory(category.upper())
         except ValueError:
             cat_enum = ReportCategory.LANDSLIDE
 
-        # Default media url if photo present
         media_url = f"/static/reports/{report_id}.jpg" if photo_bytes else None
 
-        # Execute Citizen AI Pipeline
         if photo_bytes:
             analysis_result = self._pipeline.process_report(
                 report_id=report_id,
@@ -88,11 +103,9 @@ class ReportService:
             if analysis_result.phash:
                 self._known_phashes.append(analysis_result.phash)
 
-            # Map status from AI
             status_val = analysis_result.status
             evidence_score = round(analysis_result.report_credibility_score / 100.0, 2)
         else:
-            # No photo uploaded
             status_val = "PENDING"
             evidence_score = 0.30
 
@@ -132,13 +145,20 @@ class ReportService:
         category: Optional[str] = None,
         limit: int = 50,
         offset: int = 0,
-    ) -> List[Dict[str, Any]]:
+    ) -> Dict[str, Any]:
         results = list(self._reports.values())
         if status:
             results = [r for r in results if r["status"].upper() == status.upper()]
         if category:
             results = [r for r in results if r["category"].upper() == category.upper()]
-        return results[offset : offset + limit]
+        
+        paginated = results[offset : offset + limit]
+        return {
+            "reports": paginated,
+            "total": len(results),
+            "limit": limit,
+            "offset": offset,
+        }
 
     def get_analysis(self, report_id: str) -> Optional[Dict[str, Any]]:
         analysis = self._analyses.get(report_id)
@@ -186,10 +206,33 @@ class ReportService:
             message=message,
         )
 
+    def verify_report_contract(
+        self,
+        report_id: str,
+        action: VerifyAction,
+        rejection_reason: Optional[str] = None,
+        reviewer_id: str = "authority-officer-contract",
+    ) -> Optional[Dict[str, Any]]:
+        report = self._reports.get(report_id)
+        if not report:
+            return None
+
+        now = datetime.now(timezone.utc)
+        if action == VerifyAction.VERIFY:
+            report["status"] = "VERIFIED"
+            report["rejection_reason"] = None
+        elif action == VerifyAction.REJECT:
+            report["status"] = "REJECTED"
+            report["rejection_reason"] = rejection_reason
+        elif action == VerifyAction.MARK_PROBABLE:
+            report["status"] = "AUTHORITY_REVIEW"
+            report["evidence_score"] = 0.85
+
+        report["verified_by"] = reviewer_id
+        report["verified_at"] = now
+        return report
+
     def analyze_cluster(self, cluster_id: str, report_ids: List[str]) -> Dict[str, Any]:
-        """
-        Executes coordinated fraud cluster analysis on given report IDs.
-        """
         cluster_items: List[ReportClusterItem] = []
         for rid in report_ids:
             rep = self._reports.get(rid)
@@ -212,7 +255,6 @@ class ReportService:
 
         result = self._fraud_detector.analyze_cluster(cluster_id=cluster_id, reports=cluster_items)
 
-        # If quarantined, update status of participating reports
         if result.is_quarantine_recommended:
             for rid in report_ids:
                 if rid in self._reports and self._reports[rid]["status"] not in ("VERIFIED", "REJECTED"):
@@ -232,5 +274,4 @@ class ReportService:
         }
 
 
-# Global singleton service instance
 report_service = ReportService()

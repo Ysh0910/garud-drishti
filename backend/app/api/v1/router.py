@@ -6,18 +6,42 @@ Citizen Hazard Reports, AI Analysis, and Authority Reviews.
 """
 
 from datetime import datetime, timezone
+import sys
+from pathlib import Path
 from typing import List, Optional
 from fastapi import APIRouter, File, Form, HTTPException, Query, UploadFile, status
 
-from backend.app.reports.models import (
-    ReportResponse,
-    ReportSubmissionResponse,
-    CitizenReportAnalysisResponse,
-    AuthorityReviewRequest,
-    AuthorityReviewResponse,
-    BatchClusterAnalyzeRequest,
-)
-from backend.app.reports.service import report_service
+# Ensure root is in sys.path
+PROJECT_ROOT = Path(__file__).resolve().parents[4]
+BACKEND_DIR = Path(__file__).resolve().parents[3]
+for p in [str(PROJECT_ROOT), str(BACKEND_DIR)]:
+    if p not in sys.path:
+        sys.path.insert(0, p)
+
+try:
+    from app.reports.models import (
+        ReportResponse,
+        ReportListResponse,
+        ReportSubmissionResponse,
+        CitizenReportAnalysisResponse,
+        AuthorityReviewRequest,
+        AuthorityVerifyRequest,
+        AuthorityReviewResponse,
+        BatchClusterAnalyzeRequest,
+    )
+    from app.reports.service import report_service
+except ImportError:
+    from backend.app.reports.models import (
+        ReportResponse,
+        ReportListResponse,
+        ReportSubmissionResponse,
+        CitizenReportAnalysisResponse,
+        AuthorityReviewRequest,
+        AuthorityVerifyRequest,
+        AuthorityReviewResponse,
+        BatchClusterAnalyzeRequest,
+    )
+    from backend.app.reports.service import report_service
 
 api_router = APIRouter()
 
@@ -56,7 +80,6 @@ async def _handle_report_submission(
     location_accuracy_m: Optional[float] = None,
     photo: Optional[UploadFile] = None,
 ):
-    # Parse captured_at
     if captured_at:
         try:
             cap_dt = datetime.fromisoformat(captured_at.replace("Z", "+00:00"))
@@ -65,7 +88,6 @@ async def _handle_report_submission(
     else:
         cap_dt = datetime.now(timezone.utc)
 
-    # Read photo bytes if provided
     photo_bytes = None
     if photo:
         photo_bytes = await photo.read()
@@ -145,18 +167,18 @@ async def create_report_alias(
     )
 
 
-@api_router.get("/citizen/reports", response_model=List[ReportResponse])
+@api_router.get("/citizen/reports", response_model=ReportListResponse)
 async def list_citizen_reports(
     status: Optional[str] = Query(None),
     category: Optional[str] = Query(None),
     limit: int = Query(50, le=200),
     offset: int = Query(0, ge=0),
 ):
-    """Lists citizen reports with optional filters."""
+    """Lists citizen reports with pagination per contract."""
     return report_service.list_reports(status=status, category=category, limit=limit, offset=offset)
 
 
-@api_router.get("/reports", response_model=List[ReportResponse])
+@api_router.get("/reports", response_model=ReportListResponse)
 async def list_reports_alias(
     status: Optional[str] = Query(None),
     category: Optional[str] = Query(None),
@@ -212,6 +234,19 @@ async def review_report(report_id: str, review: AuthorityReviewRequest):
         reviewer_id=review.reviewer_id,
         rejection_reason=review.rejection_reason,
         notes=review.notes,
+    )
+    if not res:
+        raise HTTPException(status_code=404, detail=f"Report {report_id} not found.")
+    return res
+
+
+@api_router.post("/reports/{report_id}/verify", response_model=ReportResponse)
+async def verify_report_contract_endpoint(report_id: str, req: AuthorityVerifyRequest):
+    """Contract endpoint for authority verification."""
+    res = report_service.verify_report_contract(
+        report_id=report_id,
+        action=req.action,
+        rejection_reason=req.rejection_reason,
     )
     if not res:
         raise HTTPException(status_code=404, detail=f"Report {report_id} not found.")

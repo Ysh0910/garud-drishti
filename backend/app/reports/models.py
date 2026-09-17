@@ -42,6 +42,12 @@ class ReviewDecision(str, Enum):
     HOLD = "HOLD"
 
 
+class VerifyAction(str, Enum):
+    VERIFY = "VERIFY"
+    REJECT = "REJECT"
+    MARK_PROBABLE = "MARK_PROBABLE"
+
+
 class ReportSubmissionResponse(BaseModel):
     report_id: str
     client_report_id: Optional[str] = None
@@ -70,6 +76,13 @@ class ReportResponse(BaseModel):
     rejection_reason: Optional[str] = None
 
 
+class ReportListResponse(BaseModel):
+    reports: List[ReportResponse]
+    total: int
+    limit: int
+    offset: int
+
+
 class CitizenReportAnalysisResponse(BaseModel):
     report_id: str
     status: str
@@ -96,6 +109,11 @@ class AuthorityReviewRequest(BaseModel):
     reviewer_id: str = "authority-officer-1"
     rejection_reason: Optional[str] = None
     notes: Optional[str] = None
+
+
+class AuthorityVerifyRequest(BaseModel):
+    action: VerifyAction
+    rejection_reason: Optional[str] = None
 
 
 class AuthorityReviewResponse(BaseModel):
