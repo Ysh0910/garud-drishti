@@ -276,7 +276,7 @@ NODE_ENV=development
 CORS_ORIGINS=http://localhost:3000,http://localhost:3001
 SMS_MODE=mock
 ML_ADAPTER_URL=http://localhost:5000
-DATABASE_URL=postgresql://postgres.wcoemstemozsaurfxafm:Youcandoit%3C3@aws-0-ap-northeast-1.pooler.supabase.com:5432/postgres
+DATABASE_URL=postgresql://postgres.[PROJECT_REF]:[YOUR_PASSWORD]@aws-0-ap-northeast-1.pooler.supabase.com:5432/postgres
 ```
 
 Run migrations & start backend:

@@ -3,11 +3,16 @@ import pg from 'pg';
 const { Pool } = pg;
 
 async function main() {
+  const user = process.env.DB_USER || 'postgres';
+  const password = process.env.DB_PASSWORD || '';
+  const host = process.env.DB_HOST || 'localhost';
+  const port = parseInt(process.env.DB_PORT || '5432', 10);
+
   const adminPool = new Pool({
-    user: 'postgres',
-    password: 'Youcandoit<3',
-    host: 'localhost',
-    port: 5432,
+    user,
+    password,
+    host,
+    port,
     database: 'postgres',
     connectionTimeoutMillis: 5000,
   });
@@ -34,10 +39,10 @@ async function main() {
 
   // Connect to garud_drishti and check/enable PostGIS
   const appPool = new Pool({
-    user: 'postgres',
-    password: 'Youcandoit<3',
-    host: 'localhost',
-    port: 5432,
+    user,
+    password,
+    host,
+    port,
     database: 'garud_drishti',
     connectionTimeoutMillis: 5000,
   });
