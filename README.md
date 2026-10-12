@@ -264,10 +264,14 @@ garud-drishti/
 
 ### 1. Clone Repository & Setup Backend
 ```powershell
-git clone https://github.com/Ysh0910/garud-drishti.git
+# Clone without triggering large binary LFS downloads (saves bandwidth):
+git clone -c filter.lfs.smudge= -c filter.lfs.required=false https://github.com/Ysh0910/garud-drishti.git
 cd garud-drishti/backend
 npm install
 ```
+
+> **Note on Datasets:** All models and processed risk grids are included directly in the repo. Large raw offline datasets (~1.37 GB) are documented in [`data/README.md`](data/README.md) and can be checked on-demand via `python scripts/download_datasets.py --status`.
+
 
 Configure `backend/.env`:
 ```env

@@ -30,7 +30,12 @@ Thumbs.db
 # Internal status tracking
 GARUD_DRISHTI_DEVELOPMENT_STATUS.md
 
-# Large Raw Spatial & Satellite Data (Kept locally / S3)
+# Large Raw Spatial & Satellite Data (Kept locally / on-demand via scripts/download_datasets.py)
+data/raw/*.zip
+data/raw/*.pdf
+data/raw/*.nc
+data/raw/*.gpkg
+data/raw/subset_*
 data/raw/**/*.tif
 data/raw/**/*.TIF
 data/raw/**/*.hgt
