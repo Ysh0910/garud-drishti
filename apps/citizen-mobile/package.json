@@ -9,6 +9,7 @@
     "start": "react-native start",
     "web": "vite",
     "web:build": "vite build",
+    "build": "vite build",
     "test": "tsx tests/runAllTests.ts",
     "test:watch": "tsx watch tests/runAllTests.ts",
     "typecheck": "tsc --noEmit"
